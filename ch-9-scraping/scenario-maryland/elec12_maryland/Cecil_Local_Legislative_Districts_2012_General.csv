@@ -1,0 +1,72 @@
+"Vote Type (FOR=1,AGAINST=2)","Candidate Name","Party","Office Name","Office District","Winner","Write-In?", CONC 005,CONC 004,CONC 002,CONC 001,CONC 003
+1,"Barack Obama",DEM,President - Vice Pres,,Y,,3997,4015,3930,3805,4360
+1,"Mitt Romney",REP,President - Vice Pres,,,,6325,8069,4352,4755,8575
+1,"Gary Johnson",LIB,President - Vice Pres,,,,173,214,111,134,220
+1,"Jill Stein",GRN,President - Vice Pres,,,,75,96,50,56,87
+1,"Tiffany Renee Briscoe",DEM,President - Vice Pres,,,Y,0,0,0,1,0
+1,"Dennis Knill",DEM,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Matthew Lydick",REP,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Barbara A. Prokopich",REP,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Santa Claus",IND,President - Vice Pres,,,Y,2,6,2,2,6
+1,"Richard Duncan",IND,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Bruce Mlynski",IND,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Kevin M. Thorne",IND,President - Vice Pres,,,Y,0,0,0,0,0
+1,"James Clymer",CON,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Virgil Goode",CON,President - Vice Pres,,,Y,6,1,4,2,6
+1,"Ross C. Rocky Anderson",OTH,President - Vice Pres,,,Y,2,0,0,2,2
+1,"Andre Barnett",OTH,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Roseanne Barr",OTH,President - Vice Pres,,,Y,1,0,0,0,0
+1,"Will Christensen",OTH,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Stephen Durham",OTH,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Merlin Miller",OTH,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Leon Leo Ray",OTH,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Michael David Boyles",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Theodis (Ted) Brown, Sr.",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Paul Chehade",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"David M. Crosby",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Fred Donald Dickson, Jr.",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Robert William Dietz",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Dwight Kenneth French",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Darrell Hykes",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Nelson Keyton",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Dean Morstad",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Deonia Neveu",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Terrance James O'Hara",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Jill Reed",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Cecil James Roth",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Sheila Tittle",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Other Write-Ins",BOT,President - Vice Pres,,,Y,30,51,40,29,53
+1,"Ben Cardin",DEM,U.S. Senator           ,,Y,,3589,3636,3510,3337,4036
+1,"Daniel John Bongino",REP,U.S. Senator           ,,,,4452,5621,3278,3515,6354
+1,"Dean Ahmad",LIB,U.S. Senator           ,,,,138,132,123,127,152
+1,"S. Rob Sobhani",UNF,U.S. Senator           ,,,,2055,2718,1218,1441,2360
+1,"Lih Young",DEM,U.S. Senator           ,,,Y,1,1,0,1,1
+1,"Mary Podlesak",REP,U.S. Senator           ,,,Y,0,1,3,0,1
+1,"Brandy Baker",UNF,U.S. Senator           ,,,Y,0,0,0,0,0
+1,"Ed Tinus",UNF,U.S. Senator           ,,,Y,1,0,1,2,0
+1,"Other Write-Ins",BOT,U.S. Senator           ,,,Y,12,9,12,10,10
+1,"Wendy Rosen",DEM,U.S. Congress,01,,,3084,3200,3070,2915,3366
+1,"Andy Harris",REP,U.S. Congress,01,Y,,6355,8049,4408,4805,8508
+1,"Muir Wayne Boda",LIB,U.S. Congress,01,,,318,396,207,251,399
+1,"John LaFerla",DEM,U.S. Congress,01,,Y,301,264,335,304,438
+1,"Michael Calpino",UNF,U.S. Congress,01,,Y,3,3,1,0,1
+1,"Douglas Dryden Rae",UNF,U.S. Congress,01,,Y,0,0,0,2,0
+1,"Other Write-Ins",BOT,U.S. Congress,01,,Y,23,14,16,18,21
+1,"Pamela R. Howard",DEM,County Executive       ,,,,4682,5355,4118,4212,5634
+1,"Tari Moore",REP,County Executive       ,,Y,,5451,6528,3954,4170,7117
+1,"Other Write-Ins",BOT,County Executive       ,,,Y,12,8,15,15,15
+1,"Pamela Husfelt Bailey",DEM,County Council         ,001,,,3694,4046,3555,3600,4211
+1,"Alan McCarthy",REP,County Council         ,001,Y,,6160,7457,4334,4614,8182
+1,"Other Write-Ins",BOT,County Council         ,001,,Y,9,20,7,9,12
+1,"James G. Crouse",DEM,County Council         ,005,,,4370,4519,4153,4143,4888
+1,"Robert J. Hodge",REP,County Council         ,005,Y,,5631,7094,3837,4117,7635
+1,"Other Write-Ins",BOT,County Council         ,005,,Y,12,18,13,8,15
+1,"Keith A. Baynes",BOT,Judge Circuit Court,02,Y,,6922,7937,5506,5709,8699
+1,"Jane Murray",BOT,Judge Circuit Court,02,Y,,6680,7535,5431,5473,8361
+1,"Other Write-Ins",BOT,Judge Circuit Court,02,,Y,52,54,51,50,57
+1,"Stuart R. Berger",BOT,Judge Spec Appeal at Lg,,Y,,7367,8552,5921,6063,9190
+2,"Stuart R. Berger",BOT,Judge Spec Appeal at Lg,,Y,,1389,1740,1009,1146,1731
+1,"William Clark Manlove",NON,Board of Education,001,Y,,8505,9878,6821,7124,10576
+1,"Other Write-Ins",NON,Board of Education,001,,Y,46,57,54,48,65
+1,"Lauren Connon Camphausen",NON,Board of Education,002,Y,,7936,9159,6341,6480,9853
+1,"Other Write-Ins",NON,Board of Education,002,,Y,20,29,30,21,30

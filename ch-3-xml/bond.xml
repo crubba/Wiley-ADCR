@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<bond_movies>
+   <movie id="1">
+      <name>Dr. No</name>
+      <year>1962</year>
+      <actors bond="Sean Connery" villain="Joseph Wiseman"/>
+      <budget>1.1M</budget>
+      <boxoffice>59.5M</boxoffice>
+   </movie>
+   <movie id="2">
+      <name>Live and Let Die</name>
+      <year>1973</year>
+      <actors bond="Roger Moore" villain="Yaphet Kotto"/>
+      <budget>7M</budget>
+      <boxoffice>126.4M</boxoffice>
+   </movie>
+   <movie id="3">
+      <name>Skyfall</name>
+      <year>2012</year>
+      <actors bond="Daniel Craig" villain="Javier Bardem"/>
+      <budget>175M</budget>
+      <boxoffice>1108.6M</boxoffice>
+   </movie>      
+</bond_movies>

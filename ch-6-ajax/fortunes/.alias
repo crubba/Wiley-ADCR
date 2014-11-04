@@ -1,0 +1,6 @@
+# $Id: .alias,v 1.1 1999-11-27 23:01:40 sage Exp $
+# Luis Francisco González <luisgh@debian.org> based on that of Vadik Vygonets
+# Please check /usr/doc/tcsh/examples/alias to see other possible values.
+alias	ls	'ls --color=auto'
+alias	md	mkdir
+alias	rd	rmdir

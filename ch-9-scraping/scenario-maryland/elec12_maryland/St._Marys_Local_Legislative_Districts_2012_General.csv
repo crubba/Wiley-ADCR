@@ -1,0 +1,66 @@
+"Vote Type (FOR=1,AGAINST=2)","Candidate Name","Party","Office Name","Office District","Winner","Write-In?", CONC 004,CONC 002,CONC 001,CONC 003
+1,"Barack Obama",DEM,President - Vice Pres,,Y,,3691,3379,4266,3537
+1,"Mitt Romney",REP,President - Vice Pres,,,,3830,6004,5426,5997
+1,"Gary Johnson",LIB,President - Vice Pres,,,,162,144,208,113
+1,"Jill Stein",GRN,President - Vice Pres,,,,48,64,71,79
+1,"Tiffany Renee Briscoe",DEM,President - Vice Pres,,,Y,0,0,1,0
+1,"Dennis Knill",DEM,President - Vice Pres,,,Y,0,0,0,0
+1,"Matthew Lydick",REP,President - Vice Pres,,,Y,0,0,0,0
+1,"Barbara A. Prokopich",REP,President - Vice Pres,,,Y,0,0,0,0
+1,"Santa Claus",IND,President - Vice Pres,,,Y,1,0,4,2
+1,"Richard Duncan",IND,President - Vice Pres,,,Y,0,0,0,0
+1,"Bruce Mlynski",IND,President - Vice Pres,,,Y,0,0,0,0
+1,"Kevin M. Thorne",IND,President - Vice Pres,,,Y,0,0,0,0
+1,"James Clymer",CON,President - Vice Pres,,,Y,0,0,0,1
+1,"Virgil Goode",CON,President - Vice Pres,,,Y,3,5,3,1
+1,"Ross C. Rocky Anderson",OTH,President - Vice Pres,,,Y,2,0,1,0
+1,"Andre Barnett",OTH,President - Vice Pres,,,Y,0,0,0,0
+1,"Roseanne Barr",OTH,President - Vice Pres,,,Y,0,0,0,0
+1,"Will Christensen",OTH,President - Vice Pres,,,Y,0,0,0,0
+1,"Stephen Durham",OTH,President - Vice Pres,,,Y,0,0,0,0
+1,"Merlin Miller",OTH,President - Vice Pres,,,Y,0,0,0,0
+1,"Leon Leo Ray",OTH,President - Vice Pres,,,Y,0,0,0,0
+1,"Michael David Boyles",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Theodis (Ted) Brown, Sr.",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Paul Chehade",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"David M. Crosby",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Fred Donald Dickson, Jr.",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Robert William Dietz",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Dwight Kenneth French",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Darrell Hykes",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Nelson Keyton",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Dean Morstad",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Deonia Neveu",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Terrance James O'Hara",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Jill Reed",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Cecil James Roth",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Sheila Tittle",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Other Write-Ins",BOT,President - Vice Pres,,,Y,36,37,42,46
+1,"Ben Cardin",DEM,U.S. Senator           ,,Y,,3201,3016,3736,3109
+1,"Daniel John Bongino",REP,U.S. Senator           ,,,,2959,4227,3966,3910
+1,"Dean Ahmad",LIB,U.S. Senator           ,,,,128,125,199,123
+1,"S. Rob Sobhani",UNF,U.S. Senator           ,,,,1177,1838,1707,2170
+1,"Lih Young",DEM,U.S. Senator           ,,,Y,0,0,1,0
+1,"Mary Podlesak",REP,U.S. Senator           ,,,Y,0,0,0,0
+1,"Brandy Baker",UNF,U.S. Senator           ,,,Y,0,0,0,0
+1,"Ed Tinus",UNF,U.S. Senator           ,,,Y,2,0,0,0
+1,"Other Write-Ins",BOT,U.S. Senator           ,,,Y,9,7,12,5
+1,"Steny H. Hoyer",DEM,U.S. Congress,05,Y,,4322,4718,5331,4748
+1,"Tony O'Donnell",REP,U.S. Congress,05,,,2991,4478,4118,4532
+1,"Arvin Vohra",LIB,U.S. Congress,05,,,143,129,185,135
+1,"Bob Auerbach",GRN,U.S. Congress,05,,,88,103,140,114
+1,"Other Write-Ins",BOT,U.S. Congress,05,,Y,7,8,8,5
+1,"David W. Densford",BOT,Judge Circuit Court,07,Y,,4099,4570,5221,4248
+1,"Joseph Michael Stanalonis",BOT,Judge Circuit Court,07,,,3079,4490,4101,4739
+1,"Other Write-Ins",BOT,Judge Circuit Court,07,,Y,22,12,23,11
+1,"Stuart R. Berger",BOT,Judge Spec Appeal at Lg,,Y,,5600,6837,7113,6740
+2,"Stuart R. Berger",BOT,Judge Spec Appeal at Lg,,Y,,996,1153,1230,1195
+1,"Marilyn Crosby",NON,Board of Ed at Large,,Y,,4390,5145,5287,5309
+1,"James Tomasic",NON,Board of Ed at Large,,,,2278,3085,3274,2630
+1,"Other Write-Ins",NON,Board of Ed at Large,,,Y,28,25,24,10
+1,"Cathy Allen",NON,Board of Education     ,002,Y,,4533,5648,5708,5550
+1,"Jim Davis",NON,Board of Education     ,002,,,2055,2595,2691,2477
+1,"Other Write-Ins",NON,Board of Education     ,002,,Y,26,18,20,5
+1,"Joel Rose",NON,Board of Education     ,004,,,1718,2432,2379,2516
+1,"Mary M. Washington",NON,Board of Education     ,004,Y,,5120,6001,6367,5685
+1,"Other Write-Ins",NON,Board of Education     ,004,,Y,21,17,17,5

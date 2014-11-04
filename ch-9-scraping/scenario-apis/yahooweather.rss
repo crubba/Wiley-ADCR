@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rss xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" version="2.0">
+  <channel>
+    <title>Yahoo! Weather - Hoboken, NJ</title>
+    <link>http://us.rd.yahoo.com/dailynews/rss/weather/Hoboken__NJ/*http://weather.yahoo.com/forecast/USNJ0221_c.html</link>
+    <description>Yahoo! Weather for Hoboken, NJ</description>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 18 Feb 2014 7:35 am EST</lastBuildDate>
+    <ttl>60</ttl>
+    <yweather:location city="Hoboken" region="NJ" country="United States"/>
+    <yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+    <yweather:wind chill="-3" direction="40" speed="11.27"/>
+    <yweather:atmosphere humidity="93" visibility="1.21" pressure="1015.92" rising="2"/>
+    <yweather:astronomy sunrise="6:46 am" sunset="5:32 pm"/>
+    <image>
+      <title>Yahoo! Weather</title>
+      <width>142</width>
+      <height>18</height>
+      <link>http://weather.yahoo.com</link>
+      <url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+    </image>
+    <item>
+      <title>Conditions for Hoboken, NJ at 7:35 am EST</title>
+      <geo:lat>40.74</geo:lat>
+      <geo:long>-74.03</geo:long>
+      <link>http://us.rd.yahoo.com/dailynews/rss/weather/Hoboken__NJ/*http://weather.yahoo.com/forecast/USNJ0221_c.html</link>
+      <pubDate>Tue, 18 Feb 2014 7:35 am EST</pubDate>
+      <yweather:condition text="Cloudy" code="26" temp="0" date="Tue, 18 Feb 2014 7:35 am EST"/>
+      <description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/26.gif"/><br />
+<b>Current Conditions:</b><br />
+Cloudy, 0 C<BR />
+<BR /><b>Forecast:</b><BR />
+Tue - Rain/Snow. High: 4 Low: -2<br />
+Wed - Showers. High: 7 Low: -2<br />
+Thu - Partly Cloudy. High: 7 Low: 3<br />
+Fri - Rain/Thunder. High: 12 Low: 1<br />
+Sat - Partly Cloudy. High: 9 Low: -1<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Hoboken__NJ/*http://weather.yahoo.com/forecast/USNJ0221_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+      <yweather:forecast day="Tue" date="18 Feb 2014" low="-2" high="4" text="Rain/Snow" code="5"/>
+      <yweather:forecast day="Wed" date="19 Feb 2014" low="-2" high="7" text="Showers" code="11"/>
+      <yweather:forecast day="Thu" date="20 Feb 2014" low="3" high="7" text="Partly Cloudy" code="30"/>
+      <yweather:forecast day="Fri" date="21 Feb 2014" low="1" high="12" text="Rain/Thunder" code="12"/>
+      <yweather:forecast day="Sat" date="22 Feb 2014" low="-1" high="9" text="Partly Cloudy" code="30"/>
+      <guid isPermaLink="false">USNJ0221_2014_02_22_7_00_EST</guid>
+    </item>
+  </channel>
+</rss>
+<!-- fan1658.sports.bf1.yahoo.com Tue Feb 18 13:15:20 PST 2014 -->

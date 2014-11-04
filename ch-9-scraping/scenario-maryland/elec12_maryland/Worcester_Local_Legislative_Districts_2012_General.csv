@@ -1,0 +1,65 @@
+"Vote Type (FOR=1,AGAINST=2)","Candidate Name","Party","Office Name","Office District","Winner","Write-In?", CONC 005,CONC 004,CONC 002,CONC 006,CONC 001,CONC 007,CONC 003
+1,"Barack Obama",DEM,President - Vice Pres,,Y,,1329,862,1533,1172,1402,1111,1252
+1,"Mitt Romney",REP,President - Vice Pres,,,,2103,1717,866,2104,1330,1995,2609
+1,"Gary Johnson",LIB,President - Vice Pres,,,,42,27,23,24,21,45,45
+1,"Jill Stein",GRN,President - Vice Pres,,,,16,14,8,13,9,23,22
+1,"Tiffany Renee Briscoe",DEM,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Dennis Knill",DEM,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Matthew Lydick",REP,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Barbara A. Prokopich",REP,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Santa Claus",IND,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Richard Duncan",IND,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Bruce Mlynski",IND,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Kevin M. Thorne",IND,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"James Clymer",CON,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Virgil Goode",CON,President - Vice Pres,,,Y,0,1,1,0,0,0,0
+1,"Ross C. Rocky Anderson",OTH,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Andre Barnett",OTH,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Roseanne Barr",OTH,President - Vice Pres,,,Y,0,0,0,0,0,1,0
+1,"Will Christensen",OTH,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Stephen Durham",OTH,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Merlin Miller",OTH,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Leon Leo Ray",OTH,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Michael David Boyles",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Theodis (Ted) Brown, Sr.",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Paul Chehade",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"David M. Crosby",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Fred Donald Dickson, Jr.",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Robert William Dietz",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Dwight Kenneth French",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Darrell Hykes",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Nelson Keyton",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Dean Morstad",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Deonia Neveu",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Terrance James O'Hara",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Jill Reed",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Cecil James Roth",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Sheila Tittle",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Other Write-Ins",BOT,President - Vice Pres,,,Y,8,3,5,3,5,14,8
+1,"Ben Cardin",DEM,U.S. Senator           ,,Y,,1124,720,1362,959,1220,966,1069
+1,"Daniel John Bongino",REP,U.S. Senator           ,,,,1600,1040,547,1585,947,1258,1814
+1,"Dean Ahmad",LIB,U.S. Senator           ,,,,40,23,19,36,29,49,49
+1,"S. Rob Sobhani",UNF,U.S. Senator           ,,,,663,732,411,673,476,823,913
+1,"Lih Young",DEM,U.S. Senator           ,,,Y,0,0,0,0,0,0,0
+1,"Mary Podlesak",REP,U.S. Senator           ,,,Y,0,0,0,0,0,0,0
+1,"Brandy Baker",UNF,U.S. Senator           ,,,Y,0,0,0,0,0,0,0
+1,"Ed Tinus",UNF,U.S. Senator           ,,,Y,0,8,0,0,0,0,2
+1,"Other Write-Ins",BOT,U.S. Senator           ,,,Y,4,7,5,2,8,5,4
+1,"Wendy Rosen",DEM,U.S. Congress,01,,,852,568,1005,697,942,846,851
+1,"Andy Harris",REP,U.S. Congress,01,Y,,2134,1670,931,2112,1363,1955,2567
+1,"Muir Wayne Boda",LIB,U.S. Congress,01,,,133,125,64,102,88,121,150
+1,"John LaFerla",DEM,U.S. Congress,01,,Y,201,111,256,240,231,81,188
+1,"Michael Calpino",UNF,U.S. Congress,01,,Y,0,1,0,0,0,0,0
+1,"Douglas Dryden Rae",UNF,U.S. Congress,01,,Y,0,0,0,0,0,0,0
+1,"Other Write-Ins",BOT,U.S. Congress,01,,Y,14,6,1,7,0,9,5
+1,"Brian Daniel Shockley",BOT,Judge Circuit Court,01,Y,,2785,2159,2027,2761,2262,2566,3355
+1,"Other Write-Ins",BOT,Judge Circuit Court,01,,Y,15,9,15,15,8,20,22
+1,"Stuart R. Berger",BOT,Judge Spec Appeal at Lg,,Y,,2568,1899,1786,2467,2059,2230,2990
+2,"Stuart R. Berger",BOT,Judge Spec Appeal at Lg,,Y,,288,262,215,296,255,378,284
+1,"Barry Q. Brittingham, Sr.",NON,Board of Education     ,002,Y,,,,1779,,,,
+1,"Derrick A. Smith",NON,Board of Education     ,002,,,,,310,,,,
+1,"Other Write-Ins",NON,Board of Education     ,002,,Y,,,4,,,,
+1,"Sara D. Thompson",NON,Board of Education     ,003,Y,,,,,,,,3255
+1,"Other Write-Ins",NON,Board of Education     ,003,,Y,,,,,,,27
+1,"Jonathan C. Cook",NON,Board of Education     ,005,Y,,2781,,,,,,
+1,"Other Write-Ins",NON,Board of Education     ,005,,Y,11,,,,,,

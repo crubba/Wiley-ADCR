@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+     <link rel="shortcut icon" href="htmlresources/key.ico" type="image/x-icon" />
+     <title>Resistance Was Futile</title>
+     <script type="text/javascript">
+       function getQueryVariable(variable)
+       {
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return('<p style="font-size:150%">Please consider adding a password like this: <a href="Passed.html?pw=xxxxxx">ClickMe</a></p>');
+       }
+     </script
+     </head>
+    <body>
+        <h3 id="heading" >Oh, ok, you pass ...</h3>
+        but only because your password was: <span style="color:red">
+        <script>
+          x=getQueryVariable("pw")
+          document.write(x)
+        </script>
+        </span>
+    </body>
+  </html>
+

@@ -1,0 +1,467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CRAN Task View: Robust Statistical Methods</title>
+  <link rel=stylesheet type="text/css" href="../CRAN_web.css" />
+</head>
+
+<body>
+  <h2>CRAN Task View: Robust Statistical Methods</h2>
+  <table summary="Robust task view information">
+    <tr><td valign="top"><b>Maintainer:</b></td><td>Martin Maechler</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x4d;&#x61;&#x72;&#x74;&#x69;&#x6e;&#x2e;&#x4d;&#x61;&#x65;&#x63;&#x68;&#x6c;&#x65;&#x72;&#x20;&#x61;&#x74;&#x20;&#x52;&#x2d;&#x70;&#x72;&#x6f;&#x6a;&#x65;&#x63;&#x74;&#x2e;&#x6f;&#x72;&#x67;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2013-08-06</td></tr>
+  </table>
+
+    <div>
+      <p>
+        Robust (or "resistant") methods for statistics modelling have been
+    available in S from the very beginning in the 1980s; and then in R in
+    package
+<tt>stats</tt>.
+        Examples are
+<tt>median()</tt>,
+<tt>mean(*, trim =. )</tt>,
+<tt>mad()</tt>,
+<tt>IQR()</tt>,
+    or also
+<tt>fivenum()</tt>, the statistic
+    behind
+<tt>boxplot()</tt>
+        in package
+<tt>graphics</tt>)
+    or
+<tt>lowess()</tt>
+        (and
+<tt>loess()</tt>) for robust
+    nonparametric regression, which had been complemented
+    by
+<tt>runmed()</tt>
+        in 2003.
+
+    Much further important functionality has been made available in
+    recommended (and hence present in all R versions) package
+<a href="../packages/MASS/index.html">MASS</a>
+        (by Bill Venables and Brian Ripley, see
+        <em>
+          the
+        </em>
+        book
+        <a href="http://www.stats.ox.ac.uk/pub/MASS4/">
+          Modern Applied
+    Statistics with S
+        </a>).
+    Most importantly, they provide
+<tt>rlm()</tt>
+        for robust regression and
+<tt>cov.rob()</tt>
+        for
+    robust multivariate scatter and covariance.
+      </p>
+      <p>
+        This task view is about R add-on packages providing newer or faster,
+    more efficient algorithms and notably for (robustification of) new models.
+      </p>
+      <p>
+        Please send suggestions for additions and extensions to the
+        <a href="mailto:maechler@R-project.org">
+          task view maintainer
+        </a>.
+      </p>
+      <p>
+        An international group of scientists working in the field of robust
+    statistics has made efforts (since October 2005) to coordinate several of
+    the scattered developments and make the important ones available
+    through a set of R packages complementing each other.
+
+    These should build on a basic package with "Essentials",
+    coined
+<a href="../packages/robustbase/index.html">robustbase</a>
+        with (potentially many) other packages
+    building on top and extending the essential functionality to particular
+    models or applications.
+
+    Further, there is the quite comprehensive package
+<a href="../packages/robust/index.html">robust</a>, a version of the robust library of S-PLUS,
+    as an R package now GPLicensed thanks to Insightful and Kjell Konis.
+
+    Originally, there has been much overlap between 'robustbase'
+    and 'robust', now
+<a href="../packages/robust/index.html">robust</a>
+        <em>
+          depends
+        </em>
+        on
+<a href="../packages/robustbase/index.html">robustbase</a>, the former providing convenient routines for
+    the casual user where the latter will contain the underlying
+    functionality, and provide the more advanced statistician with a
+    large range of options for robust modeling.
+      </p>
+      <p>
+        We structure the packages roughly into the following topics, and
+    typically will first mention functionality in packages
+<a href="../packages/robustbase/index.html">robustbase</a>
+        and
+<a href="../packages/robust/index.html">robust</a>.
+      </p>
+      <ul>
+        <li>
+          <i>
+            Regression (Linear, Generalized Linear, Nonlinear Models)
+          </i>:
+<tt>lmrob()</tt>
+          (<a href="../packages/robustbase/index.html">robustbase</a>) and
+<tt>lmRob()</tt>
+          (<a href="../packages/robust/index.html">robust</a>) where the former uses the latest of the
+	fast-S algorithms and heteroscedasticity and autocorrelation corrected
+	(HAC) standard errors, the latter makes use of the M-S algorithm of
+	Maronna and Yohai (2000), automatically when there are factors
+	among the predictors (where S-estimators (and hence MM-estimators)
+	based on resampling typically badly fail).
+
+	The
+<tt>ltsReg()</tt>
+          and
+<tt>lmrob.S()</tt>
+          functions
+	are available in
+<a href="../packages/robustbase/index.html">robustbase</a>, but rather for comparison
+	purposes.
+<tt>rlm()</tt>
+          from
+<a href="../packages/MASS/index.html">MASS</a>.
+
+	Note that Koenker's quantile regression package
+<a href="../packages/quantreg/index.html">quantreg</a>
+          contains L1 (aka LAD, least absolute deviations)-regression as a
+	special case, doing so also for nonparametric regression via
+	splines.
+
+	Quantile regression (and hence L1 or LAD) for mixed effect models,
+	is available in package
+<a href="../packages/lqmm/index.html">lqmm</a>, whereas an
+          <em>
+            MM-like
+          </em>
+          approach for robust linear mixed effects modeling
+	is available from package
+<a href="../packages/robustlmm/index.html">robustlmm</a>.
+          Generalized linear models (GLMs) are provided both via
+<tt>glmrob()</tt>
+          (<a href="../packages/robustbase/index.html">robustbase</a>) and
+<tt>glmRob()</tt>
+          (<a href="../packages/robust/index.html">robust</a>).
+          Robust Nonlinear model fitting is available through
+<a href="../packages/robustbase/index.html">robustbase</a>
+          's
+<tt>nlrob()</tt>.
+<a href="../packages/multinomRob/index.html">multinomRob</a>
+          fits overdispersed multinomial regression
+	models for count data.
+<a href="../packages/rgam/index.html">rgam</a>
+          fits robust GAMs, i.e., robust Generalized Additive
+	Models.
+        </li>
+        <li>
+          <i>
+            Multivariate Analysis
+          </i>:
+
+      Here, the
+<a href="../packages/rrcov/index.html">rrcov</a>
+          package which builds ("
+<tt>Depends</tt>
+          ")
+      on
+<a href="../packages/robustbase/index.html">robustbase</a>
+          provides nice S4 class based methods,
+      more methods for robust multivariate variance-covariance estimation,
+      and adds robust PCA methodology.
+          It is extended by
+<a href="../packages/rrcovNA/index.html">rrcovNA</a>, providing robust multivariate
+      methods for
+          <em>
+            for incomplete
+          </em>
+          or missing (
+<tt>NA</tt>) data, and by
+<a href="../packages/rrcovHD/index.html">rrcovHD</a>, providing robust multivariate methods for
+          <em>
+            High Dimensional
+          </em>
+          data.
+
+      Here,
+<a href="../packages/robustbase/index.html">robustbase</a>
+          contains a slightly more flexible
+      version,
+<tt>covMcd()</tt>
+          than
+<a href="../packages/robust/index.html">robust</a>
+          's
+<tt>fastmcd()</tt>, and similarly for
+<tt>covOGK()</tt>.
+      OTOH,
+<a href="../packages/robust/index.html">robust</a>
+          's
+<tt>covRob()</tt>
+          has automatically chosen
+      methods, notably
+<tt>pairwiseQC()</tt>
+          for large dimensionality p.
+
+      Package
+<a href="../packages/robustX/index.html">robustX</a>
+          for experimental, or other not yet
+      established procedures, contains
+<tt>BACON()</tt>
+          and
+<tt>covNCC()</tt>, the latter providing the
+      neighbor variance estimation (NNVE) method of Wang and Raftery (2002),
+      also available in
+<a href="../packages/covRobust/index.html">covRobust</a>.
+<a href="../packages/mvoutlier/index.html">mvoutlier</a>
+          (building on
+<a href="../packages/robustbase/index.html">robustbase</a>) provides
+      several methods for outlier identification in high dimensions.
+<a href="../packages/RSKC/index.html">RSKC</a>
+          provides
+          <b>
+            R
+          </b>
+          obust
+          <b>
+            S
+          </b>
+          parse
+          <b>
+            K
+          </b>
+          -means
+          <b>
+            C
+          </b>
+          lustering.
+<a href="../packages/FRB/index.html">FRB</a>
+          performs robust inference based on
+          <b>
+            F
+          </b>
+          ast
+      and
+          <b>
+            R
+          </b>
+          obust
+          <b>
+            B
+          </b>
+          ootstrap on robust estimators, including
+      multivarate regression, PCA and Hotelling tests.
+<a href="../packages/covRobust/index.html">covRobust</a>
+          provides the
+      nearest neighbor variance estimation (NNVE) method of Wang and
+      Raftery (2002).
+          Note that robust PCA can be performed by using standard
+      \R's
+<tt>princomp()</tt>, e.g.,
+<tt>X <- stackloss; pc.rob <- princomp(X, covmat= MASS::cov.rob(X))</tt>
+          See also the CRAN task views
+<a href="Multivariate.html">Multivariate</a>
+          and
+<a href="Cluster.html">Cluster</a>
+        </li>
+        <li>
+          <i>
+            Large Data Sets
+          </i>: ...
+
+      (See also the CRAN task view
+<a href="MachineLearning.html">MachineLearning</a>.)
+        </li>
+        <li>
+          <i>
+            Descriptive Statistics / Exploratory Data Analysis
+          </i>: ...
+        </li>
+        <li>
+          <i>
+            Time Series
+          </i>:
+          <ul>
+            <li>
+              Package
+<a href="../packages/robfilter/index.html">robfilter</a>
+              contains robust regression and
+	    filtering methods for univariate time series, typically based on
+	    repeated (weighted) median regressions.
+            </li>
+            <li>
+              Peter Ruckdeschel has started to lead an effort for a robust
+	    time-series package, see
+<a href="http://R-Forge.R-project.org/projects/robust-ts/"><span class="Rforge">robust-ts</span></a>
+              on R-Forge.
+            </li>
+            <li>
+              Further, robKalman,
+              <i>
+                "Routines for Robust Kalman
+	    Filtering --- the ACM- and rLS-filter"
+              </i>, is being developed, see
+<a href="http://R-Forge.R-project.org/projects/robkalman/"><span class="Rforge">robkalman</span></a>
+              on R-Forge.
+            </li>
+          </ul>
+          Note however that these (last two items) are not yet available from CRAN.
+        </li>
+        <li>
+          <i>
+            Econometric Models
+          </i>:
+
+	Econometricians tend to like HAC (heteroscedasticity and
+        autocorrelation corrected) standard errors. For a broad class of
+        models, these are provided by package
+<a href="../packages/sandwich/index.html">sandwich</a>.
+
+	Note that
+<tt>vcov(lmrob())</tt>
+          also uses a version of HAC
+	standard errors for its robustly estimated linear models.
+
+	See also the CRAN task view
+<a href="Econometrics.html">Econometrics</a>
+        </li>
+        <li>
+          <i>
+            Robust Methods for Bioinformatics
+          </i>:
+      There are several packages in the
+          <a href="http://www.bioconductor.org/">
+            Bioconductor project
+          </a>
+          providing specialized robust methods.
+
+      In addition,
+<a href="../packages/RobLoxBioC/index.html">RobLoxBioC</a>
+          provides infinitesimally robust
+      estimators for preprocessing omics data.
+        </li>
+        <li>
+          <i>
+            Robust Methods for Survival Analysis
+          </i>:
+	Package
+<a href="../packages/coxrobust/index.html">coxrobust</a>
+          provides robust estimation in the Cox model.
+        </li>
+        <li>
+          <i>
+            Robust Methods for Surveys
+          </i>:
+	On R-forge only, package
+<a href="http://R-Forge.R-project.org/projects/rhte/"><span class="Rforge">rhte</span></a>
+          provides a robust
+	Horvitz-Thompson estimator.
+        </li>
+        <li>
+          <i>
+            Other approaches to robust and resistant methodology
+          </i>:
+          <ul>
+            <li>
+              The package
+<a href="../packages/distr/index.html">distr</a>
+              and its several child packages
+	    also allow to explore robust estimation concepts, see e.g.,
+<a href="http://R-Forge.R-project.org/projects/distr/"><span class="Rforge">distr</span></a>
+              on R-Forge.
+            </li>
+            <li>
+              Notably, based on these,
+	    the project
+<a href="http://R-Forge.R-project.org/projects/robast/"><span class="Rforge">robast</span></a>
+              aims for the implementation of R
+	    packages for the computation of optimally robust estimators and
+	    tests as well as the necessary infrastructure (mainly S4 classes
+	    and methods) and diagnostics; cf. M. Kohl (2005).
+	    It includes the R packages
+<a href="../packages/RandVar/index.html">RandVar</a>,
+<a href="../packages/RobAStBase/index.html">RobAStBase</a>,
+<a href="../packages/RobLox/index.html">RobLox</a>,
+<a href="../packages/RobLoxBioC/index.html">RobLoxBioC</a>,
+<a href="../packages/RobRex/index.html">RobRex</a>.
+	    Further,
+<a href="../packages/ROptEst/index.html">ROptEst</a>, and
+<a href="../packages/ROptRegTS/index.html">ROptRegTS</a>.
+            </li>
+            <li>
+<a href="../packages/RobustAFT/index.html">RobustAFT</a>
+              computes Robust Accelerated Failure
+	  Time Regression for Gaussian and logWeibull errors.
+            </li>
+            <li>
+<a href="../packages/wle/index.html">wle</a>
+              <i>
+                Weighted Likelihood Estimation
+              </i>
+              provides
+	    robustified likelihood estimation for a range of models,
+	    notably (generalized) regression, and time series (AR and
+	    fracdiff).
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+  <h3>CRAN packages:</h3>
+  <ul>
+    <li><a href="../packages/covRobust/index.html">covRobust</a></li>
+    <li><a href="../packages/coxrobust/index.html">coxrobust</a></li>
+    <li><a href="../packages/distr/index.html">distr</a></li>
+    <li><a href="../packages/FRB/index.html">FRB</a></li>
+    <li><a href="../packages/lqmm/index.html">lqmm</a></li>
+    <li><a href="../packages/MASS/index.html">MASS</a> (core)</li>
+    <li><a href="../packages/multinomRob/index.html">multinomRob</a></li>
+    <li><a href="../packages/mvoutlier/index.html">mvoutlier</a></li>
+    <li><a href="../packages/quantreg/index.html">quantreg</a></li>
+    <li><a href="../packages/RandVar/index.html">RandVar</a></li>
+    <li><a href="../packages/rgam/index.html">rgam</a></li>
+    <li><a href="../packages/RobAStBase/index.html">RobAStBase</a></li>
+    <li><a href="../packages/robfilter/index.html">robfilter</a></li>
+    <li><a href="../packages/RobLox/index.html">RobLox</a></li>
+    <li><a href="../packages/RobLoxBioC/index.html">RobLoxBioC</a></li>
+    <li><a href="../packages/RobRex/index.html">RobRex</a></li>
+    <li><a href="../packages/robust/index.html">robust</a> (core)</li>
+    <li><a href="../packages/RobustAFT/index.html">RobustAFT</a></li>
+    <li><a href="../packages/robustbase/index.html">robustbase</a> (core)</li>
+    <li><a href="../packages/robustlmm/index.html">robustlmm</a></li>
+    <li><a href="../packages/robustX/index.html">robustX</a></li>
+    <li><a href="../packages/ROptEst/index.html">ROptEst</a></li>
+    <li><a href="../packages/ROptRegTS/index.html">ROptRegTS</a></li>
+    <li><a href="../packages/rrcov/index.html">rrcov</a> (core)</li>
+    <li><a href="../packages/rrcovHD/index.html">rrcovHD</a></li>
+    <li><a href="../packages/rrcovNA/index.html">rrcovNA</a></li>
+    <li><a href="../packages/RSKC/index.html">RSKC</a></li>
+    <li><a href="../packages/sandwich/index.html">sandwich</a></li>
+    <li><a href="../packages/wle/index.html">wle</a></li>
+  </ul>
+
+  <h3>Related links:</h3>
+  <ul>
+    <li><a href="http://www.statistik.tuwien.ac.at/rsr/">
+  Robust Statistics in R (TU Vienna)
+</a></li>
+    <li><a href="https://stat.ethz.ch/mailman/listinfo/r-sig-robust/">
+  R Special Interest Group on Robust Statistics
+</a></li>
+    <li>R-Forge Project: <a href="http://R-Forge.R-project.org/projects/distr/" target="_top"><span class="Rforge">distr</span></a></li>
+    <li>R-Forge Project: <a href="http://R-Forge.R-project.org/projects/robast/" target="_top"><span class="Rforge">robast</span></a></li>
+    <li>R-Forge Project: <a href="http://R-Forge.R-project.org/projects/robkalman/" target="_top"><span class="Rforge">robkalman</span></a></li>
+    <li>R-Forge Project: <a href="http://R-Forge.R-project.org/projects/robust-ts/" target="_top"><span class="Rforge">robust-ts</span></a></li>
+  </ul>
+
+</body>
+</html>
+ 

@@ -1,0 +1,683 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CRAN Task View: Numerical Mathematics</title>
+  <link rel=stylesheet type="text/css" href="../CRAN_web.css" />
+</head>
+
+<body>
+  <h2>CRAN Task View: Numerical Mathematics</h2>
+  <table summary="NumericalMathematics task view information">
+    <tr><td valign="top"><b>Maintainer:</b></td><td>Hans W. Borchers</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x68;&#x77;&#x62;&#x6f;&#x72;&#x63;&#x68;&#x65;&#x72;&#x73;&#x20;&#x61;&#x74;&#x20;&#x67;&#x6f;&#x6f;&#x67;&#x6c;&#x65;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2014-02-22</td></tr>
+  </table>
+
+    <div>
+      <p>
+        This task view on numerical mathematics lists R packages and functions 
+    that are useful for solving numerical problems in linear algebra and 
+    analysis. It shows that R is a viable computing environment for 
+    implementing and applying numerical methods, also outside the realm of 
+    statistics.
+      </p>
+      <p>
+        The task view will
+        <em>
+          not
+        </em>
+        cover differential equations, 
+    optimization problems and solvers, or packages and functions operating 
+    on times series, because all these topics are treated extensively in 
+    the corresponding task views
+<a href="DifferentialEquations.html">DifferentialEquations</a>,
+<a href="Optimization.html">Optimization</a>, and
+<a href="TimeSeries.html">TimeSeries</a>. All these task 
+    views together will provide a good selection of what is available in R for 
+    the area of numerical mathematics.
+      </p>
+      <p>
+        The task view has been created to provide an overview of the topic. 
+    If some packages are missing or certain topics in numerical math 
+    should be treated in more detail, please let the maintainer know.
+      </p>
+      <h4>
+        Numerical Linear Algebra
+      </h4>
+      <p>
+        As statistics is based to a large extent on linear algebra, many 
+    numerical linear algebra routines are present in R, and some only 
+    implicitly. Examples of explicitly available functions are vector and 
+    matrix operations, matrix (QR) decompositions, solving linear equations, 
+    eigenvalues/-vectors, singular value decomposition, or least-squares 
+    approximation.
+      </p>
+      <ul>
+        <li>
+          The recommended package
+<a href="../packages/Matrix/index.html">Matrix</a>
+          provides classes and methods 
+        for dense and sparse matrices and operations on them, for example 
+        Cholesky and Schur decomposition, matrix exponential, or norms and 
+        conditional numbers for sparse matrices.
+        </li>
+        <li>
+          Recommended package
+<a href="../packages/MASS/index.html">MASS</a>
+          adds generalized (Penrose) 
+        inverses and null spaces of matrices.
+        </li>
+        <li>
+<a href="../packages/expm/index.html">expm</a>
+          computes the exponential, logarithm, and square root 
+        of square matrices, but also powers of matrices or the Frechet 
+        derivative.
+<tt>expm()</tt>
+          is to be preferred to the function 
+        with the same name in
+<a href="../packages/Matrix/index.html">Matrix</a>.
+        </li>
+        <li>
+<a href="../packages/SparseM/index.html">SparseM</a>
+          provides classes and methods for sparse matrices 
+        and for solving linear and least-squares problems in sparse linear 
+        algebra
+        </li>
+        <li>
+<a href="../packages/svd/index.html">svd</a>
+          provides R bindings to state-of-the-art implementations 
+        of singular value decomposition (SVD) and eigenvalue/eigenvector 
+        computations. Package
+<a href="../packages/ssvd/index.html">ssvd</a>
+          will obtain sparse SVDs using an 
+        iterative thresholding method, while
+<a href="../packages/irlba/index.html">irlba</a>
+          will compute 
+        approximate singular values/vectors of large matrices.
+        </li>
+        <li>
+          The packages
+<a href="../packages/geigen/index.html">geigen</a>
+          and
+<a href="../packages/QZ/index.html">QZ</a>
+          compute generalized 
+        eigenvalues and -vectors for pairs of matrices, and QZ (generalized 
+        Schur) decompositions.
+        </li>
+        <li>
+<a href="../packages/eigeninv/index.html">eigeninv</a>
+          generates matrices with a given set of 
+        eigenvalues ('inverse eigenvalue problem').
+        </li>
+        <li>
+          Package
+<a href="../packages/onion/index.html">onion</a>
+          contains routines for manipulating 
+        quaternions and octonians (normed division algebras over the real 
+        numbers); quaternions can be useful for handling rotations in 
+        three-dimensional space.
+        </li>
+        <li>
+          Packages
+<a href="../packages/RcppArmadillo/index.html">RcppArmadillo</a>
+          and
+<a href="../packages/RcppEigen/index.html">RcppEigen</a>
+          enable the 
+        integration of the C++ template libraries 'Armadillo' resp. 'Eigen' 
+        for linear algebra applications written in C++ and integrated in R 
+        using
+<a href="../packages/Rcpp/index.html">Rcpp</a>
+          for performance and ease of use.
+        </li>
+      </ul>
+      <h4>
+        Special Functions
+      </h4>
+      <p>
+        Many special mathematical functions are present in R, especially 
+    logarithms and exponentials, trigonometric and hyperbolic functions, or 
+    Bessel and Gamma functions. Many more special functions are available in 
+    contributed packages.
+      </p>
+      <ul>
+        <li>
+          Package
+<a href="../packages/gsl/index.html">gsl</a>
+          provides an interface to the 'GNU Scientific 
+        Library' that contains implementations of many special functions, for 
+        example the Airy and Bessel functions, elliptic and exponential 
+        integrals, the hypergeometric function, Lambert's W function, and
+        many more.
+        </li>
+        <li>
+          Airy and Bessel functions, for real and complex numbers, are also 
+        computed in package
+<a href="../packages/Bessel/index.html">Bessel</a>, with approximations for large 
+        arguments.
+        </li>
+        <li>
+          Package
+<a href="../packages/pracma/index.html">pracma</a>
+          includes special functions, such as 
+        error functions and inverses, incomplete and complex gamma function, 
+        exponential and logarithmic integrals, Fresnel integrals, the 
+        polygamma and the Riemann zeta function.
+        </li>
+        <li>
+<a href="../packages/appell/index.html">appell</a>
+          computes Gauss' 2F1 and Appell's F1 hypergeometric 
+        functions for complex parameters and arguments quite accurately.
+        </li>
+        <li>
+          The hypergeometric (and generalized hypergeometric) function, is 
+        computed in
+<a href="../packages/hypergeo/index.html">hypergeo</a>, including transformation formulas 
+        and special values of the parameters.
+        </li>
+        <li>
+          Elliptic and modular functions are available in package
+<a href="../packages/elliptic/index.html">elliptic</a>, including the Weierstrass P function and Jacobi's 
+        theta functions.
+        There are tools for visualizing complex functions.
+        </li>
+      </ul>
+      <h4>
+        Polynomials
+      </h4>
+      <p>
+        Function polyroot() in base R determines all zeros of a polynomial,  
+    based on the Jenkins-Traub algorithm. Linear regression function lm() 
+    can perform polynomial fitting when using
+<tt>poly()</tt>
+        in the model 
+    formula (with option
+<tt>raw = TRUE</tt>).
+      </p>
+      <ul>
+        <li>
+          Packages
+<a href="../packages/polynom/index.html">polynom</a>
+          and
+<a href="../packages/PolynomF/index.html">PolynomF</a>
+          provide similar 
+        functionality for manipulating univariate polynomials, like 
+        evaluating polynomials (Horner scheme), differentiating or integrating 
+        them, or solving polynomials, i.e. finding all roots (based on an 
+        eigenvalue computation).
+        </li>
+        <li>
+          Package
+<a href="../packages/MonoPoly/index.html">MonoPoly</a>
+          fits univariate polynomials to given data, 
+        applying different algorithms.
+        </li>
+        <li>
+          For multivariate polynomials, package
+<a href="../packages/multipol/index.html">multipol</a>
+          provides 
+        various tools to manipulate and combine these polynomials of several 
+        variables.
+        </li>
+        <li>
+          Package
+<a href="../packages/mpoly/index.html">mpoly</a>
+          facilitates symbolic manipulations on 
+        multivariate polynomials, including basic differential calculus 
+        operations on polynomials, plus some Groebner basis calculations.
+        </li>
+        <li>
+          Package
+<a href="../packages/orthopolynom/index.html">orthopolynom</a>
+          consists of a collection of functions 
+        to construct orthogonal polynomials and their recurrence relations, 
+        among them Chebyshev, Hermite, and Legendre polynomials, as well as 
+        spherical and ultraspherical polynomials. There are functions to 
+        operate on these polynomials.
+        </li>
+      </ul>
+      <h4>
+        Differentiation and Integration
+      </h4>
+      <p>
+<tt>D()</tt>
+        and
+<tt>deriv()</tt>
+        in base R compute derivatives  
+    of simple expressions symbolically.
+    Function
+<tt>integrate()</tt>
+        implements an approach for numerically 
+    integrating univariate functions in R. It applies adaptive Gauss-Kronrod 
+    quadrature and can handle singularities and unbounded domains to a certain 
+    extent.
+      </p>
+      <ul>
+        <li>
+<a href="../packages/numDeriv/index.html">numDeriv</a>
+          sets the standard for numerical differentiation 
+        in R, providing numerical gradients, Jacobians, and Hessians, computed 
+        by simple finite differences, Richardson extrapolation, or the highly 
+        accurate complex step approach.
+        </li>
+        <li>
+<a href="../packages/features/index.html">features</a>
+          extracts features from functional data, such as 
+        first and second derivatives, or curvature at critical points.
+        </li>
+        <li>
+          Package
+<a href="../packages/pracma/index.html">pracma</a>
+          contains functions for computing numerical 
+        derivatives, including Richardson extrapolation or complex step.
+<tt>fderiv()</tt>
+          computes numerical derivatives of higher orders.
+<a href="../packages/pracma/index.html">pracma</a>
+          has several routines for numerical integration: 
+        adaptive Lobatto quadrature, Romberg integration, Newton-Cotes 
+        formulas, Clenshaw-Curtis quadrature rules.
+<tt>integral2()</tt>
+          integrates functions in two dimensions, also for domains characterized 
+        by polar coordinates or with variable interval limits.
+        </li>
+        <li>
+          Package
+<a href="../packages/gaussquad/index.html">gaussquad</a>
+          contains a collection of functions to 
+        perform Gaussian quadrature, among them Chebyshev, Hermite, Laguerre, 
+        and Legendre quadrature rules, explicitly returning nodes and weights 
+        in each case. Function
+<tt>gaussquad()</tt>
+          in package
+<a href="../packages/statmod/index.html">statmod</a>
+          does a similar job.
+        </li>
+        <li>
+          Adaptive multivariate integration over hyper-rectangles in 
+        n-dimensional space is available in package
+<a href="../packages/cubature/index.html">cubature</a>
+          as 
+        function
+<tt>adaptIntegrate()</tt>, based on C code by Stephen 
+        Johnson. The integrand functions can even be multi-valued.
+        </li>
+        <li>
+          Package
+<a href="../packages/SphericalCubature/index.html">SphericalCubature</a>
+          employs
+<a href="../packages/cubature/index.html">cubature</a>
+          to 
+        integrate functions over unit spheres and balls in n-dimensional 
+        space; conversion routines for multivariate, spherical, and polar 
+        coordinates are provided.
+        </li>
+        <li>
+          Multi-dimensional numerical integration is also covered in package
+<a href="../packages/R2Cuba/index.html">R2Cuba</a>, employing a C library by Thomas Hahn. 
+        With
+<tt>vegas()</tt>
+          it includes an approach to Monte Carlo 
+        integration based on importance sampling.
+        </li>
+        <li>
+          Package
+<a href="../packages/SparseGrid/index.html">SparseGrid</a>
+          provides another approach to 
+        multivariate integration in high-dimensional spaces. It creates sparse 
+        n-dimensional grids that can be used as with quadrature rules.
+        </li>
+        <li>
+          Package
+<a href="../packages/polyCub/index.html">polyCub</a>
+          holds some routines for numerical 
+        integration over polygonal domains in two dimensions.
+        </li>
+      </ul>
+      <h4>
+        Interpolation and Approximation
+      </h4>
+      <p>
+        Base R provides functions
+<tt>approx()</tt>
+        for constant and linear 
+    interpolation, and
+<tt>spline()</tt>
+        for cubic (Hermite) spline 
+    interpolation, while
+<tt>smooth.spline()</tt>
+        performs cubic spline 
+    approximation. Base package splines creates periodic interpolation 
+    splines in function
+<tt>periodicSpline()</tt>.
+      </p>
+      <ul>
+        <li>
+          Interpolation of irregularly spaced data is possible with the
+<a href="../packages/akima/index.html">akima</a>
+          package:
+<tt>aspline()</tt>
+          for univariate data,
+<tt>bicubic()</tt>
+          or
+<tt>interp()</tt>
+          for data on a 2D 
+        rectangular domain. (This package is distributed under ACM license and 
+        not available for commercial use.)
+        </li>
+        <li>
+          Package
+<a href="../packages/signal/index.html">signal</a>
+          contains several
+          <em>
+            filters
+          </em>
+          to smooth 
+        discrete data, notably
+<tt>interp1()</tt>
+          for linear, spline, and 
+        cubic interpolation,
+<tt>pchip()</tt>
+          for piecewise cubic Hermite 
+        interpolation, and
+<tt>sgolay()</tt>
+          for Savitzky-Golay 
+        smoothing.
+        </li>
+        <li>
+          Package
+<a href="../packages/pracma/index.html">pracma</a>
+          provides barycentric Lagrange interpolation 
+        (in 1 and 2 dimensions) in
+<tt>barylag()</tt>
+          resp.
+<tt>barylag2d()</tt>, 1-dim. akima in
+<tt>akimaInterp()</tt>, 
+        and interpolation and approximation of data with rational functions, 
+        i.e. in the presence of singularities, in
+<tt>ratinterp()</tt>
+          and
+<tt>rationalfit()</tt>.
+        </li>
+        <li>
+<tt>sinterp()</tt>
+          in package
+<a href="../packages/stinepack/index.html">stinepack</a>
+          realizes 
+        interpolation based on piecewise rational functions by applying 
+        Stineman's algorithm. The interpolating function will be monoton in 
+        regions where the specified points change monotonically.
+        </li>
+      </ul>
+      <h4>
+        Root Finding
+      </h4>
+      <p>
+<tt>uniroot()</tt>, implementing the Brent-Decker algorithm, is the 
+    basic routine in R to find roots of univariate functions. There are 
+    implementations of the bisection algorithm in several contributed 
+    packages. For root finding with higher precision there is function
+<tt>unirootR()</tt>
+        in the multi-precision package
+<a href="../packages/Rmpfr/index.html">Rmpfr</a>. 
+    And for finding roots of multivariate functions see the following two 
+    packages:
+      </p>
+      <ul>
+        <li>
+          For solving nonlinear systems of equations the
+<a href="../packages/BB/index.html">BB</a>
+          package 
+        provides (non-monotone) Barzilai-Borwein spectral methods in
+<tt>sane()</tt>, including a derivative-free variant in
+<tt>dfsane()</tt>, and multi-start features with sensitivity 
+        analysis.
+        </li>
+        <li>
+          Package
+<a href="../packages/nleqslv/index.html">nleqslv</a>
+          solves nonlinear systems of equations 
+        using alternatively the Broyden or Newton method, supported by 
+        strategies such as line searches or trust regions.
+        </li>
+        <li>
+<a href="../packages/ktsolve/index.html">ktsolve</a>
+          defines a common interface for solving a set of
+        equations with
+<tt>BB</tt>
+          or
+<tt>nleqslv</tt>.
+        </li>
+      </ul>
+      <h4>
+        Discrete Mathematics and Number Theory
+      </h4>
+      <p>
+        Not so many functions are available for computational number theory.
+    Note that integers in double precision can be represented exactly up to
+<tt>2^53 - 1</tt>, above that limit a multi-precision package such as
+<a href="../packages/gmp/index.html">gmp</a>
+        is needed, see below.
+      </p>
+      <ul>
+        <li>
+          Package
+<a href="../packages/numbers/index.html">numbers</a>
+          provides functions for factorization, prime 
+        numbers, twin primes, primitive roots, modular inverses, extended GCD, 
+        etc. Included are some number-theoretic functions like divisor 
+        functions or Euler's Phi function.
+        </li>
+        <li>
+<a href="../packages/contfrac/index.html">contfrac</a>
+          contains various utilities for evaluating 
+        continued fractions and partial convergents.
+        </li>
+        <li>
+          The
+<a href="../packages/partitions/index.html">partitions</a>
+          package enumerates additive partitions 
+        of integers, including restricted and unequal partitions.
+        </li>
+        <li>
+          Package
+<a href="../packages/combinat/index.html">combinat</a>
+          generates all permutations or all 
+        combinations of a certain length of a set of elements (i.e. a vector); 
+        it also computes binomial coefficients.
+<a href="../packages/pcenum/index.html">pcenum</a>
+          provides 
+        methods to
+          <em>
+            iterate
+          </em>
+          through all permutations or combinations 
+        without retrieving them all at one time.
+        </li>
+        <li>
+<a href="../packages/magic/index.html">magic</a>
+          creates and investigates magical squares.
+        </li>
+      </ul>
+      <h4>
+        Multi-Precision Arithmetic and Symbolic Mathematics
+      </h4>
+      <ul>
+        <li>
+          Multiple precision arithmetic is available in R through package
+<a href="../packages/gmp/index.html">gmp</a>
+          that interfaces to the GMP C library. Examples are 
+        factorization of integers, a probabilistic prime number test, or 
+        operations on big rationals -- for which linear systems of equations 
+        can be solved.
+        </li>
+        <li>
+          Multiple precision floating point operations and functions are 
+        provided through package
+<a href="../packages/Rmpfr/index.html">Rmpfr</a>
+          using the MPFR and GMP 
+        libraries. Special numbers and some special functions are included, 
+        as well as routines for root finding, integration, and optimization 
+        in arbitrary precision.
+        </li>
+        <li>
+          Package
+<a href="../packages/rSymPy/index.html">rSymPy</a>
+          accesses the symbolic algebra system 'SymPy' 
+        (written in Python) from R. 
+        It supports arbitrary precision computations, linear algebra and 
+        calculus, solving equations, discrete mathematics, and much more.
+        </li>
+        <li>
+          Package
+<a href="../packages/Ryacas/index.html">Ryacas</a>
+          interfaces the computer algebra system 
+        'Yacas'. It supports symbolic and arbitrary precision computations 
+        in calculus and linear algebra.
+        </li>
+      </ul>
+      <h4>
+        MATLAB, Octave, and Python Interfaces
+      </h4>
+      <p>
+        Interfaces to numerical computation software such as MATLAB 
+    (commercial) or Octave (free) will be important when solving difficult 
+    numerical problems. Please note that the commercial programs SAS and 
+    Mathematica do have facilities to call R functions.
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/matlab/index.html">matlab</a>
+          emulation package contains about 30 simple 
+        functions, replicating MATLAB functions, using the respective MATLAB 
+        names and being implemented in pure R.
+        </li>
+        <li>
+          Package
+<a href="../packages/R.matlab/index.html">R.matlab</a>
+          provides tools to read and write MAT 
+        files, which is the MATLAB data format. It also enables a 
+        one-directional interface with a MATLAB process, sending and 
+        retrieving objects through a TCP/IP connection.
+        </li>
+        <li>
+          Package
+<a href="../packages/RcppOctave/index.html">RcppOctave</a>
+          provides an interface to Octave (a 
+        MATLAB clone). It enables calling Octave functions, passing variables 
+        between R and Octave, and browsing Octave documentation.
+        </li>
+        <li>
+          Python, through its modules 'NumPy', 'SciPy', and 'pandas', has 
+        elaborate and efficient numerical tools available. R package
+<a href="../packages/rPython/index.html">rPython</a>
+          permits calls from R to Python, while project
+          <a href="http://sourceforge.net/projects/rpy/">
+            RPy
+          </a>
+          (with Python 
+        module 'rpy2') interfaces R from Python.
+        </li>
+      </ul>
+    </div>
+
+  <h3>CRAN packages:</h3>
+  <ul>
+    <li><a href="../packages/akima/index.html">akima</a></li>
+    <li><a href="../packages/appell/index.html">appell</a></li>
+    <li><a href="../packages/BB/index.html">BB</a></li>
+    <li><a href="../packages/Bessel/index.html">Bessel</a></li>
+    <li><a href="../packages/combinat/index.html">combinat</a></li>
+    <li><a href="../packages/contfrac/index.html">contfrac</a></li>
+    <li><a href="../packages/cubature/index.html">cubature</a></li>
+    <li><a href="../packages/eigeninv/index.html">eigeninv</a></li>
+    <li><a href="../packages/elliptic/index.html">elliptic</a></li>
+    <li><a href="../packages/expm/index.html">expm</a></li>
+    <li><a href="../packages/features/index.html">features</a></li>
+    <li><a href="../packages/gaussquad/index.html">gaussquad</a></li>
+    <li><a href="../packages/geigen/index.html">geigen</a></li>
+    <li><a href="../packages/gmp/index.html">gmp</a></li>
+    <li><a href="../packages/gsl/index.html">gsl</a> (core)</li>
+    <li><a href="../packages/hypergeo/index.html">hypergeo</a></li>
+    <li><a href="../packages/irlba/index.html">irlba</a></li>
+    <li><a href="../packages/ktsolve/index.html">ktsolve</a></li>
+    <li><a href="../packages/magic/index.html">magic</a></li>
+    <li><a href="../packages/MASS/index.html">MASS</a></li>
+    <li><a href="../packages/matlab/index.html">matlab</a></li>
+    <li><a href="../packages/Matrix/index.html">Matrix</a> (core)</li>
+    <li><a href="../packages/MonoPoly/index.html">MonoPoly</a></li>
+    <li><a href="../packages/mpoly/index.html">mpoly</a></li>
+    <li><a href="../packages/multipol/index.html">multipol</a></li>
+    <li><a href="../packages/nleqslv/index.html">nleqslv</a></li>
+    <li><a href="../packages/numbers/index.html">numbers</a></li>
+    <li><a href="../packages/numDeriv/index.html">numDeriv</a> (core)</li>
+    <li><a href="../packages/onion/index.html">onion</a></li>
+    <li><a href="../packages/orthopolynom/index.html">orthopolynom</a></li>
+    <li><a href="../packages/partitions/index.html">partitions</a></li>
+    <li><a href="../packages/pcenum/index.html">pcenum</a></li>
+    <li><a href="../packages/polyCub/index.html">polyCub</a></li>
+    <li><a href="../packages/polynom/index.html">polynom</a> (core)</li>
+    <li><a href="../packages/PolynomF/index.html">PolynomF</a></li>
+    <li><a href="../packages/pracma/index.html">pracma</a></li>
+    <li><a href="../packages/QZ/index.html">QZ</a></li>
+    <li><a href="../packages/R.matlab/index.html">R.matlab</a></li>
+    <li><a href="../packages/R2Cuba/index.html">R2Cuba</a></li>
+    <li><a href="../packages/Rcpp/index.html">Rcpp</a></li>
+    <li><a href="../packages/RcppArmadillo/index.html">RcppArmadillo</a></li>
+    <li><a href="../packages/RcppEigen/index.html">RcppEigen</a></li>
+    <li><a href="../packages/RcppOctave/index.html">RcppOctave</a></li>
+    <li><a href="../packages/Rmpfr/index.html">Rmpfr</a></li>
+    <li><a href="../packages/rPython/index.html">rPython</a></li>
+    <li><a href="../packages/rSymPy/index.html">rSymPy</a></li>
+    <li><a href="../packages/Ryacas/index.html">Ryacas</a></li>
+    <li><a href="../packages/signal/index.html">signal</a></li>
+    <li><a href="../packages/SparseGrid/index.html">SparseGrid</a></li>
+    <li><a href="../packages/SparseM/index.html">SparseM</a></li>
+    <li><a href="../packages/SphericalCubature/index.html">SphericalCubature</a></li>
+    <li><a href="../packages/ssvd/index.html">ssvd</a></li>
+    <li><a href="../packages/statmod/index.html">statmod</a></li>
+    <li><a href="../packages/stinepack/index.html">stinepack</a></li>
+    <li><a href="../packages/svd/index.html">svd</a></li>
+  </ul>
+
+  <h3>Related links:</h3>
+  <ul>
+    <li>CRAN Task View: <a href="DifferentialEquations.html">DifferentialEquations</a></li>
+    <li>CRAN Task View: <a href="Optimization.html">Optimization</a></li>
+    <li>CRAN Task View: <a href="TimeSeries.html">TimeSeries</a></li>
+    <li><span>
+  Textbook:
+  <a href="http://www.worldscientific.com/worldscibooks/10.1142/7814">
+    Hands-On Matrix Algebra Using R
+  </a>
+</span></li>
+    <li><span>
+  Textbook:
+  <a href="http://www.ms.unimelb.edu.au/spuRs/">
+    Introduction 
+        to Scientific Programming and Simulation Using R
+  </a>
+</span></li>
+    <li><span>
+  Textbook:
+  <a href="http://www.crcpress.com/product/isbn/9781439884485">
+    Numerical Methods in Science and Engineering Using R
+  </a>
+  [to appear]
+</span></li>
+    <li><a href="http://www.nr.com/aands/">
+  Abramowitz and Stegun. 
+        Handbook of Mathematical Functions
+</a></li>
+    <li><a href="http://www.nrbook.com/a/bookcpdf.php">
+  Numerical Recipes:
+        The Art of Numerical Computing
+</a></li>
+    <li><a href="http://mathworld.wolfram.com/">
+  E. Weisstein's 
+        Wolfram MathWorld
+</a></li>
+  </ul>
+
+</body>
+</html>
+ 

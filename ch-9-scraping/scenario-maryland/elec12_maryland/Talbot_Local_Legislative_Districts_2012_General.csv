@@ -1,0 +1,63 @@
+"Vote Type (FOR=1,AGAINST=2)","Candidate Name","Party","Office Name","Office District","Winner","Write-In?", CONC 000
+1,"Barack Obama",DEM,President - Vice Pres,,Y,,5225
+1,"Mitt Romney",REP,President - Vice Pres,,,,7326
+1,"Gary Johnson",LIB,President - Vice Pres,,,,153
+1,"Jill Stein",GRN,President - Vice Pres,,,,58
+1,"Tiffany Renee Briscoe",DEM,President - Vice Pres,,,Y,0
+1,"Dennis Knill",DEM,President - Vice Pres,,,Y,0
+1,"Matthew Lydick",REP,President - Vice Pres,,,Y,0
+1,"Barbara A. Prokopich",REP,President - Vice Pres,,,Y,0
+1,"Santa Claus",IND,President - Vice Pres,,,Y,3
+1,"Richard Duncan",IND,President - Vice Pres,,,Y,0
+1,"Bruce Mlynski",IND,President - Vice Pres,,,Y,0
+1,"Kevin M. Thorne",IND,President - Vice Pres,,,Y,0
+1,"James Clymer",CON,President - Vice Pres,,,Y,0
+1,"Virgil Goode",CON,President - Vice Pres,,,Y,0
+1,"Ross C. Rocky Anderson",OTH,President - Vice Pres,,,Y,2
+1,"Andre Barnett",OTH,President - Vice Pres,,,Y,0
+1,"Roseanne Barr",OTH,President - Vice Pres,,,Y,0
+1,"Will Christensen",OTH,President - Vice Pres,,,Y,0
+1,"Stephen Durham",OTH,President - Vice Pres,,,Y,0
+1,"Merlin Miller",OTH,President - Vice Pres,,,Y,0
+1,"Leon Leo Ray",OTH,President - Vice Pres,,,Y,0
+1,"Michael David Boyles",UNF,President - Vice Pres,,,Y,1
+1,"Theodis (Ted) Brown, Sr.",UNF,President - Vice Pres,,,Y,0
+1,"Paul Chehade",UNF,President - Vice Pres,,,Y,0
+1,"David M. Crosby",UNF,President - Vice Pres,,,Y,0
+1,"Fred Donald Dickson, Jr.",UNF,President - Vice Pres,,,Y,0
+1,"Robert William Dietz",UNF,President - Vice Pres,,,Y,0
+1,"Dwight Kenneth French",UNF,President - Vice Pres,,,Y,0
+1,"Darrell Hykes",UNF,President - Vice Pres,,,Y,0
+1,"Nelson Keyton",UNF,President - Vice Pres,,,Y,0
+1,"Dean Morstad",UNF,President - Vice Pres,,,Y,0
+1,"Deonia Neveu",UNF,President - Vice Pres,,,Y,0
+1,"Terrance James O'Hara",UNF,President - Vice Pres,,,Y,0
+1,"Jill Reed",UNF,President - Vice Pres,,,Y,0
+1,"Cecil James Roth",UNF,President - Vice Pres,,,Y,0
+1,"Sheila Tittle",UNF,President - Vice Pres,,,Y,0
+1,"Other Write-Ins",BOT,President - Vice Pres,,,Y,28
+1,"Ben Cardin",DEM,U.S. Senator           ,,Y,,4643
+1,"Daniel John Bongino",REP,U.S. Senator           ,,,,5678
+1,"Dean Ahmad",LIB,U.S. Senator           ,,,,136
+1,"S. Rob Sobhani",UNF,U.S. Senator           ,,,,2051
+1,"Lih Young",DEM,U.S. Senator           ,,,Y,0
+1,"Mary Podlesak",REP,U.S. Senator           ,,,Y,0
+1,"Brandy Baker",UNF,U.S. Senator           ,,,Y,0
+1,"Ed Tinus",UNF,U.S. Senator           ,,,Y,0
+1,"Other Write-Ins",BOT,U.S. Senator           ,,,Y,16
+1,"Wendy Rosen",DEM,U.S. Congress,01,,,2861
+1,"Andy Harris",REP,U.S. Congress,01,Y,,7246
+1,"Muir Wayne Boda",LIB,U.S. Congress,01,,,648
+1,"John LaFerla",DEM,U.S. Congress,01,,Y,1255
+1,"Michael Calpino",UNF,U.S. Congress,01,,Y,0
+1,"Douglas Dryden Rae",UNF,U.S. Congress,01,,Y,0
+1,"Other Write-Ins",BOT,U.S. Congress,01,,Y,81
+1,"Stuart R. Berger",BOT,Judge Spec Appeal at Lg,,Y,,8811
+2,"Stuart R. Berger",BOT,Judge Spec Appeal at Lg,,Y,,1571
+1,"Juanita Sue Hopkins",NON,Board of Education     ,002,Y,,1361
+1,"Other Write-Ins",NON,Board of Education     ,002,,Y,35
+1,"Jesse Gomez",NON,Board of Education     ,005,Y,,1592
+1,"Other Write-Ins",NON,Board of Education     ,005,,Y,16
+1,"Greg Criniti",NON,Board of Education     ,006,Y,,819
+1,"Andrea Poe",NON,Board of Education     ,006,,,629
+1,"Other Write-Ins",NON,Board of Education     ,006,,Y,6

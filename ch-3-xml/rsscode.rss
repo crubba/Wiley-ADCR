@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+ <title>The ADCR blog</title>
+ <description>Blog to the ADCR book; Wiley 2014</description>
+ <link>http://www.rdatacollection.com/blog</link>
+ <lastBuildDate>Tue, 22 Oct 2013 00:01:00 +0000 </lastBuildDate>
+  <item>
+  <title>Why R is useful for web scraping</title>
+  <description>R is becoming the most popular statistical software and is growing fast due to an active community publishing several additional packages every day. Yet, R is more than [...]</description>
+  <link>http://www.rdatacollection.com/blog/why-r-is-useful</link>
+  <pubDate>Tue, 22 Oct 2013 00:01:00 +0000 </pubDate>
+ </item>
+ </channel>
+</rss>

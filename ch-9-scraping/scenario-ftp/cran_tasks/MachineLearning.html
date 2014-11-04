@@ -1,0 +1,458 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CRAN Task View: Machine Learning &amp; Statistical Learning</title>
+  <link rel=stylesheet type="text/css" href="../CRAN_web.css" />
+</head>
+
+<body>
+  <h2>CRAN Task View: Machine Learning &amp; Statistical Learning</h2>
+  <table summary="MachineLearning task view information">
+    <tr><td valign="top"><b>Maintainer:</b></td><td>Torsten Hothorn</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x54;&#x6f;&#x72;&#x73;&#x74;&#x65;&#x6e;&#x2e;&#x48;&#x6f;&#x74;&#x68;&#x6f;&#x72;&#x6e;&#x20;&#x61;&#x74;&#x20;&#x52;&#x2d;&#x70;&#x72;&#x6f;&#x6a;&#x65;&#x63;&#x74;&#x2e;&#x6f;&#x72;&#x67;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2013-12-12</td></tr>
+  </table>
+
+    <div>
+      Several add-on packages implement ideas and methods developed at the
+    borderline between computer science and statistics - this field of research
+    is usually referred to as machine learning. 
+
+    The packages can be roughly structured into the following topics:
+      <ul>
+        <li>
+          <i>
+            Neural Networks
+          </i>: Single-hidden-layer neural network are 
+             implemented in package
+<a href="../packages/nnet/index.html">nnet</a>
+          (shipped with base R).
+             Package
+<a href="../packages/RSNNS/index.html">RSNNS</a>
+          offers an interface to the Stuttgart 
+             Neural Network Simulator (SNNS).
+        </li>
+        <li>
+          <i>
+            Recursive Partitioning
+          </i>: Tree-structured models for
+             regression, classification and survival analysis, following the
+	     ideas in the CART book, are
+             implemented in
+<a href="../packages/rpart/index.html">rpart</a>
+          (shipped with base R) and
+<a href="../packages/tree/index.html">tree</a>.
+             Package
+<a href="../packages/rpart/index.html">rpart</a>
+          is recommended for computing CART-like
+             trees. 
+             A rich toolbox of partitioning algorithms is available in
+          <A HREF="http://www.cs.waikato.ac.nz/~ml/weka/">
+            Weka
+          </A>, 
+             package
+<a href="../packages/RWeka/index.html">RWeka</a>
+          provides an interface to this
+             implementation, including the J4.8-variant of C4.5 and M5.
+             The
+<a href="../packages/Cubist/index.html">Cubist</a>
+          package fits rule-based models (similar
+             to trees) with linear regression models in the terminal leaves,
+             instance-based corrections and boosting. The
+<a href="../packages/C50/index.html">C50</a>
+          package can fit
+             C5.0 classification trees, rule-based models, and boosted versions of these.
+<br/>
+          Two recursive partitioning algorithms with unbiased variable
+             selection and statistical stopping criterion are implemented in 
+             package
+<a href="../packages/party/index.html">party</a>. Function
+<tt>ctree()</tt>
+          is based on 
+             non-parametrical conditional inference procedures for testing 
+             independence between response and each input variable whereas
+<tt>mob()</tt>
+          can be used to partition parametric models.
+             Extensible tools for visualizing binary trees
+             and node distributions of the response are available in package
+<a href="../packages/party/index.html">party</a>
+          as well.
+<br/>
+          An adaptation of
+<a href="../packages/rpart/index.html">rpart</a>
+          for multivariate responses
+             is available in package
+<a href="../packages/mvpart/index.html">mvpart</a>. For problems with binary input variables
+             the package
+<a href="../packages/LogicReg/index.html">LogicReg</a>
+          implements logic regression.
+             Graphical tools for the visualization of
+             trees are available in package
+<a href="../packages/maptree/index.html">maptree</a>. An approach to deal with the instability
+             problem via extra splits is available in package
+<a href="../packages/TWIX/index.html">TWIX</a>.
+<br/>
+          Trees for modelling longitudinal data by means of
+             random effects is offered by package
+<a href="../packages/REEMtree/index.html">REEMtree</a>.
+	     Partitioning of mixture models is performed by
+<a href="../packages/RPMM/index.html">RPMM</a>.
+<br/>
+          Computational infrastructure for representing trees and
+             unified methods for predition and visualization is implemented
+             in
+<a href="../packages/partykit/index.html">partykit</a>. This infrastructure is used by
+             package
+<a href="../packages/evtree/index.html">evtree</a>
+          to implement evolutionary learning 
+             of globally optimal trees.
+             Oblique trees are available in package
+<a href="../packages/oblique.tree/index.html">oblique.tree</a>.
+        </li>
+        <li>
+          <i>
+            Random Forests
+          </i>: The reference implementation of the random
+             forest algorithm for regression and classification is available in 
+             package
+<a href="../packages/randomForest/index.html">randomForest</a>. Package
+<a href="../packages/ipred/index.html">ipred</a>
+          has bagging
+             for regression, classification and survival analysis as well as
+             bundling, a combination of multiple models via
+             ensemble learning. In addition, a random forest variant for
+             response variables measured at arbitrary scales based on
+             conditional inference trees is implemented in package
+<a href="../packages/party/index.html">party</a>.
+<a href="../packages/randomSurvivalForest/index.html">randomSurvivalForest</a>
+          offers a random forest algorithm for
+             censored data. Quantile regression forests
+<a href="../packages/quantregForest/index.html">quantregForest</a>
+          allow to regress quantiles of a numeric response on exploratory
+             variables via a random forest approach.
+             The
+<a href="../packages/varSelRF/index.html">varSelRF</a>
+          and
+<a href="../packages/Boruta/index.html">Boruta</a>
+          packages focus on variable selection by means
+             for random forest algorithms. For large data sets, package
+<a href="../packages/bigrf/index.html">bigrf</a>
+          computes random forests in parallel and uses large memory objects 
+             to store the data.
+        </li>
+        <li>
+          <i>
+            Regularized and Shrinkage Methods
+          </i>: Regression models with some
+             constraint on the parameter estimates can be fitted with the
+<a href="../packages/lasso2/index.html">lasso2</a>
+          and
+<a href="../packages/lars/index.html">lars</a>
+          packages.  Lasso with
+             simultaneous updates for groups of parameters (groupwise lasso)
+             is available in package
+<a href="../packages/grplasso/index.html">grplasso</a>; the
+<a href="../packages/grpreg/index.html">grpreg</a>
+          package implements a number of other group
+             penalization models, such as group MCP and group SCAD.
+             The L1 regularization path for generalized linear models and
+             Cox models can be obtained from functions available in package
+<a href="../packages/glmpath/index.html">glmpath</a>, the entire lasso or elastic-net regularization path (also in
+<a href="../packages/elasticnet/index.html">elasticnet</a>)
+             for linear regression, 
+             logistic and multinomial regression models can be obtained from package
+<a href="../packages/glmnet/index.html">glmnet</a>.
+             The
+<a href="../packages/penalized/index.html">penalized</a>
+          package provides
+             an alternative implementation of lasso (L1) and ridge (L2) 
+             penalized regression models (both GLM and Cox models).
+             Package
+<a href="../packages/RXshrink/index.html">RXshrink</a>
+          can be used to identify and display TRACEs 
+             for a specified shrinkage path and to determine the appropriate extent of shrinkage.
+             Semiparametric additive hazards models under lasso penalties are offered
+             by package
+<a href="../packages/ahaz/index.html">ahaz</a>.
+             A generalisation of the Lasso shrinkage technique for linear regression
+             is called relaxed lasso and is available in package
+<a href="../packages/relaxo/index.html">relaxo</a>.
+             Fisher's LDA projection with an optional LASSO penalty to produce sparse 
+             solutions is implemented in package
+<a href="../packages/penalizedLDA/index.html">penalizedLDA</a>.
+             The shrunken
+             centroids classifier and utilities for gene expression analyses are
+             implemented in package
+<a href="../packages/pamr/index.html">pamr</a>. An implementation
+             of multivariate adaptive regression splines is available
+             in package
+<a href="../packages/earth/index.html">earth</a>. Variable selection through clone selection
+             in SVMs in penalized models (SCAD or L1 penalties) is implemented
+             in package
+<a href="../packages/penalizedSVM/index.html">penalizedSVM</a>. Various forms of
+             penalized discriminant analysis are implemented in 
+             packages
+<a href="../packages/hda/index.html">hda</a>,
+<a href="../packages/rda/index.html">rda</a>,
+<a href="../packages/sda/index.html">sda</a>, and
+<a href="../packages/SDDA/index.html">SDDA</a>. Package
+<a href="../packages/LiblineaR/index.html">LiblineaR</a>
+          offers an interface to 
+             the LIBLINEAR library.
+             The
+<a href="../packages/ncvreg/index.html">ncvreg</a>
+          package fits linear and logistic
+             regression models under the the SCAD and MCP 
+             regression penalties using a coordinate descent algorithm.
+	     High-throughput ridge regression (i.e., penalization with many predictor variables) and
+	     heteroskedastic effects models are the focus of the
+<a href="../packages/bigRR/index.html">bigRR</a>
+          package.
+             An implementation of bundle methods for regularized risk minimization 
+             is available form package
+<a href="../packages/bmrm/index.html">bmrm</a>.
+        </li>
+        <li>
+          <i>
+            Boosting
+          </i>: Various forms of gradient boosting are
+             implemented in package
+<a href="../packages/gbm/index.html">gbm</a>
+          (tree-based functional gradient
+             descent boosting). The Hinge-loss is optimized by the boosting implementation 
+             in package
+<a href="../packages/bst/index.html">bst</a>. Package
+<a href="../packages/GAMBoost/index.html">GAMBoost</a>
+          can be used to fit generalized additive models
+             by a boosting algorithm. An extensible boosting framework for
+             generalized linear, additive and nonparametric models is available in
+             package
+<a href="../packages/mboost/index.html">mboost</a>. Likelihood-based boosting for Cox models
+             is implemented in
+<a href="../packages/CoxBoost/index.html">CoxBoost</a>
+          and for mixed models in
+<a href="../packages/GMMBoost/index.html">GMMBoost</a>.
+             GAMLSS models can be fitted using boosting by
+<a href="../packages/gamboostLSS/index.html">gamboostLSS</a>.
+        </li>
+        <li>
+          <i>
+            Support Vector Machines and Kernel Methods
+          </i>: The function
+<tt>svm()</tt>
+          from
+<a href="../packages/e1071/index.html">e1071</a>
+          offers an interface to the LIBSVM library and
+             package
+<a href="../packages/kernlab/index.html">kernlab</a>
+          implements a flexible framework 
+             for kernel learning (including SVMs, RVMs and other kernel
+	     learning algorithms). An interface to the SVMlight implementation
+	     (only for one-against-all classification) is provided in package
+<a href="../packages/klaR/index.html">klaR</a>.
+             The relevant dimension in kernel feature spaces can be estimated
+             using
+<a href="../packages/rdetools/index.html">rdetools</a>
+          which also offers procedures for model selection
+             and prediction.
+        </li>
+        <li>
+          <i>
+            Bayesian Methods
+          </i>: Bayesian Additive Regression Trees (BART),
+             where the final model is defined in terms of the sum over
+             many weak learners (not unlike ensemble methods), 
+             are implemented in package
+<a href="../packages/BayesTree/index.html">BayesTree</a>. 
+             Bayesian nonstationary, semiparametric nonlinear regression 
+             and design by treed Gaussian processes including Bayesian CART and 
+             treed linear models are made available by package
+<a href="../packages/tgp/index.html">tgp</a>.
+        </li>
+        <li>
+          <i>
+            Optimization using Genetic Algorithms
+          </i>:
+             Packages
+<a href="../packages/rgp/index.html">rgp</a>
+          and
+<a href="../packages/rgenoud/index.html">rgenoud</a>
+          offer optimization routines based on genetic algorithms. 
+             The package
+<a href="../packages/Rmalschains/index.html">Rmalschains</a>
+          implements memetic algorithms 
+             with local search chains, which are a special type of 
+             evolutionary algorithms, combining a steady state genetic 
+             algorithm with local search for real-valued
+             parameter optimization.
+        </li>
+        <li>
+          <i>
+            Association Rules
+          </i>: Package
+<a href="../packages/arules/index.html">arules</a>
+          provides both data structures for efficient
+             handling of sparse binary data as well as interfaces to
+             implementations of Apriori and Eclat for mining
+             frequent itemsets, maximal frequent itemsets, closed 
+             frequent itemsets and association rules.
+        </li>
+        <li>
+          <i>
+            Fuzzy Rule-based Systems
+          </i>:
+             Package
+<a href="../packages/frbs/index.html">frbs</a>
+          implements a host of standard 
+             methods for learning fuzzy rule-based systems from data 
+             for regression and classification. Package
+<a href="../packages/RoughSets/index.html">RoughSets</a>
+          provides comprehensive implementations of the
+             rough set theory (RST) and the fuzzy rough set theory (FRST) in a single
+             package.
+        </li>
+        <li>
+          <i>
+            Model selection and validation
+          </i>: Package
+<a href="../packages/e1071/index.html">e1071</a>
+          has function
+<tt>tune()</tt>
+          for hyper parameter tuning and 
+             function
+<tt>errorest()</tt>
+          (<a href="../packages/ipred/index.html">ipred</a>) can be used for
+             error rate estimation. The cost parameter C for support vector
+             machines can be chosen utilizing the functionality of package
+<a href="../packages/svmpath/index.html">svmpath</a>.
+             Functions for ROC analysis and other visualisation techniques 
+             for comparing candidate classifiers are available from package
+<a href="../packages/ROCR/index.html">ROCR</a>.
+             Package
+<a href="../packages/caret/index.html">caret</a>
+          provides miscellaneous functions 
+             for building predictive models, including parameter tuning 
+             and  variable importance measures. The package can be used 
+             with various parallel implementations (e.g. MPI, NWS etc).
+        </li>
+        <li>
+          <i>
+            Elements of Statistical Learning
+          </i>: Data sets, functions and
+             examples from the book
+          <A HREF="http://www-stat.stanford.edu/~tibs/ElemStatLearn/">
+            The Elements of Statistical Learning: Data Mining,
+             Inference, and Prediction
+          </A>
+          by Trevor Hastie, Robert Tibshirani and 
+             Jerome Friedman have been packaged and are available as
+<a href="../packages/ElemStatLearn/index.html">ElemStatLearn</a>.
+        </li>
+        <li>
+          <i>
+            GUI
+          </i>
+<a href="../packages/rattle/index.html">rattle</a>
+          is a graphical user interface for data mining in R.
+        </li>
+      </ul>
+<a href="../packages/CORElearn/index.html">CORElearn</a>
+      implements a rather broad class of machine learning
+  algorithms, such as nearest neighbors, trees, random forests, and 
+  several feature selection methods. Similar, package
+<a href="../packages/rminer/index.html">rminer</a>
+      interfaces
+  several learning algorithms implemented in other packages and computes
+  several performance measures.
+    </div>
+
+  <h3>CRAN packages:</h3>
+  <ul>
+    <li><a href="../packages/ahaz/index.html">ahaz</a></li>
+    <li><a href="../packages/arules/index.html">arules</a></li>
+    <li><a href="../packages/BayesTree/index.html">BayesTree</a></li>
+    <li><a href="../packages/bigrf/index.html">bigrf</a></li>
+    <li><a href="../packages/bigRR/index.html">bigRR</a></li>
+    <li><a href="../packages/bmrm/index.html">bmrm</a></li>
+    <li><a href="../packages/Boruta/index.html">Boruta</a></li>
+    <li><a href="../packages/bst/index.html">bst</a></li>
+    <li><a href="../packages/C50/index.html">C50</a></li>
+    <li><a href="../packages/caret/index.html">caret</a></li>
+    <li><a href="../packages/CORElearn/index.html">CORElearn</a></li>
+    <li><a href="../packages/CoxBoost/index.html">CoxBoost</a></li>
+    <li><a href="../packages/Cubist/index.html">Cubist</a></li>
+    <li><a href="../packages/e1071/index.html">e1071</a> (core)</li>
+    <li><a href="../packages/earth/index.html">earth</a></li>
+    <li><a href="../packages/elasticnet/index.html">elasticnet</a></li>
+    <li><a href="../packages/ElemStatLearn/index.html">ElemStatLearn</a></li>
+    <li><a href="../packages/evtree/index.html">evtree</a></li>
+    <li><a href="../packages/frbs/index.html">frbs</a></li>
+    <li><a href="../packages/GAMBoost/index.html">GAMBoost</a></li>
+    <li><a href="../packages/gamboostLSS/index.html">gamboostLSS</a></li>
+    <li><a href="../packages/gbm/index.html">gbm</a> (core)</li>
+    <li><a href="../packages/glmnet/index.html">glmnet</a></li>
+    <li><a href="../packages/glmpath/index.html">glmpath</a></li>
+    <li><a href="../packages/GMMBoost/index.html">GMMBoost</a></li>
+    <li><a href="../packages/grplasso/index.html">grplasso</a></li>
+    <li><a href="../packages/grpreg/index.html">grpreg</a></li>
+    <li><a href="../packages/hda/index.html">hda</a></li>
+    <li><a href="../packages/ipred/index.html">ipred</a></li>
+    <li><a href="../packages/kernlab/index.html">kernlab</a> (core)</li>
+    <li><a href="../packages/klaR/index.html">klaR</a></li>
+    <li><a href="../packages/lars/index.html">lars</a></li>
+    <li><a href="../packages/lasso2/index.html">lasso2</a></li>
+    <li><a href="../packages/LiblineaR/index.html">LiblineaR</a></li>
+    <li><a href="../packages/LogicReg/index.html">LogicReg</a></li>
+    <li><a href="../packages/maptree/index.html">maptree</a></li>
+    <li><a href="../packages/mboost/index.html">mboost</a> (core)</li>
+    <li><a href="../packages/mvpart/index.html">mvpart</a></li>
+    <li><a href="../packages/ncvreg/index.html">ncvreg</a></li>
+    <li><a href="../packages/nnet/index.html">nnet</a> (core)</li>
+    <li><a href="../packages/oblique.tree/index.html">oblique.tree</a></li>
+    <li><a href="../packages/pamr/index.html">pamr</a></li>
+    <li><a href="../packages/party/index.html">party</a></li>
+    <li><a href="../packages/partykit/index.html">partykit</a></li>
+    <li><a href="../packages/penalized/index.html">penalized</a></li>
+    <li><a href="../packages/penalizedLDA/index.html">penalizedLDA</a></li>
+    <li><a href="../packages/penalizedSVM/index.html">penalizedSVM</a></li>
+    <li><a href="../packages/quantregForest/index.html">quantregForest</a></li>
+    <li><a href="../packages/randomForest/index.html">randomForest</a> (core)</li>
+    <li><a href="../packages/randomSurvivalForest/index.html">randomSurvivalForest</a></li>
+    <li><a href="../packages/rattle/index.html">rattle</a></li>
+    <li><a href="../packages/rda/index.html">rda</a></li>
+    <li><a href="../packages/rdetools/index.html">rdetools</a></li>
+    <li><a href="../packages/REEMtree/index.html">REEMtree</a></li>
+    <li><a href="../packages/relaxo/index.html">relaxo</a></li>
+    <li><a href="../packages/rgenoud/index.html">rgenoud</a></li>
+    <li><a href="../packages/rgp/index.html">rgp</a></li>
+    <li><a href="../packages/Rmalschains/index.html">Rmalschains</a></li>
+    <li><a href="../packages/rminer/index.html">rminer</a></li>
+    <li><a href="../packages/ROCR/index.html">ROCR</a></li>
+    <li><a href="../packages/RoughSets/index.html">RoughSets</a></li>
+    <li><a href="../packages/rpart/index.html">rpart</a> (core)</li>
+    <li><a href="../packages/RPMM/index.html">RPMM</a></li>
+    <li><a href="../packages/RSNNS/index.html">RSNNS</a></li>
+    <li><a href="../packages/RWeka/index.html">RWeka</a></li>
+    <li><a href="../packages/RXshrink/index.html">RXshrink</a></li>
+    <li><a href="../packages/sda/index.html">sda</a></li>
+    <li><a href="../packages/SDDA/index.html">SDDA</a></li>
+    <li><a href="../packages/svmpath/index.html">svmpath</a></li>
+    <li><a href="../packages/tgp/index.html">tgp</a></li>
+    <li><a href="../packages/tree/index.html">tree</a></li>
+    <li><a href="../packages/TWIX/index.html">TWIX</a></li>
+    <li><a href="../packages/varSelRF/index.html">varSelRF</a></li>
+  </ul>
+
+  <h3>Related links:</h3>
+  <ul>
+    <li><a href="http://www.MLOSS.org/">
+  MLOSS: Machine Learning Open Source Software
+</a></li>
+    <li><a href="http://www.boosting.org/">
+  Boosting Research Site
+</a></li>
+  </ul>
+
+</body>
+</html>
+ 

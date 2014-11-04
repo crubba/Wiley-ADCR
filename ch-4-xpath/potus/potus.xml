@@ -1,0 +1,761 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE dataset SYSTEM "../DatasetByRecord.dtd">
+<document>
+  <president>
+    <name>George Washington</name>
+    <number>1</number>
+    <start>April 30, 1789</start>
+    <end>March 3, 1797</end>
+    <party>Federalist</party>
+    <nickname>Father of His Country</nickname>
+    <born>22-Feb-1732</born>
+    <occupation>Planter, Soldier</occupation>
+    <state>Virginia</state>
+    <hometown>Westmoreland County</hometown>
+    <education>No formal education</education>
+    <married>Martha Dandridge Custis (1732-1802), on January 6, 1759</married>
+    <mother>Mary Ball Washington</mother>
+    <father>Augustine Washington</father>
+    <salary>NA</salary>
+    <religion>Episcopalian</religion>
+  </president>
+  <president>
+    <name>John Adams</name>
+    <number>2</number>
+    <start>March 4, 1797</start>
+    <end>March 3, 1801</end>
+    <party>Federalist</party>
+    <nickname>Atlas of Independence</nickname>
+    <born>30-Oct-1735</born>
+    <occupation>Lawyer</occupation>
+    <state>Massachusetts</state>
+    <hometown>Braintree (now Quincy)</hometown>
+    <education>Graduated from Harvard College (1755)</education>
+    <married>Abigail Smith (1744-1818), on October 25, 1764</married>
+    <mother>Susanna Boylston Adams</mother>
+    <father>John Adams</father>
+    <salary>NA</salary>
+    <religion>Unitarian</religion>
+  </president>
+  <president>
+    <name>Thomas Jefferson</name>
+    <number>3</number>
+    <start>March 4, 1801</start>
+    <end>March 3, 1809</end>
+    <party>Democratic-Republican</party>
+    <nickname>Man of the People; Sage of Monticello</nickname>
+    <born>13-Apr-1743</born>
+    <occupation>Lawyer, planter</occupation>
+    <state>Virginia</state>
+    <hometown>Shadwell</hometown>
+    <education>Graduated from College of William and Mary (1762)</education>
+    <married>Martha Wayles Skelton (1748-1782), on January 1, 1772</married>
+    <mother>Jane Randolph Jefferson</mother>
+    <father>Peter Jefferson</father>
+    <salary>NA</salary>
+    <religion>No formal affiliation</religion>
+  </president>
+  <president>
+    <name>James Madison</name>
+    <number>4</number>
+    <start>March 4, 1809</start>
+    <end>March 3, 1817</end>
+    <party>Democratic-Republican</party>
+    <nickname>Father of the Constitution</nickname>
+    <born>16-Mar-1751</born>
+    <occupation>Lawyer</occupation>
+    <state>Virginia</state>
+    <hometown>Port Conway</hometown>
+    <education>Graduated from College of New Jersey (now Princeton University; 1771)</education>
+    <married>Dolley Payne Todd (1768-1849), on September 15, 1794</married>
+    <mother>Nelly Conway Madison</mother>
+    <father>James Madison</father>
+    <salary>NA</salary>
+    <religion>Episcopalian</religion>
+  </president>
+  <president>
+    <name>James Monroe</name>
+    <number>5</number>
+    <start>March 4, 1817</start>
+    <end>March 3, 1825</end>
+    <party>Democratic-Republican</party>
+    <nickname>The Last Cocked Hat; Era-of-Good-Feeling President</nickname>
+    <born>28-Apr-1758</born>
+    <occupation>Lawyer</occupation>
+    <state>Virginia</state>
+    <hometown>Westmoreland County</hometown>
+    <education>Graduated from College of William and Mary (1776)</education>
+    <married>Elizabeth Eliza Kortright (1768-1830), on February 16, 1786</married>
+    <mother>Elizabeth Jones Monroe</mother>
+    <father>Spence Monroe</father>
+    <salary>NA</salary>
+    <religion>Episcopalian</religion>
+  </president>
+  <president>
+    <name>John Quincy Adams</name>
+    <number>6</number>
+    <start>March 4, 1825</start>
+    <end>March 3, 1829</end>
+    <party>Democratic-Republican</party>
+    <nickname>Old Man Eloquent</nickname>
+    <born>11-Jul-1767</born>
+    <occupation>Lawyer</occupation>
+    <state>Massachusetts</state>
+    <hometown>Braintree (now Quincy)</hometown>
+    <education>Graduated from Harvard College (1787)</education>
+    <married>Louisa Catherine Johnson (1775-1852), on July 26, 1797</married>
+    <mother>Abigail Smith Adams</mother>
+    <father>tiny U.S. flag John Adams</father>
+    <salary>NA</salary>
+    <religion>Unitarian</religion>
+  </president>
+  <president>
+    <name>Andrew Jackson</name>
+    <number>7</number>
+    <start>March 4, 1829</start>
+    <end>March 3, 1837</end>
+    <party>Democratic</party>
+    <nickname>Old Hickory</nickname>
+    <born>15-Mar-1767</born>
+    <occupation>Lawyer, soldier</occupation>
+    <state>North Carolina</state>
+    <hometown>Waxhaw</hometown>
+    <education>No formal education</education>
+    <married>Rachel Donelson Robards (1767-1828),August 1791 anda second ceremony on January</married>
+    <mother>Elizabeth Hutchinson Jackson</mother>
+    <father>Andrew Jackson</father>
+    <salary>NA</salary>
+    <religion>Presbyterian</religion>
+  </president>
+  <president>
+    <name>Martin Van Buren</name>
+    <number>8</number>
+    <start>March 4, 1837</start>
+    <end>March 3, 1841</end>
+    <party>Democratic</party>
+    <nickname>The Little Magician; The Red Fox of Kinderhook</nickname>
+    <born>05-Dec-1782</born>
+    <occupation>Lawyer</occupation>
+    <state>New York</state>
+    <hometown>Kinderhook</hometown>
+    <education>Graduated from Kinderhook Academy (1796)</education>
+    <married>Hannah Hoes (1783-1819), on February 21, 1807</married>
+    <mother>Maria Hoes Van Buren</mother>
+    <father>Abraham Van Buren</father>
+    <salary>NA</salary>
+    <religion>Dutch Reformed</religion>
+  </president>
+  <president>
+    <name>William Henry Harrison</name>
+    <number>9</number>
+    <start>March 4, 1841</start>
+    <end>April 4, 1841</end>
+    <party>Whig</party>
+    <nickname>Old Tippecanoe; Old Tip</nickname>
+    <born>09-Feb-1773</born>
+    <occupation>Soldier</occupation>
+    <state>Virginia</state>
+    <hometown>Berkeley</hometown>
+    <education>Attended Hampden-Sydney College</education>
+    <married>Anna Tuthill Symmes (1775-1864), on November 25, 1795</married>
+    <mother>Elizabeth Bassett Harrison</mother>
+    <father>Benjamin Harrison</father>
+    <salary>NA</salary>
+    <religion>Episcopalian</religion>
+  </president>
+  <president>
+    <name>John Tyler</name>
+    <number>10</number>
+    <start>April 6, 1841</start>
+    <end>March 3, 1845</end>
+    <party>Whig</party>
+    <nickname>Accidental President; His Accidency</nickname>
+    <born>29-Mar-1790</born>
+    <occupation>Lawyer</occupation>
+    <state>Virginia</state>
+    <hometown>Greenway</hometown>
+    <education>Graduated from the College of William and Mary (1807)</education>
+    <married>Letitia Chrisitan (1790-1842), on March 29, 1813; Julia Gardiner (1820-1889), on</married>
+    <mother>Mary Marot Armistead Tyler</mother>
+    <father>John Tyler</father>
+    <salary>NA</salary>
+    <religion>Episcopalian</religion>
+  </president>
+  <president>
+    <name>James Knox Polk</name>
+    <number>11</number>
+    <start>March 4, 1845</start>
+    <end>March 3, 1849</end>
+    <party>Democratic</party>
+    <nickname>Young Hickory</nickname>
+    <born>02-Nov-1795</born>
+    <occupation>Lawyer</occupation>
+    <state>North Carolina</state>
+    <hometown>Mecklenburg County</hometown>
+    <education>Graduated from the University of North Carolina (1818)</education>
+    <married>Sarah Childress (1803-1891), on January 1, 1824</married>
+    <mother>Jane Knox Polk</mother>
+    <father>Samuel Polk</father>
+    <salary>NA</salary>
+    <religion>Presbyterian</religion>
+  </president>
+  <president>
+    <name>Zachary Taylor</name>
+    <number>12</number>
+    <start>March 5, 1849</start>
+    <end>July 9, 1850</end>
+    <party>Whig</party>
+    <nickname>Old Rough and Ready</nickname>
+    <born>24-Nov-1784</born>
+    <occupation>Soldier</occupation>
+    <state>Virginia</state>
+    <hometown>near Barboursville</hometown>
+    <education>No formal education</education>
+    <married>Margaret Mackall Smith (1788-1852), on June 21, 1810</married>
+    <mother>Sarah Dabney Strother Taylor</mother>
+    <father>Lieutenant Colonel Richard Taylor</father>
+    <salary>NA</salary>
+    <religion>Episcopalian</religion>
+  </president>
+  <president>
+    <name>Millard Fillmore</name>
+    <number>13</number>
+    <start>July 9, 1850</start>
+    <end>March 3, 1853</end>
+    <party>Whig</party>
+    <nickname>The American Louis Philippe</nickname>
+    <born>07-Jan-1800</born>
+    <occupation>Lawyer</occupation>
+    <state>New York</state>
+    <hometown>Locke Township (now Summerhill)</hometown>
+    <education>No formal education</education>
+    <married>Abigail Powers (1798-1853), on February 5, 1826; Caroline Carmichael McIntosh (1</married>
+    <mother>Phoebe Millard Fillmore</mother>
+    <father>Nathaniel Fillmore</father>
+    <salary>NA</salary>
+    <religion>Unitarian</religion>
+  </president>
+  <president>
+    <name>Franklin Pierce</name>
+    <number>14</number>
+    <start>March 4, 1853</start>
+    <end>March 3, 1857</end>
+    <party>Democrat</party>
+    <nickname>Young Hickory of the Granite Hills</nickname>
+    <born>23-Nov-1804</born>
+    <occupation>Lawyer, public official</occupation>
+    <state>New Hampshire</state>
+    <hometown>Hillsborough (now Hillsboro)</hometown>
+    <education>Graduated from Bowdoin College (1824)</education>
+    <married>Jane Means Appleton (1806-1863), on November 10, 1834</married>
+    <mother>Ann Kendrick Pierce</mother>
+    <father>General Benjamin Pierce</father>
+    <salary>NA</salary>
+    <religion>Episcopalian</religion>
+  </president>
+  <president>
+    <name>James Buchanan</name>
+    <number>15</number>
+    <start>March 4, 1857</start>
+    <end>March 3, 1861</end>
+    <party>Democrat</party>
+    <nickname>Old Buck</nickname>
+    <born>23-Apr-1791</born>
+    <occupation>Lawyer</occupation>
+    <state>Pennsylvania</state>
+    <hometown>Cove Gap (near Mercersburg)</hometown>
+    <education>Graduated from Dickinson College (1809)</education>
+    <married>Never married. The White House hostess was his niece Harriet Lane (1830-1903)</married>
+    <mother>Elizabeth Speer Buchanan</mother>
+    <father>James Buchanan</father>
+    <salary>NA</salary>
+    <religion>Presbyterian</religion>
+  </president>
+  <president>
+    <name>Abraham Lincoln</name>
+    <number>16</number>
+    <start>March 4, 1861</start>
+    <end>April 15, 1865</end>
+    <party>Republican</party>
+    <nickname>Honest Abe; Illinois Rail-Splitter</nickname>
+    <born>12-Feb-1809</born>
+    <occupation>Lawyer</occupation>
+    <state>Kentucky</state>
+    <hometown>Hardin (now Larue) County</hometown>
+    <education>No formal education</education>
+    <married>Mary Todd (1818-1882), on November 4, 1842</married>
+    <mother>Nancy Hanks Lincoln</mother>
+    <father>Thomas Lincoln</father>
+    <salary>NA</salary>
+    <religion>No formal affiliation</religion>
+  </president>
+  <president>
+    <name>Andrew Johnson</name>
+    <number>17</number>
+    <start>April 15, 1865</start>
+    <end>March 3, 1869</end>
+    <party>Democratic</party>
+    <nickname>None</nickname>
+    <born>29-Dec-1808</born>
+    <occupation>Tailor, public official</occupation>
+    <state>North Carolina</state>
+    <hometown>Raleigh</hometown>
+    <education>No formal education</education>
+    <married>Eliza McCardle (1810-1876), on May 5, 1827</married>
+    <mother>Mary McDonough Johnson</mother>
+    <father>Jacob Johnson</father>
+    <salary>NA</salary>
+    <religion>No formal affiliation</religion>
+  </president>
+  <president>
+    <name>Ulysses Simpson Grant</name>
+    <number>18</number>
+    <start>March 4, 1869</start>
+    <end>March 3, 1877</end>
+    <party>Republican</party>
+    <nickname>Hero of Appomattox</nickname>
+    <born>27-Apr-1822</born>
+    <occupation>Soldier</occupation>
+    <state>Ohio</state>
+    <hometown>Point Pleasant</hometown>
+    <education>Graduated from the U.S. Military AcademyWest Point, N.Y. (1843)</education>
+    <married>Julia Boggs Dent (1826-1902), on August 22, 1848</married>
+    <mother>Hannah Simpson Grant</mother>
+    <father>Jesse Root Grant</father>
+    <salary>NA</salary>
+    <religion>Methodist</religion>
+  </president>
+  <president>
+    <name>Rutherford Birchard Hayes</name>
+    <number>19</number>
+    <start>March 4, 1877</start>
+    <end>March 3, 1881</end>
+    <party>Republican</party>
+    <nickname>Dark-Horse President</nickname>
+    <born>04-Oct-1822</born>
+    <occupation>Lawyer</occupation>
+    <state>Ohio</state>
+    <hometown>Delaware</hometown>
+    <education>Graduated from Kenyon College (1842) and Harvard Law School (1845)</education>
+    <married>Lucy Ware Webb (1831-1889), on December 30, 1852</married>
+    <mother>Sophia Birchard Hayes</mother>
+    <father>Rutherford Hayes</father>
+    <salary>NA</salary>
+    <religion>No formal affiliation</religion>
+  </president>
+  <president>
+    <name>James Abram Garfield</name>
+    <number>20</number>
+    <start>March 4, 1881</start>
+    <end>September 19, 1881</end>
+    <party>Republican</party>
+    <nickname>None</nickname>
+    <born>19-Nov-1831</born>
+    <occupation>Teacher, public official</occupation>
+    <state>Ohio</state>
+    <hometown>Orange</hometown>
+    <education>Attended Western Reserve Eclectic Institute (now Hiram College); Graduated from</education>
+    <married>Lucretia Rudolph (1832-1918), on November 11, 1858</married>
+    <mother>Eliza Ballou Garfield</mother>
+    <father>Abram Garfield</father>
+    <salary>NA</salary>
+    <religion>Disciples of Christ</religion>
+  </president>
+  <president>
+    <name>Chester Alan Arthur</name>
+    <number>21</number>
+    <start>September 19, 1881</start>
+    <end>March 3, 1885</end>
+    <party>Republican</party>
+    <nickname>The Gentleman Boss; Elegant Arthur</nickname>
+    <born>05-Oct-1829</born>
+    <occupation>Lawyer</occupation>
+    <state>Vermont</state>
+    <hometown>Fairfield</hometown>
+    <education>Graduated from Union College (1848)</education>
+    <married>Ellen Lewis Herndon (1837-1880), on October 25, 1859</married>
+    <mother>Malvina Stone Arthur</mother>
+    <father>William Arthur</father>
+    <salary>NA</salary>
+    <religion>Episcopalian</religion>
+  </president>
+  <president>
+    <name>Grover Cleveland</name>
+    <number>22</number>
+    <start>March 4, 1885</start>
+    <end>March 3, 1889 and March 4, 1893</end>
+    <party>Democrat</party>
+    <nickname>Uncle Jumbo; Veto Mayor; Veto President</nickname>
+    <born>18-Mar-1837</born>
+    <occupation>Lawyer</occupation>
+    <state>New Jersey</state>
+    <hometown>Caldwell</hometown>
+    <education>No formal education</education>
+    <married>Frances Folsom (1864-1947), on June 2, 1886</married>
+    <mother>Anne Neal Cleveland</mother>
+    <father>Richard Falley Cleveland</father>
+    <salary>NA</salary>
+    <religion>Presbyterian</religion>
+  </president>
+  <president>
+    <name>Benjamin Harrison</name>
+    <number>23</number>
+    <start>March 4, 1889</start>
+    <end>March 3, 1893</end>
+    <party>Republican</party>
+    <nickname>Kid Gloves Harrison; Little Ben</nickname>
+    <born>20-Aug-1833</born>
+    <occupation>Lawyer</occupation>
+    <state>Ohio</state>
+    <hometown>North Bend</hometown>
+    <education>Graduated from Miami University, Oxford, Ohio (1852)</education>
+    <married>Caroline Lavinia Scott (1832-1892), on October 20, 1853; Mary Scott Lord Dimmick</married>
+    <mother>Elizabeth Ramsey Irwin Harrison</mother>
+    <father>John Scott Harrison</father>
+    <salary>NA</salary>
+    <religion>Presbyterian</religion>
+  </president>
+  <president>
+    <name>William McKinley</name>
+    <number>25</number>
+    <start>March 4, 1897</start>
+    <end>September 14, 1901</end>
+    <party>Republican</party>
+    <nickname>Idol of Ohio</nickname>
+    <born>29-Jan-1843</born>
+    <occupation>Lawyer</occupation>
+    <state>Ohio</state>
+    <hometown>Niles</hometown>
+    <education>Attended Allegheny College</education>
+    <married>Ida Saxton (1847-1907), on January 25, 1871</married>
+    <mother>Nancy Campbell Allison McKinley</mother>
+    <father>William McKinley</father>
+    <salary>NA</salary>
+    <religion>Methodist</religion>
+  </president>
+  <president>
+    <name>Theodore Roosevelt</name>
+    <number>26</number>
+    <start>September 14, 1901</start>
+    <end>March 3, 1909</end>
+    <party>Republican</party>
+    <nickname>TR; Trust-Buster; Teddy</nickname>
+    <born>27-Oct-1858</born>
+    <occupation>Author, lawyer, public official</occupation>
+    <state>New York</state>
+    <hometown>New York</hometown>
+    <education>Graduated from Harvard College (1880)</education>
+    <married>Alice Hathaway Lee (1861-1884), on October 27, 1880; Edith Kermit Carow (1861-19</married>
+    <mother>Martha Bulloch Roosevelt</mother>
+    <father>Theodore Roosevelt</father>
+    <salary>NA</salary>
+    <religion>Dutch Reformed</religion>
+  </president>
+  <president>
+    <name>William Howard Taft</name>
+    <number>27</number>
+    <start>March 4, 1909</start>
+    <end>March 3, 1913</end>
+    <party>Republican</party>
+    <nickname>None</nickname>
+    <born>15-Sep-1857</born>
+    <occupation>Lawyer, public official</occupation>
+    <state>Ohio</state>
+    <hometown>Cincinnati</hometown>
+    <education>Graduated from Yale College (1878); Cincinnati Law School (1880)</education>
+    <married>Helen Herron (1861-1943), on June 19, 1886</married>
+    <mother>Louisa Maria Torrey Taft</mother>
+    <father>Alphonso Taft</father>
+    <salary>NA</salary>
+    <religion>Unitarian</religion>
+  </president>
+  <president>
+    <name>Woodrow Wilson</name>
+    <number>28</number>
+    <start>March 4, 1913</start>
+    <end>March 3, 1921</end>
+    <party>Democrat</party>
+    <nickname>SchoolmasterPolitics</nickname>
+    <born>28-Dec-1856</born>
+    <occupation>Teacher, public official</occupation>
+    <state>Virginia</state>
+    <hometown>Staunton</hometown>
+    <education>Graduated from the College of New Jersey (now Princeton University) (1879)</education>
+    <married>Ellen Louise Axson (1860-1914), on June 24, 1885; Edith Bolling Galt (1872-1961)</married>
+    <mother>Jessie Janet Woodrow Wilson</mother>
+    <father>Joseph Ruggles Wilson</father>
+    <salary>NA</salary>
+    <religion>Presbyterian</religion>
+  </president>
+  <president>
+    <name>Warren Gamaliel Harding</name>
+    <number>29</number>
+    <start>March 4, 1921</start>
+    <end>August 2, 1923</end>
+    <party>Republican</party>
+    <nickname>None</nickname>
+    <born>02-Nov-1865</born>
+    <occupation>Editor-Publisher</occupation>
+    <state>Ohio</state>
+    <hometown>near Corsica (now Blooming Grove)</hometown>
+    <education>Graduated from Ohio Central College (1882)</education>
+    <married>Florence Kling De Wolfe (1860-1924), on July 8, 1891</married>
+    <mother>Phoebe Elizabeth Dickerson Harding</mother>
+    <father>George Tyron Harding</father>
+    <salary>NA</salary>
+    <religion>Baptist</religion>
+  </president>
+  <president>
+    <name>Calvin Coolidge</name>
+    <number>30</number>
+    <start>August 3, 1923</start>
+    <end>March 3, 1929</end>
+    <party>Republican</party>
+    <nickname>Silent Cal</nickname>
+    <born>04-Jul-1872</born>
+    <occupation>Lawyer</occupation>
+    <state>Vermont</state>
+    <hometown>Plymouth</hometown>
+    <education>Graduated from Amherst College (1895)</education>
+    <married>Grace Anna Goodhue (1879-1957), on October 4, 1905</married>
+    <mother>Victoria Josephine Moor Coolidge</mother>
+    <father>John Calvin Coolidge</father>
+    <salary>NA</salary>
+    <religion>Congregationalist</religion>
+  </president>
+  <president>
+    <name>Herbert Clark Hoover</name>
+    <number>31</number>
+    <start>March 4, 1929</start>
+    <end>March 3, 1933</end>
+    <party>Republican</party>
+    <nickname>None</nickname>
+    <born>10-Aug-1874</born>
+    <occupation>Engineer</occupation>
+    <state>Iowa</state>
+    <hometown>West Branch</hometown>
+    <education>Graduated from Stanford University (1895).</education>
+    <married>Lou Henry (1875-1944), on February 10, 1899</married>
+    <mother>Hulda Randall Minthorn Hoover</mother>
+    <father>Jesse Clark Hoover</father>
+    <salary>NA</salary>
+    <religion>Society of Friends (Quaker)</religion>
+  </president>
+  <president>
+    <name>Franklin Delano Roosevelt</name>
+    <number>32</number>
+    <start>March 4, 1933</start>
+    <end>April 12, 1945</end>
+    <party>Democrat</party>
+    <nickname>FDR</nickname>
+    <born>30-Jan-1882</born>
+    <occupation>Public official, lawyer</occupation>
+    <state>New York</state>
+    <hometown>Hyde Park</hometown>
+    <education>Graduated from Harvard College (1903); Attended Columbia Law School</education>
+    <married>Anna Eleanor Roosevelt (1884-1962), on March 17, 1905</married>
+    <mother>Sara Delano Roosevelt</mother>
+    <father>James Roosevelt</father>
+    <salary>NA</salary>
+    <religion>Episcopalian</religion>
+  </president>
+  <president>
+    <name>Harry S. Truman</name>
+    <number>33</number>
+    <start>April 12, 1945</start>
+    <end>January 20, 1953</end>
+    <party>Democrat</party>
+    <nickname>Give 'Em Hell Harry</nickname>
+    <born>08-May-1884</born>
+    <occupation>Farmer, public official</occupation>
+    <state>Missouri</state>
+    <hometown>Lamar</hometown>
+    <education>Attended the University of Kansas City Law School</education>
+    <married>Elizabeth Bess Virginia Wallace (1885-1982), on June 28, 1919</married>
+    <mother>Martha Ellen Young Truman</mother>
+    <father>John Anderson Truman</father>
+    <salary>NA</salary>
+    <religion>Baptist</religion>
+  </president>
+  <president>
+    <name>Dwight David Eisenhower</name>
+    <number>34</number>
+    <start>January 20, 1953</start>
+    <end>January 20, 1961</end>
+    <party>Republican</party>
+    <nickname>Ike</nickname>
+    <born>14-Oct-1890</born>
+    <occupation>Soldier</occupation>
+    <state>Texas</state>
+    <hometown>Denison</hometown>
+    <education>Graduated from U.S. Military Academy, West Point, N.Y. (1915)</education>
+    <married>Mary Mamie Geneva Doud (1896-1979), on July 1, 1916</married>
+    <mother>Ida Elizabeth Stover Eisenhower</mother>
+    <father>David Jacob Eisenhower</father>
+    <salary>NA</salary>
+    <religion>Presbyterian</religion>
+  </president>
+  <president>
+    <name>John Fitzgerald Kennedy</name>
+    <number>35</number>
+    <start>January 20, 1961</start>
+    <end>November 22, 1963</end>
+    <party>Democrat</party>
+    <nickname>JFK, Jack</nickname>
+    <born>29-May-1917</born>
+    <occupation>Author, public official</occupation>
+    <state>Massachusetts</state>
+    <hometown>Brookline</hometown>
+    <education>Graduated from Harvard College (1940)</education>
+    <married>Jacqueline Lee Bouvier (1929-1994), on September 12, 1953</married>
+    <mother>Rose Elizabeth Fitzgerald Kennedy</mother>
+    <father>Joseph Patrick Kennedy</father>
+    <salary>NA</salary>
+    <religion>Roman Catholic</religion>
+  </president>
+  <president>
+    <name>Lyndon Baines Johnson</name>
+    <number>36</number>
+    <start>November 22, 1963</start>
+    <end>January 20, 1969</end>
+    <party>Democrat</party>
+    <nickname>LBJ</nickname>
+    <born>27-Aug-1908</born>
+    <occupation>Teacher, public official</occupation>
+    <state>Texas</state>
+    <hometown>near Johnson City</hometown>
+    <education>Graduated from Southwest Texas State Teachers College (1930) (now known as Texas</education>
+    <married>Claudia Lady Bird Alta Taylor (1912-2007), on November 17, 1934</married>
+    <mother>Rebekah Baines Johnson</mother>
+    <father>Sam Ealy Johnson, Jr.</father>
+    <salary>NA</salary>
+    <religion>Disciples of Christ</religion>
+  </president>
+  <president>
+    <name>Richard Milhous Nixon</name>
+    <number>37</number>
+    <start>January 20, 1969</start>
+    <end>August 9, 1974</end>
+    <party>Republican</party>
+    <nickname>Tricky Dick</nickname>
+    <born>09-Jan-1913</born>
+    <occupation>Lawyer, public official</occupation>
+    <state>California</state>
+    <hometown>Yorba Linda</hometown>
+    <education>Graduated from Whittier College (1934) and Duke University Law School (1937)</education>
+    <married>Thelma Patricia Catherine Ryan (1912-1993), on June 21, 1940</married>
+    <mother>Hannah Milhous Nixon</mother>
+    <father>Francis Anthony Nixon</father>
+    <salary>NA</salary>
+    <religion>Society of Friends (Quaker)</religion>
+  </president>
+  <president>
+    <name>Gerald Rudolph Ford</name>
+    <number>38</number>
+    <start>August 9, 1974</start>
+    <end>January 20, 1977</end>
+    <party>Republican</party>
+    <nickname>Jerry</nickname>
+    <born>14-Jul-1913</born>
+    <occupation>Lawyer, public official</occupation>
+    <state>Nebraska</state>
+    <hometown>Omaha</hometown>
+    <education>Graduated from the University of Michigan (1935) and Yale University Law School</education>
+    <married>Elizabeth Betty Bloomer Warren (1918- ), on October 15, 1948</married>
+    <mother>Dorothy Ayer Gardner King Ford</mother>
+    <father>Leslie Lynch King</father>
+    <salary>NA</salary>
+    <religion>Episcopalian</religion>
+  </president>
+  <president>
+    <name>James Earl Carter, Jr.</name>
+    <number>39</number>
+    <start>January 20, 1977</start>
+    <end>January 20, 1981</end>
+    <party>Democrat</party>
+    <nickname>Jimmy</nickname>
+    <born>01-Oct-1924</born>
+    <occupation>Farmer, public official</occupation>
+    <state>Georgia</state>
+    <hometown>Plains</hometown>
+    <education>Graduated from U.S. Naval Academy, Annapolis, Md. (1946)</education>
+    <married>Eleanor Rosalynn Smith (1928- ), on July 7, 1946</married>
+    <mother>Lillian Gordy Carter</mother>
+    <father>James Earl Carter</father>
+    <salary>NA</salary>
+    <religion>Baptist</religion>
+  </president>
+  <president>
+    <name>Ronald Wilson Reagan</name>
+    <number>40</number>
+    <start>January 20, 1981</start>
+    <end>January 20, 1989</end>
+    <party>Republican</party>
+    <nickname>The Gipper; The Great Communicator; Dutch</nickname>
+    <born>06-Feb-1911</born>
+    <occupation>Actor, public official</occupation>
+    <state>Illinois</state>
+    <hometown>Tampico</hometown>
+    <education>Graduated from Eureka College (1932)</education>
+    <married>Jane Wyman (1914- ), on June 25, 1940 (divorced1948); Nancy Davis (1923- ), on M</married>
+    <mother>Nelle Wilson Reagan</mother>
+    <father>John Edward Reagan</father>
+    <salary>NA</salary>
+    <religion>Disciples of Christ</religion>
+  </president>
+  <president>
+    <name>George Herbert Walker Bush</name>
+    <number>41</number>
+    <start>January 20, 1989</start>
+    <end>January 20, 1993</end>
+    <party>Republican</party>
+    <nickname>Poppy</nickname>
+    <born>12-Jun-1924</born>
+    <occupation>Businessman, public official</occupation>
+    <state>Massachusetts</state>
+    <hometown>Milton</hometown>
+    <education>Graduated from Yale University (1948)</education>
+    <married>Barbara Pierce (1925- ), on January 6, 1945</married>
+    <mother>Dorothy Walker Bush</mother>
+    <father>Prescott Sheldon Bush</father>
+    <salary>NA</salary>
+    <religion>Episcopalian</religion>
+  </president>
+  <president>
+    <name>William Jefferson Clinton</name>
+    <number>42</number>
+    <start>January 20, 1993</start>
+    <end>January 20, 2001</end>
+    <party>Democrat</party>
+    <nickname>Bill</nickname>
+    <born>19-Aug-1946</born>
+    <occupation>Lawyer, public official</occupation>
+    <state>Arkansas</state>
+    <hometown>Hope</hometown>
+    <education>Graduated from Georgetown University (1968); Attended Oxford University (1968-70</education>
+    <married>Hillary Rodham (1947- ), on October 11, 1975</married>
+    <mother>Virginia Divine Cassidy Blythe Clinton Kelley</mother>
+    <father>William Jefferson Blythe III</father>
+    <salary>NA</salary>
+    <religion>Baptist</religion>
+  </president>
+  <president>
+    <name>George Walker Bush</name>
+    <number>43</number>
+    <start>January 20, 2001</start>
+    <end>NA</end>
+    <party>Republican</party>
+    <nickname>W, Little George</nickname>
+    <born>06-Jul-1946</born>
+    <occupation>Businessman</occupation>
+    <state>Connecticut</state>
+    <hometown>New Haven</hometown>
+    <education>Graduated from Yale University (1968); Graduated from Harvard Business School (1</education>
+    <married>Laura Welch (1946- ), on November 5, 1977</married>
+    <mother>Barbara Pierce Bush</mother>
+    <father>tiny U.S. flag George Herbert Walker Bush</father>
+    <salary>NA</salary>
+    <religion>Methodist</religion>
+  </president>
+</document>

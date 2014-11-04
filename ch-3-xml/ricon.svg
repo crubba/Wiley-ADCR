@@ -1,0 +1,9 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <ellipse cx="100" cy="70" rx="100" ry="70" style="fill:grey"/>
+  <ellipse cx="110" cy="75" rx="80" ry="50" style="fill:white"/> 
+  <text x="65" y="160" fill="blue" style="font-size:160;  font-stretch:ultra-expanded;font-family:sans;font-weight:bold">R</text>
+</svg>

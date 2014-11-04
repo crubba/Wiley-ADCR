@@ -1,0 +1,68 @@
+"Vote Type (FOR=1,AGAINST=2)","Candidate Name","Party","Office Name","Office District","Winner","Write-In?", CONC 005,CONC 004,CONC 002,CONC 001,CONC 003
+1,"Barack Obama",DEM,President - Vice Pres,,Y,,5210,4716,3932,3846,4385
+1,"Mitt Romney",REP,President - Vice Pres,,,,9708,10531,9920,10170,7455
+1,"Gary Johnson",LIB,President - Vice Pres,,,,294,304,278,264,253
+1,"Jill Stein",GRN,President - Vice Pres,,,,113,104,123,130,107
+1,"Tiffany Renee Briscoe",DEM,President - Vice Pres,,,Y,0,0,0,1,0
+1,"Dennis Knill",DEM,President - Vice Pres,,,Y,0,0,0,2,0
+1,"Matthew Lydick",REP,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Barbara A. Prokopich",REP,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Santa Claus",IND,President - Vice Pres,,,Y,7,5,7,7,3
+1,"Richard Duncan",IND,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Bruce Mlynski",IND,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Kevin M. Thorne",IND,President - Vice Pres,,,Y,0,0,0,0,0
+1,"James Clymer",CON,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Virgil Goode",CON,President - Vice Pres,,,Y,4,8,0,0,3
+1,"Ross C. Rocky Anderson",OTH,President - Vice Pres,,,Y,1,0,0,0,0
+1,"Andre Barnett",OTH,President - Vice Pres,,,Y,0,0,0,1,0
+1,"Roseanne Barr",OTH,President - Vice Pres,,,Y,1,0,0,0,0
+1,"Will Christensen",OTH,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Stephen Durham",OTH,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Merlin Miller",OTH,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Leon Leo Ray",OTH,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Michael David Boyles",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Theodis (Ted) Brown, Sr.",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Paul Chehade",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"David M. Crosby",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Fred Donald Dickson, Jr.",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Robert William Dietz",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Dwight Kenneth French",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Darrell Hykes",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Nelson Keyton",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Dean Morstad",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Deonia Neveu",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Terrance James O'Hara",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Jill Reed",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Cecil James Roth",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Sheila Tittle",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Other Write-Ins",BOT,President - Vice Pres,,,Y,94,77,70,89,90
+1,"Ben Cardin",DEM,U.S. Senator           ,,Y,,4096,3670,3162,3111,3528
+1,"Daniel John Bongino",REP,U.S. Senator           ,,,,7108,8074,6894,7184,5363
+1,"Dean Ahmad",LIB,U.S. Senator           ,,,,215,214,170,175,170
+1,"S. Rob Sobhani",UNF,U.S. Senator           ,,,,3619,3447,3769,3731,2885
+1,"Lih Young",DEM,U.S. Senator           ,,,Y,0,0,0,1,0
+1,"Mary Podlesak",REP,U.S. Senator           ,,,Y,0,0,0,0,0
+1,"Brandy Baker",UNF,U.S. Senator           ,,,Y,0,1,1,0,0
+1,"Ed Tinus",UNF,U.S. Senator           ,,,Y,0,0,0,0,0
+1,"Other Write-Ins",BOT,U.S. Senator           ,,,Y,16,10,5,10,11
+1,"Wendy Rosen",DEM,U.S. Congress,01,,,,,2948,2711,
+1,"Andy Harris",REP,U.S. Congress,01,Y,,,,9933,9527,
+1,"Muir Wayne Boda",LIB,U.S. Congress,01,,,,,438,449,
+1,"John LaFerla",DEM,U.S. Congress,01,,Y,,,6,5,
+1,"Michael Calpino",UNF,U.S. Congress,01,,Y,,,0,0,
+1,"Douglas Dryden Rae",UNF,U.S. Congress,01,,Y,,,0,0,
+1,"Other Write-Ins",BOT,U.S. Congress,01,,Y,,,195,216,
+1,"Chris Van Hollen",DEM,U.S. Congress,08,Y,,4586,4240,,238,3910
+1,"Ken Timmerman",REP,U.S. Congress,08,,,9062,9849,,611,6756
+1,"Mark Grannis",LIB,U.S. Congress,08,,,516,503,,30,472
+1,"George Gluck",GRN,U.S. Congress,08,,,267,253,,12,239
+1,"Other Write-Ins",BOT,U.S. Congress,08,,Y,38,19,,2,21
+1,"Lynne A. Battaglia",BOT,Appellate Judge,03,Y,,10158,10100,9142,9511,8270
+2,"Lynne A. Battaglia",BOT,Appellate Judge,03,Y,,2173,2431,2242,2343,1720
+1,"Stuart R. Berger",BOT,Judge Spec Appeal at Lg,,Y,,9897,9768,8905,9220,8016
+2,"Stuart R. Berger",BOT,Judge Spec Appeal at Lg,,Y,,2296,2610,2351,2487,1846
+1,"Ginger DiMaggio",NON,Board of Education     ,,,,4787,4731,4807,4902,4135
+1,"Jim Doolan",NON,Board of Education     ,,Y,,5626,5950,5521,5497,5141
+1,"Cynthia L. Foley",NON,Board of Education     ,,,,4422,4140,4055,4580,3288
+1,"Jennifer A. Seidel",NON,Board of Education     ,,Y,,6507,7080,5403,5861,5477
+1,"Other Write-Ins",NON,Board of Education     ,,,Y,138,79,98,100,95

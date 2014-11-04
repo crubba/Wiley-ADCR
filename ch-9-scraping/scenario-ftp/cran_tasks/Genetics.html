@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CRAN Task View: Statistical Genetics</title>
+  <link rel=stylesheet type="text/css" href="../CRAN_web.css" />
+</head>
+
+<body>
+  <h2>CRAN Task View: Statistical Genetics</h2>
+  <table summary="Genetics task view information">
+    <tr><td valign="top"><b>Maintainer:</b></td><td>Giovanni Montana</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x67;&#x2e;&#x6d;&#x6f;&#x6e;&#x74;&#x61;&#x6e;&#x61;&#x20;&#x61;&#x74;&#x20;&#x69;&#x6d;&#x70;&#x65;&#x72;&#x69;&#x61;&#x6c;&#x2e;&#x61;&#x63;&#x2e;&#x75;&#x6b;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2013-12-10</td></tr>
+  </table>
+
+    <div>
+      <p>
+        Great advances have been made in the field of genetic analysis over the last years. The availability of millions
+        of single nucleotide polymorphisms (SNPs) in widely available databases, coupled with major advances in SNP genotyping
+        technology that reduce costs and increase throughput, are enabling a host of studies aimed at elucidating the genetic basis
+        of complex disease. The focus in this task view is on R packages implementing statistical methods and algorithms for the
+        analysis of genetic data and for related population genetics studies.
+      </p>
+      <p>
+        A number of R packages are already available and many more are most likely to be developed in the near future.
+        Please send your comments and suggestions to the task view maintainer.
+      </p>
+      <ul>
+        <li>
+          <i>
+            Population Genetics
+          </i>:
+<a href="../packages/genetics/index.html">genetics</a>
+          implements classes and methods for representing genotype and haplotype data, and has several
+          functions for population genetic analysis (e.g. functions for estimation and testing of 
+          Hardy-Weinberg and linkage disequilibria, etc.).
+<a href="../packages/Geneland/index.html">Geneland</a>
+          has functions for detecting spatial structures from genetic data
+          within a Bayesian framework via MCMC estimation.
+<a href="../packages/rmetasim/index.html">rmetasim</a>
+          provides an interface to the metasim engine
+      for population genetics simulations.
+<a href="../packages/hapsim/index.html">hapsim</a>
+          simulates haplotype data with pre-specified allele frequencies and LD patterns. A few 
+          population genetics functions are also implemeted in
+<a href="../packages/gap/index.html">gap</a>.
+<a href="../packages/LDheatmap/index.html">LDheatmap</a>
+          creates a heat map plot of measures of pairwise LD.
+<a href="../packages/hwde/index.html">hwde</a>
+          fits models for genotypic disequilibria.  Whilst
+<a href="../packages/HardyWeinberg/index.html">HardyWeinberg</a>
+          provides graphical representation of disequilibria via ternary plots (also known as de Finetti diagrams).
+<a href="../packages/Biodem/index.html">Biodem</a>
+          package provides functions for Biodemographical analysis, e.g.
+<tt>Fst()</tt>
+          calculates the Fst from the conditional kinship matrix. The
+<a href="../packages/adegenet/index.html">adegenet</a>
+          package implements a number of different methods for analysing population structure using multivariate
+          statistics, graphics and spatial statistics.
+The
+<a href="../packages/hierfstat/index.html">hierfstat</a>
+          package allows the estimation of hierarchical F-statistics from haploid or diploid genetic data with any numbers of levels in the hierarchy.
+        </li>
+        <li>
+          <i>
+            Phylogenetics
+          </i>:
+	  The
+<a href="Phylogenetics.html">Phylogenetics</a>
+          view has more detailed information,
+	  the most important packages are also mentioned here.	  
+          Phylogenetic and evolution analyses can be performed via
+<a href="../packages/ape/index.html">ape</a>. Package
+<a href="../packages/ouch/index.html">ouch</a>
+          provides Ornstein-Uhlenbeck models for phylogenetic comparative hypotheses.
+<a href="../packages/stepwise/index.html">stepwise</a>
+          implements a method for stepwise detection of recombination breakpoints in
+          sequence alignments.
+<a href="../packages/phangorn/index.html">phangorn</a>
+          estimates phylogenetic trees and networks using maximum likelihood, maximum parsimony, distance
+          methods and Hadamard conjugation.
+        </li>
+        <li>
+          <i>
+            Linkage
+          </i>:
+          There are few native packages for performing parametric or non-parametric linkage analysis 
+          from within R itself, the calculations must be performed using external packages.  However,
+          there are a number of ancillary R packages that facilitate interface with these stand-alone
+          programs and using the results for further analysis and presentation.
+<a href="../packages/ibdreg/index.html">ibdreg</a>
+          uses Identity By Descent (IBD) Non-Parametric Linkage (NPL) statistics for related pairs calculated
+          externally to test for genetic linkage with covariates by regression modelling.
+<a href="../packages/multic/index.html">multic</a>
+          also utilises IBD sharing statistics calculated externally for detecting quantitative trait loci
+          under polygenic and major gene models via variance components. Whilst not 
+          official R packages one software suite in particular is worthy of mention.
+          <a href="http://pngu.mgh.harvard.edu/~purcell/plink/">
+            PLINK
+          </a>
+          is a C++ program for genome wide linkage analysis that supports R-based plug-ins via Rserve allowing
+          users to utilise the rich suite of statistical functions in R for analysis.
+        </li>
+        <li>
+          <i>
+            QTL mapping
+          </i>:
+          Packages in this category develop methods for the analysis of experimental crosses
+          to identify markers contributing to variation in quantitative traits.
+<a href="../packages/bqtl/index.html">bqtl</a>
+          implement both likelihood-based and Bayesian methods for inbred crosses and recombinant inbred
+          lines.
+<a href="../packages/qtl/index.html">qtl</a>
+          provides several functions and a data structure for QTL mapping, including a function
+<tt>scanone()</tt>
+          for genome-wide scans.
+<a href="../packages/qtlbim/index.html">qtlbim</a>
+          implements Bayesian Interval Mapping for QTL.
+<a href="../packages/wgaim/index.html">wgaim</a>
+          builds on the
+<a href="../packages/qtl/index.html">qtl</a>
+          by including functions for the modelling and summary of QTL intervals from the
+          full linkage map whilst
+<a href="../packages/dlmap/index.html">dlmap</a>
+          can be used to perform QTL mapping in a mixed model framework with separate detection and localization stages.
+        </li>
+        <li>
+          <i>
+            Association
+          </i>: 
+          Packages in this category provide statistical methods to test associations between individual genetic markers 
+          and a phenotype.
+<a href="../packages/gap/index.html">gap</a>
+          is a package for genetic data analysis of both population and family data; it contains functions for sample 
+          size calculations, probability of familial disease aggregation, kinship calculation, and some tests for linkage
+          and association analyses. Among the other functions,
+<tt>genecounting()</tt>
+          estimates haplotype frequencies from genotype data, and
+<tt>gcontrol()</tt>
+          implements a Bayesian genomic control statistics for association studies. For family data,
+<a href="../packages/tdthap/index.html">tdthap</a>
+          offers an implementation of the Transmission/Disequilibrium Test (TDT) for extended marker haplotypes.
+        </li>
+        <li>
+          <i>
+            Linkage Disequilibrium and haplotype mapping
+          </i>:
+          A number of packages provide haplotype estimation for unrelated individuals with amnbiguous haplotypes 
+          (due to unkown linkage phase) and allow testing for associations between the estimated haplotypes and
+          phenotypes (including co-variates) under a GLM framework.
+<a href="../packages/hapassoc/index.html">hapassoc</a>
+          performs likelihood inference of trait associations with haplotypes in GLMs.
+<a href="../packages/haplo.stats/index.html">haplo.stats</a>
+          also contains tests for haplotype associations under a GLM framework, but also provides score tests of
+          association as well as providing novel functionality for building haplotypes in a sequential manner, 
+          power and sample-size calculations and the preparation of data matrices for use in other methods.
+<a href="../packages/haplo.ccs/index.html">haplo.ccs</a>
+          utilises the haplotype estimation of
+<a href="../packages/haplo.stats/index.html">haplo.stats</a>
+          and performs case-control association tests
+          via weighted logistic regression.
+<a href="../packages/tdthap/index.html">tdthap</a>
+          implements transmission/disequilibrium tests for extended marker haplotypes.
+<a href="../packages/ldDesign/index.html">ldDesign</a>
+          is a package for design of experiments for association studies for detection of linkage disequilibrium.
+<a href="../packages/LDheatmap/index.html">LDheatmap</a>
+          creates a heat map plot of measures of pairwise LD.
+        </li>
+        <li>
+          <i>
+            Genome-Wide Association Studies (GWAS)
+          </i>:
+          With recent technical advances in high-throughput genotyping technologies the possibility of performing 
+          Genome-Wide Association Studies is now a feasible strategy.  A number of packages are available to facilitate
+          the analysis of these large data sets.
+<a href="../packages/GenABEL/index.html">GenABEL</a>
+          is designed for the efficent storage and handling of GWAS data with fast analysis tools for quality control,
+          association with binary and quantitative traits, as well as tools for visualizing results.
+<a href="../packages/pbatR/index.html">pbatR</a>
+          provides a GUI to the powerful PBAT software which performs family and population based family and 
+          population based studies.  The software has been implemented to take advantage of parallel processing, which
+          vastly reduces the computational time required for GWAS.
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/snpMatrix.html"><span class="BioC">snpMatrix</span></a>
+          Implements classes and methods for large-scale SNP association studies.
+        </li>
+        <li>
+          <i>
+            Multiple testing
+          </i>:
+          The package
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/qvalue.html"><span class="BioC">qvalue</span></a>
+          on Bioconductor
+          implements False Discovery Rate; the main function
+<tt>qvalue()</tt>
+          estimates the q-values from a list of p-values.
+          Package
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/multtest.html"><span class="BioC">multtest</span></a>
+          on Bioconductor
+          also offers several non-parametric bootstrap and permutation resampling-based multiple testing procedures.
+        </li>
+        <li>
+          <i>
+            Importing Sequence Data
+          </i>:
+          There are utilities in the
+<a href="../packages/seqinr/index.html">seqinr</a>
+          package to import sequence data from various sources, including files of aligned sequences in mase, clustal,
+          phylip, fasta and msf format which will be of utility to some population genetic analysis.  Users interested in
+          using R for sequence data and bioinformatics are also referred to the
+          <a href="http://www.bioconductor.org/">
+            BioConductor
+          </a>
+          project.
+        </li>
+      </ul>
+    </div>
+
+  <h3>CRAN packages:</h3>
+  <ul>
+    <li><a href="../packages/adegenet/index.html">adegenet</a></li>
+    <li><a href="../packages/ape/index.html">ape</a></li>
+    <li><a href="../packages/Biodem/index.html">Biodem</a></li>
+    <li><a href="../packages/bqtl/index.html">bqtl</a></li>
+    <li><a href="../packages/dlmap/index.html">dlmap</a></li>
+    <li><a href="../packages/gap/index.html">gap</a> (core)</li>
+    <li><a href="../packages/GenABEL/index.html">GenABEL</a></li>
+    <li><a href="../packages/Geneland/index.html">Geneland</a></li>
+    <li><a href="../packages/genetics/index.html">genetics</a> (core)</li>
+    <li><a href="../packages/hapassoc/index.html">hapassoc</a></li>
+    <li><a href="../packages/haplo.ccs/index.html">haplo.ccs</a></li>
+    <li><a href="../packages/haplo.stats/index.html">haplo.stats</a> (core)</li>
+    <li><a href="../packages/hapsim/index.html">hapsim</a></li>
+    <li><a href="../packages/HardyWeinberg/index.html">HardyWeinberg</a></li>
+    <li><a href="../packages/hierfstat/index.html">hierfstat</a></li>
+    <li><a href="../packages/hwde/index.html">hwde</a></li>
+    <li><a href="../packages/ibdreg/index.html">ibdreg</a></li>
+    <li><a href="../packages/ldDesign/index.html">ldDesign</a></li>
+    <li><a href="../packages/LDheatmap/index.html">LDheatmap</a></li>
+    <li><a href="../packages/luca/index.html">luca</a></li>
+    <li><a href="../packages/multic/index.html">multic</a></li>
+    <li><a href="../packages/ouch/index.html">ouch</a></li>
+    <li><a href="../packages/pbatR/index.html">pbatR</a></li>
+    <li><a href="../packages/phangorn/index.html">phangorn</a></li>
+    <li><a href="../packages/qtl/index.html">qtl</a></li>
+    <li><a href="../packages/qtlbim/index.html">qtlbim</a></li>
+    <li><a href="../packages/rmetasim/index.html">rmetasim</a></li>
+    <li><a href="../packages/seqinr/index.html">seqinr</a></li>
+    <li><a href="../packages/snp.plotter/index.html">snp.plotter</a></li>
+    <li><a href="../packages/SNPmaxsel/index.html">SNPmaxsel</a></li>
+    <li><a href="../packages/stepwise/index.html">stepwise</a></li>
+    <li><a href="../packages/tdthap/index.html">tdthap</a></li>
+    <li><a href="../packages/untb/index.html">untb</a></li>
+    <li><a href="../packages/wgaim/index.html">wgaim</a></li>
+  </ul>
+
+  <h3>Related links:</h3>
+  <ul>
+    <li>CRAN Task View: <a href="Phylogenetics.html">Phylogenetics</a></li>
+    <li><a href="http://rgenetics.org/">
+  The Rgenetics Project
+</a></li>
+    <li><a href="http://www.bioconductor.org/">
+  Bioconductor
+</a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/multtest.html" target="_top"><span class="BioC">multtest</span></a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/qvalue.html" target="_top"><span class="BioC">qvalue</span></a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/snpMatrix.html" target="_top"><span class="BioC">snpMatrix</span></a></li>
+    <li><a href="http://mayoresearch.mayo.edu/mayo/research/biostat/splusfunctions.cfm">
+  R packages from Divison of Biostatistics, Mayo Clinic
+</a></li>
+    <li><a href="http://watson.hgen.pitt.edu/register/">
+  QTL-ALL :  provides interfaces between Merlin and/or Simwalk2 and plotting of results in R.
+</a></li>
+    <li><a href="http://www.ucl.ac.uk/~rmjdjhz/software.htm">
+  Computer programs by Jing Hua Zhao (some are included in the gap package)
+</a></li>
+    <li><a href="http://www-gene.cimr.cam.ac.uk/clayton/software/">
+  R Software by David Clayton
+</a></li>
+    <li><a href="http://www.qimr.edu.au/davidD/#R">
+  R Software by David Duffy
+</a></li>
+    <li><a href="http://astor.som.jhmi.edu/BayesMendel/">
+  BayesMendel
+</a></li>
+    <li><a href="http://linkage.rockefeller.edu/yyang/resources.html">
+  R code for estimating haplotype frequencies from pooled DNA samples
+</a></li>
+    <li><a href="http://linkage.rockefeller.edu/soft/">
+  An alphabetic list of genetic analysis software
+</a></li>
+    <li><a href="http://wpicr.wpic.pitt.edu/WPICCompGen/hclust.htm">
+  Hclust.R, software for Choosing Tag SNPs
+</a></li>
+    <li><a href="http://wpicr.wpic.pitt.edu/WPICCompGen/bars.htm">
+  Bayesian Adaptive Regression Splines (BARS)
+</a></li>
+    <li><a href="http://www.mpipsykl.mpg.de/pages/english/research/mueller_downloads.htm">
+  Direct Simulation Approach (DAS), for simulation of p-values
+</a></li>
+    <li><a href="http://www.stat.auckland.ac.nz/~yee/VGAM/">
+  Vector Generalized Linear and Additive Models (VGLMs/VGAMs)
+</a></li>
+    <li><a href="http://people.fas.harvard.edu/~tjhoffm/pbatR.html">
+  P2BAT tools for family and pedigree based association.
+</a></li>
+    <li><a href="http://pbil.univ-lyon1.fr/software/mareymap/">
+  MareyMap GUI for comparing physical and genetic maps.
+</a></li>
+    <li><a href="http://csg.sph.umich.edu/boehnke/p_act.php">
+  p_ACT adjustments for multiple testing
+</a></li>
+    <li><a href="http://watson.hgen.pitt.edu/register">
+  SNPCaller family-based genotype calling methods.
+</a></li>
+  </ul>
+
+</body>
+</html>
+ 

@@ -1,0 +1,523 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CRAN Task View: Medical Image Analysis</title>
+  <link rel=stylesheet type="text/css" href="../CRAN_web.css" />
+</head>
+
+<body>
+  <h2>CRAN Task View: Medical Image Analysis</h2>
+  <table summary="MedicalImaging task view information">
+    <tr><td valign="top"><b>Maintainer:</b></td><td>Brandon Whitcher</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x62;&#x77;&#x68;&#x69;&#x74;&#x63;&#x68;&#x65;&#x72;&#x20;&#x61;&#x74;&#x20;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2013-08-12</td></tr>
+  </table>
+
+    <div>
+      <p>
+        <strong>
+          Data Input/Output
+        </strong>
+      </p>
+      <p>
+        <em>
+          DICOM
+        </em>
+      </p>
+      <p>
+        The industry standard format, for data coming off a clinical
+    imaging device, is
+        <a href="http://dicom.nema.org">
+          DICOM
+        </a>
+        (Digital Imaging and Communications in Medicine).  The DICOM
+    "standard" is very broad and very complicated.  Roughly speaking
+    each DICOM-compliant file is a collection of fields organized into
+    two four-byte sequences (group,element) that are represented as
+    hexadecimal numbers and form a
+        <em>
+          tag
+        </em>.  The (group,element)
+    combination announces what type of information is coming next.
+    There is no fixed number of bytes for a DICOM header.  The final
+    (group,element) tag should be the "data" tag (7FE0,0010), such
+    that all subsequent information is related to the image(s).
+      </p>
+      <ul>
+        <li>
+          The packages
+<a href="../packages/oro.dicom/index.html">oro.dicom</a>,
+<a href="../packages/fmri/index.html">fmri</a>
+          and
+<a href="../packages/tractor.base/index.html">tractor.base</a>
+          (part of the
+<a href="http://code.google.com/p/tractor/"><span class="Gcode">tractor</span></a>
+          project) provide R functions that read DICOM files and
+      facilitate their conversion to ANALYZE or NIfTI format.
+        </li>
+      </ul>
+      <p>
+        <em>
+          ANALYZE and NIfTI
+        </em>
+      </p>
+      <p>
+        Although the industry standard for medical imaging data is
+    DICOM, another format has come to be heavily used in the image
+    analysis community.  The
+        <a href="http://www.mayo.edu/bir/PDF/ANALYZE75.pdf">
+          ANALYZE
+        </a>
+        format was originally developed in conjunction with an image
+    processing system (of the same name) at the Mayo Foundation.  An
+    Anlayze (7.5) format image is comprised of two files, the "hdr"
+    and "img" files, that contain information about the acquisition
+    and the acquisition itself, respectively.  A more recent adaption
+    of this format is known as
+        <a href="http://nifti.nimh.nih.gov/nifti-1">
+          NIfTI-1
+        </a>
+        and is a
+    product of the Data Format Working Group (DFWG) from the
+    Neuroimaging Informatics Technology Initiative (NIfTI).  The
+    NIfTI-1 data format is almost identical to the ANALYZE format, but
+    offers a few improvements: merging of the header and image
+    information into one file (.nii), re-organization of the 348-byte
+    fixed header into more relevant categories and the possibility of
+    extending the header information.
+      </p>
+      <ul>
+        <li>
+          The packages
+<a href="../packages/AnalyzeFMRI/index.html">AnalyzeFMRI</a>,
+<a href="../packages/fmri/index.html">fmri</a>,
+<a href="../packages/tractor.base/index.html">tractor.base</a>
+          (part of the
+<a href="http://code.google.com/p/tractor/"><span class="Gcode">tractor</span></a>
+          project),
+<a href="../packages/oro.nifti/index.html">oro.nifti</a>
+          and
+      NeuroImage (currently only available within the
+<a href="http://R-Forge.R-project.org/projects/neuroim/"><span class="Rforge">neuroim</span></a>
+          project on R-Forge) all provide
+      functions that read/write ANALYZE and NIfTI files.
+        </li>
+        <li>
+          The
+<a href="../packages/Rniftilib/index.html">Rniftilib</a>
+          package provides read/write
+      capabilities for the NIfTI-1 format.  The
+<a href="../packages/Rniftilib/index.html">Rniftilib</a>
+          package provides a R interface to the C reference library
+      provided by the
+          <a href="http://sourceforge.net/projects/niftilib/">
+            Neuroimaging
+      Informatics Technology Initiative
+          </a>.  In contrast to other
+      R packages supporting the ANALYZE and NIfTI-1 format, this
+      package comes without additional functions for data processing
+      and is restricted to functions for data handling as provided by
+      the C reference library.  The aim of the package is to serve as
+      a common basis for the work with multi-dimensional volumetric
+      (neuro)imaging data.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Magnetic Resonance Imaging (MRI)
+        </strong>
+      </p>
+      <p>
+        <em>
+          Diffusion Tensor Imaging (DTI)
+        </em>
+      </p>
+      <ul>
+        <li>
+          The R package
+<a href="../packages/dti/index.html">dti</a>
+          provides structural adaptive
+      smoothing methods for the analysis of diffusion weighted data in
+      the context of the DTI model.  Due to its edge preserving
+      properties these smoothing methods are capable of reducing noise
+      without compromizing significant structures (e.g., fibre
+      tracts).  The package also provides functions for DTI data
+      processing from input, via tensor reconstruction to
+      visualization (2D and 3D).
+        </li>
+        <li>
+          The
+<a href="../packages/tractor.base/index.html">tractor.base</a>
+          package (part of the
+          <a href="http://www.tractor-mri.org.uk/">
+            tractor project
+          </a>)
+      consists of functions for reading, writing and visualising MRI
+      images.  Images may be stored in ANALYZE, NIfTI or DICOM file
+      formats, and can be visualised slice-by-slice or in projection.
+      It also provides functions for common image manipulation tasks,
+      such as masking and thresholding; and for applying arbitrary
+      functions to image data.  The package is written in pure R.
+        </li>
+      </ul>
+      <ul>
+        <li>
+          Diffusion anisotropy has been used to characterize white
+      matter neuronal pathways in the human brain, and infer global
+      connectivity in the central nervous system.  The
+<a href="../packages/gdimap/index.html">gdimap</a>
+          package implements algorithms to estimate and
+      visualize the orientation of neuronal pathways using model-free
+      methods (q-space imaging methods). The estimation of fibre
+      orientation has been implemented using (1) by extracting local
+      maxima or (2) directional statistical clustering of the ODF
+      voxel data.
+        </li>
+      </ul>
+      <p>
+        <em>
+          Dynamic Contrast-Enhanced MRI (DCE-MRI)
+        </em>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/DATforDCEMRI/index.html">DATforDCEMRI</a>
+          package performs voxel-wise
+      deconvolution analysis of contrast agent concentration versus
+      time data and generates the impulse response function (IRF),
+      which may be used to approximate commonly utilized kinetic
+      parameters such as Ktrans and Ve.  An interactive advanced
+      voxel diagnosis tool (AVDT) is also provided to facilitate
+      easy navigation of the voxel-wise data.
+        </li>
+        <li>
+          The
+<a href="../packages/dcemriS4/index.html">dcemriS4</a>
+          package contains a collection of
+      functions to perform quantitative analysis from a DCE-MRI (or
+      diffusion-weighted MRI) acquisition on a voxel-by-voxel basis
+      and depends on the S4 implementation of the NIfTI and ANALYZE
+      classes in
+<a href="../packages/oro.nifti/index.html">oro.nifti</a>.  Data management capabilities
+      include: read/write for NIfTI extensions, full audit trail,
+      improved visualization, etc. The steps to quantify DCE-MRI are
+      as follows: motion correction and/or co-registration, T1
+      estimation, conversion of signal intensity to gadolinium
+      contrast-agent concentration and kinetic parameter estimation.
+      Parametric estimation of the kinetic parameters, from a
+      single-compartment (Kety or extended Kety) model, is performed
+      via Levenburg-Marquardt optimization or Bayesian estimation.
+      Semi-parametric estimation of the kinetic parameters is also
+      possible via Bayesian P-splines.
+        </li>
+      </ul>
+      <p>
+        <em>
+          Functional Connectivity
+        </em>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/brainwaver/index.html">brainwaver</a>
+          package provides basic wavelet
+      analysis of multivariate time series with a visualisation and
+      parametrisation using graph theory.  It computes the correlation
+      matrix for each scale of a wavelet decomposition, via
+<a href="../packages/waveslim/index.html">waveslim</a>.  Hypothesis testing is applied to each
+      entry of one matrix in order to construct an adjacency matrix of
+      a graph.  The graph obtained is finally analysed using
+      small-world theory and, with efficient computation techniques,
+      tested using simulated attacks.  The brainwaver project is
+      complementary to the
+          <a href="http://www-bmu.psychiatry.cam.ac.uk/software">
+            CamBA
+          </a>
+          project for brain image data processing.  A collection of
+      scripts (with a makefile) is available to
+          <a href="http://www.gipsa-lab.inpg.fr/~sophie.achard/brainwaver">
+            download
+          </a>
+          along with the
+<a href="../packages/brainwaver/index.html">brainwaver</a>
+          package.
+        </li>
+      </ul>
+      <p>
+        <em>
+          Functional MRI
+        </em>
+      </p>
+      <ul>
+        <li>
+<a href="../packages/AnalyzeFMRI/index.html">AnalyzeFMRI</a>
+          is a package originally written for
+      the processing and analysis of large structural and functional
+      MRI data sets under the ANALYZE format.  It has been updated to
+      include new functionality: complete NIfTI input/output,
+      cross-platform visualization based on Tcl/Tk components, and
+      spatial/temporal ICA (
+          <a href="http://en.wikipedia.org/wiki/Independent_component_analysis">
+            Independent Components Analysis
+          </a>) 
+      via a graphical user interface (GUI).
+        </li>
+        <li>
+          The package
+<a href="../packages/arf3DS4/index.html">arf3DS4</a>
+          applied the active region
+      fitting (ARF) algorithm for the analysis of functional magnetic
+      resonance imaging (fMRI) data.  ARF uses Gaussian shape spatial
+      models to parameterize active brain regions.
+        </li>
+        <li>
+          The R package
+<a href="../packages/fmri/index.html">fmri</a>
+          provides tools for the
+      analysis of functional MRI data.  The core is the implementation
+      of a new class of adaptive smoothing methods.  These methods
+      allow for a significant signal enhancement and reduction of
+      false positive detections without, in contrast to traditional
+      non-adaptive smoothing methods, reducing the effective spatial
+      resolution.  This property is especially of interest in the
+      analysis of high-resolution functional MRI.  The package
+      includes functions for input/output of some standard imaging
+      formats (ANALYZE, NIfTI, AFNI, DICOM) as well as for linear
+      modelling the data and signal detection using
+          <a href="http://imaging.mrc-cbu.cam.ac.uk/imaging/PrinciplesRandomFields">
+            Random Field Theory
+          </a>.  
+      It also includes ICA and NGCA (non-Gaussian Components Analysis)
+      based methods and hence has some overlap with
+<a href="../packages/AnalyzeFMRI/index.html">AnalyzeFMRI</a>.
+        </li>
+        <li>
+          Neuroimage is an R package (currently only available within
+      the
+<a href="http://R-Forge.R-project.org/projects/neuroim/"><span class="Rforge">neuroim</span></a>
+          project on R-Forge) that provides
+      data structures and input/output routines for functional brain
+      imaging data.  It reads and writes NIfTI-1 data and provides S4
+      classes for handling multi-dimensional images.
+        </li>
+        <li>
+          Compute Unified Device Architecture (CUDA) is a software
+      platform for massively parallel high-performance computing on
+      NVIDIA GPUs.
+<a href="../packages/cudaBayesreg/index.html">cudaBayesreg</a>
+          provides a CUDA
+      implementation of a Bayesian multilevel model for the analysis
+      of brain fMRI data.  The CUDA programming model uses a separate
+      thread for fitting a linear regression model at each voxel in
+      parallel.  The global statistical model implements a Gibbs
+      Sampler for hierarchical linear models with a normal prior.
+      This model has been proposed by Rossi, Allenby and McCulloch in
+          <a href="http://dx.doi.org/10.1002/0470863692">
+            Bayesian
+      Statistics and Marketing
+          </a>, Chapter 3, and is referred to as
+      "rhierLinearModel" in the R package
+<a href="../packages/bayesm/index.html">bayesm</a>.
+        </li>
+        <li>
+          The
+<a href="../packages/neuRosim/index.html">neuRosim</a>
+          package allows users to generate
+      functional MRI time series or four-dimensional data.  Some
+      high-level functions are created for fast data generation with
+      only a few arguments and a diversity of functions to define
+      activation and noise characteristics.  For more advanced users
+      it is possible to use the low-level functions and manipulate the
+      arguments.
+        </li>
+      </ul>
+      <p>
+        <em>
+          Structural MRI
+        </em>
+      </p>
+      <ul>
+        <li>
+          The package
+<a href="../packages/dpmixsim/index.html">dpmixsim</a>
+          implements a Dirichlet
+      Process Mixture (DPM) model for clustering and image
+      segmentation.  The DPM model is a Bayesian nonparametric
+      methodology that relies on MCMC simulations for exploring
+      mixture models with an unknown number of components.  The code
+      implements conjugate models with normal structure (conjugate
+      normal-normal DPM model).  Applications are oriented towards the
+      classification of MR images according to tissue type or region
+      of interest.
+        </li>
+        <li>
+          The package
+<a href="../packages/mritc/index.html">mritc</a>
+          provides tools for MRI tissue
+      classification using normal mixture models and (partial volume,
+      higher resolution) hidden Markov normal mixture models fitted by
+      various methods.  Functions to obtain initial values and spatial
+      parameters are available.  Facilities for visualization and
+      evaluation of classification results are provided.  To improve
+      the speed, table lookup methods are used in various places,
+      vectorization is used to take advantage of conditional
+      independence, and some computations are performed by embedded C
+      code.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          General Image Processing
+        </strong>
+      </p>
+      <ul>
+        <li>
+<a href="../packages/adimpro/index.html">adimpro</a>
+          is a package for 2D digital (color and
+      B/W) images, actually not specific to medical imaging, but for
+      general image processing.
+        </li>
+        <li>
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/EBImage.html"><span class="BioC">EBImage</span></a>
+          is an R package which provides general
+      purpose functionality for the reading, writing, processing and
+      analysis of images.  Furthermore, in the context of
+      microscopy-based cellular assays, this package offers tools to
+      transform the images, segment cells and extract quantitative
+      cellular descriptors.
+        </li>
+        <li>
+          The package
+<a href="../packages/mmand/index.html">mmand</a>
+          (Mathematical Morphology in Any
+      Number of Dimensions) provides morphological operations like
+      erode and dilate, opening and closing, as well as smoothing and
+      kernel-based image processing.  It operates on arrays or 
+      array-like data of arbitrary dimension.
+        </li>
+        <li>
+          The
+<a href="../packages/RNiftyReg/index.html">RNiftyReg</a>
+          provides an interface to the
+          <a href="http://sourceforge.net/projects/niftyreg/">
+            NiftyReg
+          </a>
+          image registration tools.  Rigid-body, affine and non-linear
+      registrations are available and may be applied in 2D-to-2D,
+      3D-to-2D and 4D-to-3D procedures.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Positron Emission Tomography (PET)
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/occ/index.html">occ</a>
+          package provides a generic function for
+      estimating PET neuro-receptor occupancies by a drug, from the
+      total volumes of distribution of a set of regions of interest
+      (ROI).  Fittings methods include the reference region, the
+          <em>
+            ordinary least squares
+          </em>
+          (OLS, sometimes known as
+      "occupancy plot") and the
+          <em>
+            restricted maximum likelihood
+      estimation
+          </em>
+          (REML).
+        </li>
+        <li>
+          The
+<a href="../packages/PET/index.html">PET</a>
+          package contains three of the major
+      iterative reconstruction techniques (Algebraic Reconstruction
+      Technique, Likelihood Reconstruction using Expectation
+      Maximization and Least Squares Conjugate Method) and several
+      direct reconstruction methods for radon transformed data.
+      Furthermore, it offers the possibility to simulate a marked
+      Poisson process with spatial varying intensity.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Electroencephalography (EEG)
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The EEG package (currently only available within the
+<a href="http://R-Forge.R-project.org/projects/eeg/"><span class="Rforge">eeg</span></a>
+          project on R-Forge) reads in single trial
+      EEG (currently only ascii-exported pre-processed and trial
+      segmented in Brain Vision Analyzer), computes averages (i.e.,
+      event-related potentials or ERP's) and stores ERP's from
+      multiple data sets in a
+          <tt>
+            data.frame
+          </tt>
+          like object, such
+      that statistical analysis (linear model, (M)ANOVA) can be done
+      using the familiar R modeling frame work.
+        </li>
+        <li>
+<a href="../packages/PTAk/index.html">PTAk</a>
+          is an R package that uses a multiway method
+      to decompose a tensor (array) of any order, as a generalisation
+      of a singular value decomposition (SVD) also supporting
+      non-identity metrics and penalisations.  A 2-way SVD with these
+      extensions is also available.  The package also includes
+      additional multiway methods: PCAn (Tucker-n) and
+      PARAFAC/CANDECOMP with these extensions.  Applications include
+      the analysis of EEG and functional MRI data.
+        </li>
+      </ul>
+    </div>
+
+  <h3>CRAN packages:</h3>
+  <ul>
+    <li><a href="../packages/adimpro/index.html">adimpro</a> (core)</li>
+    <li><a href="../packages/AnalyzeFMRI/index.html">AnalyzeFMRI</a> (core)</li>
+    <li><a href="../packages/arf3DS4/index.html">arf3DS4</a> (core)</li>
+    <li><a href="../packages/bayesm/index.html">bayesm</a></li>
+    <li><a href="../packages/brainwaver/index.html">brainwaver</a></li>
+    <li><a href="../packages/cudaBayesreg/index.html">cudaBayesreg</a></li>
+    <li><a href="../packages/DATforDCEMRI/index.html">DATforDCEMRI</a> (core)</li>
+    <li><a href="../packages/dcemriS4/index.html">dcemriS4</a> (core)</li>
+    <li><a href="../packages/dpmixsim/index.html">dpmixsim</a> (core)</li>
+    <li><a href="../packages/dti/index.html">dti</a> (core)</li>
+    <li><a href="../packages/fmri/index.html">fmri</a> (core)</li>
+    <li><a href="../packages/gdimap/index.html">gdimap</a> (core)</li>
+    <li><a href="../packages/mmand/index.html">mmand</a> (core)</li>
+    <li><a href="../packages/mritc/index.html">mritc</a> (core)</li>
+    <li><a href="../packages/neuRosim/index.html">neuRosim</a> (core)</li>
+    <li><a href="../packages/occ/index.html">occ</a> (core)</li>
+    <li><a href="../packages/oro.dicom/index.html">oro.dicom</a> (core)</li>
+    <li><a href="../packages/oro.nifti/index.html">oro.nifti</a> (core)</li>
+    <li><a href="../packages/PET/index.html">PET</a> (core)</li>
+    <li><a href="../packages/PTAk/index.html">PTAk</a></li>
+    <li><a href="../packages/Rniftilib/index.html">Rniftilib</a> (core)</li>
+    <li><a href="../packages/RNiftyReg/index.html">RNiftyReg</a> (core)</li>
+    <li><a href="../packages/tractor.base/index.html">tractor.base</a> (core)</li>
+    <li><a href="../packages/waveslim/index.html">waveslim</a></li>
+  </ul>
+
+  <h3>Related links:</h3>
+  <ul>
+    <li>CRAN Task View: <a href="ChemPhys.html">ChemPhys</a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/EBImage.html" target="_top"><span class="BioC">EBImage</span></a></li>
+    <li>R-Forge Project: <a href="http://R-Forge.R-project.org/projects/eeg/" target="_top"><span class="Rforge">eeg</span></a></li>
+    <li>R-Forge Project: <a href="http://R-Forge.R-project.org/projects/neuroim/" target="_top"><span class="Rforge">neuroim</span></a></li>
+    <li><a href="http://www.jstatsoft.org/v44/">
+  Journal of Statistical Software: Special Volume on Magnetic Resonance Imaging in R
+</a></li>
+  </ul>
+
+</body>
+</html>
+ 

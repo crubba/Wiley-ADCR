@@ -1,0 +1,989 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CRAN Task View: Optimization and Mathematical Programming</title>
+  <link rel=stylesheet type="text/css" href="../CRAN_web.css" />
+</head>
+
+<body>
+  <h2>CRAN Task View: Optimization and Mathematical Programming</h2>
+  <table summary="Optimization task view information">
+    <tr><td valign="top"><b>Maintainer:</b></td><td>Stefan Theussl</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x53;&#x74;&#x65;&#x66;&#x61;&#x6e;&#x2e;&#x54;&#x68;&#x65;&#x75;&#x73;&#x73;&#x6c;&#x20;&#x61;&#x74;&#x20;&#x52;&#x2d;&#x50;&#x72;&#x6f;&#x6a;&#x65;&#x63;&#x74;&#x2e;&#x6f;&#x72;&#x67;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2013-02-14</td></tr>
+  </table>
+
+    <div>
+      <p>
+        This CRAN task view contains a list of packages which offer
+  facilities for solving optimization problems.
+  Although every regression model in statistics solves an optimization
+  problem they are not part of this view. If you are looking for regression
+  methods, the following views will contain useful starting points:
+<a href="Multivariate.html">Multivariate</a>,
+<a href="SocialSciences.html">SocialSciences</a>,
+<a href="Robust.html">Robust</a>
+        among others.
+  The focus of this task view is on
+        <a href="#SolverInfrastructure">
+          Optimization Infrastructure Packages
+        </a>,
+        <a href="#GeneralPurposeSolvers">
+          General Purpose Continuous
+  Solvers
+        </a>,
+        <a href="#MathematicalProgrammingSolvers">
+          Mathematical
+  Programming Solvers
+        </a>
+        and
+        <a href="#SpecificApplications">
+          Specific
+  Applications in Optimization
+        </a>. Packages are categorized in these
+  three sections.
+      </p>
+      <p>
+        Many packages provide functionality for more than one
+  of the subjects listed at the end of this task view. E.g., mixed
+  integer linear programming solvers typically offer standard linear
+  programming
+  routines like the simplex algorithm. Therefore following each package
+  description a list of abbreviations describes the typical features
+  of the optimizer (i.e., the problems which can be solved). The
+  full names of the abbreviations given in square brackets can be
+  found at the end of this task view under
+        <a href="#ClassificationBySubject">
+          Classification According to
+  Subject
+        </a>.
+      </p>
+      <p>
+        If you think that some package is missing from the list, please
+  let me know.
+      </p>
+      <h2>
+        <a name="SolverInfrastructure">
+          Optimization Infrastructure Packages
+        </a>
+      </h2>
+      <ul>
+        <li>
+          Trying to unify optimization algorithms via a single wrapper
+    function,
+<a href="../packages/optimx/index.html">optimx</a>
+          helps to proper specify the
+    (nonlinear) optimization problem including objective function,
+    gradient function, and scaling. This package supports the
+    (local) optimization of smooth, nonlinear functions with at most
+    box constraints (bounds).
+<a href="../packages/optimx/index.html">optimx</a>
+          depends not only on
+    packages and/or functions mentioned in this section of this task
+    view but also on two packages implemented by the author(s),
+    namely
+<a href="../packages/Rcgmin/index.html">Rcgmin</a>
+          and
+<a href="../packages/Rvmmin/index.html">Rvmmin</a>. Both are "pure
+    R" implementations of conjugate gradient minimization and
+    variable metric nonlinear function minimization algorithms,
+    respectively.
+        </li>
+        <li>
+          The R Optimization Infrastructure (<a href="../packages/ROI/index.html">ROI</a>) package
+    provides a framework for handling optimization problems in R. It
+    uses an object oriented approach to define and solve various
+    optimization tasks in R which can be from different problem
+    classes (e.g., linear, quadratic, non-linear programming
+    problems). This makes optimization transparent for the R user as
+    the corresponding workflow is completely abstracted from the
+    underlying solver. Furthermore, this approach allows for easy
+    switching between solvers, given that corresponding solver plugins
+    are available, and thus enhances comparability.
+        </li>
+      </ul>
+      <h2>
+        <a name="GeneralPurposeSolvers">
+          General Purpose Continuous
+  Solvers
+        </a>
+      </h2>
+      <ul>
+        <li>
+          Package stats offers several general purpose optimization
+    routines.
+    First, function
+<tt>optim()</tt>
+          provides an implementation of
+    the Broyden-Fletcher-Goldfarb-Shanno (BFGS) method,
+    bounded BFGS, conjugate gradient, Nelder-Mead, and simulated
+    annealing (SANN) optimization
+    methods. It utilizes gradients, if provided, for faster
+    convergence. Typically it is used for unconstrained optimization
+    but includes an option for box-constrained
+    optimization.
+
+    Additionally, for minimizing a function subject to
+    linear inequality constraints stats contains the routine
+<tt>constrOptim()</tt>.
+
+    For one-dimensional unconstrained function optimization there is
+<tt>optimize()</tt>
+          which searches an interval
+    for a minimum or maximum.
+
+    Then there is
+<tt>nlm</tt>
+          which is used for solving nonlinear
+    unconstrained minimization problems. Eventually,
+<tt>nlminb()</tt>
+          offers unconstrained and constrained
+    optimization using PORT routines. [RGA, QN]
+        </li>
+        <li>
+          Implementations of the augmented lagrange multiplier method
+    for general nonlinear optimization can be found in
+    packages
+<a href="../packages/alabama/index.html">alabama</a>
+          and
+<a href="../packages/Rsolnp/index.html">Rsolnp</a>.
+        </li>
+        <li>
+<a href="../packages/clue/index.html">clue</a>
+          contains the function
+<tt>sumt()</tt>
+          for
+    solving constrained optimization problems via the sequential
+    unconstrained minimization technique (SUMT).
+        </li>
+        <li>
+          Package
+<a href="../packages/cmaes/index.html">cmaes</a>
+          implements a global optimization
+    procedure using a covariance matrix adapting evolutionary
+    strategy (CMA-ES).
+        </li>
+        <li>
+          Package
+<a href="../packages/dfoptim/index.html">dfoptim</a>, derivative-free optimization
+    procedures, contains quite efficient R implementations of the
+    Nelder-Mead and Hooke-Jeeves algorithms (unconstrained and
+    bounds-constrained). [DF]
+        </li>
+        <li>
+<a href="../packages/GenSA/index.html">GenSA</a>
+          is a package providing a function for
+    generalized simulated annealing which can be used to search for a
+    global minimum of a very complex non-linear objective function
+    with a very large number of optima.
+        </li>
+        <li>
+          Package
+<a href="../packages/gsl/index.html">gsl</a>
+          provides BFGS, conjugate gradient,
+    steepest descent, and Nelder-Mead algorithms. It uses a "line
+    search" approach via the function
+<tt>multimin()</tt>. It is
+    based on the GNU Scientific Library (GSL). [RGA, QN]
+        </li>
+        <li>
+          Package
+<a href="../packages/maxLik/index.html">maxLik</a>
+          provides a general purpose
+    Newton-Raphson optimizer
+<tt>maxNR()</tt>
+          as well as wrapper
+    to methods, implemented in
+<tt>optim()</tt>. It supports fitting a
+    submodel by specifying constant parameters.
+        </li>
+        <li>
+          An R port of the Scilab neldermead module is packaged
+    in
+<a href="../packages/neldermead/index.html">neldermead</a>
+          offering several direct search
+    optimization algorithms based on the simplex method.
+        </li>
+        <li>
+          Package
+<a href="../packages/nloptr/index.html">nloptr</a>
+          provides access to NLopt, an LGPL
+    licensed library of various nonlinear optimization algorithms. It
+    especially supports global optimization with routines such as
+    DIRECT, StoGo, and others. It includes local derivative-free
+    (COBYLA, Nelder-Mead, Subplex) and gradient-based (e.g., BFGS)
+    methods, and also the augmented Lagrangian approach. [DF, GO, QN]
+        </li>
+        <li>
+          Several derivative-free optimization algorithms are provided
+    with package
+<a href="../packages/minqa/index.html">minqa</a>. E.g., the
+    functions
+<tt>bobyqa()</tt>,
+<tt>newuoa()</tt>,
+    and
+<tt>uobyqa()</tt>
+          allow to minimize a function of many
+    variables by a trust region method that forms quadratic models by
+    interpolation.
+<tt>bobyqa()</tt>
+          additionally permits box
+    constraints (bounds) on the parameters. [DF]
+        </li>
+        <li>
+          Package
+<a href="../packages/powell/index.html">powell</a>
+          optimizes functions using Powell's
+    UObyQA algorithm (Unconstrained Optimization by Quadratic
+    Approximation).
+        </li>
+        <li>
+          A particle swarm optimizer (PSO) is implemented in package
+<a href="../packages/pso/index.html">pso</a>. The algorithm follows the standard PSO 2007 by
+    Maurice Clerc et al. Additionally, a number of ancillary routines
+    are provided for easy testing and graphics. Another (parallelized)
+    implementation of the PSO algorithm can be found in package ppso
+    available from
+          <a href="http://www.rforge.net/ppso/">
+            rforge.net
+          </a>.
+        </li>
+        <li>
+          Package
+<a href="../packages/hydroPSO/index.html">hydroPSO</a>
+          is a model-independent global
+    optimization tool for real-world models, implementing the latest
+    Standard Particle Swarm Optimization algorithm
+    (SPSO-2011).
+<a href="../packages/hydroPSO/index.html">hydroPSO</a>
+          is parallel-capable, and includes
+    several fine-tuning options and post-processing functions.
+        </li>
+        <li>
+<a href="../packages/subplex/index.html">subplex</a>
+          provides unconstrained function
+    optimization based on a subspace searching simplex method.
+        </li>
+        <li>
+          Package
+<a href="../packages/ucminf/index.html">ucminf</a>
+          implements an algorithm of
+    quasi-Newtonian type for nonlinear unconstrained
+    optimization. [QN]
+        </li>
+        <li>
+          In package
+<a href="../packages/trust/index.html">trust</a>, a routine with the same name offers
+    local optimization based on the "trust region" approach.
+        </li>
+        <li>
+<a href="../packages/trustOptim/index.html">trustOptim</a>
+          implements a "trust region" algorithm for
+    unconstrained nonlinear optimization. The algorithm is optimized
+    for objective functions with sparse Hessians. This makes the
+    algorithm highly scalable and efficient, in terms of both time and
+    memory footprint.
+        </li>
+        <li>
+          Package
+<a href="../packages/nleqslv/index.html">nleqslv</a>
+          provides a
+    function
+<tt>nleqslv()</tt>
+          implementing Newton and Broyden
+    methods with line search and trust region global strategies for
+    solving medium sized system of nonlinear equations.
+        </li>
+        <li>
+          Package
+<a href="../packages/genalg/index.html">genalg</a>
+          contains
+<tt>rbga()</tt>, an implementation of a genetic algorithm for
+    multi-dimensional function optimization.
+        </li>
+        <li>
+          Machine coded genetic algorithm (MCGA) provided by package
+<a href="../packages/mcga/index.html">mcga</a>
+          is a tool which solves optimization problems based
+    on byte representation of variables.
+        </li>
+        <li>
+          Package
+<a href="../packages/rgenoud/index.html">rgenoud</a>
+          offers
+<tt>genoud()</tt>, a routine which is capable of solving
+    complex function minimization/maximization problems by combining
+    evolutionary algorithms with
+    a derivative-based (quasi-Newtonian) approach.
+        </li>
+        <li>
+          An R implementation of the Self-Organising Migrating Algorithm
+    (SOMA) is available in package
+<a href="../packages/soma/index.html">soma</a>. The approach of
+    this stochastic optimization algorithm is similar to that of
+    genetic algorithms and can be applied to any cost-minimization
+    problem with a bounded parameter space, and is robust to local
+    minima.
+        </li>
+        <li>
+          Package
+<a href="../packages/DEoptim/index.html">DEoptim</a>
+          provides a global optimizer based
+    on the differential evolution algorithm.
+<a href="../packages/RcppDE/index.html">RcppDE</a>
+          provides a C++ implementation of the
+<tt>DEoptim()</tt>
+          function.
+        </li>
+        <li>
+          Package
+<a href="../packages/Rmalschains/index.html">Rmalschains</a>
+          implements an algorithm family
+    for continuous optimization called memetic algorithms with local
+    search chains (MA-LS-Chains).
+        </li>
+      </ul>
+      <h2>
+        <a name="MathematicalProgrammingSolvers">
+          Mathematical
+  Programming Solvers
+        </a>
+      </h2>
+      This section provides an overview of open source as well as commercial
+  optimizers. Which type of mathematical programming problem can be solved
+  by a certain package or function can be seen from the abbreviations in
+  square brackets. For a
+      <a href="#ClassificationBySubject">
+        classification by subject
+      </a>
+      see
+  the list at the end of this task view.
+      <ul>
+        <li>
+          Package
+<a href="../packages/linprog/index.html">linprog</a>
+          solves linear programming problems using
+    the function
+<tt>solveLP()</tt>
+          (the solver is based on
+<a href="../packages/lpSolve/index.html">lpSolve</a>) and can read model files in MPS
+    format. [LP]
+        </li>
+        <li>
+          In package
+<a href="../packages/quadprog/index.html">quadprog</a>
+<tt>solve.QP()</tt>
+          solves
+    quadratic programming problems
+    with linear equality and inequality constraints. [QP]
+        </li>
+        <li>
+<a href="../packages/BB/index.html">BB</a>
+          contains the function
+<tt>spg()</tt>
+          providing a
+    spectral projected gradient method for large scale optimization with
+    simple constraints. It takes a nonlinear objective function as an
+    argument as well as basic constraints. Furthermore,
+<a href="../packages/BB/index.html">BB</a>
+          contains two functions (
+<tt>dfsane()</tt>
+          and
+<tt>sane()</tt>) for using the spectral gradient method
+    for solving a nonlinear system of equations.
+        </li>
+        <li>
+          In the
+<a href="../packages/boot/index.html">boot</a>
+          package there is a routine called
+<tt>simplex()</tt>
+          which realizes the two-phase tableau simplex
+    method for (relatively small) linear programming problems. [LP]
+        </li>
+        <li>
+          The
+<a href="../packages/CLSOCP/index.html">CLSOCP</a>
+          package provides an implementation of a
+    one step smoothing Newton method for the solution of second order
+    cone programming (SOCP) problems.
+        </li>
+        <li>
+          The
+<a href="../packages/DWD/index.html">DWD</a>
+          package provides the implementation of
+    distance weighted discrimination (DWD) using an interior point
+    method for the solution of SOCP problems.
+        </li>
+        <li>
+<a href="../packages/kernlab/index.html">kernlab</a>
+          contains the function
+<tt>ipop</tt>
+          for
+    solving quadratic programming problems using interior point
+    methods. [IPM, QP]
+        </li>
+        <li>
+<a href="../packages/limSolve/index.html">limSolve</a>
+          offers to solve linear or quadratic
+    optimization functions. [LP, QP]
+        </li>
+        <li>
+<a href="../packages/LowRankQP/index.html">LowRankQP</a>
+          primal/dual interior point method solving
+    quadratic programming problems [IPM, QP]
+        </li>
+        <li>
+          Package
+<a href="../packages/rcdd/index.html">rcdd</a>
+          offers the function
+<tt>lpcdd()</tt>
+          for solving linear programs with exact arithmetic using the
+          <a href="http://gmplib.org">
+            GNU Multiple Precision (GMP)
+          </a>
+          library. [LP]
+        </li>
+        <li>
+          In package Rdonlp2 (see the
+<a href="http://R-Forge.R-project.org/projects/rmetrics/"><span class="Rforge">rmetrics</span></a>
+          project)
+    function
+<tt>donlp2()</tt>, a wrapper for the DONLP2
+    solver, offers the minimization of smooth nonlinear functions and
+    constraints. DONLP2 can be used freely for any kind of research
+    purposes, otherwise it requires licensing. [GO, NLP]
+        </li>
+        <li>
+          The
+          <a href="http://www.neos-server.org/neos/">
+            NEOS Server
+    for Optimization
+          </a>
+          provides online access to state-of-the-art
+    optimization problem solvers. Package
+<a href="../packages/rneos/index.html">rneos</a>
+          enables the
+    user to pass optimization problems to NEOS and retrieve results
+    within R.
+        </li>
+        <li>
+          An interface to Ipopt from the
+          <a href="http://www.coin-or.org/">
+            COIN-OR
+          </a>
+          initiative called
+<a href="http://R-Forge.R-project.org/projects/ipoptr/"><span class="Rforge">ipoptr</span></a>
+          is available from
+          <a href="http://R-Forge.R-project.org/">
+            R-Forge
+          </a>. Ipopt is an open
+    source solver for large-scale nonlinear continuous
+    optimization. [NLP]
+        </li>
+      </ul>
+      <h3>
+        Interfaces to Open Source Optimizers
+      </h3>
+      <ul>
+        <li>
+          Package
+<a href="../packages/clpAPI/index.html">clpAPI</a>
+          provides high level access from R to
+    low-level API routines of the
+          <a href="https://projects.coin-or.org/Clp">
+            COIN OR Clp
+          </a>
+          solver
+    library. [LP]
+        </li>
+        <li>
+          Package
+<a href="../packages/lpSolve/index.html">lpSolve</a>
+          contains the routine
+<tt>lp()</tt>
+          to solve LPs and MILPs by calling the freely
+    available solver
+          <a href="http://lpsolve.sourceforge.net">
+            lp_solve
+          </a>. This solver is
+    based on the revised simplex method and a branch-and-bound (B&amp;B)
+    approach. It supports semi-continuous variables and Special Ordered
+    Sets (SOS). Furthermore
+<tt>lp.assign()</tt>
+          and
+<tt>lp.transport()</tt>
+          are aimed at solving assignment problems
+    and transportation problems, respectively. Additionally, there is the
+    package
+<a href="../packages/lpSolveAPI/index.html">lpSolveAPI</a>
+          which provides an R interface to the
+    low level API routines of lp_solve (see also project
+<a href="http://R-Forge.R-project.org/projects/lpsolve/"><span class="Rforge">lpsolve</span></a>
+          on
+          <a href="http://R-Forge.R-project.org/">
+            R-Forge
+          </a>).
+<a href="../packages/lpSolveAPI/index.html">lpSolveAPI</a>
+          supports reading linear programs from files in lp
+    and MPS format. [BP, IP, LP, MILP, SPLP]
+        </li>
+        <li>
+          Packages
+<a href="../packages/glpkAPI/index.html">glpkAPI</a>
+          as well as
+    package
+<a href="../packages/Rglpk/index.html">Rglpk</a>
+          provide an interface to the
+          <a href="http://www.gnu.org/software/glpk/">
+            GNU Linear Programming
+    Kit
+          </a>
+          (GLPK). Whereas the former provides high level access
+    to low level routines the latter offers a high level routine
+<tt>Rglpk_solve_LP()</tt>
+          to solve MILPs using GLPK.  Both
+    packages offer the possibility to use models formulated in the MPS
+    format. [BP, IP, IPM, LP, MILP]
+        </li>
+        <li>
+<a href="../packages/Rsymphony/index.html">Rsymphony</a>
+          provides the routine
+<tt>Rsymphony_solve_LP()</tt>
+          which
+    interfaces the SYMPHONY solver for mixed integer linear
+    programs. SYMPHONY applies LP
+    relaxation with a branch-and-cut approach. It is part of the
+          <a href="http://www.coin-or.org/">
+            Computational
+    Infrastructure for Operations Research
+          </a>
+          (COIN-OR) project which is an initiative to spur the
+    development of open source software for the operations research
+    community. [LP, IP, MILP]
+        </li>
+        <li>
+          The NOMAD solver is implemented in the
+<a href="../packages/crs/index.html">crs</a>
+          package
+    for solving mixed integer programming problems. This algorithm is
+    accessible via the
+<tt>snomadr()</tt>
+          function and is
+    primarily designed for constrained optimization of blackbox
+    functions.
+        </li>
+        <li>
+          The CSDP semidefinite programming library is interfaced by
+    package
+<a href="../packages/Rcsdp/index.html">Rcsdp</a>. [SDP]
+        </li>
+      </ul>
+      <h3>
+        Interfaces to Commercial Optimizers
+      </h3>
+      This section surveys interfaces to commercial solvers. Typically, the
+  corresponding libraries have to be installed separately.
+      <ul>
+        <li>
+          Packages
+<a href="../packages/cplexAPI/index.html">cplexAPI</a>
+          and
+<a href="../packages/Rcplex/index.html">Rcplex</a>
+          provide an
+    interface to the CPLEX solver package from
+          <a href="http://www-01.ibm.com/software/integration/optimization/cplex-optimizer/">
+            IBM
+          </a>. CPLEX
+    provides dual/primal simplex optimizers as well as a barrier
+    optimizer for solving large scale linear and quadratic
+    programs. Furthermore, it offers a mixed integer optimizer to
+    solve difficult mixed integer programs. Note that CPLEX is
+          <b>
+            not
+    free
+          </b>
+          and you have to get a license from
+          <a href="http://www.ibm.com/">
+            IBM
+          </a>. Academics will receive a free
+    licence upon request. [LP, IP, BP, QP, MILP, MIQP, IPM]
+        </li>
+        <li>
+          Package
+<a href="../packages/Rmosek/index.html">Rmosek</a>
+          offers an interface to the
+    commercial optimizer from
+          <a href="http://www.mosek.com/">
+            MOSEK
+          </a>. It provides dual/primal
+    simplex optimizers as well as a barrier optimizer. In addition to
+    solving LP and QP problems this solver can handle SOCP and
+    quadratically constrained programming (QPQC) tasks. Furthermore,
+    it offers a mixed integer optimizer to solve difficult mixed
+    integer programs (MILP, MISOCP, etc.). Note that you have to get a
+    license from
+          <a href="http://www.mosek.com/">
+            MOSEK
+          </a>. Academic
+    licenses are free of charge.  [LP, IP, BP, QP, MILP, MIQP,
+    IPM]
+        </li>
+        <li>
+          Gurobi Optimization ships an R binding with their 5.0 release
+    that allows to solve LP, MIP, QP, MIQP, SOCP, and MISOCP models
+    from within R. See the
+          <a href="http://www.gurobi.com/documentation/5.0/reference-manual/node651#sec:R">
+            R
+    reference manual
+          </a>
+          from the Gurobi documentation for details.
+        </li>
+      </ul>
+      <h2>
+        <a name="SpecificApplications">
+          Specific Applications in
+  Optimization
+        </a>
+      </h2>
+      <ul>
+        <li>
+          Package
+<a href="../packages/adagio/index.html">adagio</a>
+          provides functions for single and
+    multiple knapsack problems and solves subset sum and assignment
+    tasks.
+        </li>
+        <li>
+          In package
+<a href="../packages/clue/index.html">clue</a>
+<tt>solve_LSAP()</tt>
+          enables
+    the user to solve the linear
+    sum assignment problem (LSAP) using an efficient C implementation of
+    the Hungarian algorithm. [SPLP]
+        </li>
+        <li>
+          The data cloning algorithm is a global optimization approach
+    and a variant of simulated annealing which has been implemented
+    in package
+<a href="../packages/dclone/index.html">dclone</a>. The package provides low level
+    functions for implementing maximum likelihood estimating
+    procedures for complex models using data cloning and Bayesian
+    Markov chain Monte Carlo methods.
+        </li>
+        <li>
+          Package
+<a href="../packages/goalprog/index.html">goalprog</a>
+          provides some functions for
+    lexicographic linear goal
+    programming and optimization. Goal programming is a branch of
+    multi-objective, multi-criteria decision analysis. [MOP]
+        </li>
+        <li>
+<a href="../packages/igraph/index.html">igraph</a>, a package for graph and network analysis,
+    uses the very fast igraph C library. It can be used to calculate
+    shortest paths, maximal network flows, minimum
+    spanning trees, etc. [GRAPH]
+        </li>
+        <li>
+          Package
+<a href="../packages/minpack.lm/index.html">minpack.lm</a>
+          provides an interface to the
+    Levenberg-Marquardt nonlinear least-squares algorithm found in
+    MINPACK.
+        </li>
+        <li>
+<a href="../packages/maxLik/index.html">maxLik</a>
+          adds a likelihood-specific layer on top of a
+    number of maximization routines like Brendt-Hall-Hall-Hausman
+    (BHHH) and Newton-Raphson among others.  It includes summary and
+    print methods which extract the standard errors based on the
+    Hessian matrix and allows easy swapping of maximization
+    algorithms. It also provides a function to check whether an
+    analytic derivative is computed directly.
+        </li>
+        <li>
+          Multi-criteria optimization problems can be solved using
+    package
+<a href="../packages/mco/index.html">mco</a>
+          which implements genetic
+    algorithms. [MOP]
+        </li>
+        <li>
+          Package
+<a href="../packages/optmatch/index.html">optmatch</a>
+          provides routines for solving
+    matching problems by translating
+    them into minimum-cost flow problems, which are in turn solved
+    optimally by the RELAX-IV codes
+    of Bertsekas and Tseng (free for research). [SPLP]
+        </li>
+        <li>
+          Package
+<a href="../packages/quantreg/index.html">quantreg</a>
+          contains variations of simplex and
+    of interior point routines (
+<tt>nlrq()</tt>,
+<tt>crq()</tt>). It provides an interface to L1 regression
+    in the R code of function
+<tt>rq()</tt>. [SPLP, LP, IPM]
+        </li>
+        <li>
+          Package
+<a href="../packages/sna/index.html">sna</a>
+          contains the function
+<tt>lab.optim()</tt>
+          which is the front-end to a series of heuristic routines for optimizing
+    some bivariate graph statistic. [GRAPH]
+        </li>
+        <li>
+          Package
+<a href="../packages/TSP/index.html">TSP</a>
+          provides basic infrastructure for
+    handling and solving the
+    traveling salesperson problem (TSP). The main routine
+<tt>solve_TSP()</tt>
+          solves the TSP
+    through several heuristics. In addition, it provides an interface
+    to the
+          <a href="http://www.tsp.gatech.edu/concorde/index.html">
+            Concorde TSP
+    Solver
+          </a>, which has to be
+    downloaded separately.  [SPLP]
+        </li>
+      </ul>
+      <h2>
+        <a name="ClassificationBySubject">
+          Classification According to
+  Subject
+        </a>
+      </h2>
+      <p>
+        What follows is an attempt to provide a by-subject overview of
+  packages.  The full name of the subject as well as the corresponding
+        <a href="http://www.ams.org/mathscinet/msc/msc2010.html?t=90Cxx&amp;btn=Current">
+          MSC
+  2010
+        </a>
+        code (if available) are given in brackets.
+      </p>
+      <ul>
+        <li>
+          LP (Linear programming, 90C05):
+<a href="../packages/boot/index.html">boot</a>,
+<a href="../packages/clpAPI/index.html">clpAPI</a>,
+<a href="../packages/cplexAPI/index.html">cplexAPI</a>,
+<a href="../packages/glpkAPI/index.html">glpkAPI</a>,
+<a href="../packages/limSolve/index.html">limSolve</a>,
+<a href="../packages/linprog/index.html">linprog</a>,
+<a href="../packages/lpSolve/index.html">lpSolve</a>,
+<a href="../packages/lpSolveAPI/index.html">lpSolveAPI</a>,
+<a href="../packages/quantreg/index.html">quantreg</a>,
+<a href="../packages/rcdd/index.html">rcdd</a>,
+<a href="../packages/Rcplex/index.html">Rcplex</a>,
+<a href="../packages/Rglpk/index.html">Rglpk</a>,
+<a href="../packages/Rmosek/index.html">Rmosek</a>,
+<a href="../packages/Rsymphony/index.html">Rsymphony</a>
+        </li>
+        <li>
+          GO (Global Optimization):
+<a href="../packages/nloptr/index.html">nloptr</a>
+        </li>
+        <li>
+          SPLP (Special problems of linear programming like transportation,
+      multi-index, etc., 90C08):
+<a href="../packages/clue/index.html">clue</a>,
+<a href="../packages/lpSolve/index.html">lpSolve</a>,
+<a href="../packages/lpSolveAPI/index.html">lpSolveAPI</a>,
+<a href="../packages/optmatch/index.html">optmatch</a>,
+<a href="../packages/quantreg/index.html">quantreg</a>,
+<a href="../packages/TSP/index.html">TSP</a>
+        </li>
+        <li>
+          BP (Boolean programming, 90C09):
+<a href="../packages/cplexAPI/index.html">cplexAPI</a>,
+<a href="../packages/glpkAPI/index.html">glpkAPI</a>,
+<a href="../packages/lpSolve/index.html">lpSolve</a>,
+<a href="../packages/lpSolveAPI/index.html">lpSolveAPI</a>,
+<a href="../packages/Rcplex/index.html">Rcplex</a>,
+<a href="../packages/Rglpk/index.html">Rglpk</a>
+        </li>
+        <li>
+          IP (Integer programming, 90C10):
+<a href="../packages/cplexAPI/index.html">cplexAPI</a>,
+<a href="../packages/glpkAPI/index.html">glpkAPI</a>
+<a href="../packages/lpSolve/index.html">lpSolve</a>,
+<a href="../packages/lpSolveAPI/index.html">lpSolveAPI</a>,
+<a href="../packages/Rcplex/index.html">Rcplex</a>,
+<a href="../packages/Rglpk/index.html">Rglpk</a>,
+<a href="../packages/Rmosek/index.html">Rmosek</a>,
+<a href="../packages/Rsymphony/index.html">Rsymphony</a>
+        </li>
+        <li>
+          MIP (Mixed integer programming and its variants MILP for LP
+      and MIQP for QP, 90C11):
+<a href="../packages/cplexAPI/index.html">cplexAPI</a>,
+<a href="../packages/glpkAPI/index.html">glpkAPI</a>,
+<a href="../packages/lpSolve/index.html">lpSolve</a>,
+<a href="../packages/lpSolveAPI/index.html">lpSolveAPI</a>,
+<a href="../packages/Rcplex/index.html">Rcplex</a>,
+<a href="../packages/Rglpk/index.html">Rglpk</a>,
+<a href="../packages/Rmosek/index.html">Rmosek</a>,
+<a href="../packages/Rsymphony/index.html">Rsymphony</a>
+        </li>
+        <li>
+          QP (Quadratic programming, 90C20):
+<a href="../packages/cplexAPI/index.html">cplexAPI</a>,
+<a href="../packages/kernlab/index.html">kernlab</a>,
+<a href="../packages/limSolve/index.html">limSolve</a>,
+<a href="../packages/LowRankQP/index.html">LowRankQP</a>,
+<a href="../packages/quadprog/index.html">quadprog</a>,
+<a href="../packages/Rcplex/index.html">Rcplex</a>,
+<a href="../packages/Rmosek/index.html">Rmosek</a>
+        </li>
+        <li>
+          SDP (Semidefinite programming, 90C22):
+<a href="../packages/Rcsdp/index.html">Rcsdp</a>
+        </li>
+        <li>
+          MOP (Multi-objective and goal programming, 90C29):
+<a href="../packages/goalprog/index.html">goalprog</a>,
+<a href="../packages/mco/index.html">mco</a>
+        </li>
+        <li>
+          NLP (Nonlinear programming,
+      90C30): Rdonlp2,
+<a href="../packages/Rsolnp/index.html">Rsolnp</a>
+        </li>
+        <li>
+          GRAPH (Programming involving graphs or networks, 90C35):
+<a href="../packages/igraph/index.html">igraph</a>,
+<a href="../packages/sna/index.html">sna</a>
+        </li>
+        <li>
+          IPM (Interior-point methods, 90C51):
+<a href="../packages/cplexAPI/index.html">cplexAPI</a>,
+<a href="../packages/kernlab/index.html">kernlab</a>,
+<a href="../packages/glpkAPI/index.html">glpkAPI</a>,
+<a href="../packages/LowRankQP/index.html">LowRankQP</a>,
+<a href="../packages/quantreg/index.html">quantreg</a>,
+<a href="../packages/Rcplex/index.html">Rcplex</a>
+        </li>
+        <li>
+          RGA (Methods of reduced gradient type, 90C52): stats
+      (
+<tt>optim()</tt>),
+<a href="../packages/gsl/index.html">gsl</a>
+        </li>
+        <li>
+          QN (Methods of quasi-Newton type, 90C53): stats
+      (
+<tt>optim()</tt>),
+<a href="../packages/gsl/index.html">gsl</a>,
+<a href="../packages/nloptr/index.html">nloptr</a>,
+<a href="../packages/ucminf/index.html">ucminf</a>
+        </li>
+        <li>
+          DF (Derivative-free methods, 90C56):
+<a href="../packages/dfoptim/index.html">dfoptim</a>,
+<a href="../packages/minqa/index.html">minqa</a>,
+<a href="../packages/nloptr/index.html">nloptr</a>
+        </li>
+      </ul>
+    </div>
+
+  <h3>CRAN packages:</h3>
+  <ul>
+    <li><a href="../packages/adagio/index.html">adagio</a></li>
+    <li><a href="../packages/alabama/index.html">alabama</a></li>
+    <li><a href="../packages/BB/index.html">BB</a></li>
+    <li><a href="../packages/boot/index.html">boot</a></li>
+    <li><a href="../packages/clpAPI/index.html">clpAPI</a></li>
+    <li><a href="../packages/CLSOCP/index.html">CLSOCP</a></li>
+    <li><a href="../packages/clue/index.html">clue</a></li>
+    <li><a href="../packages/cmaes/index.html">cmaes</a></li>
+    <li><a href="../packages/cplexAPI/index.html">cplexAPI</a></li>
+    <li><a href="../packages/crs/index.html">crs</a></li>
+    <li><a href="../packages/dclone/index.html">dclone</a></li>
+    <li><a href="../packages/DEoptim/index.html">DEoptim</a></li>
+    <li><a href="../packages/desirability/index.html">desirability</a></li>
+    <li><a href="../packages/dfoptim/index.html">dfoptim</a></li>
+    <li><a href="../packages/DWD/index.html">DWD</a></li>
+    <li><a href="../packages/genalg/index.html">genalg</a></li>
+    <li><a href="../packages/GenSA/index.html">GenSA</a></li>
+    <li><a href="../packages/glpkAPI/index.html">glpkAPI</a></li>
+    <li><a href="../packages/goalprog/index.html">goalprog</a></li>
+    <li><a href="../packages/gsl/index.html">gsl</a></li>
+    <li><a href="../packages/hydroPSO/index.html">hydroPSO</a></li>
+    <li><a href="../packages/igraph/index.html">igraph</a></li>
+    <li><a href="../packages/kernlab/index.html">kernlab</a></li>
+    <li><a href="../packages/limSolve/index.html">limSolve</a></li>
+    <li><a href="../packages/linprog/index.html">linprog</a></li>
+    <li><a href="../packages/LowRankQP/index.html">LowRankQP</a></li>
+    <li><a href="../packages/lpSolve/index.html">lpSolve</a> (core)</li>
+    <li><a href="../packages/lpSolveAPI/index.html">lpSolveAPI</a></li>
+    <li><a href="../packages/maxLik/index.html">maxLik</a></li>
+    <li><a href="../packages/mcga/index.html">mcga</a></li>
+    <li><a href="../packages/mco/index.html">mco</a></li>
+    <li><a href="../packages/minpack.lm/index.html">minpack.lm</a></li>
+    <li><a href="../packages/minqa/index.html">minqa</a> (core)</li>
+    <li><a href="../packages/neldermead/index.html">neldermead</a></li>
+    <li><a href="../packages/nleqslv/index.html">nleqslv</a></li>
+    <li><a href="../packages/nloptr/index.html">nloptr</a></li>
+    <li><a href="../packages/optimx/index.html">optimx</a> (core)</li>
+    <li><a href="../packages/optmatch/index.html">optmatch</a></li>
+    <li><a href="../packages/powell/index.html">powell</a></li>
+    <li><a href="../packages/pso/index.html">pso</a></li>
+    <li><a href="../packages/quadprog/index.html">quadprog</a> (core)</li>
+    <li><a href="../packages/quantreg/index.html">quantreg</a></li>
+    <li><a href="../packages/rcdd/index.html">rcdd</a></li>
+    <li><a href="../packages/Rcgmin/index.html">Rcgmin</a></li>
+    <li><a href="../packages/Rcplex/index.html">Rcplex</a></li>
+    <li><a href="../packages/RcppDE/index.html">RcppDE</a></li>
+    <li><a href="../packages/Rcsdp/index.html">Rcsdp</a></li>
+    <li><a href="../packages/rgenoud/index.html">rgenoud</a></li>
+    <li><a href="../packages/Rglpk/index.html">Rglpk</a> (core)</li>
+    <li><a href="../packages/Rmalschains/index.html">Rmalschains</a></li>
+    <li><a href="../packages/Rmosek/index.html">Rmosek</a></li>
+    <li><a href="../packages/rneos/index.html">rneos</a></li>
+    <li><a href="../packages/ROI/index.html">ROI</a> (core)</li>
+    <li><a href="../packages/Rsolnp/index.html">Rsolnp</a> (core)</li>
+    <li><a href="../packages/Rsymphony/index.html">Rsymphony</a> (core)</li>
+    <li><a href="../packages/Rvmmin/index.html">Rvmmin</a></li>
+    <li><a href="../packages/sna/index.html">sna</a></li>
+    <li><a href="../packages/soma/index.html">soma</a></li>
+    <li><a href="../packages/subplex/index.html">subplex</a></li>
+    <li><a href="../packages/trust/index.html">trust</a></li>
+    <li><a href="../packages/trustOptim/index.html">trustOptim</a></li>
+    <li><a href="../packages/TSP/index.html">TSP</a> (core)</li>
+    <li><a href="../packages/ucminf/index.html">ucminf</a></li>
+  </ul>
+
+  <h3>Related links:</h3>
+  <ul>
+    <li><a href="http://wiki.mcs.anl.gov/NEOS/index.php/NEOS_Wiki">
+  NEOS Wiki
+</a></li>
+    <li><a href="http://plato.asu.edu/sub/pns.html">
+  Decision Tree for
+  Optimization Software
+</a></li>
+    <li><a href="http://rwiki.sciviews.org/doku.php?id=tips:optimization">
+  Overview
+    on optimization algorithms and corresponding R packages (functions)
+</a></li>
+    <li><a href="http://www.coin-or.org/">
+  COIN-OR Project
+</a></li>
+    <li><a href="http://www.ams.org/mathscinet/msc/msc2010.html?t=90Cxx&amp;btn=Current">
+  Mathematics Subject Classification - Mathematical programming
+</a></li>
+    <li><a href="http://www.portfolioprobe.com/2012/07/23/a-comparison-of-some-heuristic-optimization-methods/">
+  Comparison of some heuristic optimization methods
+</a></li>
+  </ul>
+
+</body>
+</html>
+ 

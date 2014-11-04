@@ -1,0 +1,2229 @@
+
+[
+{
+ "quote": "What we have is nice, but we need something very different.",
+"author": "Robert Gentleman",
+"context": null,
+"source": "Statistical Computing 2003, Reisensburg",
+"date": "June 2003" 
+},
+{
+ "quote": "R is wonderful, but it cannot work magic.",
+"author": "Rolf Turner",
+"context": "answering a request for automatic generation of 'data from a known mean and 95% CI'",
+"source": "R-help",
+"date": "October 2011" 
+},
+{
+ "quote": "Please bear with a poor newbee, who might be doing everything backwards (I was brought up in pure math).",
+"author": "Thomas Poulsen",
+"context": null,
+"source": "R-help",
+"date": "May 2004" 
+},
+ {
+ "quote": "Okay, let's stand up and be counted: who has been writing diamond graph code? Mine's 60 lines.",
+"author": "Barry Rowlingson",
+"context": "in a discussion about the patent for diamond graphs",
+"source": "R-help",
+"date": "August 2003" 
+},
+{
+ "quote": "Bug, undocumented behaviour, feature? I don't know. It all seems to work in 1.6.0, so everyone should downgrade now... :)",
+"author": "Barry Rowlingson",
+"context": null,
+"source": "R-help",
+"date": "July 2003" 
+},
+{
+ "quote": "I'm always thrilled when people discover what lexical scoping really means.",
+"author": "Robert Gentleman",
+"context": null,
+"source": "Statistical Computing 2003, Reisensburg",
+"date": "June 2003" 
+},
+{
+ "quote": "My institution has a particularly diabolical policy on intellectual property, especially on software.",
+"author": "Ross Ihaka",
+"context": null,
+"source": "R-help",
+"date": "August 2003" 
+},
+{
+ "quote": "If you imagine that this pen is Trellis, then Lattice is not this pen.",
+"author": "Paul Murrell",
+"context": "on the difference of Lattice (which eventually was called grid) and Trellis",
+"source": "DSC 2001, Wien",
+"date": "March 2001" 
+},
+{
+ "quote": "It is good to look around at what is available, but one shouldn't miss what is under one's nose either.",
+"author": "Robert Gentleman",
+"context": null,
+"source": "bioconductor",
+"date": "September 2003" 
+},
+{
+ "quote": "Readable, obvious, maintainable, 'portable' for some value of 'portable'...",
+"author": "Barry Rowlingson",
+"context": "suggesting some function",
+"source": "R-help",
+"date": "September 2003" 
+},
+{
+ "quote": "'They' did write documentation that told you that Perl was needed, but 'they' can't read it for you.",
+"author": "Brian D. Ripley",
+"context": null,
+"source": "R-help",
+"date": "February 2001" 
+},
+{
+ "quote": "Overall, SAS is about 11 years behind R and S-Plus in statistical capabilities (last year it was about 10 years behind) in my estimation.",
+"author": "Frank Harrell (SAS User, 1969-1991)",
+"context": null,
+"source": "R-help",
+"date": "September 2003" 
+},
+{
+ "quote": "I want a budget.",
+"author": "Peter Dalgaard",
+"context": "in a talk about Tcl/Tk, meaning to say 'I want a button widget'",
+"source": "gR 2003, Aalborg",
+"date": "September 2003" 
+},
+{
+ "quote": "You can be maximally lazy, but still be efficient.",
+"author": "Kevin Murphy",
+"context": "describing the implementation of an algorithm",
+"source": "gR 2003, Aalborg",
+"date": "September 2003" 
+},
+{
+ "quote": "Andrew Thomas: ...and if something goes wrong here it is probably not WinBUGS since that has been running for more than 10 years...<x>Peter Green (from the back): ... and it still hasn't converged!",
+"author": "Andrew Thomas and Peter Green",
+"context": "during the talk about 'BRugs'",
+"source": "gR 2003, Aalborg",
+"date": "September 2003" 
+},
+{
+ "quote": "This is all documented in TFM. Those who WTFM don't want to have to WTFM again on the mailing list. RTFM.",
+"author": "Barry Rowlingson",
+"context": null,
+"source": "R-help",
+"date": "October 2003" 
+},
+{
+ "quote": "It really is hard to anticipate just how silly users can be.",
+"author": "Brian D. Ripley",
+"context": null,
+"source": "R-devel",
+"date": "October 2003" 
+},
+{
+ "quote": "So apparently you wish to report as a bug the fact that R 1.8.0 is different from R 1.4.0.",
+"author": "Douglas Bates",
+"context": null,
+"source": "R-devel",
+"date": "October 2003" 
+},
+{
+ "quote": "I plan to fix this - the report is just in case I forget or get hit by a bus.",
+"author": "Ross Ihaka",
+"context": "reporting a bug in persp",
+"source": "R-help",
+"date": "October 2003" 
+},
+{
+ "quote": "Thomas W. Blackwell: I just discovered to my surprise that I cannot define a function with an argument named 'break' or 'while'!<x>Brian D. Ripley: No, they are reserved names. [...] Most programming languages have reserved words, so I am surprised you are surprised.",
+"author": "Thomas W. Blackwell and Brian D. Ripley",
+"context": null,
+"source": "R-help",
+"date": "November 2003" 
+},
+{
+ "quote": "R has changed quite a lot recently, and older preconceptions do need to be checked against current information.",
+"author": "Brian D. Ripley",
+"context": null,
+"source": "R-help",
+"date": "November 2003" 
+},
+{
+ "quote": "But a difference of a few minutes means that this is well under 20% of the total time unless your statistical analysis is very much speedier than mine.",
+"author": "Brian D. Ripley",
+"context": null,
+"source": "R-devel",
+"date": "November 2003" 
+},
+{
+ "quote": "I seem to recall that we were targetting 512k Macintoshes. In our dreams we might have seen 16Mb Sun.",
+"author": "Ross Ihaka",
+"context": "in reply to the question whether R&R thought when they started out that they would see R using 16G memory on a dual Opteron computer",
+"source": "R-help",
+"date": "November 2003" 
+},
+{
+ "quote": "I quit using SAS in 1991 because my productivity jumped at least 20% within one month of using S-Plus.",
+"author": "Frank Harrell",
+"context": null,
+"source": "R-help",
+"date": "November 2003" 
+},
+{
+ "quote": "When a Certain Guru rips strips off people (God knows he's done it to me often enough) on this list, there's a damned good reason for it.",
+"author": "Rolf Turner",
+"context": "in a discussion about whether a friendly mailing list with more 'customer service' attitude than R-help was needed",
+"source": "R-help",
+"date": "December 2003" 
+},
+{
+ "quote": "Ah, so that's why my report of a bug in the RCheapViagra package didn't get through....",
+"author": "Barry Rowlingson",
+"context": "after Peter Dalgaard announced a new spam filter for R-bugs",
+"source": "R-devel",
+"date": "January 2004" 
+},
+{
+ "quote": "Henrik Bengtsson: Is there a way to turn off the (annoying) beep that occurs when one calls the locator() command and clicks the mouse? [...]<x>Brian D. Ripley: It's a feature of the windows() device. Windows is fond of beeping, and I just mute the sound.",
+"author": "Henrik Bengtsson and Brian D. Ripley",
+"context": null,
+"source": "R-help",
+"date": "July 2001" 
+},
+{
+ "quote": "Brian D. Ripley: Add to package utils in R-devel, after correction. I was surprised you had fallen into the 1:0 trap.<x>Patrick Burns: I'm surprised too -- good catch.",
+"author": "Brian D. Ripley and Patrick Burns",
+"context": "after adding Patrick Burns' head() to the utils package",
+"source": "R-devel",
+"date": "January 2004" 
+},
+{
+ "quote": "As to whether you can do a Lilliefors test for several groups, that depends entirely on your ability to understand what the underlying question would be (see Adams D 1979).",
+"author": "Knut M. Wittkowski",
+"context": null,
+"source": "R-help",
+"date": "February 2004" 
+},
+{
+ "quote": "Jim Gustafsson: I would like to put my SAS-code into R. Could I do that, if yes, how?<x>Frank Harrell: Just reverse the procedure you use when you put R code into SAS. ;)",
+"author": "Jim Gustafsson and Frank Harrell",
+"context": null,
+"source": "R-help",
+"date": "February 2004" 
+},
+{
+ "quote": "Is this English or American (you know, the language referred to in the USA as 'English')? [...] As an English English speaker, my sense and my employer's dictionary both suggest doubling here.",
+"author": "Brian D. Ripley",
+"context": "in a discussion whether it is 'subsetable' or 'subsettable'",
+"source": "R-devel",
+"date": "February 2004" 
+},
+{
+ "quote": "As Brian says, there's nothing in the design that lets you do this, but then since you have the source there's nothing on the planet to stop you doing this. The design is not a law :)",
+"author": "Barry Rowlingson",
+"context": "answering the question whether the mouse position can be determined without any click",
+"source": "R-help",
+"date": "February 2004" 
+},
+{
+ "quote": "Barry Rowlingson: Your grid above has 8*6 = 42 points.<x>(That was a subtle Hitchhikers Guide To The Galaxy reference there, honest, and not a stupid dumb multiplication mistake on my part after working four 18-hour days on the trot...)<x>Peter Dalgaard: [...] Don't panic, just throw yourself at the ground and miss.",
+"author": "Barry Rowlingson and Peter Dalgaard",
+"context": null,
+"source": "R-help",
+"date": "March 2004" 
+},
+{
+ "quote": "I have mentioned several times on this list that I'm in the process of developing a new and wonderful implementation of lme and I would prefer to continue working on that rather than modifying old-style code.",
+"author": "Douglas Bates",
+"context": null,
+"source": "R-help",
+"date": "March 2004" 
+},
+{
+ "quote": "Ivo Welch: Thanks. I will put in a suggestion that the docs refer to q() in 'see also' for 'stop'.<x>Brian D. Ripley: I don't think anyone else is confusing 'exit' with 'stop', though. I hope you don't when driving ....",
+"author": "Ivo Welch and Brian D. Ripley",
+"context": null,
+"source": "R-help",
+"date": "March 2004" 
+},
+{
+ "quote": "Before we get too carried away with this thread could you all please consider how the sd function calculates its result? [...] I'll tell you, it takes the square root of the variance. How is the variance calculated for a numeric vector? First you calculate the mean *using floating point arithmetic* in which it is not necessarily true that N * k / N == k [...] Most of those tests [for numerical accuracy] end in a check using the all.equal function which checks if the relative difference is less than a threshold. That's about the best that you can do with floating point arithmetic.<x>Here endeth the sermon.",
+"author": "Douglas Bates",
+"context": "after a discussion why sd(rep(0.001, 15)) is not necessarily exactly 0",
+"source": "R-help",
+"date": "March 2004" 
+},
+{
+ "quote": "The keyboard is the standard Italian layout, which is missing the ~ (tilde) key. [...] Can anyone advice how to produce the ~ symbol, short of a copy/paste from MS Word?",
+"author": "Federico Calboli",
+"context": null,
+"source": "R-help",
+"date": "March 2004" 
+},
+{
+ "quote": "I'd like to prefix all these solutions with 'Here's how to do it, but don't actually do it you crazy fool'. It's on a par with redefining pi, or redefining '+'. And then redefining '<-'. These techniques have their proper place, and that would be in the currently non-existent obfuscated R contest.<x>No, the R-ish (iRish?) way is to index vectors from 1. That's what the R gods intended!",
+"author": "Barry Rowlingson",
+"context": "in a discussion how vectors in R could be indexed starting from 0",
+"source": "R-help",
+"date": "March 2004" 
+},
+{
+ "quote": "I think that it's generally a good idea not to resist the most natural way of programming in R.",
+"author": "John Fox",
+"context": null,
+"source": "R-help",
+"date": "March 2004" 
+},
+{
+ "quote": "For almost 40 years SAS has been the primary tool for statisticians worldwide and its easy-to-learn syntax, unsurpassed graphical system, powerful macro language and recent graphical user interfaces have made SAS the number one statistical software choice for both beginners and advanced users.",
+"author": "Rolf Poalis, Biostatistics Denmark",
+"context": "announcement of the SAS to R parser sas2R",
+"source": "R-help",
+"date": "April 1, 2004" 
+},
+{
+ "quote": "Sorting is a wonderful topic! Especially because you can discuss different fundamental ideas like brute force, divide and conquer, and questions of efficiency, tradeoffs of space and time, etc.",
+"author": "Peter Wolf",
+"context": null,
+"source": "R-help",
+"date": "April 2004" 
+},
+{
+ "quote": "Douglas Bates: If you really want to be cautious you could use an octal representation like sep=\"\\\\007\" to get a character that is very unlikely to occur in a factor level.<x>Ed L. Cashin: I definitely want to be cautious. Instead of the bell character I think I'll use the field separator character, \"\\\\034\", just because this is the first time I've been able to use it for it's intended purpose! ;)<x>Douglas Bates: Yes, but with \"\\\\034\" you don't get to make obscure James Bond references :-)",
+"author": "Douglas Bates and Ed L. Cashin",
+"context": null,
+"source": "R-help",
+"date": "April 2004" 
+},
+{
+ "quote": "Bret Collier: I hope this is not a uniformed question, but I am a little lost.<x>Peter Dalgaard: Don't worry, they all look alike... ;-)",
+"author": "Bret Collier and Peter Dalgaard",
+"context": null,
+"source": "R-help",
+"date": "April 2004" 
+},
+{
+ "quote": "I was actually reading it with some curiosity as to how they managed to find 5 locations that were close to everyone on R-help...",
+"author": "Peter Dalgaard",
+"context": "after XL Solutions announced courses 'R/Splus Programming Techniques, @ 5 locations near you!'",
+"source": "R-help",
+"date": "April 2004" 
+},
+{
+ "quote": "My preference goes with the numbering scheme attributed to a tribe on some island in the Pacific which consists of a 'factor' with four levels: 'one', 'two', 'three', and 'lots'. Hence, I'd go with 'lots of R users'.",
+"author": "Dirk Eddelbuettel",
+"context": "in a discussion about trying to estimate the number of R users",
+"source": "R-help",
+"date": "April 2004" 
+},
+{
+ "quote": "The Huli of Papua New Guinea use '15' to mean a very large number and '15 times 15 samting (something)' to mean something close to infinity.",
+"author": "David Whiting",
+"context": "in a discussion about trying to estimate the number of R users",
+"source": "R-help",
+"date": "April 2004" 
+},
+{
+ "quote": "It seems to me against the spirit of Open Source software to attempt to monitor distribution. We could ask R to 'call home' on first use (in the way e.g. pine does) but I suspect many users would find that objectionable.",
+"author": "Brian D. Ripley",
+"context": "in a discussion about trying to estimate the number of R users",
+"source": "R-help",
+"date": "April 2004" 
+},
+{
+ "quote": "Maybe you should contact Microsoft, and get them to modify their tools so they work on the R sources?",
+"author": "Duncan Murdoch",
+"context": "answering the question if there is a way compiling the R sources using VisualC++",
+"source": "R-help",
+"date": "April 2004" 
+},
+{
+ "quote": "Seldom are prizes, credit, and gratitude given, else Brian would be drowning in them.",
+"author": "Anthony Rossini",
+"context": "about the merits of implementing software",
+"source": "R-help",
+"date": "May 2004" 
+},
+{
+ "quote": "Release 1.0.0<x>(silence)<x>Wow! Thank you! [...] If I am allowed to ask just one question today: How do you fit 48 hours of coding in an ordinary day? Any hints will be appreciated ... :-)",
+"author": "Detlef Steuer",
+"context": "on 2000-02-29",
+"source": "R-help",
+"date": "February 2000" 
+},
+{
+ "quote": "If you give people a linear model function you give them something dangerous.",
+"author": "John Fox",
+"context": null,
+"source": "useR! 2004, Vienna",
+"date": "May 2004" 
+},
+{
+ "quote": "To paraphrase provocatively, 'machine learning is statistics minus any checking of models and assumptions'.",
+"author": "Brian D. Ripley",
+"context": "about the difference between machine learning and statistics",
+"source": "useR! 2004, Vienna",
+"date": "May 2004" 
+},
+{
+ "quote": "The documentation level of R is already much higher than average for open source software and even than some commercial packages (esp. SPSS is notorious for its attitude of \"You want to do one of these things. If you don't understand what the output means, click help and we'll pop up five lines of mumbo-jumbo that you're not going to understand either.\")",
+"author": "Peter Dalgaard",
+"context": null,
+"source": "R-help",
+"date": "April 2002" 
+},
+{
+ "quote": "Can one be a good data analyst without being a half-good programmer? The short answer to that is, 'No.' The long answer to that is, 'No.'",
+"author": "Frank Harrell",
+"context": null,
+"source": "1999 S-PLUS User Conference, New Orleans",
+"date": "October 1999" 
+},
+{
+ "quote": "For the S system, which has forever altered the way people analyze, visualize, and manipulate data .... S is an elegant, widely accepted, and enduring software system, with conceptual integrity, thanks to the insight, taste, and effort of John Chambers.",
+"author": "Association for Computing Machinery",
+"context": null,
+"source": "ACM/Software System Award citation",
+"date": "1998" 
+},
+{
+ "quote": "Some of us feel that type III sum of squares and so-called ls-means are statistical nonsense which should have been left in SAS.",
+"author": "Brian D. Ripley",
+"context": null,
+"source": "s-news",
+"date": "May 1999" 
+},
+{
+ "quote": "I'm really curious to know why the \"two types\" of sum of squares are called \"Type I\" and \"Type III\"! This is a very common misconception, particularly among SAS users who have been fed this nonsense quite often for all their professional lives. Fortunately the reality is much simpler. There is, by any sensible reckoning, only ONE type of sum of squares, and it always represents an improvement sum of squares of the outer (or alternative) model over the inner (or null hypothesis) model. What the SAS highly dubious classification of sums of squares does is to encourage users to concentrate on the null hypothesis model and to forget about the alternative. This is always a very bad idea and not surprisingly it can lead to nonsensical tests, as in the test it provides for main effects \"even in the presence of interactions\", something which beggars definition, let alone belief.",
+"author": "Bill Venables",
+"context": null,
+"source": "R-help",
+"date": "November 2000" 
+},
+{
+ "quote": "I was profoundly disappointed when I saw that S-PLUS 4.5 now provides \"Type III\" sums of squares as a routine option for the summary method for aov objects. I note that it is not yet available for multistratum models, although this has all the hallmarks of an oversight (that is, a bug) rather than common sense seeing the light of day. When the decision was being taken of whether to include this feature, \"because the FDA requires it\" a few of my colleagues and I were consulted and our reply was unhesitatingly a clear and unequivocal \"No\", but it seems the FDA and SAS speak louder and we were clearly outvoted.",
+"author": "Bill Venables",
+"context": null,
+"source": "'Exegeses on Linear Models' paper",
+"date": "May 2000" 
+},
+{
+ "quote": "SAS seems to be to statistical computing what Microsoft is to personal computing.",
+"author": "Bill Venables",
+"context": null,
+"source": "'Exegeses on Linear Models' paper",
+"date": "May 2000" 
+},
+{
+ "quote": "Zhu Wang: I am trying to create a library which uses some Fortran source files [...]<x>Douglas Bates: Someone named Martin Maechler will shortly be sending you email regarding the distinction between 'library' and 'package' :-)",
+"author": "Zhu Wang and Douglas Bates",
+"context": null,
+"source": "R-help",
+"date": "May 2004" 
+},
+{
+ "quote": "Let's not kid ourselves: the most widely used piece of software for statistics is Excel.",
+"author": "Brian D. Ripley",
+"context": "'Statistical Methods Need Software: A View of Statistical Computing'",
+"source": "Opening lecture RSS 2002, Plymouth",
+"date": "September 2002" 
+},
+{
+ "quote": "John Miller: How do I prevent google search to post my questions asked here??<x>Martin Maechler: you don't: R-help is famous and celebrity can't be gotten rid off ;-)",
+"author": "John Miller and Martin Maechler",
+"context": null,
+"source": "R-help",
+"date": "June 2004" 
+},
+{
+ "quote": "I use R. My company benefits from it. My clients benefit from it.<x>...and I sleep just fine (when I do sleep)... :-)",
+"author": "Marc Schwartz, Medanalytics",
+"context": "about the 'costs' of free software",
+"source": "R-help",
+"date": "June 2004" 
+},
+{
+ "quote": "Please bear with a poor newbee, who might be doing everything backwards (I was brought up in pure math).",
+"author": "Thomas Poulsen",
+"context": null,
+"source": "R-help",
+"date": "May 2004" 
+},
+{
+ "quote": "1st mail: One of the reasons that SAM is popular, is that it is popular (i.e. since everyone has heard of it, it makes reviewers happy). So, it would be nice to be able to point to publications in good journals so that reviewers will be comfortable. (I personally, am quite comfortable with SAM).<x>2nd mail: Oops, must have been a Freudian slip. Actually, I am not perfectly comfortable with SAM. But I am quite comfortable with limma.",
+"author": "Naomi Altman",
+"context": "answering the question whether anyone had published data using limma for microarray analysis",
+"source": "bioconductor",
+"date": "June 2004" 
+},
+{
+ "quote": "However, if you want to do this at all efficiently for a data frame, start with my solution not Uwe's [...]",
+"author": "Brian D. Ripley",
+"context": "in a second reply to a question related to data frame manipulations",
+"source": "R-help",
+"date": "June 2004" 
+},
+{
+ "quote": "/* some real insanity to keep Duncan sane */",
+"author": "Luke Tierney",
+"context": null,
+"source": "in src/main/context.c",
+"date": "June 2001" 
+},
+{
+ "quote": "Roger D. Peng: I don't think anyone actually believes that R is designed to make *everyone* happy. For me, R does about 99% of the things I need to do, but sadly, when I need to order a pizza, I still have to pick up the telephone.<x>Douglas Bates: There are several chains of pizzerias in the U.S. that provide for Internet-based ordering (e.g. www.papajohnsonline.com) so, with the Internet modules in R, it's only a matter of time before you will have a pizza-ordering function available.<x>Brian D. Ripley: Indeed, the GraphApp toolkit (used for the RGui interface under R for Windows, but Guido forgot to include it) provides one (for use in Sydney, Australia, we presume as that is where the GraphApp author hails from). Alternatively, a Padovian has no need of ordering pizzas with both home and neighbourhood restaurants ....",
+"author": "Roger D. Peng, Douglas Bates, and Brian D. Ripley",
+"context": null,
+"source": "R-help",
+"date": "June 2004" 
+},
+{
+ "quote": "Uwe Ligges: Please stop sending unsensible bug reports! Those have to be handled manually in the bug repository!<x>Barry Rowlingson: Really? They seem to be being handled automatically and frighteningly well by the Uwe-bot at the moment. Congratulations, you've passed the Turing Test.",
+"author": "Uwe Ligges and Barry Rowlingson",
+"context": "after several nonsensical mails to R-bugs",
+"source": "R-devel",
+"date": "July 2004" 
+},
+{
+ "quote": "Soon, they'll be speaking R on the subway.",
+"author": "Michael Rennie",
+"context": "giving 'Kudos to the R support team'",
+"source": "R-help",
+"date": "July 2004" 
+},
+{
+ "quote": "Ted Harding: But you can also do these with 'any' and 'all', e.g. any(v==TRUE).<x>Thomas Lumley: or any( (v==TRUE)==TRUE), or any( ((v==TRUE)==TRUE)==TRUE)... Or, perhaps, any(v). Lewis Carroll wrote a nice piece on this theme.",
+"author": "Ted Harding and Thomas Lumley",
+"context": "about implementing an 'or' of a logical vector",
+"source": "R-help",
+"date": "August 2004" 
+},
+{
+ "quote": "Benjamin Lloyd-Hughes: Has anyone had any joy getting the rgdal package to compile under windows?<x>Roger Bivand: The closest anyone has got so far is Hisaji Ono, who used MSYS (http://www.mingw.org/) to build PROJ.4 and GDAL (GDAL depends on PROJ.4, PROJ.4 needs a PATH to metadata files for projection and transformation), and then hand-pasted the paths to the GDAL headers and library into src/Makevars, running Rcmd INSTALL rgdal at the Windows command prompt as usual. All of this can be repeated, but is not portable, and does not suit the very valuable standard binary package build system for Windows. Roughly: [points 1 to 5 etc omitted]<x>Barry Rowlingson: At some point the complexity of installing things like this for Windows will cross the complexity of installing Linux... (PS excepting live-Linux installs like Knoppix)",
+"author": "Benjamin Lloyd-Hughes, Roger Bivand, and Barry Rowlingson",
+"context": null,
+"source": "R-help",
+"date": "August 2004" 
+},
+{
+ "quote": "So good advice here is: Beware of good advice about this. (Of course, I may just be an outlier ...)",
+"author": "Berton Gunter",
+"context": "replying to the question what the best way to detect an outlier is",
+"source": "R-help",
+"date": "September 2004" 
+},
+{
+ "quote": "Gabor Grothendieck: Congratulations to the R team and all involved for reaching the 2.0.0 milestone. The progress of R is truly astounding.<x>Barry Rowlingson: A milestone is something that tells you how far it is to where you are going. With R-2.0.0, have we arrived?<x>Peter Dalgaard: Depending on direction, milestones might only be telling you how far you've gone. And you may even be walking in circles around the target/origin...",
+"author": "Gabor Grothendieck, Barry Rowlingson, and Peter Dalgaard",
+"context": null,
+"source": "R-help",
+"date": "October 2004" 
+},
+{
+ "quote": "So it ***do not refuse*** to read the data. I do not expect some dwarf climbs out from your computer and says he will not read your data. Or is he?<x>?read.table gives you more details about how to read some data.",
+"author": "Petr Pikal",
+"context": "after a post that said read.table() refuses to read unbalanced data",
+"source": "R-help",
+"date": "October 2004" 
+},
+{
+ "quote": "These road distances seem to be very non-Euclidean indeed (even non-metric). It seems to be 2282km from Athens to Milan if you go directly, but if you go via Rome it is only 1403km. I thought that World is non-Euclidean, but not that obviously.",
+"author": "Jari Oksanen",
+"context": "on the eurodist data",
+"source": "R-help",
+"date": "October 2004" 
+},
+{
+ "quote": "Eric Lecoutre: I don't want to die being idiot...<x>Peter Dalgaard: With age, most of us come to realise that that is the only possible outcome.",
+"author": "Eric Lecoutre and Peter Dalgaard",
+"context": null,
+"source": "R-help",
+"date": "October 2004" 
+},
+{
+ "quote": "Morten Welinder: The result changes 70000 orders of magnitude right here. Ugh. This is affecting some erlang calculations of mine pretty badly.<x>Peter Dalgaard: Make that 30400 orders of magnitude (natural logs y'know)... On something that's about 300000 orders of magnitude below 1, mind you! What the devil are you calculating? The probability that a random configuration of atoms would make up the known universe?",
+"author": "Morten Welinder and Peter Dalgaard",
+"context": "reporting a pgamma discontinuity",
+"source": "R-devel",
+"date": "October 2004" 
+},
+{
+ "quote": "Firstly, don't call your matrix 'matrix'. Would you call your dog 'dog'? Anyway, it might clash with the function 'matrix'.",
+"author": "Barry Rowlingson",
+"context": null,
+"source": "R-help",
+"date": "October 2004" 
+},
+{
+ "quote": "R is the lingua franca of statistical research. Work in all other languages should be discouraged.",
+"author": "Jan de Leeuw",
+"context": "as quoted by Matt Pocernich on R-help",
+"source": "JSM 2003, San Francisco",
+"date": "August 2003" 
+},
+{
+ "quote": "Amer Siddique: looking for some thoughts on incorporating R functionality to create histograms of data stored in an informix db. im gonna write the app in .Net and will use a managed provider to access the data. what R libs might I have to package in the assemblies? (sorry my Q is general as Ive only just looked at wanting this yet)<x>Brian D. Ripley: Could you translate the question into English? My guess is that you are writing in a lower-cased version of some Microsoft internal language, but you don't even mention that this is for Windows (if it is).",
+"author": "Amer Siddique and Brian D. Ripley",
+"context": "on using R in .NET apps",
+"source": "R-help",
+"date": "November 2004" 
+},
+{
+ "quote": "Tony Plate: It is the prerogative of the members of R-core to decide whether to spend their time on improving documentation or improving the functionality (or merely having a life).<x>Patrick Burns: I thought we had agreed that members of R-core are not allowed lives.",
+"author": "Tony Plate and Patrick Burns",
+"context": "in a thread about how to improve the documentation of R functions",
+"source": "R-devel",
+"date": "November 2004" 
+},
+{
+ "quote": "Obviously I have not tested on an Alphabc...tuvwxyz system but it should work there.",
+"author": "Brian D. Ripley",
+"context": "after fixing a problem discovered when compiling R 2.0.0 on Linux Alpha",
+"source": "R-devel",
+"date": "October 2004" 
+},
+{
+ "quote": "Lars Strand: Will R run under Windows Pocket PC?<x>Brian D. Ripley: We don't know! There are no binary versions of R for that platform, but perhaps you could find a suitable compiler and manage to build the sources.<x>Outside pure mathematics it is usually very hard to establish that something cannot be done (and it can be very hard in pure mathematics, too).",
+"author": "Lars Strand and Brian D. Ripley",
+"context": null,
+"source": "R-help",
+"date": "November 2004" 
+},
+{
+ "quote": "It [the effort of learning how to use R] is the price paid, just as the dollars or euros for a commercial package would be. For that price, I've learnt a great deal - and not only about R. And I shall remember it when I next have to find a heavyweight solution for a big problem presented by a small charitable client with an invisible budget. It's a huge, awe-inspiring package - easier to perceive as such because the power is not hidden beneath a cosmetic veneer.",
+"author": "Felix Grant",
+"context": "in an article about free statistics software",
+"source": "Scientific Computing World",
+"date": "November 2004" 
+},
+{
+ "quote": "There are companies whose yearly license fees to SAS total millions of dollars. Then those companies hire armies of SAS programmers to program an archaic macro language using old statistical methods to produce ugly tables and the worst graphics in the statistical software world.",
+"author": "Frank Harrell",
+"context": null,
+"source": "R-help",
+"date": "November 2004" 
+},
+{
+ "quote": "I believe functions should do what they say on the box (and the help page), and not what some user hopes they might do by mind-reading.",
+"author": "Brian D. Ripley",
+"context": null,
+"source": "R-help",
+"date": "November 2004" 
+},
+{
+ "quote": "Thomas Lumley: The algorithm in glm.fit, while not perfect, is a little smarter than a simple IRLS. It uses step-halving to back away from the edge, and when the parameter space is convex it has a reasonable chance of creeping along the boundary to the true MLE.<x>Peter Dalgaard: Hmm. That wasn't my experience. I had a situation where there was like a (virtual) maximum outside the boundary, and the algorithm would basically stay on the path to that peak, banging its little head into the same point of the wall repeatedly, so to speak.",
+"author": "Thomas Lumley and Peter Dalgaard",
+"context": "about problems with constrained optimzation in GLMs and \"the little optimizer that couldn't\"",
+"source": "R-help",
+"date": "November 2004" 
+},
+{
+ "quote": "Getting flamed for asking dumb questions on a public mailing list is all part of growing up and being a man/woman.",
+"author": "Michael Watson",
+"context": "in a discussion on whether answers on R-help should be more polite",
+"source": "R-help",
+"date": "December 2004" 
+},
+{
+ "quote": "You may have not been long enough on this list to see that some of the old-time gurus have reached a demigod like status. Demigods have all rights to be 'rude' (that's almost a definition of a demi-deity).",
+"author": "Jari Oksanen",
+"context": "in a discussion on whether answers on R-help should be more polite",
+"source": "R-help",
+"date": "December 2004" 
+},
+{
+ "quote": "Suggesting a Usenet newsgroup is a generation thing. I think some of the younger users would prefer a Wiki or a Forum (these are words I've seen, but I wouldn't visit places like this, talking about my g-g-generation).",
+"author": "Jari Oksanen",
+"context": null,
+"source": "R-help",
+"date": "December 2004" 
+},
+{
+ "quote": "Our great-great grandchildren as yet unborn may read some of the stupid questions and/or answers that I and perhaps others give from time to time. I'd rather get flamed for saying something stupid in public on this list than to continue to provide substandard service to the people with whom I work because I perpetrated the same mistake in an environment in which no one questioned so effectively my errors.",
+"author": "Spencer Graves",
+"context": "in a discussion on whether answers on R-help should be more polite",
+"source": "R-help",
+"date": "December 2004" 
+},
+{
+ "quote": "Robin Hankin: I'd say that without a tool like R you cannot learn statistics.<x>David Whiting: I believe Fisher and a few others managed to get by without it.<x>Peter Dalgaard: But think how far they could have got with R!",
+"author": "Robin Hankin, David Whiting, and Peter Dalgaard",
+"context": "on teaching/learning statistics with R",
+"source": "R-help",
+"date": "December 2004" 
+},
+{
+ "quote": "If you don't go with R now, you will someday.",
+"author": "David Kane",
+"context": "on whether to use R or S-PLUS",
+"source": "R-SIG-Finance",
+"date": "November 2004" 
+},
+{
+ "quote": "Patrick Burns: In the old days with S-PLUS, the rule of thumb was that you needed 10 times as much memory as your dataset. [...] R (and current versions of S-PLUS) are more frugal than S-PLUS was back then.<x>Ajay Shah: Hmm, so it'd be interesting to apply current prices of RAM and current prices of R, to work out the break-even point at which it's better to buy SAS! :-) Without making any calculations, I can't see how SAS can compete with the price of 4G of RAM.",
+"author": "Patrick Burns and Ajay Shah",
+"context": "on whether to use R, S-PLUS or SAS",
+"source": "R-SIG-Finance",
+"date": "December 2004" 
+},
+{
+ "quote": "I have never heard anyone (knowledgable or otherwise) claim that, in the absence of transition costs, SAS is better than R for equity modeling. If you come across any such claim, I would be happy to refute it.",
+"author": "David Kane",
+"context": null,
+"source": "R-SIG-Finance",
+"date": "December 2004" 
+},
+{
+ "quote": "Will Frank Harrell or someone else please explain to me a real application in which this is not fast enough?",
+"author": "Brian D. Ripley",
+"context": "announcing improved versions of read.table and write.table",
+"source": "R-devel",
+"date": "December 2004" 
+},
+{
+ "quote": "Achim Zeileis: Other visualizations of departures from indepence include mosaicplots with shading or association plots. See mosaicplot() and assocplot() and the package vcd.<x>Peter Dalgaard: I see that you've taken initive to abbriate statiscal concepts...",
+"author": "Achim Zeileis and Peter Dalgaard",
+"context": null,
+"source": "R-help",
+"date": "January 2005" 
+},
+{
+ "quote": "Also, that's what Martin Maechler told me and he wrote the code so I trust him on that. I figure that if you have to trust someone to be meticulous and precise then a German-speaking Swiss is a good choice.",
+"author": "Douglas Bates",
+"context": null,
+"source": "R-help",
+"date": "January 2005" 
+},
+{
+ "quote": "Paul Gilbert: [code comparing speed of apply(z,2,sum) vs. rep(1,10000)%*%z)] which seemed completely contrary to all my childhood teachings.<x>Douglas Bates: Must have had an interesting childhood if you spent it learning about the speeds of various matrix multiplication techniques.<x>Paul Gilbert: [...] why is apply so slow?<x>Brian Ripley: 'so slow' sic: what are you going to do in the 7ms you saved?",
+"author": "Paul Gilbert, Douglas Bates, and Brian D. Ripley",
+"context": "discussing 'the incredible lightness of crossprod'",
+"source": "R-devel",
+"date": "January 2005" 
+},
+{
+ "quote": "Well, if I had written that, it would have been on purpose ...",
+"author": "Kurt Hornik",
+"context": "after Torsten Hothorn reported the 'typo' automa*g*ically in ?NotYetImplemented",
+"source": "R-devel",
+"date": "January 2005" 
+},
+{
+ "quote": "I'm not sure I'd trust any computer recommendation from 1976, no matter how famous the authors are.",
+"author": "Peter Dalgaard",
+"context": "after Samuel Edward Kemp cited a recommendation about nonlinear least squares computer programs from 'Box-Jenkins, 1976'",
+"source": "R-help",
+"date": "January 2005" 
+},
+{
+ "quote": "Marc R. Feldesman: I'm trying to figure out what could have possibly changed [...] that make Brian Ripley's posts (in particular) not show up on my mail server [...]<x>Peter Dalgaard: Did you remember to turn off the Oxford-sarcasm filter?",
+"author": "Marc R. Feldesman and Peter Dalgaard",
+"context": "Marc R. Feldesman having some e-mail problems",
+"source": "R-help",
+"date": "January 2005" 
+},
+{
+ "quote": "Mingzhai Sun: When you use it [R], since it is written by so many authors, how do you know that the results are trustable?<x>Bill Venables: The R engine [...] is pretty well uniformly excellent code but you have to take my word for that. Actually, you don't. The whole engine is open source so, if you wish, you can check every line of it. If people were out to push dodgy software, this is not the way they'd go about it.",
+"author": "Mingzhai Sun and Bill Venables",
+"context": null,
+"source": "R-help",
+"date": "January 2004" 
+},
+{
+ "quote": "Jesus and the rest of the R-help community: Thanks for your help.",
+"author": "Mike Saunders",
+"context": "after Jesus Frias answered his question about split-split plots",
+"source": "R-help",
+"date": "February 2005" 
+},
+{
+ "quote": "Pavel Khomski: How can I specify the random part in the GLMM-call (of the lme4 library) for compound matrices just in the the same way as they defined in the lme-Call (of the nlme library).<x>Martin Maechler: ''twice in such a short paragraph -- yikes !!'' ... I'm getting convulsive...",
+"author": "Pavel Khomski and Martin Maechler",
+"context": null,
+"source": "R-help",
+"date": "February 2005" 
+},
+{
+ "quote": "A sufficiently trained statistician can read the vagaries of a Q-Q plot like a shaman can read a chicken's entrails, with a similar recourse to scientific principles. Interpreting Q-Q plots is more a visceral than an intellectual exercise. The uninitiated are often mystified by the process. Experience is the key here.",
+"author": "Department of Mathematics and Statistics, Murdoch University",
+"context": null,
+"source": "StatsNotes",
+"date": null 
+},
+{
+ "quote": "If the answer is parse() you should usually rethink the question.",
+"author": "Thomas Lumley",
+"context": null,
+"source": "R-help",
+"date": "February 2005" 
+},
+{
+ "quote": "Just now I had an apparently insurmountable problem that's been bugging me for days, but phrasing my question in a form suitable for the R-help list enabled me to solve my own problem in two minutes flat.<x>Thanks everyone.",
+"author": "Robin Hankin",
+"context": null,
+"source": "R-help",
+"date": "March 2005" 
+},
+{
+ "quote": "Actually, I see it as part of my job to inflict R on people who are perfectly happy to have never heard of it. Happiness doesn't equal proficient and efficient. In some cases the proficiency of a person serves a greater good than their momentary happiness.",
+"author": "Patrick Burns",
+"context": null,
+"source": "R-help",
+"date": "April 2005" 
+},
+{
+ "quote": "Evelyn Hall: I would like to know how (if) I can extract some of the information from the summary of my nlme.<x>Simon Blomberg: This is R. There is no if. Only how.",
+"author": "Evelyn Hall and Simon 'Yoda' Blomberg",
+"context": null,
+"source": "R-help",
+"date": "April 2005" 
+},
+{
+ "quote": "Tradition among experienced S programmers has always been that loops (typically 'for' loops) are intrinsically inefficient: expressing computations without loops has provided a measure of entry into the inner circle of S programming.",
+"author": "John Chambers",
+"context": null,
+"source": "Programming With Data, p. 173",
+"date": "1998" 
+},
+{
+ "quote": "You can't expect statistical procedures to rescue you from poor data.",
+"author": "Berton Gunter",
+"context": "on dealing with missing values in a cluster analysis",
+"source": "R-help",
+"date": "April 2005" 
+},
+{
+ "quote": "I think we can reject the null hypothesis of \"Dirk can type\" at all convential significance levels.",
+"author": "Dirk Eddelbuettel",
+"context": "after several users including himself had misspelled Ubuntu as Umbutu or Ubunto",
+"source": "R-help",
+"date": "April 2005" 
+},
+{
+ "quote": "The problem, as always, is what the heck does one mean by 'outlier' in these contexts. Seems to be like pornography -- \"I know it when I see it.\"",
+"author": "Berton Gunter",
+"context": "quoting Justice Potter Stewart in a discussion about tests for outliers",
+"source": "R-help",
+"date": "April 2005" 
+},
+{
+ "quote": "[...] (damn... my shift key just broke as well...)<x>bill venables.",
+"author": "Bill Venables",
+"context": "answering a message that lacked upper case letters",
+"source": "R-help",
+"date": "April 2005" 
+},
+{
+ "quote": "It is a mistake to assume that everything is known about even the common approximations used in statistical practice, and this area is still opening up.",
+"author": "Bill Venables",
+"context": "in a discussion about how fitted generalized linear mixed models can be compared",
+"source": "R-help",
+"date": "April 2005" 
+},
+{
+ "quote": "We are teaching stuff like mathematics, statistics, statistical programming and so on, but we cannot teach each possible software product - we also don't teach how to analyze each possible dataset that might find its way to the statistician's desk, we just use the iris data and Anscombe's quartet. ;-)",
+"author": "Uwe Ligges",
+"context": "in a thread about whether universities have to teach students how to use commercial software",
+"source": "R-help",
+"date": "April 2005" 
+},
+{
+ "quote": "Usually (but not always) doing tests of normality reflect a lack of understanding of the power of rank tests, and an assumption of high power for the tests (qq plots don't always help with that because of their subjectivity). When possible it's good to choose a robust method. Also, doing pre-testing for normality can affect the type I error of the overall analysis.",
+"author": "Frank Harrell",
+"context": null,
+"source": "R-help",
+"date": "April 2005" 
+},
+{
+ "quote": "As for elegance, R is refined, tasteful, and beautiful. When I grow up, I want to marry R.",
+"author": "Andy Bunn",
+"context": "in a discussion about whether R is simple, powerful and elegant",
+"source": "R-help",
+"date": "May 2005" 
+},
+{
+ "quote": "Frank Harrell: Here is an easy approach that will yield results only slightly less valid than one actually using the response variable:<x>  x <- data.frame(x1, x2, x3, x4, ..., other potential predictors)<x>  x[ , sample(ncol(x))]<x>Andy Liaw: Hmm... Shouldn't that be something like:<x>  x[, sample(ncol(x), ceiling(ncol(x) * runif(1)))]",
+"author": "Frank Harrell and Andy Liaw",
+"context": "about alternative strategies for stepwise regression and 'random parsimony'",
+"source": "R-help",
+"date": "May 2005" 
+},
+{
+ "quote": "Rene M. Raupp: Does anybody know any work comparing R with other (charged) statistical software (like Minitab, SPSS, SAS)? [...] I have to show it's as good as the others.<x>Kjetil Brinchmann Halvorsen: Sorry. That will be difficult. Couldn't it do to prove it is better?",
+"author": "Rene M. Raupp and Kjetil Brinchmann Halvorsen",
+"context": null,
+"source": "R-help",
+"date": "May 2005" 
+},
+{
+ "quote": "Sean Davis: It got me going quickly with S4 methods, which it seems to me are the way to go in most cases.<x>Rolf Turner: If you want to simultaneously handcuff yourself, strap yourself into a strait jacket, and tie yourself in knots, and moreover write code which is incomprehensible to the human mind, then S4 methods are indeed the way to go.",
+"author": "Sean Davis and Rolf Turner",
+"context": "expressing different views about the benefits of S4 classes",
+"source": "R-help",
+"date": "May 2005" 
+},
+{
+ "quote": "I wish to perform brain surgery this afternoon at 4pm and don't know where to start. My background is the history of great statistician sports legends but I am willing to learn. I know there are courses and numerous books on brain surgery but I don't have the time for those. Please direct me to the appropriate HowTos, and be on standby for solving any problem I may encounter while in the operating room. Some of you might ask for specifics of the case, but that would require my following the posting guide and spending even more time than I am already taking to write this note.",
+"author": "I. Ben Fooled",
+"context": "aka Frank Harrell",
+"source": "R-help",
+"date": "April 1, 2005" 
+},
+{
+ "quote": "You're overlooking something like line 800 of the documentation for xyplot. [...] It's probably in the R-FAQ as well, since my original feeling was that this behaviour was chosen in order to confuse people and see how many people read the FAQ... :)",
+"author": "Barry Rowlingson",
+"context": "about the fact that lattice objects have to be print()ed",
+"source": "R-help",
+"date": "May 2005" 
+},
+{
+ "quote": "Rolf Turner: In the middle of a Saturday morning (in my Time Zone!) I send out a plea for help, and in just over 20 minutes my problem is solved!<x>I don't think you get service like that anywhere else. This R-help list is BLOODY AMAZING!<x>Spencer Graves: 'The sun never sets on the (former) British Empire.' Today, it never sets on R-Help.",
+"author": "Rolf Turner and Spencer Graves",
+"context": null,
+"source": "R-help",
+"date": "May 2005" 
+},
+{
+ "quote": "As a general rule (subject to numerous exceptions, caveats, etc.):<x>1) it is programming and debugging time that most impacts 'overall' program execution time;<x>2) this is most strongly impacted by code readability and size (the smaller the better);<x>3) both of which are enhanced by modular construction and reuseability, which argues for avoiding inline code and using separate functions.<x>These days, I would argue that most of the time it is program clarity and correctness (they are related) that is the important issue, not execution speed.",
+"author": "Berton Gunter",
+"context": "in a discussion about parsing speed",
+"source": "R-help",
+"date": "May 2005" 
+},
+{
+ "quote": "I suggest that we redefine \"+\" to be a legal character in the name of an identifier. Sure, if you used to have \"a+b\" you'll have to rewrite it as \"+(a,b)\", but think of the benefits! You+can+write+out+long+sentences+and+use+them+as+variable+names!",
+"author": "Duncan Murdoch",
+"context": "in a discussion whether to use underscore, dot, or mixed case in variable names",
+"source": "R-help",
+"date": "May 2005" 
+},
+{
+ "quote": "Oops. Was that what I was expecting?",
+"author": "Louise Matthews",
+"context": "during the practicals of 'Statistical Practice in Epidemiology Using R'",
+"source": "SPE Course, Tartu",
+"date": "May 2005" 
+},
+{
+ "quote": "Well, 'do as we say, not do as we do' applies, I think.",
+"author": "Brian D. Ripley",
+"context": "answering a report on a small inconsistency in 'Writing R Extensions' by David Firth",
+"source": "R-devel",
+"date": "June 2005" 
+},
+{
+ "quote": "See pages 45 and 46 of V&R's S PROGRAMMING for a definitive discussion of how to do this.<x>(Confession: I treat anything that V&R say as definitive).",
+"author": "Berton Gunter",
+"context": "in reply to the question how to parse a '...' function argument",
+"source": "R-help",
+"date": "June 2005" 
+},
+{
+ "quote": "A big computer, a complex algorithm and a long time does not equal science.",
+"author": "Robert Gentleman",
+"context": null,
+"source": "SSC 2003, Halifax",
+"date": "June 2003" 
+},
+{
+ "quote": "Uwe Ligges: I just told nonsense, stepclass() does not make sense with randomForest(), obviously ... (wonder why nobody shouted?).<x>Douglas Bates: Oh, we're just so used to you talking nonsense that we don't bother to point it out any more :-)",
+"author": "Uwe Ligges and Douglas Bates",
+"context": null,
+"source": "R-help",
+"date": "July 2005" 
+},
+{
+ "quote": "The fact that some people murder doesn't mean we should copy them. And murdering data, though not as serious, should also be avoided.",
+"author": "Frank E. Harrell",
+"context": "answering a question on categorization of continuous variables in survival modelling",
+"source": "R-help",
+"date": "July 2005" 
+},
+{
+ "quote": "The learning curve is steep - but then like many people, I'd like to be able to do sophisticated modelling with deep understanding and no effort :-)",
+"author": "Sean O'Riordain",
+"context": "in a thread about the helpfulness of documentation",
+"source": "R-help",
+"date": "July 2005" 
+},
+{
+ "quote": "Excellent, Berwin!<x>Specifically the part about why the bug never really triggers wrong behavior. Your mail should be saved in 'The Annals of R' ...",
+"author": "Martin Maechler",
+"context": "after Berwin A Turlach reported a buglet in 'spline_eval'",
+"source": "R-devel",
+"date": "July 2005" 
+},
+{
+ "quote": "You say yourself it wasn't reproducible. So it could have been anything that \"crashed\" your R, cosmic radiation, a bolt of lightning reversing a bit in your computer memory, ... :-)",
+"author": "Martin Maechler",
+"context": "replying to a bug report",
+"source": "R-devel",
+"date": "July 2005" 
+},
+{
+ "quote": "It was simple, but you know, it's always simple when you've done it.",
+"author": "Simone Gabbriellini",
+"context": "after solving a problem with a trick suggested on the list",
+"source": "R-help",
+"date": "August 2005" 
+},
+{
+ "quote": "Trevor Hastie: It would be great to have a 'clickable' digest, where the topics list is a set of pointers, and clicking on a topic takes you to that entry.<x>Jeff Gentry: I sincerely hope you don't mean that you wish HTML enabled content in the actual emails coming through the mailing list. People who send HTML in email text should be taken out back and shot :)<x>Peter Dalgaard: Pretty much what my spam filter does... Well, it kills the message, not the sender, although the latter would be a more permanent solution.",
+"author": "Trevor Hastie, Jeff Gentry, and Peter Dalgaard",
+"context": null,
+"source": "R-help",
+"date": "August 2005" 
+},
+{
+ "quote": "If you aren't sure of the relative priority of two operators, use parentheses. 1:(nr-1) would work regardless of whether : or - had higher priority. Or, in extreme cases, read the documentation.",
+"author": "Duncan Murdoch",
+"context": null,
+"source": "R-help",
+"date": "August 2005" 
+},
+{
+ "quote": "It is wrong to blame ANY tool for our own shortcomings!",
+"author": "Robert Baer",
+"context": "about the perils of using PowerPoint",
+"source": "R-help",
+"date": "September 2005" 
+},
+{
+ "quote": "Jason Horn: Can anyone think of a way to create a pretty() sequence that excludes zero? Or a way to remove the zero from a sequence after using pretty()?<x>Peter Dalgaard: The former is rather hard because zero is generally considered just about the prettiest number around...",
+"author": "Jason Horn and Peter Dalgaard",
+"context": null,
+"source": "R-help",
+"date": "October 2005" 
+},
+{
+ "quote": "Does anyone know someone working in this area in France who is not a JARP (Just Another R Person)?",
+"author": "Jan de Leeuw",
+"context": null,
+"source": "JSS mailing list",
+"date": "October 2005" 
+},
+{
+ "quote": "Contrary to popular belief the speed of R's interpreter is rarely the limiting factor to R's speed. People treating R like C is typically the limiting factor. You have vector operations, USE THEM.",
+"author": "Byron Ellis",
+"context": null,
+"source": "R-help",
+"date": "October 2005" 
+},
+{
+ "quote": "Mathematical conventions are just that, conventions. They differ by field of mathematics. Don't ask us why matrix rows are numbered down but graphs are numbered up the y axis, nor why x comes before y but row before column. But the matrix layout has always seemed illogical to me.",
+"author": "Brian D. Ripley",
+"context": "answering a question why print(x) and image(x) are layouted differently",
+"source": "R-help",
+"date": "August 2004" 
+},
+{
+ "quote": "Byron Ellis: If we wanted to be truly radical we'd just accept that graphics devices and event loops are just special cases of the connection and merge the whole thing, thus more-or-less reinventing CLIM. :-)<x>Anthony Rossini: Eventually, all programming languages grow up and become Lisp. (progress, progress, and more joyful progress on CLS).<x>Byron Ellis: Untrue! They may also become Smalltalk :-)",
+"author": "Byron Ellis and Anthony Rossini",
+"context": null,
+"source": "R-devel",
+"date": "December 2005" 
+},
+{
+ "quote": "And the fear of getting Ripleyed on the mailing list also makes me think, read, and improve before submitting half baked questions to the list.",
+"author": "Eric Kort",
+"context": null,
+"source": "R-help",
+"date": "January 2006" 
+},
+{
+ "quote": "Ole F. Christensen: Brain, Thank you very much for your help.<x>Peter Dalgaard: You seem to be using call-by-value semantics rather than call-by-name...",
+"author": "Ole F. Christensen and Peter Dalgaard",
+"context": "thanking *Brian* D. Ripley for help",
+"source": "R-devel",
+"date": "January 2006" 
+},
+{
+ "quote": "Thomas Lumley: The precedence of ^ is higher than that of unary minus. It may be surprising, [...]<x>Herve Pages: No, it's not surprising. At least to me... In the country where I grew up, I've been teached that -x^2 means -(x^2) not (-x)^2.",
+"author": "Thomas Lumley and Herve Pages",
+"context": "both explaining that operator precedence is working perfectly well",
+"source": "R-devel",
+"date": "January 2006" 
+},
+{
+ "quote": "The wiki spamming is a serious problem, [...]. What does a logfile with IPs help? The spammers are strangers selling viagra. I don't want to find them :-)",
+"author": "Detlef Steuer",
+"context": "in a discussion on R wikis",
+"source": "R-help",
+"date": "January 2006" 
+},
+{
+ "quote": "Any doubts about R's big-league status should be put to rest, now that we have a Sudoku Puzzle Solver. Take that, SAS!",
+"author": "David Brahm",
+"context": "announcing the sudoku package",
+"source": "R-packages",
+"date": "January 2006" 
+},
+{
+ "quote": "This list is impressive. People are knowledgable, opinionated, ready to help and to flame you for asking elementary question or asking how to use type III SSQ. So, speak softly and carry a beagle. Seriously, sometimes it would be quicker just to give an answer, than to flame a poor soul.",
+"author": "Milos Zarkovic",
+"context": null,
+"source": "R-help",
+"date": "January 2006" 
+},
+{
+ "quote": "Lastly, by what we could call the 'Liaw-Baron principle', every question that can be asked has in fact already been asked.",
+"author": "Dirk Eddelbuettel",
+"context": "citing Andy Liaw's and Jonathan Baron's opinion on unique questions on R-help",
+"source": "R-help",
+"date": "January 2006" 
+},
+{
+ "quote": "It's not a question of trying variations, rather of following instructions.",
+"author": "Brian D. Ripley",
+"context": "about using 'Writing R Extensions'",
+"source": "R-help",
+"date": "January 2006" 
+},
+{
+ "quote": "Michael Dewey: When I started I found the free documents useful but I made most progress when I bought MASS. I do realise that liking books is a bit last millennium.<x>Thomas Lumley: Very late last millenium, though. \"When I were young[er] we didn't have all these fancy yellow books.\"",
+"author": "Michael Dewey and Thomas Lumley",
+"context": "about different kinds of documentation for R",
+"source": "R-help",
+"date": "January 2006" 
+},
+{
+ "quote": "Please do think hard before you tell other people what they 'should' do for you.",
+"author": "Brian D. Ripley",
+"context": null,
+"source": "R-devel",
+"date": "January 2006" 
+},
+{
+ "quote": "It might surprise many R-help posters, but R has manuals as well...",
+"author": "Uwe Ligges",
+"context": null,
+"source": "R-help",
+"date": "January 2006" 
+},
+{
+ "quote": "Tom Backer Johnsen: I have just started looking at R, and are getting more and more irritated at myself for not having done that before. However, one of the things I have not found in the documentation is some way of preparing output from R for convenient formatting into something like MS Word.<x>Barry Rowlingson: Well whatever you do, don't start looking at LaTeX, because that will get you even more irritated at yourself for not having done it before.",
+"author": "Tom Backer Johnsen and Barry Rowlingson",
+"context": null,
+"source": "R-help",
+"date": "February 2006" 
+},
+{
+ "quote": "Michael Watson: Hopefully this one isn't in the manual or I am about to get shot :-S<x>Peter Dalgaard: *Kapow*...",
+"author": "Michael Watson and Peter Dalgaard",
+"context": "question on axis()",
+"source": "R-help",
+"date": "February 2006" 
+},
+{
+ "quote": "My solution when I run into mysteries like this is to put 'browser()' in the function just before or after the line of interest. The magnitude and direction of my stupidity usually become clear quickly.",
+"author": "Patrick Burns",
+"context": null,
+"source": "R-help",
+"date": "February 2006" 
+},
+{
+ "quote": "Similarly to Brian, I'm much more reluctant to help people who don't exist -- who knows, maybe you're a computer program who has just passed the Turing test :-)",
+"author": "Martin Maechler",
+"context": "about postings with anonymous e-mail addresses and without real names",
+"source": "R-help",
+"date": "March 2006" 
+},
+{
+ "quote": "There's probably some examples, but there are some examples of people using<x>  solve(t(X) %*% W %*% X) %*% W %*% Y<x>to compute regression coefficients, too.",
+"author": "Thomas Lumley",
+"context": "discussing usefulness of evaluation order in lapply",
+"source": "R-help",
+"date": "March 2006" 
+},
+{
+ "quote": "(3 times...rrrrgh...) and why do you think the mailing list is called R-*packages* ???????????<x>Please do<x>  for(i in 1:20) cat(\"It's a package!\\n\")",
+"author": "Martin Maechler",
+"context": "after a newly released *package* has been called *library* three times in its announcement on R-packages",
+"source": "R-help",
+"date": "March 2006" 
+},
+{
+ "quote": "If we do that, I predict that the total amount of r-help time wasted on it will exceed the CPU time saved by orders of magnitude.",
+"author": "Duncan Murdoch",
+"context": "after a specialized function speeding up detection of NAs was suggested for base R",
+"source": "R-devel",
+"date": "April 2006" 
+},
+{
+ "quote": "This has been discussed before in this list, and Ripley said \"no, no!\". I do it all the time, but only in secrecy.",
+"author": "Jari Oksanen",
+"context": "about replacing zero distances with tiny values for isoMDS()",
+"source": "R-help",
+"date": "April 2006" 
+},
+{
+ "quote": "2-D pie charts are terrible. That makes 3-D pie charts terrible to the 3/2 power.",
+"author": "Frank Harrell",
+"context": null,
+"source": "R-help",
+"date": "April 2006" 
+},
+{
+ "quote": "Yourexamplesmightactuallybereadableifyouusedyourspacebar.",
+"author": "Brian D. Ripley",
+"context": "answering a question containing code without any spaces",
+"source": "R-help",
+"date": "May 2006" 
+},
+{
+ "quote": "It seems that you are facing a very serious fortune(122) problem.",
+"author": "Jean R. Lobry",
+"context": "in reply to a user that quickly needed help for his PhD thesis, without properly checking the documentation",
+"source": "R-help",
+"date": "May 2006" 
+},
+{
+ "quote": "Duncan Murdoch: Others need to run under ESS.<x>Francois Pinard: While this is a good things for Emacs lovers, the requirement is rather unwelcome for pagans! :-)",
+"author": "Duncan Murdoch and Francois Pinard",
+"context": "on the availability of command completion",
+"source": "R-help",
+"date": "May 2006" 
+},
+{
+ "quote": "When talking about user friendliness of computer software I like the analogy of cars vs. busses: [...]<x>Using this analogy programs like SPSS are busses, easy to use for the standard things, but very frustrating if you want to do something that is not already preprogrammed.<x>R is a 4-wheel drive SUV (though environmentally friendly) with a bike on the back, a kayak on top, good walking and running shoes in the passenger seat, and mountain climbing and spelunking gear in the back. R can take you anywhere you want to go if you take time to learn how to use the equipment, but that is going to take longer than learning where the bus stops are in SPSS.",
+"author": "Greg Snow",
+"context": null,
+"source": "R-help",
+"date": "May 2006" 
+},
+{
+ "quote": "Oh, gosh, this is getting whimsical.<x>R, I surmise, is a mutable tool that enables the user to do what they want. Knapped flint for the Stone Age statistical fool, plasma arc for the expert and learned savant.<x>R is a friend to all manner of men. The perfect companion, the servant complete. It gently informeth the clueless and then, reveals the essence unto the esthete.",
+"author": "Jim Lemon",
+"context": "in a discussion about the usability of R",
+"source": "R-help",
+"date": "May 2006" 
+},
+{
+ "quote": "Statistical computing is not easy, so how could R be? Who has ever claimed it is? Any package that makes statistical computing appear to be easy is probably giving you wrong answers half the time, or is extremely limited in scope.",
+"author": "Duncan Murdoch",
+"context": "in a discussion about the usability of R",
+"source": "R-help",
+"date": "May 2006" 
+},
+{
+ "quote": "Jarek Tuszynski: At one company [...] I had to run all the licenses of all the software [...] through the legal department. When they read the GNU Public License (GPL) their only comment was: We have no idea what that license means. Do not touch any software using it.<x>Rolf Turner: This is typical of lawyers' minds. If something is clear, rational, lucid, straightforward, unambigous, means what it says ... they can't understand it.",
+"author": "Jarek Tuszynski and Rolf Turner",
+"context": "in a discussion about the GPL and 'buying R'",
+"source": "R-help",
+"date": "May 2006" 
+},
+{
+ "quote": "It is unusual for the actual data not to be available in real problems.",
+"author": "Brian D. Ripley",
+"context": "in reply to a question how to fit a distribution if not the data but only their histogram is available",
+"source": "R-help",
+"date": "June 2006" 
+},
+{
+ "quote": "Warning: Although abusing R was not proved to be addictive, it should be noted that it often leads to harder stuff.",
+"author": "Ivan Mizera (self-confessed abuseR)",
+"context": null,
+"source": "useR! 2006, Vienna",
+"date": "June 2006" 
+},
+{
+ "quote": "I wish <<- had never been invented, as it makes an esoteric and dangerous feature of the language *seem* normal and reasonable. If you want to dumb down R/S into a macro language, this is the operator for you.",
+"author": "Bill Venables",
+"context": null,
+"source": "R-help",
+"date": "July 2001" 
+},
+{
+ "quote": "John Kane: I have 120 columns in a data.frame. I have one value in a column named \"blaw\" that I want to change. How do I find the coordinates?<x>Roger Koenker: It is the well-known wicked which problem: If you had (grammatically incorrectly) thought \"... which I want to change\" then you might have been led to type (in another window):<x>  ?which<x>and you would have seen the light. Maybe that() should be an alias for which()?",
+"author": "John Kane and Roger Koenker",
+"context": null,
+"source": "R-help",
+"date": "August 2006" 
+},
+{
+ "quote": "Gregor Gorjanc: But imagine how hard would it be to have two separate modes ... argh, probably a mess^2 or have I missed something obvious.<x>Martin Maechler: Yes, exactly: \"Mess ^ 2\" -- and if you allow both 'drop' and 'na.rm' options, it's \"Mess ^ 3\" -- not something anyone really wants!",
+"author": "Gregor Gorjanc and Martin Maechler",
+"context": "in a discussion whether 'drop' should be set in options(), possibly depending on different user vs. programmer modes",
+"source": "R-devel",
+"date": "September 2006" 
+},
+{
+ "quote": "You need to prepare your students for the future, not the past.",
+"author": "Spencer Graves",
+"context": "making a case for using R in academia",
+"source": "R-help",
+"date": "November 2006" 
+},
+{
+ "quote": "Have you ever wanted to write a book, but not known where to start? Now is a very good time to jump in, because there is currently a very simple recipe for success: just put R in the title and you will have to beat the publishers off with a stick!",
+"author": "Paul Murrell",
+"context": null,
+"source": "ASA Statistical Computing & Graphics Newsletter 17(2)",
+"date": "November 2006" 
+},
+{
+ "quote": "This is at best a matter of opinion, and credentials do matter for opinions.",
+"author": "Brian D. Ripley",
+"context": "in response to the claim that only 1.79e3 is printed with three significant digits whereas 1790 is not",
+"source": "R-help",
+"date": "December 2006" 
+},
+{
+ "quote": "If you want to do an integer divide, you should only use integers to divide with.",
+"author": "Thierry Onkelinx",
+"context": "(not entirely correctly) in an answer to \"understanding integer divide (%/%)\"",
+"source": "R-help",
+"date": "January 2007" 
+},
+{
+ "quote": "Personally I have never regretted trying not to underestimate my own future stupidity.",
+"author": "Greg Snow",
+"context": "explaining why eval(parse(...)) is often suboptimal, answering a question triggered by the infamous fortune(106)",
+"source": "R-help",
+"date": "January 2007" 
+},
+{
+ "quote": "Brian Ripley: Where did you tell it [...]? (Nowhere: R is lacking a mind_read() function!)<x>Peter Dalgaard: Please stop complaining about missing features. Patches will be considered.<x><x>Oh, it's you, Brian. Never mind then. You'll get to it, I'm sure. ;-)",
+"author": "Brian Ripley and Peter Dalgaard",
+"context": "answering why abline(lm(x~y)) would not work",
+"source": "R-help",
+"date": "January 2007" 
+},
+{
+ "quote": "Just [use] MinGW like R [does], following the guides to the letter gets you there like marked stones across a marsh. Leaving the path usually gets you at best neck deep in the mire, alternatively just bubbles.",
+"author": "Roger Bivand",
+"context": "explaining what development environment should be used to develop C on Windows (for R)",
+"source": "R-devel",
+"date": "January 2007" 
+},
+{
+ "quote": "You must realize that R is written by experts in statistics and statistical computing who, despite popular opinion, do not believe that everything in SAS and SPSS is worth copying. Some things done in such packages, which trace their roots back to the days of punched cards and magnetic tape when fitting a single linear model may take several days because your first 5 attempts failed due to syntax errors in the JCL or the SAS code, still reflect the approach of \"give me every possible statistic that could be calculated from this model, whether or not it makes sense\". The approach taken in R is different. The underlying assumption is that the useR is thinking about the analysis while doing it.",
+"author": "Douglas Bates",
+"context": "in reply to the suggestion to include type III sums of squares and lsmeans in base R to make it more similar to SAS or SPSS",
+"source": "R-help",
+"date": "March 2007" 
+},
+{
+ "quote": "I don't like to see the use of c() for its side effects. In this case Marc's as.vector seems to me to be self-explanatory, and that is a virtue in programming that is too often undervalued.",
+"author": "Brian D. Ripley",
+"context": "on how to convert a matrix into a vector",
+"source": "R-help",
+"date": "March 2007" 
+},
+{
+ "quote": "I cannot remember if I have been using 14 or 14, I think it was 14 and I am not near the machine to check.",
+"author": "John Kane",
+"context": "confused about his SPSS version",
+"source": "R-help",
+"date": "April 2007" 
+},
+{
+ "quote": "Tony Plate: There looks to be a typo in the R-exts manual: [...]<x>Peter Dalgaard: 'svn blame' tells me that this was Brian's addition in rev.35362 [...]<x>Brian D. Ripley: I prefer 'svn praise' myself.<x>Peter Dalgaard: Or 'svn annotate'. I think it depends on what I'm looking for, plus the risk that the author (perpetrator, contributor) might be me...",
+"author": "Tony Plate, Peter Dalgaard, and Brian D. Ripley",
+"context": "about a typo in the documentation",
+"source": "R-devel",
+"date": "April 2007" 
+},
+{
+ "quote": "Corinna Schmitt: How can I divide the number 0.285 with 2. I need a function.<x>  Result: 0.285 / 2 = 0.1425<x>Gabor Csardi: Well, i think<x>  half.of.0.285 <- function() {<x>    0.1425<x>  }<x>would do the trick.",
+"author": "Corinna Schmitt and Gabor Csardi",
+"context": null,
+"source": "R-help",
+"date": "April 2007" 
+},
+{
+ "quote": "Perhaps one is the real forge and the other is a forgery? Or a forge-R-y? I'll get my coat...",
+"author": "Barry Rowlingson",
+"context": "on the question whether http://www.RForge.net/ or http://R-Forge.R-project.org/ is the official forge server",
+"source": "R-help",
+"date": "April 2007" 
+},
+{
+ "quote": "It is all too easy for statistical thinking to be swamped by programming tasks.",
+"author": "Brian D. Ripley",
+"context": null,
+"source": "DSC 2001, Wien",
+"date": "March 2001" 
+},
+{
+ "quote": "R is being used for different purposes than the original interactive EDA environment.",
+"author": "Duncan Temple Lang",
+"context": null,
+"source": "DSC 2007, Auckland",
+"date": "February 2007" 
+},
+{
+ "quote": "RAM is cheap and thinking hurts.",
+"author": "Uwe Ligges",
+"context": "about memory requirements in R",
+"source": "R-help",
+"date": "June 2007" 
+},
+{
+ "quote": "All this becomes even more glaring if you take the unusal step of plotting the data.",
+"author": "Bill Venables",
+"context": "interpreting the results of an ANOVA analysis",
+"source": "R-help",
+"date": "July 2007" 
+},
+{
+ "quote": "What sort of editor would overlook this clear and demonstrable message leaping out from the data in favour of some arcane argument about \"types of sums of squares\"? Several answers come to mind: A power freak, a SAS afficianado, an idiot.",
+"author": "Bill Venables",
+"context": null,
+"source": "R-help",
+"date": "July 2007" 
+},
+{
+ "quote": "If you really want to assess uncertainty you need to take into account that the models are false and that several models may capture different aspects of the data and so be false in different ways.",
+"author": "Brian D. Ripley",
+"context": null,
+"source": "R-help",
+"date": "July 2007" 
+},
+{
+ "quote": "R will always be arcane to those who do not make a serious effort to learn it. It is **not** meant to be intuitive and easy for casual users to just plunge into. It is far too complex and powerful for that. But the rewards are great for serious data analysts who put in the effort.",
+"author": "Berton Gunter",
+"context": null,
+"source": "R-help",
+"date": "August 2007" 
+},
+{
+ "quote": "If anything, there should be a Law: Thou Shalt Not Even Think Of Producing A Graph That Looks Like Anything From A Spreadsheet.",
+"author": "Ted Harding",
+"context": "in a discussion about producing graphics",
+"source": "R-help",
+"date": "August 2007" 
+},
+{
+ "quote": "Friends don't let friends use Excel for statistics!",
+"author": "Jonathan D. Cryer",
+"context": "about problems with using Microsoft Excel for statistics",
+"source": "JSM 2001, Atlanta",
+"date": "August 2001" 
+},
+{
+ "quote": "Anand Patil: Can this be fixed without requiring the user to do anything?<x>Brian D. Ripley: The fix requires 'the user' to read the documentation.",
+"author": "Anand Patil and Brian D. Ripley",
+"context": "about some compiler problems under Windows Vista",
+"source": "R-help",
+"date": "September 2007" 
+},
+{
+ "quote": "Bad English is the language of science.",
+"author": "Jan de Leeuw",
+"context": null,
+"source": "JSS mailing list",
+"date": "February 2005" 
+},
+{
+ "quote": "3-D bar plots are an abomination. Just because Excel can do them doesn't mean you should.<x>(Dismount pulpit).",
+"author": "Berton Gunter",
+"context": null,
+"source": "R-help",
+"date": "October 2007" 
+},
+{
+ "quote": "Actually the documentation of sunflowerplot is wrong in botanical sense. Sunflowers have composite flowers in capitula, and the things called 'petals' in documentation are ligulate, sterile ray-florets (each with vestigial petals which are not easily visible in sunflower, but in some other species you may see three (occasionally two) teeth).",
+"author": "Jari Oksanen",
+"context": null,
+"source": "R-help",
+"date": "December 2007" 
+},
+{
+ "quote": "Apparently mathematical impossibility is not an impediment to parameter estimation in such cases.",
+"author": "Douglas Bates",
+"context": "about the abilities of SAS PROC MIXED",
+"source": "R-help",
+"date": "December 2007" 
+},
+{
+ "quote": "memory problems (not me. my pc!)",
+"author": "Sara Mouro",
+"context": "subject line for an R-help request",
+"source": "R-help",
+"date": "January 2008" 
+},
+{
+ "quote": "Gustaf Rydevik: The author also has some thought-provoking opinions on R being no-good and that you should write everything in C.<x>Paul Gilbert: People used to say assembler, that's progress.",
+"author": "Gustaf Rydevik and Paul Gilbert",
+"context": "in a discussion about an 'R is slow' blog post",
+"source": "R-help",
+"date": "January 2008" 
+},
+{
+ "quote": "Happy families are all alike; every unhappy family is unhappy in its own way.<x>Leo Tolstoy<x><x>and every messy data is messy in its own way - it's easy to define the characteristics of a clean dataset (rows are observations, columns are variables, columns contain values of consistent types). If you start to look at real life data you'll see every way you can imagine data being messy (and many that you can't)!",
+"author": "Hadley Wickham",
+"context": "answering 'in what way messy data sets are messy'",
+"source": "R-help",
+"date": "January 2008" 
+},
+{
+ "quote": "I strongly suggest you collaborate with a local statistician. I can think of no circumstance where multiple regression on \"hundreds of thousands of variables\" is anything more than a fancy random number generator.",
+"author": "Berton Gunter",
+"context": null,
+"source": "R-help",
+"date": "February 2008" 
+},
+{
+ "quote": "The \"right\" place to store information like this in Windows is in the registry, but we've been reluctant to use it, for various historical reasons. In fact, we were just told today that editing the registry is not allowed by software used by the US government. I think they'll be moving back to the abacus, if they want to stay with Windows.",
+"author": "Duncan Murdoch",
+"context": "about where to store some Windows GUI preferences",
+"source": "R-devel",
+"date": "January 2008" 
+},
+{
+ "quote": "I recently read the small print on the academic license our site has for SAS. You have to:<x><x>  1 inform SAS of any taught courses that use SAS,<x>  2 inform SAS of any research projects using SAS,<x>  3 allow SAS to refer to your institution as a SAS user,<x>  4 allow SAS to review your taught courses,<x>  5 ensure your courses are taught using qualified personnel,<x>  6 give SAS your first-born male offspring.<x><x>I spoke to our site's licensing supremos and they say they've never heard of anyone complying with 1 or 2. Point 4 sounds like petty fiddling in our educational business, and point 5 left 'qualified' undefined. Point 6 doesn't bother me since I don't have kids.",
+"author": "Barry Rowlingson",
+"context": null,
+"source": "R-help",
+"date": "February 2008" 
+},
+{
+ "quote": "The \"one size fits all\" approach to data analysis - also known as \"give me a quart and a half of statistics and just make sure that there is a p-value less than 5% somewhere in there\" - doesn't fit well into the R system.",
+"author": "Douglas Bates",
+"context": null,
+"source": "R-help",
+"date": "March 2008" 
+},
+{
+ "quote": "In many cases a) often looks difficult, but on closer inspection turns out to be impossible.",
+"author": "Bill Venables",
+"context": "about calculating the negative log-likelihood from a non-independence model",
+"source": "R-help",
+"date": "April 2008" 
+},
+{
+ "quote": "Basically R is reluctant to let you shoot yourself in the foot unless you are really determined to do so.",
+"author": "Bill Venables",
+"context": "about the warning hist() issues when being called with unequal interval widths and freq=TRUE",
+"source": "R-help",
+"date": "May 2008" 
+},
+{
+ "quote": "Whoops! I read that e+24 as e-24, so scrub all that I said.<x>(You'd think, that having seen Bill Venables make a similar error -- which he corrected in the follow-up posting to which I was replying -- I would've been more careful. Well, you'd think wrong. Actually it *was* e-24 when I posted; then the Gremlins got in and changed everything. :-) )",
+"author": "Rolf Turner",
+"context": "discussing that f.root from uniroot() is (not) almost zero",
+"source": "R-help",
+"date": "May 2008" 
+},
+{
+ "quote": "R may be the wrong tool for the job, but it's the wrong job.",
+"author": "Rolf Turner",
+"context": "about solving 100th degree polynomials",
+"source": "R-help",
+"date": "May 2008" 
+},
+{
+ "quote": "Kenn Konstabel: [...] There's more to this trend: SPSS and Statistica now advertise \"R language support\": [...]<x>Charles C. Berry: If you can't beat R, join R.<x>Marc Schwartz: \"Resistance is futile. You will be assimilated.\" ",
+"author": "Kenn Konstabel, Charles C. Berry, and Marc Schwartz",
+"context": "about the RPro release from REvolution",
+"source": "R-help",
+"date": "August 2008" 
+},
+{
+ "quote": "As for the question of the bug in `is', ... it depends what your definition of `is' is.",
+"author": "Douglas Bates",
+"context": "referring to Bill Clinton after a tortuous discussion of the behavior of is(7, \"integer\")",
+"source": "R-help",
+"date": "September 2008" 
+},
+{
+ "quote": "Shan-Ho Chou: I got a question about eigenvector. I've tried input a symmetric matrix to both R (using eigen function) and Minitab, but the result is really different. Can anyone tell me what's wrong with that?<x>Bill Venables: Simple. Minitab must be broken. Have you reported it to them?",
+"author": "Shan-Ho Chou and Bill Venables",
+"context": null,
+"source": "R-help",
+"date": "July 2007" 
+},
+{
+ "quote": "I still don't know what to do about the compromise between how statistics should be done and how journal editors seem to insist it should be done ...",
+"author": "Ben Bolker",
+"context": null,
+"source": "R-sig-mixed-models",
+"date": "October 2008" 
+},
+{
+ "quote": "Nothing exceeds like Excel.",
+"author": "Roger Koenker",
+"context": "in reply to a question why it takes so long to paste 19,000 lines of R code from Excel into R",
+"source": "R-help",
+"date": "October 2008" 
+},
+{
+ "quote": "Fabio Mulazzani: I need to obtain all the 9.somethingExp157 permutations that can be given from the numbers from 1 to 100.<x>Ted Harding: To an adequate approximation there are 10^158 of them. Simply to obtain them all (at a rate of 10^10 per second, which is faster than the CPU frequency of most desktop computers) would take 10^148 seconds, or slightly longer than 3*(10^140) years. Current estimates of the age of the Universe are of the order of 1.5*(10^10) years, so the Universe will have to last about 2*(10^130) times as long as it has already existed, before the task could be finished. So: why do you want to do this?",
+"author": "Fabio Mulazzani and Ted Harding",
+"context": null,
+"source": "R-help",
+"date": "November 2008" 
+},
+{
+ "quote": "Cross posting is sociopathic.",
+"author": "Roger Koenker",
+"context": null,
+"source": "R-help",
+"date": "November 2008" 
+},
+{
+ "quote": "Some people familiar with R describe it as a supercharged version of Microsoft's Excel spreadsheet software.",
+"author": "Ashlee Vance",
+"context": "in his article \"Data Analysts Captivated by R's Power\"",
+"source": "The New York Times",
+"date": "January 2009" 
+},
+{
+ "quote": "I think [R] addresses a niche market for high-end data analysts that want free, readily available code. [...] We have customers who build engines for aircraft. I am happy they are not using freeware when I get on a jet.",
+"author": "Anne H. Milley",
+"context": "director of technology product marketing at SAS, quoted in Ashlee Vance's article \"Data Analysts Captivated by R's Power\"",
+"source": "The New York Times",
+"date": "January 2009" 
+},
+{
+ "quote": "It's interesting that SAS Institute feels that non-peer-reviewed software with hidden implementations of analytic methods that cannot be reproduced by others should be trusted when building aircraft engines.",
+"author": "Frank Harrell",
+"context": "in response to the statement of the SAS director of technology product marketing: \"We have customers who build engines for aircraft. I am happy they are not using freeware when I get on a jet.\"",
+"source": "R-help",
+"date": "January 2009" 
+},
+{
+ "quote": "This sounds like you have discovered homeopathic properties in Sweave! It will be serious if input files remember errors even after they have been removed.",
+"author": "Duncan Murdoch",
+"context": "after a user reported that two supposedly identical Rnw documents work and lead to an error, respectively",
+"source": "R-help",
+"date": "January 2009" 
+},
+{
+ "quote": "Many problems come as a result of users forgetting that they are smarter than the computer. I see 3 ways to remedy the problem:<x>1. Make computers that are as smart or smarter than people.<x>2. Make the programmers anticipate every way that someone may use a particular function and make them implement all of the functionality even if they don't think it is worth the time/effort since there is an easy work around for many of the less likely used features.<x>3. Don't expect the computer to guess correctly and tell it exactly what you want it to do.",
+"author": "Greg Snow",
+"context": "in response to the question why as.Date() would not parse \"13/1/2001\" in 'the only reasonable way'",
+"source": "R-help",
+"date": "January 2009" 
+},
+{
+ "quote": "One of the beauties of S and R is the syntax closeness to mathematical notation. Many of us know that Lisp has beauties that S can never have, but that's really in different beauty-space.",
+"author": "Martin Maechler",
+"context": null,
+"source": "R-devel",
+"date": "February 2009" 
+},
+{
+ "quote": "R is Open Source and so you can modify it to emulate the bugs in other software: that is not one of the aims of its developers so please don't expect us to do so for you.",
+"author": "Brian D. Ripley",
+"context": "answering a request for a change to Excel-like non IEC 60559 standard conform rounding",
+"source": "R-help",
+"date": "March 2009" 
+},
+{
+ "quote": "The combination of some data and an aching desire for an answer does not ensure that a reasonable answer can be extracted from a given body of data.",
+"author": "John W. Tukey",
+"context": "the first of six \"basics\" against statistician's hubrises",
+"source": "in \"Sunset Salvo\", The American Statistician 40(1), 72-76",
+"date": "February 1986" 
+},
+{
+ "quote": "I must say I feel very uneasy about giving advice on how to use R as a pre-processor for something that is to be done in Excel, but we are a broad church here!",
+"author": "Bill Venables",
+"context": null,
+"source": "R-help",
+"date": "March 2009" 
+},
+{
+ "quote": "No matter how much progress is made by the developers of screen readers somehow PDF remains less than accessible. It's a bit like a failed relationship in which one partner tries to win the other back with expensive gifts.",
+"author": "Paul R. Stanley",
+"context": "in a discussion about text-to-speech processors for the benefit of blind users of LaTeX",
+"source": "texhax mailing list",
+"date": "March 2009" 
+},
+{
+ "quote": "As the name says, studentizing is left as an easy student exercise. Destudentizing is more difficult and usually called professorizing.",
+"author": "Dieter Menne",
+"context": "in response to a question whether residuals from nls() are studentized",
+"source": "R-help",
+"date": "April 2009" 
+},
+{
+ "quote": "Hmm. I don't ever use R-squared, so I didn't implement it.",
+"author": "Thomas Lumley",
+"context": "in reply to a question about how to compute R-squared using biglm",
+"source": "R-help",
+"date": "April 2009" 
+},
+{
+ "quote": "The issue really comes down to the fact that the questions: \"exactly normal?\", and \"normal enough?\" are 2 very different questions (with the difference becoming greater with increased sample size) and while the first is the easier to answer, the second is generally the more useful one.",
+"author": "Greg Snow",
+"context": "answering a question about a \"normality test\" suitable for large data",
+"source": "R-help",
+"date": "April 2009" 
+},
+{
+ "quote": "Trellis graphics are a bit like hash functions: you can be close to the target, but get a far-off result.",
+"author": "Dieter Menne",
+"context": "about problems with creating a suitable lattice panel function",
+"source": "R-help",
+"date": "August 2008" 
+},
+{
+ "quote": "The only people who should use the assign function are those who fully understand why you should never use the assign function.",
+"author": "Greg Snow",
+"context": null,
+"source": "R-help",
+"date": "July 2009" 
+},
+{
+ "quote": "4 bits are not enough for me!",
+"author": "Philippe Grosjean",
+"context": "after conference dinner incl. wine in a conversation about the representation of data in the ff package",
+"source": "useR! 2009, Rennes",
+"date": "July 2009" 
+},
+{
+ "quote": "Kelvin Lam: My institute has been heavily dependent on SAS for the past while, and SAS is starting to charge us a very deep amount for license renewal. Since we are a non-profit organization that is definitely not sustainable. The team is brainstorming possibility of switching to R, at least gradually. I am talking about the entire institute with considerable number of analysts using SAS their entire career. There's a handful of us using R regularly. What kind of problems and challenges have you faced?<x>Frank Harrell: One of your challenges will be that with the increased productivity of the team you will have time for more intellectually challenging problems. That frustrates some people.",
+"author": "Kelvin Lam and Frank Harrell",
+"context": null,
+"source": "R-help",
+"date": "July 2009" 
+},
+{
+ "quote": "Yes we CRAN!",
+"author": "Aurelien Latouche",
+"context": "suggestion for a T-shirt slogan",
+"source": "private communication",
+"date": "July 2009" 
+},
+{
+ "quote": "Dear Uwe, thank you very much for your unvaluable time and effort.",
+"author": "Javier Cano",
+"context": "thanking Uwe Ligges for solving a coding problem",
+"source": "R-help",
+"date": "July 2009" 
+},
+{
+ "quote": "If I were to be treated by a cure created by stepwise regression, I would prefer voodoo.",
+"author": "Dieter Menne",
+"context": "in a thread about regressions with many variables",
+"source": "R-help",
+"date": "October 2009" 
+},
+{
+ "quote": "If one doesn't understand the output of lm(), then one's knowledge of statistics is insufficient to warrant using lm().",
+"author": "Peter Ehlers",
+"context": null,
+"source": "R-help",
+"date": "October 2009" 
+},
+{
+ "quote": "If 'fools rush in where angels fear to tread', then Bayesians 'jump' in where frequentists fear to 'step'.",
+"author": "Charles C. Berry",
+"context": "about Bayesian model selection as an alternative to stepwise regression",
+"source": "R-help",
+"date": "November 2009" 
+},
+{
+ "quote": "You are going to need a few more sessions for this therapy to be useful, we cannot read your computer's mind, just interpret what you tell us. I don't want to jump ahead, but can you tell us the childhood of your crashes, etc.",
+"author": "Romain Francois",
+"context": "in a 'psychotherapy' session trying to understand the sources of a useR's problems",
+"source": "R-help",
+"date": "November 2009" 
+},
+{
+ "quote": "It currently works (because I can't figure out how to make it an error) but you really should not do it.",
+"author": "Hadley Wickham",
+"context": "discussing a user's ggplot experiences",
+"source": "R-help",
+"date": "October 2009" 
+},
+{
+ "quote": "There's an informal tradition that those announcements [about R releases] contain at least one mistake, but apparently I forgot this time, so users have to make up their own....",
+"author": "Peter Dalgaard",
+"context": "about an apparent non-bug report in his former R-announce message",
+"source": "R-help",
+"date": "December 2009" 
+},
+{
+ "quote": "It appears to me that you do not understand even basic statistics. As a corollary to that impression I would suggest that giving you advice about the use of R for scientific investigation could be morally similar to giving you advice about how to do your own household wiring.",
+"author": "David Winsemius",
+"context": null,
+"source": "R-help",
+"date": "November 2009" 
+},
+{
+ "quote": "Kakali Das: Is there any certification courses available in statistics in India which can be done after completing M.Sc. in Statistics? I need to know some courses which will be a specialization and can be done in distance mode from India?<x>Kjetil Brinchmann Halvorsen: A specialization course (maybe better named generalization course) suitable to everybody, very cheap, and of immense quality, is to participate in the mailing list R-help, and simply try to understand (and then respond usefully) to questions arising there.",
+"author": "Kakali Das and Kjetil Brinchmann Halvorsen",
+"context": null,
+"source": "Yahoo! Statisticians_group",
+"date": "November 2009" 
+},
+{
+ "quote": "In general, it's much easier to create output from a R object than create an R object from output.",
+"author": "Hadley Wickham",
+"context": null,
+"source": "R-help",
+"date": "December 2009" 
+},
+{
+ "quote": "As Obi-Wan Kenobi may have said in Star Wars: \"Use the source, Luke!\"",
+"author": "Barry Rowlingson",
+"context": "answering a question on the documentation of some implementation details",
+"source": "R-devel",
+"date": "January 2010" 
+},
+{
+ "quote": "Finally, a word of wisdom from a long-ago engineering colleague: \"Whenever I see an outlier, I'm never sure whether to throw it away or patent it.\"",
+"author": "Berton Gunter",
+"context": "on outlier identification",
+"source": "R-help",
+"date": "December 2009" 
+},
+{
+ "quote": "As one of the developers of the nls function I would like to state that the lack of automatic ANOVA, R^2 and adj. R^2 from nls is a feature, not a bug :-)",
+"author": "Douglas Bates",
+"context": "in reply to a request for automatic ANOVA of NLS models as in Statistica",
+"source": "R-help",
+"date": "August 2000" 
+},
+{
+ "quote": "My best advice regarding R^2 statistics with nonlinear models is, as Nancy Reagan suggested, \"Just say no.\".",
+"author": "Douglas Bates",
+"context": null,
+"source": "R-help",
+"date": "August 2000" 
+},
+{
+ "quote": "I recently attended a Ph.D. prelim exam where the candidate had proposed research on various ways of defining an R^2 statistic in the original data scale from a linear model fit to data in a transformed scale determined by the Box-Cox method. There were seven different possible definitions for R^2, all of which, as acknowledged by the candidate and by the thesis advisor, were incorrect. The purpose of this path-breaking study is to determine in some way which of these seven possible incorrect definitions should be used. My suggestion that the obvious answer was \"none of them\" was regarded as somewhat heretical.",
+"author": "Douglas Bates",
+"context": null,
+"source": "R-help",
+"date": "August 2000" 
+},
+{
+ "quote": "[Listing original copyright holders in R packages is] especially useful if there are areas of doubt and uncertainty (eg code published on ftp sites before people worried about licenses), since it at least gives you rigidly defined areas of doubt and uncertainty.[5]<x>[5] Adams D, (1978) Hitchhiker's Guide. BBC Radio.",
+"author": "Thomas Lumley",
+"context": "in a discussion about copyright vs. licenses",
+"source": "R-devel",
+"date": "January 2010" 
+},
+{
+ "quote": "The widespread use of spreadsheets or SPSS data sets or SAS data sets which encourage the \"single table with a gargantuan number of columns, most of which are missing data in most cases\" approach to organization of longitudinal data is regrettable.",
+"author": "Douglas Bates",
+"context": "in a discussion about software for hierarchical data sets",
+"source": "R-help",
+"date": "February 2010" 
+},
+{
+ "quote": "R is a complex program. If you can't work out how to find the documentation, I doubt you will be able to use R.",
+"author": "David Kirby",
+"context": "in response to a vague question on where to find documentation for R",
+"source": "R-help",
+"date": "February 2010" 
+},
+{
+ "quote": "If your ultimate interest is in real scientific progress, I'd suggest that you ignore that sentence (and any conclusion drawn subsequent to it).",
+"author": "Andy Liaw",
+"context": "in response to a question on the meaning of the sentence: 'Independent variables whose correlation with the response variable was not significant at 5% level were removed'",
+"source": "R-help",
+"date": "March 2010" 
+},
+{
+ "quote": "I begin to think that R needs a _mis_fortunes package...",
+"author": "Stephen L.R. Ellison",
+"context": null,
+"source": "R-help",
+"date": "March 2010" 
+},
+{
+ "quote": "I think what we are seeking is the marginal variance-covariance matrix of the parameter estimators (marginal with respect to the random effects random variable, B), which would have the form of the inverse of the crossproduct of a (q+p) by p matrix composed of the vertical concatenation of - L^{-1}RZX RX^{-1} and RX^{-1}. (Note: You do *not* want to calculate the first term by inverting L, use solve(L, RZX, system = \"L\") - [...] don't even think about using solve(L) - don't!, don't!, don't! - have I made myself clear? - don't do that (and we all know that someone will do exactly that for a very large L and then send out messages about \"R is SOOOOO SLOOOOW!!!!\" :-) )",
+"author": "Douglas Bates",
+"context": null,
+"source": "R-SIG-Mixed-Models",
+"date": "March 2010" 
+},
+{
+ "quote": "Only with a very high signal to noise ratio (e.g., high true R^2) can torturing data lead to a confession to something other than what the analyst wants to hear.",
+"author": "Frank Harrell",
+"context": null,
+"source": "R-help",
+"date": "April 2010" 
+},
+{
+ "quote": "If you don't want informative help files, it's really not much work to make uninformative ones.",
+"author": "Duncan Murdoch",
+"context": "in response to a question how to install a package without editing .Rd files appropriately before",
+"source": "R-help",
+"date": "May 2010" 
+},
+{
+ "quote": "Dave Lubbers: R 2.7.2 - the manual says configure, make, which is what I did. So I did read the manual and followed the directions. The manual is too terse to get me there.<x>Duncan Murdoch: You used the wrong tense. In referring to R 2.7.2, only past tenses are grammatically correct. If you want to say the manual *is* too terse, then you need to install R 2.11.0.",
+"author": "Dave Lubbers and Duncan Murdoch",
+"context": "on where to find libRmath",
+"source": "R-devel",
+"date": "May 2010" 
+},
+{
+ "quote": "Soham: How to compute the p-value of a statistic generally?<x>Berton Gunter: runif(1)",
+"author": "Soham and Berton Gunter",
+"context": null,
+"source": "R-help",
+"date": "May 2010" 
+},
+{
+ "quote": "Karl Ove Hufthammer: Why not use 'predict.loess' (i.e., 'predict' on a loess object) directly?<x>Greg Snow: Because that would be simple, straightforward, and make sense, and not require knowledge about less obvious functions.",
+"author": "Karl Ove Hufthammer and Greg Snow",
+"context": null,
+"source": "R-help",
+"date": "May 2010" 
+},
+{
+ "quote": "This reminds me of a quote I saw once (I think it may have been in one of those Murphy's Laws calendars), my parahpase:<x><x>If you make someone think that they are thinking,<x>      They will love you for it.<x>If you make them actually think,<x>      They will hate you for it.<x><x>This explains why people love pie charts and hate more effective graphs.",
+"author": "Greg Snow",
+"context": null,
+"source": "R-help",
+"date": "December 2009" 
+},
+{
+ "quote": "On average, any data manipulation that can be described in a sentence or two of English can be programmed in one line in R. If you find yourself writing a long 'for' loop to do something that sounds simple, take a step back and research if an existing combination of functions can easily handle your request.",
+"author": "Erik Iverson",
+"context": null,
+"source": "R-help",
+"date": "June 2010" 
+},
+{
+ "quote": "There are actual error messages, and until you show them, we can not help as the mind reading machine is currently off for repairs.",
+"author": "Dirk Eddelbuettel",
+"context": "after reports about errors with R CMD check",
+"source": "R-help",
+"date": "July 2010" 
+},
+{
+ "quote": "Knut Krueger: Is there any function available to combine those p values?<x>Stephan Kolassa: ?\"+\"",
+"author": "Knut Krueger and Stephan Kolassa",
+"context": "about ways to combine p values from different tests",
+"source": "R-help",
+"date": "July 2010" 
+},
+{
+ "quote": "So, with the item in the original query:<x><x>  if (x<-3) do_something;<x><x>if they wrote it as<x><x>  if (x<(-3)) do_something;<x><x>there would be no problem (and no doubt about what went with what). Of course in complicated expressions this could induce an episode of ocular lispopia, but apart from that it's safe!",
+"author": "Ted Harding",
+"context": "about potential confusion between assignment and comparisons with negative numbers",
+"source": "R-devel",
+"date": "August 2010" 
+},
+{
+ "quote": "Spencer Graves: What do you think about adding a \"No RTFM\" policy to the R mailing lists?<x>Michael Dewey: You raise an interesting point but the responses to your post remind us that people (and indeed whole cultures) are not all situated at the same point on the continuum of directness between \"It's a cow, stupid\" and \"From this side it looks not unlike a cow\".",
+"author": "Spencer Graves and Michael Dewey",
+"context": "reply after a long discussion of a potential \"No RTFM\" policy",
+"source": "R-help",
+"date": "August 2010" 
+},
+{
+ "quote": "Dirk Eddelbuettel: Could it get any more un-scientific and un-empirical? Maybe we should debate whether it is faster on Thursdays than on Wednesdays too?<x>Thomas Lumley: That's easy. It's faster on Wednesdays, because faculty meeting and seminar are on Thursday (so more faculty are on campus using the computers) and homework for the applied regression sequence is due on Friday (so more students are using the computers).",
+"author": "Dirk Eddelbuettel and Thomas Lumley",
+"context": "after a rather vague disucssion which language is fastest for numerical computations",
+"source": "R-help and private communication",
+"date": "September 2010" 
+},
+{
+ "quote": "datayoda: Bing is my friend...I found the cumsum() function.<x>Dirk Eddelbuettel: If bing is your friend, then rseek.org is bound to be your uncle.",
+"author": "datayoda and Dirk Eddelbuettel",
+"context": "after searching for a function that computes cumulative sums",
+"source": "stackoverflow.com",
+"date": "October 2010" 
+},
+{
+ "quote": "This is one of those cases, in my opinion, where R's documentation drops you into a flat landscape, in the middle of nowhere, in a thick mist.",
+"author": "Ted Harding",
+"context": "helping a user confused about R's partial matching behavior",
+"source": "R-help",
+"date": "November 2010" 
+},
+{
+ "quote": "I used a heuristic... pulled from my posterior. That makes it Bayesian, right?",
+"author": "JD Long",
+"context": "in a not too serious chat about modeling strategies",
+"source": "Stackoverflow",
+"date": "November 2010" 
+},
+{
+ "quote": "If you can do with[out a] Makefile, do without a Makefile.",
+"author": "Dirk Eddelbuettel",
+"context": "in a discussion about the benefits of (not) changing the compiler in R packages",
+"source": "R-SIG-HPC",
+"date": "December 2010" 
+},
+{
+ "quote": "We also have huge amounts of work going into calibration transfer, i.e. making quantitative predictive models work on a different instrument. This is always a whole lot of work, and for some fields of problems at the moment considered basically impossible even between two instruments of the same model and manufacturer.",
+"author": "Claudia Beleits",
+"context": "in a discussion about publication bias and scientific validity",
+"source": "R-help",
+"date": "January 2011" 
+},
+{
+ "quote": "This reminds me of a famous FORTRAN code snippet:<x><x>10 STOP<x>STOP<x>STOP<x>! IN CASE STILL SKIDDING<x>GOTO 10<x>",
+"author": "Carl Witthoft",
+"context": "in response to the question how to completely stop R scripts after stop()",
+"source": "R-help",
+"date": "January 2011" 
+},
+{
+ "quote": "There is a reason that the speedometer in your car doesn't just read \"slow\" and \"fast\".",
+"author": "Frank Harrell",
+"context": "warning about the use of cutoffs after logistic regression",
+"source": "R-help",
+"date": "February 2011" 
+},
+{
+ "quote": "The style for JSS now enforces (via Achimitization) the use of quotes.",
+"author": "Michael Friendly",
+"context": "on whether to quote or not to quote arguments like library(\"Hmisc\") or help(\"mean\")",
+"source": "R-help",
+"date": "March 2011" 
+},
+{
+ "quote": "Although there is almost never a \"No\" in R, the best short answer is: \"No\".",
+"author": "Uwe Ligges",
+"context": "in response to the question whether R has a concept of \"const objects\" as in C++ that avoid modification",
+"source": "R-help",
+"date": "March 2011" 
+},
+{
+ "quote": "Tested solutions offered when reproducible examples are provided.",
+"author": "David Winsemius",
+"context": "suggesting a potential solution to a vague problem description",
+"source": "R-help",
+"date": "April 2011" 
+},
+{
+ "quote": "The good way to do it is to include the following comment at the beginning:<x># This is a holy Script, please edit it not",
+"author": "Kenn Konstabel",
+"context": "on \"... how to protect R Script files from inadvertent editing by users.\"",
+"source": "R-help",
+"date": "April 2011" 
+},
+{
+ "quote": "Sorry, but this is the R-help list.  The 'R Spam' list is over at /dev/null.",
+"author": "Dirk Eddelbuettel",
+"context": "after a poster misused the mailing list for advertising",
+"source": "R-help",
+"date": "April 2011" 
+},
+{
+ "quote": "You might also consider a more informative subject line. \"Help needed\" is true for all questions (not answers) on R-help. Just think, why is this list called R-***help***?",
+"author": "Peter Ehlers",
+"context": "after answering a help request",
+"source": "R-help",
+"date": "April 2011" 
+},
+{
+ "quote": "I think this is kind of like asking \"will your Land Rover make it up my driveway?\", but I'll assume the question was asked in all seriousness.",
+"author": "Ista Zahn",
+"context": "in response to a request for replication of some data preprocessing done in SAS",
+"source": "R-help",
+"date": "April 2011" 
+},
+{
+ "quote": "In those first years after Bell Labs it was always a struggle to maintain my access to S and Port -- actually even Unix was a problem. I recall the director of campus computing services telling me that Unix wasn't appropriate for educational institutions since it was \"too flexible.\"",
+"author": "Roger Koenker",
+"context": "in a discussion about nlminb",
+"source": "private communication",
+"date": "April 2011" 
+},
+{
+ "quote": "Joshua Wiley: ... the advantages of formal classes seem worth at least not entirely dismissing.<x>Jim Lemon: Hmmm, yeah, that's about the grammatical equivalent of S4 classes.",
+"author": "Joshua Wiley and Jim Lemon",
+"context": "in a discussion about the relative advantages of S3 and S4 classes",
+"source": "R-help",
+"date": "May 2011" 
+},
+{
+ "quote": "For recursive objects, search for recursive objects.",
+"author": "Barry Rowlingson",
+"context": "in a thread about \"Recursive objects\" and how to search for former discussions about the topic",
+"source": "R-devel",
+"date": "May 2011" 
+},
+{
+ "quote": "Most people pay infinitely more to Microsoft for Windows than they pay to R Core for R. I hope that's also the ratio of their complaints to Microsoft about this bug to their complaints to us about R.",
+"author": "Duncan Murdoch",
+"context": "after a report that the default R version associated with .R files could not be changed in the standard Windows dialogs",
+"source": "R-help",
+"date": "May 2011" 
+},
+{
+ "quote": "The trouble with nonstandard evaluation is that it doesn't follow standard evaluation rules...",
+"author": "Peter Dalgaard",
+"context": "about nonstandard evaluation in the curve() function",
+"source": "R-help",
+"date": "June 2011" 
+},
+{
+ "quote": "Vaishali Sadaphal: I need to give my R code to my client to use. I would like to protect the logic/algorithms that have been coded in R. This means that I would not like anyone to be able to read the code.<x>Duncan Murdoch: R is an open source project, so providing ways for you to do this is not one of our goals. [...] If you think your client will steal from you, then you should find another client.",
+"author": "Vaishali Sadaphal and Duncan Murdoch",
+"context": null,
+"source": "R-help",
+"date": "July 2011" 
+},
+{
+ "quote": "Well..... SAS is SAS, but R is FREE...",
+"author": "Abhishek Rathore",
+"context": "in a discussion about R vs. SAS",
+"source": "LinkedIn Group Stat-Math Statistics",
+"date": "July 2011" 
+},
+{
+ "quote": "It is becoming apparent that you do not know how to use the results from either system. The progress of science would be safer if you get some advice from a person that knows what they are doing.",
+"author": "David Winsemius",
+"context": "in response to a user that obtained different linear regression results in R and SPSS and wanted to know which one to use",
+"source": "R-help",
+"date": "July 2011" 
+},
+{
+ "quote": "For quite a while, bug-for-bug compatibility with S-PLUS v 3.x was considered important to allow people to port their packages between systems.",
+"author": "Peter Dalgaard",
+"context": null,
+"source": "R-help",
+"date": "February 2009" 
+},
+{
+ "quote": "I've been reading Data Analysis Using Regression and Multilevel/Hierarchical Models by Gelman and Hill. I'm getting acquainted with my new cartoon character friends Elmer (lmer) and Bugs, and at some point it may become clear what is going on. At the moment though, the whole thing seems a bit Looney Tunes.",
+"author": "Paul Miller",
+"context": null,
+"source": "R-SIG-Mixed-Models",
+"date": "August 2011" 
+},
+{
+ "quote": "Thank your for your entry in the Poorly Capitalized and Inadequately Searched Posting Contest. You will be advised of your ranking in due course.",
+"author": "David Winsemius",
+"context": "in response to an all-lower-case question on a simple clustering task",
+"source": "R-help",
+"date": "August 2011" 
+},
+{
+ "quote": "Don't do as I say, do as Hadley does.",
+"author": "Barry Rowlingson",
+"context": "in a discussion about the workflow for writing R packages, see also fortune(128)",
+"source": "R-devel",
+"date": "September 2011" 
+},
+{
+ "quote": "R is wonderful, but it cannot work magic.",
+"author": "Rolf Turner",
+"context": "answering a request for automatic generation of 'data from a known mean and 95% CI'",
+"source": "R-help",
+"date": "October 2011" 
+},
+{
+ "quote": "If we told you all of R's secrets, we'd have to kill you.",
+"author": "Duncan Murdoch",
+"context": "answering a request for too detailed documentation",
+"source": "R-help",
+"date": "October 2011" 
+},
+{
+ "quote": "I know barely more than zero about R: until yesterday I didn't know how to spell it.",
+"author": "Pete Wilson",
+"context": null,
+"source": "stackoverflow",
+"date": "October 2011" 
+},
+{
+ "quote": "Kevin Wright: Doug already mentioned the limitations of open source optimization code. Open source has benefits, but simply being open doesn't necessarily mean better.<x><x>Joshua Wiley: Actually, a series of studies I have conducted including theoretical proofs and empirical evidence proves open source to be unequivocally better. If you are interested, you can pay me to use the assertion, but the supporting details are restricted so you must accept that my internal checks and quality control are sufficient and the findings are correct and accurate. Details follow.<x><x>License and Use of I. Ben Fooled's findings:<x><x>\"Open source is unequivocally better\" is $10 for personal use or $20 for each public use of the assertion. It is also possible to get a yearly license, but note that this does not include updates. Support is extra. If you wish to use the assertions on a multicore system, there is an additional $5 per core per assertion fee. A student version is available for pedagogical purposes only: \"pn src s nqvcll bttr\". If you need more than 20 letters, please upgrade to the full version.<x><x>This is the best thing since bread, but don't take my word for it. Here are some trite testimonials putatively from customers:<x><x>\"Using I. Ben Fooled's assertion has really revolutionized my work. I love it. I use it every day\" ~ Jane, Data Expert<x><x>\"I lost 130 lbs on this system\", 'wait, this isn't a weightloss testimonial? Sorry!' \"My work is easily twice as efficient since I switched to I. Ben Fooled's product.\" ~ John, Entrepeneur",
+"author": "Kevin Wright and Joshua Wiley",
+"context": null,
+"source": "R-SIG-Mixed-Models",
+"date": "October 2011" 
+},
+{
+ "quote": "As with many tools in this domain, for effective use they require more knowledge than many of their users possess, and can be dangerous because they seem to \"work\".",
+"author": "John C. Nash",
+"context": "in the context of stochastic optimization",
+"source": "R-help",
+"date": "December 2011" 
+},
+{
+ "quote": "Unfortunately, this is one of those situations where as far as I can tell all of the real statisticians are out there playing with large data sets where the small-sample corrections are not so important and leaving the rest of us to figure it out for ourselves...",
+"author": "Ben Bolker",
+"context": "about the 'correct' degrees-of-freedom correction in Wald statistics for GLMMs",
+"source": "R-SIG-Mixed-Models",
+"date": "December 2011" 
+},
+{
+ "quote": "David Winsemius: Any of your staff can view the (open) source code just as any other member of the human race.<x>Uwe Ligges:I do not think the GPL excludes other species...",
+"author": "David Winsemius and Uwe Ligges",
+"context": "following a request for access to the R sources",
+"source": "R-help",
+"date": "December 2011" 
+},
+{
+ "quote": "I think the amount of people on this list who understand your question is roughly zero.",
+"author": "Uwe Ligges",
+"context": "in response to a non-reproducible problem for which additionally subject and body did not match well",
+"source": "R-help",
+"date": "January 2012" 
+},
+{
+ "quote": "It's not meant for sampling weights. It's meant for precision weights. How best to include sampling weights in mixed models is a research problem at the moment, but you can rely on getting the wrong answer if you just use the weights= argument.",
+"author": "Thomas Lumley",
+"context": "in reponse to a question about specifying sampling weights in lme4",
+"source": "R-help",
+"date": "January 2012" 
+},
+{
+ "quote": "Perhaps same thing that will happen when those monks finish the Towers of Hanoi?<x>2 * 3^198<x>[1] 5.902533e+94",
+"author": "David Winsemius",
+"context": "in reponse to a question about expand.grid(x1=1, x2=1:2, x3=1:3, x4=1:3, x5=1:3, ..., x200=1:3)",
+"source": "R-help",
+"date": "January 2012" 
+},
+{
+ "quote": "I'll go back to lurking in the daily R-Helps and not ask any more questions until I've read all the old R-help messages. I'm working on December 1998 right now and reading forward. Perhaps by next year I'll will have read all the old R-help postings and I'll dare ask another question then.",
+"author": "Earl F. Glynn",
+"context": null,
+"source": "R-help",
+"date": "January 2012" 
+},
+{
+ "quote": "Dirk Eddelbuettel: Devel is in the detail.<x>Douglas Bates: Typo or profound insight?",
+"author": "Dirk Eddelbuettel and Douglas Bates",
+"context": null,
+"source": "Rcpp-devel",
+"date": "February 2012" 
+},
+{
+ "quote": "There seem to be three canons: R-Forge, Rforge, and for the Followers of Wickham, github. Four, if you count OmegaHat.",
+"author": "David Winsemius",
+"context": "in a discussion about the 'canonical' source code management platform for R",
+"source": "R-help",
+"date": "February 2012" 
+},
+{
+ "quote": "The problem here is that the $ notation is a magical shortcut and like any other magic if used incorrectly is likely to do the programmatic equivalent of turning yourself into a toad.",
+"author": "Greg Snow",
+"context": "in response to a user that wanted to access a column whose name is stored in y via x$y rather than x[[y]]",
+"source": "R-help",
+"date": "February 2012" 
+},
+{
+ "quote": "Etienne B. Racine: I haven't seen any documentation about this behavior.<x>Edzer Pebesma: Isn't the more important question whether you saw documentation that is in conflict with this behaviour?<x>Tom Gottfried: Taking that to the extremes: undocumented software always works perfectly.",
+"author": "Etienne B. Racine, Edzer Pebesma, and Tom Gottfried",
+"context": null,
+"source": "R-SIG-Geo",
+"date": "February 2012" 
+},
+{
+ "quote": "That's a casual model, not a causal model - you can tell the difference by looking for the word \"excel\".",
+"author": "Hadley Wickham",
+"context": "commenting on an Excel chart showing student's SAT score increases with family income, without considering further covariates",
+"source": "http://twitter.com/#!/hadleywickham",
+"date": "February 2012" 
+},
+{
+ "quote": "Careful now, or I'll get into a rant about how much you pay for ArcGIS and whether you are getting value for money if bugs become 'well-known'! Bugs in R tend to be either 'obscure' or 'fixed' :)",
+"author": "Barry Rowlingson",
+"context": "in response to a request for rgdal to work around a well-known bug in ArcGIS",
+"source": "R-SIG-Geo",
+"date": "March 2012" 
+},
+{
+ "quote": "Igor Sosa Mayor: The problem is that it gives the result that I want.<x>Sarah Goslee: That's a new sort of problem.",
+"author": "Igor Sosa Mayor and Sarah Goslee",
+"context": null,
+"source": "R-help",
+"date": "March 2012" 
+} 
+]

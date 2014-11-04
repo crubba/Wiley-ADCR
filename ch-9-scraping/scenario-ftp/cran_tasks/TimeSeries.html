@@ -1,0 +1,1221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CRAN Task View: Time Series Analysis</title>
+  <link rel=stylesheet type="text/css" href="../CRAN_web.css" />
+</head>
+
+<body>
+  <h2>CRAN Task View: Time Series Analysis</h2>
+  <table summary="TimeSeries task view information">
+    <tr><td valign="top"><b>Maintainer:</b></td><td>Rob J. Hyndman</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x52;&#x6f;&#x62;&#x2e;&#x48;&#x79;&#x6e;&#x64;&#x6d;&#x61;&#x6e;&#x20;&#x61;&#x74;&#x20;&#x6d;&#x6f;&#x6e;&#x61;&#x73;&#x68;&#x2e;&#x65;&#x64;&#x75;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2014-02-28</td></tr>
+  </table>
+
+    <div>
+      <p>
+        Base R ships with a lot of functionality useful for time series,
+  in particular in the stats package. This is complemented by many
+  packages on CRAN, which are briefly summarized below. There is also
+  a considerable overlap between the tools for time series and those
+  in the
+<a href="Econometrics.html">Econometrics</a>
+        and
+<a href="Finance.html">Finance</a>
+        task views.
+  The packages in this view can be roughly
+  structured into the following topics. If you think that some package
+  is missing from the list, please let us know.
+      </p>
+      <p>
+        <strong>
+          Basics
+        </strong>
+      </p>
+      <ul>
+        <li>
+          <i>
+            Infrastructure
+          </i>: Base R contains substantial infrastructure for representing and analyzing
+      time series data. The fundamental class is
+<tt>"ts"</tt>
+          that can
+      represent regularly spaced time series (using numeric time stamps).
+      Hence, it is particularly well-suited for annual, monthly, quarterly
+      data, etc.
+        </li>
+        <li>
+          <i>
+            Graphics
+          </i>: Time series plots are obtained with
+<tt>plot()</tt>
+          applied
+      to
+<tt>ts</tt>
+          objects. (Partial) autocorrelation
+      functions plots are implemented in
+<tt>acf()</tt>
+          and
+<tt>pacf()</tt>. Alternative
+      versions are provided by
+<tt>Acf()</tt>
+          and
+<tt>Pacf()</tt>
+          in
+<a href="../packages/forecast/index.html">forecast</a>,
+      along with a combination display using
+<tt>tsdisplay()</tt>.
+<a href="../packages/SDD/index.html">SDD</a>
+          provides more general serial dependence diagrams.
+      Seasonal displays are obtained using
+<tt>monthplot()</tt>
+          in stats and
+<tt>seasonplot</tt>
+          in
+<a href="../packages/forecast/index.html">forecast</a>.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Times and Dates
+        </strong>
+      </p>
+      <ul>
+        <li>
+          Class
+<tt>"ts"</tt>
+          can only deal with numeric time stamps,
+      but many more classes are available for storing time/date information
+      and computing with it. For an overview see
+          <i>
+            R Help Desk: Date and
+      Time Classes in R
+          </i>
+          by Gabor Grothendieck and Thomas Petzoldt in
+          <a href="http://CRAN.R-project.org/doc/Rnews/Rnews_2004-1.pdf" target="_top">
+            R News 4(1)
+          </a>,
+      29-32.
+        </li>
+        <li>
+          Classes
+<tt>"yearmon"</tt>
+          and
+<tt>"yearqtr"</tt>
+          from
+<a href="../packages/zoo/index.html">zoo</a>
+          allow for more convenient computation with monthly
+      and quarterly observations, respectively.
+        </li>
+        <li>
+          Class
+<tt>"Date"</tt>
+          from the base package is the basic class
+      for dealing with dates in daily data. The dates are internally stored
+      as the number of days since 1970-01-01.
+        </li>
+        <li>
+          The
+<a href="../packages/chron/index.html">chron</a>
+          package provides classes for
+<tt>dates()</tt>,
+<tt>hours()</tt>
+          and date/time (intra-day) in
+<tt>chron()</tt>. There is no
+      support for time zones and daylight savings time. Internally,
+<tt>"chron"</tt>
+          objects are (fractional) days since 1970-01-01.
+        </li>
+        <li>
+          Classes
+<tt>"POSIXct"</tt>
+          and
+<tt>"POSIXlt"</tt>
+          implement
+      the POSIX standard for date/time (intra-day) information and also support time zones
+      and daylight savings time. However, the time zone computations require
+      some care and might be system-dependent. Internally,
+<tt>"POSIXct"</tt>
+          objects are the number of seconds since 1970-01-01 00:00:00 GMT.
+      Package
+<a href="../packages/lubridate/index.html">lubridate</a>
+          provides functions that facilitate
+      certain POSIX-based computations.
+        </li>
+        <li>
+          Class
+<tt>"timeDate"</tt>
+          is provided in the
+<a href="../packages/timeDate/index.html">timeDate</a>
+          package (previously: fCalendar). It is aimed at financial time/date information and deals with
+      time zones and daylight savings times via a new concept of "financial centers".
+      Internally, it stores all information in
+<tt>"POSIXct"</tt>
+          and does
+      all computations in GMT only. Calendar functionality, e.g., including
+      information about weekends and holidays for various stock exchanges,
+      is also included.
+        </li>
+        <li>
+          The
+<a href="../packages/tis/index.html">tis</a>
+          package provides the
+<tt>"ti"</tt>
+          class for
+      time/date information.
+        </li>
+        <li>
+          The
+<tt>"mondate"</tt>
+          class from the
+<a href="../packages/mondate/index.html">mondate</a>
+          package
+      facilitates computing with dates in terms of months.
+        </li>
+        <li>
+<a href="../packages/TSAgg/index.html">TSAgg</a>
+          provides functions for aggregation of incomplete time series data.
+        </li>
+        <li>
+          The
+<a href="../packages/tempdisagg/index.html">tempdisagg</a>
+          package includes methods for temporal disaggregation and interpolation of a low frequency time series to a higher frequency series.
+        </li>
+        <li>
+<a href="../packages/TimeProjection/index.html">TimeProjection</a>
+          extracts useful time components of a date object, such as day of week, weekend, holiday, day of month, etc, and put it in a data frame.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Time Series Classes
+        </strong>
+      </p>
+      <ul>
+        <li>
+          As mentioned above,
+<tt>"ts"</tt>
+          is the basic class for
+      regularly spaced time series using numeric time stamps.
+        </li>
+        <li>
+          The
+<a href="../packages/zoo/index.html">zoo</a>
+          package provides infrastructure for regularly
+      and irregularly spaced time series using arbitrary classes for
+      the time stamps (i.e., allowing all classes from the previous section).
+      It is designed to be as consistent as possible with
+<tt>"ts"</tt>.
+      Coercion from and to
+<tt>"zoo"</tt>
+          is available for all other
+      classes mentioned in this section.
+        </li>
+        <li>
+          The package
+<a href="../packages/xts/index.html">xts</a>
+          is based on
+<a href="../packages/zoo/index.html">zoo</a>
+          and provides
+      uniform handling of R's different time-based data classes.
+        </li>
+        <li>
+          Various packages implement irregular time series based on
+<tt>"POSIXct"</tt>
+          time stamps, intended especially for financial applications. These include
+<tt>"its"</tt>
+          from
+<a href="../packages/its/index.html">its</a>,
+<tt>"irts"</tt>
+          from
+<a href="../packages/tseries/index.html">tseries</a>, and
+<tt>"fts"</tt>
+          from
+<a href="../packages/fts/index.html">fts</a>.
+        </li>
+        <li>
+          The class
+<tt>"timeSeries"</tt>
+          in
+<a href="../packages/timeSeries/index.html">timeSeries</a>
+          (previously: fSeries)
+      implements time series with
+<tt>"timeDate"</tt>
+          time stamps.
+        </li>
+        <li>
+          The class
+<tt>"tis"</tt>
+          in
+<a href="../packages/tis/index.html">tis</a>
+          implements
+      time series with
+<tt>"ti"</tt>
+          time stamps.
+        </li>
+        <li>
+          The package
+<a href="../packages/tframe/index.html">tframe</a>
+          contains infrastructure for setting
+      time frames in different formats.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Forecasting and Univariate Modeling
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/forecast/index.html">forecast</a>
+          package
+      provides a class and methods for univariate time series
+      forecasts, and provides many functions implementing different
+      forecasting models including all those in the stats
+      package.
+        </li>
+        <li>
+          <i>
+            Exponential smoothing
+          </i>:
+<tt>HoltWinters()</tt>
+          in stats
+      provides some basic models with partial optimization,
+<tt>ets()</tt>
+          from the
+<a href="../packages/forecast/index.html">forecast</a>
+          package provides a larger set of
+      models and facilities with full optimization.
+        </li>
+        <li>
+          <i>
+            Structural models
+          </i>
+          are implemented in
+<tt>StructTS()</tt>
+          in stats, and in
+<a href="../packages/stsm/index.html">stsm</a>
+          and
+<a href="../packages/stsm.class/index.html">stsm.class</a>.
+<a href="../packages/KFKSDS/index.html">KFKSDS</a>
+          provides a naive implementation of the Kalman filter and smoothers for univariate state space models.
+        </li>
+        <li>
+          Non-Gaussian time series can be handled with GLARMA state space models via the
+<a href="../packages/glarma/index.html">glarma</a>
+          package.
+        </li>
+        <li>
+          <i>
+            Autoregressive models
+          </i>:
+<tt>ar()</tt>
+          in stats (with
+      model selection) and
+<a href="../packages/FitAR/index.html">FitAR</a>
+          for subset AR models.
+        </li>
+        <li>
+          <i>
+            ARIMA models
+          </i>:
+<tt>arima()</tt>
+          in stats is the basic
+      function for ARIMA, SARIMA, ARIMAX, and subset ARIMA models.
+      It is enhanced in the
+<a href="../packages/forecast/index.html">forecast</a>
+          package via the function
+<tt>Arima()</tt>
+          along with
+<tt>auto.arima()</tt>
+          for automatic
+      order selection.
+<tt>arma()</tt>
+          in the
+<a href="../packages/tseries/index.html">tseries</a>
+          package provides different algorithms for ARMA and subset ARMA
+      models.
+<a href="../packages/FitARMA/index.html">FitARMA</a>
+          implements a fast MLE algorithm for ARMA models.
+        Package
+<a href="../packages/gsarima/index.html">gsarima</a>
+          contains functionality for Generalized SARIMA time series
+      simulation. The
+<a href="../packages/mar1s/index.html">mar1s</a>
+          package handles multiplicative AR(1) with seasonal processes.
+<a href="../packages/TSTutorial/index.html">TSTutorial</a>
+          provides an interactive tutorial for Box-Jenkins modelling.
+        </li>
+        <li>
+          <i>
+            Periodic ARMA models
+          </i>:
+<a href="../packages/pear/index.html">pear</a>
+          and
+<a href="../packages/partsm/index.html">partsm</a>
+          for periodic autoregressive time series models, and
+<a href="../packages/perARMA/index.html">perARMA</a>
+          for periodic ARMA modelling and other procedures for periodic time series analysis.
+        </li>
+        <li>
+          <i>
+            ARFIMA models
+          </i>: Some facilities for fractional differenced ARFIMA
+      models are provided in the
+<a href="../packages/fracdiff/index.html">fracdiff</a>
+          package. The
+<a href="../packages/arfima/index.html">arfima</a>
+          package
+      has more advanced and general facilities for ARFIMA and ARIMA models, including dynamic
+      regression (transfer function) models.
+<tt>armaFit()</tt>
+          from the
+<a href="../packages/fArma/index.html">fArma</a>
+          package
+      is an interface for ARIMA and ARFIMA models. Fractional Gaussian noise and simple models for
+      hyperbolic decay time series are handled in the
+<a href="../packages/FGN/index.html">FGN</a>
+          package.
+        </li>
+        <li>
+          <i>
+            Transfer function
+          </i>
+          models are provided by the
+<tt>arimax</tt>
+          function in the
+<a href="../packages/TSA/index.html">TSA</a>
+          package, and the
+<tt>arfima</tt>
+          function in the
+<a href="../packages/arfima/index.html">arfima</a>
+          package.
+        </li>
+        <li>
+          <i>
+            GARCH models
+          </i>:
+<tt>garch()</tt>
+          from
+<a href="../packages/tseries/index.html">tseries</a>
+          fits basic GARCH models. 
+    Many variations on GARCH models are provided by
+<a href="../packages/rugarch/index.html">rugarch</a>. Other univariate GARCH packages 
+    include
+<a href="../packages/fGarch/index.html">fGarch</a>
+          which implements ARIMA models with a wide class of GARCH innovations, and
+<a href="../packages/bayesGARCH/index.html">bayesGARCH</a>
+          which estimates a Bayesian GARCH(1,1) model with t innovations.
+<a href="../packages/gogarch/index.html">gogarch</a>
+          implements Generalized Orthogonal GARCH (GO-GARCH) models.
+        </li>
+        <li>
+          <i>
+            Stochastic volatility
+          </i>
+          models are handled by
+<a href="../packages/stochvol/index.html">stochvol</a>
+          in a Bayesian framework.
+        </li>
+        <li>
+          <i>
+            Miscellaneous
+          </i>:
+<a href="../packages/ltsa/index.html">ltsa</a>
+          contains methods for
+      linear time series analysis,
+<a href="../packages/dlm/index.html">dlm</a>
+          for Bayesian
+      analysis of dynamic linear models,
+<a href="../packages/timsac/index.html">timsac</a>
+          for time
+      series analysis and control, and
+<a href="../packages/tsbugs/index.html">tsbugs</a>
+          for time series BUGS models.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Frequency analysis
+        </strong>
+      </p>
+      <ul>
+        <li>
+          <i>
+            Spectral density estimation
+          </i>
+          is provided by
+<tt>spectrum()</tt>
+          in the stats package, including the periodogram, smoothed periodogram and AR estimates. Bayesian spectral inference is provided by
+<a href="../packages/bspec/index.html">bspec</a>.
+<a href="../packages/quantspec/index.html">quantspec</a>
+          includes methods to compute and plot Laplace periodograms for univariate time series. The Lomb-Scargle
+      periodogram for unevenly sampled time series is computed by
+<a href="../packages/lomb/index.html">lomb</a>.
+<a href="../packages/psd/index.html">psd</a>
+          produces adaptive, sine-multitaper spectral density estimates.
+<a href="../packages/kza/index.html">kza</a>
+          provides Kolmogorov-Zurbenko Adaptive Filters including break detection, spectral analysis,
+        wavelets and KZ Fourier Transforms.
+        </li>
+        <li>
+          <i>
+            Wavelet methods
+          </i>: The
+<a href="../packages/wavelets/index.html">wavelets</a>
+          package
+      includes computing wavelet filters, wavelet transforms and
+      multiresolution analyses. Wavelet methods for time series
+      analysis based on Percival and Walden (2000) are given in
+<a href="../packages/wmtsa/index.html">wmtsa</a>.
+<a href="../packages/biwavelet/index.html">biwavelet</a>
+          can be used to plot and
+      compute the wavelet spectra, cross-wavelet spectra, and wavelet
+      coherence of non-stationary time series. It also includes functions
+      to cluster time series based on the (dis)similarities in their spectrum.
+      Further wavelet methods can be found in the packages
+<a href="../packages/brainwaver/index.html">brainwaver</a>,
+<a href="../packages/rwt/index.html">rwt</a>,
+<a href="../packages/waveslim/index.html">waveslim</a>,
+<a href="../packages/wavethresh/index.html">wavethresh</a>
+          and
+<a href="../packages/mvcwt/index.html">mvcwt</a>.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Decomposition and Filtering
+        </strong>
+      </p>
+      <ul>
+        <li>
+          <i>
+            Filters
+          </i>:
+<tt>filter()</tt>
+          in stats
+      provides autoregressive and moving average linear filtering of
+      multiple univariate time series. The
+<a href="../packages/robfilter/index.html">robfilter</a>
+          package provides several robust time series filters, while
+<a href="../packages/mFilter/index.html">mFilter</a>
+          includes miscellaneous time series filters
+      useful for smoothing and extracting trend and cyclical
+      components.
+<a href="../packages/signalextraction/index.html">signalextraction</a>
+          provides real-time signal extraction
+        (direct filter approach).
+        </li>
+        <li>
+          <i>
+            Decomposition
+          </i>: Classical decomposition
+      is provided via
+<tt>decompose()</tt>, more advanced and flexible
+      decomposition is available using
+<tt>stl()</tt>, both from
+      the basic stats package.
+<a href="../packages/sltl/index.html">sltl</a>
+          provides time series decomposition
+      using loess and harmonic regression.
+      Autoregressive-based decomposition is provided by
+<a href="../packages/ArDec/index.html">ArDec</a>.
+        </li>
+        <li>
+          <i>
+            Singular Spectrum Analysis
+          </i>
+          is implemented in
+<a href="../packages/Rssa/index.html">Rssa</a>.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Seasonality
+        </strong>
+      </p>
+      <ul>
+        <li>
+          <i>
+            Seasonal decomposition
+          </i>: the stats package provides classical
+      decomposition in
+<tt>decompose()</tt>, and STL decomposition in
+<tt>stl()</tt>.
+        </li>
+        <li>
+<a href="../packages/x12/index.html">x12</a>
+          provides a wrapper for the
+          <a href="http://www.census.gov/srd/www/x12a/">
+            X12 binaries
+          </a>
+          which have to be installed first.
+<a href="../packages/x12GUI/index.html">x12GUI</a>
+          provides a graphical user interface for
+<a href="../packages/x12/index.html">x12</a>. 
+  An R interface to the later
+          <a href="http://www.census.gov/srd/www/x13as/x13down_pc.html">
+            X-13ARIMA-SEATS binaries
+          </a>
+          is given by
+<a href="../packages/seasonal/index.html">seasonal</a>.
+        </li>
+        <li>
+          <i>
+            Analysis of seasonality
+          </i>: the
+<a href="../packages/bfast/index.html">bfast</a>
+          package provides methods for detecting and characterizing abrupt changes within the trend and seasonal components obtained from a decomposition.
+<a href="../packages/npst/index.html">npst</a>
+          provides a generalization of Hewitt's seasonality test.
+        </li>
+        <li>
+<a href="../packages/season/index.html">season</a>: Seasonal analysis of health data including regression models, time-stratified case-crossover, plotting functions and residual checks.
+        </li>
+        <li>
+<a href="../packages/seas/index.html">seas</a>: Seasonal analysis and graphics, especially for climatology.
+        </li>
+        <li>
+<a href="../packages/deseasonalize/index.html">deseasonalize</a>: Optimal deseasonalization for geophysical time series using AR fitting.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Stationarity, Unit Roots, and Cointegration
+        </strong>
+      </p>
+      <ul>
+        <li>
+          <i>
+            Stationarity and unit roots
+          </i>:
+<a href="../packages/tseries/index.html">tseries</a>
+          provides
+      various stationarity and unit root tests including
+      Augmented Dickey-Fuller, Phillips-Perron, and KPSS. Alternative
+      implementations of the ADF and KPSS tests are in the
+<a href="../packages/urca/index.html">urca</a>
+          package, which also includes further methods
+      such as Elliott-Rothenberg-Stock, Schmidt-Phillips and Zivot-Andrews
+      tests. The
+<a href="../packages/fUnitRoots/index.html">fUnitRoots</a>
+          package also provides the MacKinnon test.
+<a href="../packages/CADFtest/index.html">CADFtest</a>
+          provides implementations of both the standard ADF
+      and a covariate-augmented ADF (CADF) test.
+<a href="../packages/locits/index.html">locits</a>
+          provides a test of local stationarity and computes 
+      the localized autocovariance.
+        </li>
+        <li>
+          <i>
+            Cointegration
+          </i>: The Engle-Granger two-step method with the Phillips-Ouliaris
+      cointegration test is implemented in
+<a href="../packages/tseries/index.html">tseries</a>
+          and
+<a href="../packages/urca/index.html">urca</a>.
+      The latter additionally contains functionality for the Johansen trace
+      and lambda-max tests.
+<a href="../packages/CommonTrend/index.html">CommonTrend</a>
+          provides tools to extract and plot common trends from a cointegration system.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Nonlinear Time Series Analysis
+        </strong>
+      </p>
+      <ul>
+        <li>
+          <i>
+            Nonlinear autoregression
+          </i>:
+<a href="../packages/bentcableAR/index.html">bentcableAR</a>
+          implements Bent-Cable autoregression.
+<a href="../packages/BAYSTAR/index.html">BAYSTAR</a>
+          provides Bayesian analysis of threshold autoregressive models.
+        </li>
+        <li>
+          The
+          <i>
+            <a href="http://www.mpipks-dresden.mpg.de/~tisean/">
+              TISEAN
+            </a>
+            project
+          </i>
+          provided algorithms for time series analysis from
+      nonlinear dynamical systems theory.
+<a href="../packages/RTisean/index.html">RTisean</a>
+          provides
+      an R interface to the algorithms and
+<a href="../packages/tseriesChaos/index.html">tseriesChaos</a>
+          provides an R implementation of the algorithms.
+        </li>
+        <li>
+          <i>
+            Tests
+          </i>: Various tests for nonlinearity are provided in
+<a href="../packages/fNonlinear/index.html">fNonlinear</a>.
+        </li>
+        <li>
+          Additional functions for nonlinear time series are available in
+<a href="../packages/nlts/index.html">nlts</a>
+          and
+<a href="../packages/nonlinearTseries/index.html">nonlinearTseries</a>.
+        </li>
+        <li>
+          Fractal time series modeling and analysis is provided by
+<a href="../packages/fractal/index.html">fractal</a>.
+<a href="../packages/fractalrock/index.html">fractalrock</a>
+          generates 
+  fractal time series with non-normal returns distributions.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Dynamic Regression Models
+        </strong>
+      </p>
+      <ul>
+        <li>
+          <i>
+            Dynamic linear models
+          </i>: A convenient interface for fitting
+      dynamic regression models via OLS is available in
+<a href="../packages/dynlm/index.html">dynlm</a>;
+      an enhanced approach that also works with other regression functions
+      and more time series classes is implemented in
+<a href="../packages/dyn/index.html">dyn</a>. 
+      The
+<a href="../packages/tslars/index.html">tslars</a>
+          package applies a dynamic variable selection procedure using an extension of the LARS
+      algorithm. More advanced dynamic system equations can be fitted using
+<a href="../packages/dse/index.html">dse</a>. Gaussian linear state
+      space models can be fitted using
+<a href="../packages/dlm/index.html">dlm</a>
+          (via maximum
+      likelihood, Kalman filtering/smoothing and Bayesian methods).
+        </li>
+        <li>
+          <i>
+            Time-varying parameter
+          </i>
+          models can be fitted using the
+<a href="../packages/tpr/index.html">tpr</a>
+          package.
+        </li>
+        <li>
+          <i>
+            MIDAS regression
+          </i>
+          and other econometric methods for mixed frequency time series data analysis are provided by
+<a href="../packages/midasr/index.html">midasr</a>.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Multivariate Time Series Models
+        </strong>
+      </p>
+      <ul>
+        <li>
+          <i>
+            Vector autoregressive (VAR) models
+          </i>
+          are provided via
+<tt>ar()</tt>
+          in the basic stats package including order
+      selection via the AIC. These models are
+      restricted to be stationary. Possibly non-stationary VAR models
+      are fitted in the
+<a href="../packages/mAr/index.html">mAr</a>
+          package, which also allows
+      VAR models in principal component space. More elaborate models
+      are provided in package
+<a href="../packages/vars/index.html">vars</a>,
+<tt>estVARXls()</tt>
+          in
+<a href="../packages/dse/index.html">dse</a>
+          and a Bayesian approach is available in
+<a href="../packages/MSBVAR/index.html">MSBVAR</a>.
+<a href="../packages/StVAR/index.html">StVAR</a>
+          allows for heteroskedastic Student's t VAR models with specified degrees
+    of freedom and lag length.
+        </li>
+        <li>
+          <i>
+            VARIMA models
+          </i>
+          and
+          <i>
+            state space models
+          </i>
+          are provided
+      in the
+<a href="../packages/dse/index.html">dse</a>
+          package.
+<a href="../packages/EvalEst/index.html">EvalEst</a>
+          facilitates Monte Carlo experiments to
+	  evaluate the associated estimation methods.
+        </li>
+        <li>
+          <i>
+            Vector error correction models
+          </i>
+          are available via the
+<a href="../packages/urca/index.html">urca</a>,
+<a href="../packages/vars/index.html">vars</a>
+          packages, including versions with structural constraints and thresholding.
+        </li>
+        <li>
+          <i>
+            Multivariate GARCH models
+          </i>
+          including DCC, GO-GARCH and Copula-GARCH are available in
+<a href="../packages/rmgarch/index.html">rmgarch</a>.
+        </li>
+        <li>
+          <i>
+            Time series component analysis
+          </i>: Time series factor analysis is provided in
+<a href="../packages/tsfa/index.html">tsfa</a>.
+<a href="../packages/ForeCA/index.html">ForeCA</a>
+          implements forecatable component analysis by searching for the best linear transformations that make a multivariate time series as forecastable as possible.
+        </li>
+        <li>
+          <i>
+            Multivariate state space models
+          </i>
+          are implemented in the
+<a href="../packages/FKF/index.html">FKF</a>
+          (Fast Kalman Filter) package.    
+    This provides relatively flexible state space models via the
+<tt>fkf()</tt>
+          function: state-space  
+    parameters are allowed to be time-varying and intercepts are included in both equations.  
+    An alternative implementation is provided by the
+<a href="../packages/KFAS/index.html">KFAS</a>
+          package which provides a
+	  fast multivariate Kalman filter, smoother, simulation smoother and forecasting. Yet another implementation
+	  is given in the
+<a href="../packages/dlm/index.html">dlm</a>
+          package which also contains tools for converting other multivariate models
+	  into state space form.
+<a href="../packages/MARSS/index.html">MARSS</a>
+          fits constrained and unconstrained multivariate autoregressive state-space models using an EM algorithm. All of these
+    packages assume the observational and state error terms are uncorrelated.
+        </li>
+        <li>
+          <i>
+            Partially-observed Markov processes
+          </i>
+          are a generalization of the usual linear multivariate state
+  space models, allowing non-Gaussian and nonlinear models. These are implemented in the
+<a href="../packages/pomp/index.html">pomp</a>
+          package.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Continuous time models
+        </strong>
+      </p>
+      <ul>
+        <li>
+          <i>
+            Continuous time autoregressive modelling
+          </i>
+          is provided in
+<a href="../packages/cts/index.html">cts</a>.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Resampling
+        </strong>
+      </p>
+      <ul>
+        <li>
+          <i>
+            Bootstrapping
+          </i>: The
+<a href="../packages/boot/index.html">boot</a>
+          package provides
+      function
+<tt>tsboot()</tt>
+          for time series bootstrapping,
+      including block bootstrap with several variants.
+<tt>tsbootstrap()</tt>
+          from
+<a href="../packages/tseries/index.html">tseries</a>
+          provides
+      fast stationary and block bootstrapping.
+      Maximum entropy bootstrap for time series is available in
+<a href="../packages/meboot/index.html">meboot</a>.
+<a href="../packages/timesboot/index.html">timesboot</a>
+          computes the bootstrap CI for the sample ACF and periodogram.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Time Series Data
+        </strong>
+      </p>
+      <ul>
+        <li>
+          Data from Makridakis, Wheelwright and Hyndman (1998)
+          <i>
+            Forecasting: methods and
+      applications
+          </i>
+          are provided in the
+<a href="../packages/fma/index.html">fma</a>
+          package.
+        </li>
+        <li>
+          Data from Hyndman, Koehler, Ord and Snyder (2008)
+          <i>
+            Forecasting
+      with exponential smoothing
+          </i>
+          are in the
+<a href="../packages/expsmooth/index.html">expsmooth</a>
+          package.
+        </li>
+        <li>
+          Data from Hyndman and Athanasopoulos (2013)
+          <i>
+            Forecasting: principles and practice
+          </i>
+          are in the
+<a href="../packages/fpp/index.html">fpp</a>
+          package.
+        </li>
+        <li>
+          Data from the M-competition and M3-competition are provided in the
+<a href="../packages/Mcomp/index.html">Mcomp</a>
+          package.
+        </li>
+        <li>
+          Data from the Quandl online portal to financial, economical and social datasets can
+      be queried interactively using the
+<a href="../packages/Quandl/index.html">Quandl</a>
+          package.
+        </li>
+        <li>
+          Data from the Datamarket online portal can be fetched using the
+<a href="../packages/rdatamarket/index.html">rdatamarket</a>
+          package.
+        </li>
+        <li>
+          Data from Cryer and Chan (2010) are in the
+<a href="../packages/TSA/index.html">TSA</a>
+          package.
+        </li>
+        <li>
+          Data from Shumway and Stoffer (2011) are in the
+<a href="../packages/astsa/index.html">astsa</a>
+          package.
+        </li>
+        <li>
+          Data from Tsay (2005)
+          <i>
+            Analysis of financial
+      time series
+          </i>
+          are in the
+<a href="../packages/FinTS/index.html">FinTS</a>
+          package, along with some functions and
+      script files required to work some of the examples.
+        </li>
+        <li>
+<a href="../packages/TSdbi/index.html">TSdbi</a>
+          provides a common interface to time series databases.
+        </li>
+        <li>
+<a href="../packages/fame/index.html">fame</a>
+          provides an interface for FAME time series databases
+        </li>
+        <li>
+<a href="../packages/AER/index.html">AER</a>
+          and
+<a href="../packages/Ecdat/index.html">Ecdat</a>
+          both contain many data sets (including time series data)
+       from many econometrics text books
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Miscellaneous
+        </strong>
+      </p>
+      <ul>
+        <li>
+<a href="../packages/dtw/index.html">dtw</a>: Dynamic time warping algorithms for computing and plotting pairwise alignments between time series.
+        </li>
+        <li>
+<a href="../packages/ensembleBMA/index.html">ensembleBMA</a>: Bayesian Model Averaging to create probabilistic forecasts from ensemble forecasts and weather observations.
+        </li>
+        <li>
+<a href="../packages/events/index.html">events</a>: turns machine-extracted event data into regular aggregated multivariate time series.
+        </li>
+        <li>
+<a href="../packages/FeedbackTS/index.html">FeedbackTS</a>: Analysis of fragmented time directionality to investigate feedback in time series.
+        </li>
+        <li>
+<a href="../packages/GeneCycle/index.html">GeneCycle</a>
+          and
+<a href="../packages/GeneNet/index.html">GeneNet</a>: Microarray time series and network analysis.
+        </li>
+        <li>
+<a href="../packages/hydroTSM/index.html">hydroTSM</a>
+          and
+<a href="../packages/hydroGOF/index.html">hydroGOF</a>
+          provide functions for analysing and modelling time series in hydrology and related environmental sciences.
+        </li>
+        <li>
+<a href="../packages/Interpol.T/index.html">Interpol.T</a>
+          makes hourly interpolation of daily minimum and maximum temperature series. It is useful in climatology when hourly time-series must be downscaled from the daily information.
+        </li>
+        <li>
+<a href="../packages/MAR1/index.html">MAR1</a>
+          provides tools for preparing ecological community time series data for multivariate AR modeling.
+        </li>
+        <li>
+<a href="../packages/nets/index.html">nets</a>: routines for the estimation of sparse long run partial correlation networks for time series data.
+        </li>
+        <li>
+<a href="../packages/paleoTS/index.html">paleoTS</a>: Modeling evolution in paleontological time series.
+        </li>
+        <li>
+<a href="../packages/pastecs/index.html">pastecs</a>: Regulation, decomposition and analysis of space-time series.
+        </li>
+        <li>
+<a href="../packages/portes/index.html">portes</a>: Portmanteau tests for univariate and multivariate time series models.
+        </li>
+        <li>
+<a href="../packages/ptw/index.html">ptw</a>: Parametric time warping.
+        </li>
+        <li>
+<a href="../packages/PVAClone/index.html">PVAClone</a>: Population growth models using data cloning.
+        </li>
+        <li>
+<a href="../packages/RMAWGEN/index.html">RMAWGEN</a>
+          is set of S3 and S4   functions for spatial multi-site stochastic generation of daily time-series of temperature and precipitation making use of VAR models. The package can be used in climatology and statistical hydrology.
+        </li>
+        <li>
+<a href="../packages/RSEIS/index.html">RSEIS</a>: Seismic time series analysis tools.
+        </li>
+        <li>
+<a href="../packages/rts/index.html">rts</a>: Raster time series analysis (e.g., time series of satellite images).
+        </li>
+        <li>
+<a href="../packages/sde/index.html">sde</a>: Simulation and inference for stochastic differential equations.
+        </li>
+        <li>
+<a href="../packages/SparseTSCGM/index.html">SparseTSCGM</a>: Sparse time series chain graphical models.
+        </li>
+        <li>
+<a href="../packages/spTimer/index.html">spTimer</a>: Spatio-temporal Bayesian modelling.
+        </li>
+        <li>
+<a href="../packages/surveillance/index.html">surveillance</a>: Temporal and spatio-temporal modeling and monitoring of epidemic phenomena.
+        </li>
+        <li>
+<a href="../packages/Tides/index.html">Tides</a>: Functions to calculate characteristics of quasi periodic time series, e.g. observed estuarine water levels.
+        </li>
+        <li>
+<a href="../packages/tiger/index.html">tiger</a>: Temporally resolved groups of typical differences (errors) between two time series are determined and visualized.
+        </li>
+        <li>
+<a href="../packages/TSclust/index.html">TSclust</a>: Time series clustering utilities.
+        </li>
+        <li>
+<a href="../packages/tsModel/index.html">tsModel</a>: Time series modeling for air pollution and health.
+        </li>
+        <li>
+<a href="../packages/wavethresh/index.html">wavethresh</a>: Locally stationary wavelet models for nonstationary time series
+      (including estimation, plotting, and simulation functionality for time-varying spectrums).
+        </li>
+        <li>
+<a href="../packages/wq/index.html">wq</a>: Exploring water quality time series.
+        </li>
+        <li>
+<a href="../packages/WeightedPortTest/index.html">WeightedPortTest</a>
+          provides weighted portmanteau statistics for time series goodness-of-fit testing.
+        </li>
+      </ul>
+    </div>
+
+  <h3>CRAN packages:</h3>
+  <ul>
+    <li><a href="../packages/AER/index.html">AER</a></li>
+    <li><a href="../packages/ArDec/index.html">ArDec</a></li>
+    <li><a href="../packages/arfima/index.html">arfima</a></li>
+    <li><a href="../packages/astsa/index.html">astsa</a></li>
+    <li><a href="../packages/bayesGARCH/index.html">bayesGARCH</a></li>
+    <li><a href="../packages/BAYSTAR/index.html">BAYSTAR</a></li>
+    <li><a href="../packages/bentcableAR/index.html">bentcableAR</a></li>
+    <li><a href="../packages/bfast/index.html">bfast</a></li>
+    <li><a href="../packages/biwavelet/index.html">biwavelet</a></li>
+    <li><a href="../packages/boot/index.html">boot</a></li>
+    <li><a href="../packages/brainwaver/index.html">brainwaver</a></li>
+    <li><a href="../packages/bspec/index.html">bspec</a></li>
+    <li><a href="../packages/CADFtest/index.html">CADFtest</a></li>
+    <li><a href="../packages/chron/index.html">chron</a></li>
+    <li><a href="../packages/CommonTrend/index.html">CommonTrend</a></li>
+    <li><a href="../packages/cts/index.html">cts</a></li>
+    <li><a href="../packages/deseasonalize/index.html">deseasonalize</a></li>
+    <li><a href="../packages/dlm/index.html">dlm</a></li>
+    <li><a href="../packages/dse/index.html">dse</a></li>
+    <li><a href="../packages/dtw/index.html">dtw</a></li>
+    <li><a href="../packages/dyn/index.html">dyn</a></li>
+    <li><a href="../packages/dynlm/index.html">dynlm</a></li>
+    <li><a href="../packages/Ecdat/index.html">Ecdat</a></li>
+    <li><a href="../packages/ensembleBMA/index.html">ensembleBMA</a></li>
+    <li><a href="../packages/EvalEst/index.html">EvalEst</a></li>
+    <li><a href="../packages/events/index.html">events</a></li>
+    <li><a href="../packages/expsmooth/index.html">expsmooth</a></li>
+    <li><a href="../packages/fame/index.html">fame</a></li>
+    <li><a href="../packages/fArma/index.html">fArma</a></li>
+    <li><a href="../packages/FeedbackTS/index.html">FeedbackTS</a></li>
+    <li><a href="../packages/fGarch/index.html">fGarch</a></li>
+    <li><a href="../packages/FGN/index.html">FGN</a></li>
+    <li><a href="../packages/FinTS/index.html">FinTS</a></li>
+    <li><a href="../packages/FitAR/index.html">FitAR</a></li>
+    <li><a href="../packages/FitARMA/index.html">FitARMA</a></li>
+    <li><a href="../packages/FKF/index.html">FKF</a></li>
+    <li><a href="../packages/fma/index.html">fma</a></li>
+    <li><a href="../packages/fNonlinear/index.html">fNonlinear</a></li>
+    <li><a href="../packages/ForeCA/index.html">ForeCA</a></li>
+    <li><a href="../packages/forecast/index.html">forecast</a> (core)</li>
+    <li><a href="../packages/fpp/index.html">fpp</a></li>
+    <li><a href="../packages/fracdiff/index.html">fracdiff</a></li>
+    <li><a href="../packages/fractal/index.html">fractal</a></li>
+    <li><a href="../packages/fractalrock/index.html">fractalrock</a></li>
+    <li><a href="../packages/fts/index.html">fts</a></li>
+    <li><a href="../packages/fUnitRoots/index.html">fUnitRoots</a></li>
+    <li><a href="../packages/GeneCycle/index.html">GeneCycle</a></li>
+    <li><a href="../packages/GeneNet/index.html">GeneNet</a></li>
+    <li><a href="../packages/glarma/index.html">glarma</a></li>
+    <li><a href="../packages/gogarch/index.html">gogarch</a></li>
+    <li><a href="../packages/gsarima/index.html">gsarima</a></li>
+    <li><a href="../packages/hydroGOF/index.html">hydroGOF</a></li>
+    <li><a href="../packages/hydroTSM/index.html">hydroTSM</a></li>
+    <li><a href="../packages/Interpol.T/index.html">Interpol.T</a></li>
+    <li><a href="../packages/its/index.html">its</a></li>
+    <li><a href="../packages/KFAS/index.html">KFAS</a></li>
+    <li><a href="../packages/KFKSDS/index.html">KFKSDS</a></li>
+    <li><a href="../packages/kza/index.html">kza</a></li>
+    <li><a href="../packages/locits/index.html">locits</a></li>
+    <li><a href="../packages/lomb/index.html">lomb</a></li>
+    <li><a href="../packages/ltsa/index.html">ltsa</a></li>
+    <li><a href="../packages/lubridate/index.html">lubridate</a></li>
+    <li><a href="../packages/mAr/index.html">mAr</a></li>
+    <li><a href="../packages/MAR1/index.html">MAR1</a></li>
+    <li><a href="../packages/mar1s/index.html">mar1s</a></li>
+    <li><a href="../packages/MARSS/index.html">MARSS</a></li>
+    <li><a href="../packages/Mcomp/index.html">Mcomp</a></li>
+    <li><a href="../packages/meboot/index.html">meboot</a></li>
+    <li><a href="../packages/mFilter/index.html">mFilter</a></li>
+    <li><a href="../packages/midasr/index.html">midasr</a></li>
+    <li><a href="../packages/mondate/index.html">mondate</a></li>
+    <li><a href="../packages/MSBVAR/index.html">MSBVAR</a></li>
+    <li><a href="../packages/mvcwt/index.html">mvcwt</a></li>
+    <li><a href="../packages/nets/index.html">nets</a></li>
+    <li><a href="../packages/nlts/index.html">nlts</a></li>
+    <li><a href="../packages/nonlinearTseries/index.html">nonlinearTseries</a></li>
+    <li><a href="../packages/npst/index.html">npst</a></li>
+    <li><a href="../packages/paleoTS/index.html">paleoTS</a></li>
+    <li><a href="../packages/partsm/index.html">partsm</a></li>
+    <li><a href="../packages/pastecs/index.html">pastecs</a></li>
+    <li><a href="../packages/pear/index.html">pear</a></li>
+    <li><a href="../packages/perARMA/index.html">perARMA</a></li>
+    <li><a href="../packages/pomp/index.html">pomp</a></li>
+    <li><a href="../packages/portes/index.html">portes</a></li>
+    <li><a href="../packages/psd/index.html">psd</a></li>
+    <li><a href="../packages/ptw/index.html">ptw</a></li>
+    <li><a href="../packages/PVAClone/index.html">PVAClone</a></li>
+    <li><a href="../packages/Quandl/index.html">Quandl</a></li>
+    <li><a href="../packages/quantspec/index.html">quantspec</a></li>
+    <li><a href="../packages/rdatamarket/index.html">rdatamarket</a></li>
+    <li><a href="../packages/RMAWGEN/index.html">RMAWGEN</a></li>
+    <li><a href="../packages/rmgarch/index.html">rmgarch</a></li>
+    <li><a href="../packages/robfilter/index.html">robfilter</a></li>
+    <li><a href="../packages/RSEIS/index.html">RSEIS</a></li>
+    <li><a href="../packages/Rssa/index.html">Rssa</a></li>
+    <li><a href="../packages/RTisean/index.html">RTisean</a></li>
+    <li><a href="../packages/rts/index.html">rts</a></li>
+    <li><a href="../packages/rugarch/index.html">rugarch</a></li>
+    <li><a href="../packages/rwt/index.html">rwt</a></li>
+    <li><a href="../packages/SDD/index.html">SDD</a></li>
+    <li><a href="../packages/sde/index.html">sde</a></li>
+    <li><a href="../packages/seas/index.html">seas</a></li>
+    <li><a href="../packages/season/index.html">season</a></li>
+    <li><a href="../packages/seasonal/index.html">seasonal</a></li>
+    <li><a href="../packages/signalextraction/index.html">signalextraction</a></li>
+    <li><a href="../packages/sltl/index.html">sltl</a></li>
+    <li><a href="../packages/SparseTSCGM/index.html">SparseTSCGM</a></li>
+    <li><a href="../packages/spTimer/index.html">spTimer</a></li>
+    <li><a href="../packages/stochvol/index.html">stochvol</a></li>
+    <li><a href="../packages/stsm/index.html">stsm</a></li>
+    <li><a href="../packages/stsm.class/index.html">stsm.class</a></li>
+    <li><a href="../packages/StVAR/index.html">StVAR</a></li>
+    <li><a href="../packages/surveillance/index.html">surveillance</a></li>
+    <li><a href="../packages/tempdisagg/index.html">tempdisagg</a></li>
+    <li><a href="../packages/tframe/index.html">tframe</a></li>
+    <li><a href="../packages/Tides/index.html">Tides</a></li>
+    <li><a href="../packages/tiger/index.html">tiger</a></li>
+    <li><a href="../packages/timeDate/index.html">timeDate</a></li>
+    <li><a href="../packages/TimeProjection/index.html">TimeProjection</a></li>
+    <li><a href="../packages/timesboot/index.html">timesboot</a></li>
+    <li><a href="../packages/timeSeries/index.html">timeSeries</a></li>
+    <li><a href="../packages/timsac/index.html">timsac</a></li>
+    <li><a href="../packages/tis/index.html">tis</a></li>
+    <li><a href="../packages/tpr/index.html">tpr</a></li>
+    <li><a href="../packages/TSA/index.html">TSA</a></li>
+    <li><a href="../packages/TSAgg/index.html">TSAgg</a></li>
+    <li><a href="../packages/tsbugs/index.html">tsbugs</a></li>
+    <li><a href="../packages/TSclust/index.html">TSclust</a></li>
+    <li><a href="../packages/TSdbi/index.html">TSdbi</a></li>
+    <li><a href="../packages/tseries/index.html">tseries</a> (core)</li>
+    <li><a href="../packages/tseriesChaos/index.html">tseriesChaos</a></li>
+    <li><a href="../packages/tsfa/index.html">tsfa</a></li>
+    <li><a href="../packages/tslars/index.html">tslars</a></li>
+    <li><a href="../packages/tsModel/index.html">tsModel</a></li>
+    <li><a href="../packages/TSTutorial/index.html">TSTutorial</a></li>
+    <li><a href="../packages/urca/index.html">urca</a></li>
+    <li><a href="../packages/vars/index.html">vars</a></li>
+    <li><a href="../packages/wavelets/index.html">wavelets</a></li>
+    <li><a href="../packages/waveslim/index.html">waveslim</a></li>
+    <li><a href="../packages/wavethresh/index.html">wavethresh</a></li>
+    <li><a href="../packages/WeightedPortTest/index.html">WeightedPortTest</a></li>
+    <li><a href="../packages/wmtsa/index.html">wmtsa</a></li>
+    <li><a href="../packages/wq/index.html">wq</a></li>
+    <li><a href="../packages/x12/index.html">x12</a></li>
+    <li><a href="../packages/x12GUI/index.html">x12GUI</a></li>
+    <li><a href="../packages/xts/index.html">xts</a></li>
+    <li><a href="../packages/zoo/index.html">zoo</a> (core)</li>
+  </ul>
+
+  <h3>Related links:</h3>
+  <ul>
+    <li>CRAN Task View: <a href="Finance.html">Finance</a></li>
+    <li>CRAN Task View: <a href="Econometrics.html">Econometrics</a></li>
+    <li><a href="http://data.is/TSDLdemo" target="_top">
+  Time Series Data Library
+</a></li>
+    <li><a href="http://www.mpipks-dresden.mpg.de/~tisean/">
+  TISEAN Project
+</a></li>
+    <li><a href="http://www.quandl.com/">
+  Quandl
+</a></li>
+  </ul>
+
+</body>
+</html>
+ 

@@ -1,0 +1,64 @@
+"Vote Type (FOR=1,AGAINST=2)","Candidate Name","Party","Office Name","Office District","Winner","Write-In?", CONC 005,CONC 004,CONC 002,CONC 001,CONC 003
+1,"Barack Obama",DEM,President - Vice Pres,,Y,,673,1312,1536,730,1007
+1,"Mitt Romney",REP,President - Vice Pres,,,,1577,1595,213,1808,1199
+1,"Gary Johnson",LIB,President - Vice Pres,,,,13,26,6,18,28
+1,"Jill Stein",GRN,President - Vice Pres,,,,6,15,12,4,18
+1,"Tiffany Renee Briscoe",DEM,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Dennis Knill",DEM,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Matthew Lydick",REP,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Barbara A. Prokopich",REP,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Santa Claus",IND,President - Vice Pres,,,Y,0,0,0,1,0
+1,"Richard Duncan",IND,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Bruce Mlynski",IND,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Kevin M. Thorne",IND,President - Vice Pres,,,Y,0,0,0,0,0
+1,"James Clymer",CON,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Virgil Goode",CON,President - Vice Pres,,,Y,0,1,0,0,1
+1,"Ross C. Rocky Anderson",OTH,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Andre Barnett",OTH,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Roseanne Barr",OTH,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Will Christensen",OTH,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Stephen Durham",OTH,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Merlin Miller",OTH,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Leon Leo Ray",OTH,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Michael David Boyles",UNF,President - Vice Pres,,,Y,0,0,0,0,1
+1,"Theodis (Ted) Brown, Sr.",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Paul Chehade",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"David M. Crosby",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Fred Donald Dickson, Jr.",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Robert William Dietz",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Dwight Kenneth French",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Darrell Hykes",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Nelson Keyton",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Dean Morstad",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Deonia Neveu",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Terrance James O'Hara",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Jill Reed",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Cecil James Roth",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Sheila Tittle",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Other Write-Ins",BOT,President - Vice Pres,,,Y,2,6,1,5,7
+1,"Ben Cardin",DEM,U.S. Senator           ,,Y,,629,1167,1283,700,918
+1,"Daniel John Bongino",REP,U.S. Senator           ,,,,1011,1142,166,1203,837
+1,"Dean Ahmad",LIB,U.S. Senator           ,,,,12,28,12,20,27
+1,"S. Rob Sobhani",UNF,U.S. Senator           ,,,,545,497,148,556,397
+1,"Lih Young",DEM,U.S. Senator           ,,,Y,0,0,0,0,1
+1,"Mary Podlesak",REP,U.S. Senator           ,,,Y,0,0,0,0,0
+1,"Brandy Baker",UNF,U.S. Senator           ,,,Y,0,0,0,0,0
+1,"Ed Tinus",UNF,U.S. Senator           ,,,Y,0,0,0,0,0
+1,"Other Write-Ins",BOT,U.S. Senator           ,,,Y,0,3,2,2,4
+1,"Wendy Rosen",DEM,U.S. Congress,01,,,487,920,1137,463,684
+1,"Andy Harris",REP,U.S. Congress,01,Y,,1542,1622,320,1780,1233
+1,"Muir Wayne Boda",LIB,U.S. Congress,01,,,71,95,38,79,86
+1,"John LaFerla",DEM,U.S. Congress,01,,Y,62,97,54,117,130
+1,"Michael Calpino",UNF,U.S. Congress,01,,Y,0,2,0,0,1
+1,"Douglas Dryden Rae",UNF,U.S. Congress,01,,Y,0,0,0,0,0
+1,"Other Write-Ins",BOT,U.S. Congress,01,,Y,6,10,4,3,9
+1,"Stuart R. Berger",BOT,Judge Spec Appeal at Lg,,Y,,1544,1986,1206,1655,1548
+2,"Stuart R. Berger",BOT,Judge Spec Appeal at Lg,,Y,,323,451,228,361,305
+1,"Glenn Levi Bramble",NON,Board of Education,001,Y,,,,,1958,
+1,"Other Write-Ins",NON,Board of Education,001,,Y,,,,47,
+1,"Anne Pattison Fleming",NON,Board of Education,003,,,,,,,942
+1,"Philip Rice",NON,Board of Education,003,Y,,,,,,981
+1,"Other Write-Ins",NON,Board of Education,003,,Y,,,,,7
+1,"Phil Bramble",NON,Board of Education,005,Y,,1038,,,,
+1,"Thomas M. Gebert",NON,Board of Education,005,,,1019,,,,
+1,"Other Write-Ins",NON,Board of Education,005,,Y,3,,,,

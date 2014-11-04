@@ -1,0 +1,61 @@
+# robots.txt for http://www.dastelefonbuch.de/
+# sc 20130402_1.56, Vorgaengerversion: sc 20130128
+
+User-agent: gonzo*
+Disallow: /katalog/
+Disallow: /telefonbuch/
+Disallow: /scripts/
+Disallow: /styles/
+Disallow: /katalog/scripts/
+Disallow: /katalog/styles/
+Disallow: /telefonbuch/scripts/
+Disallow: /telefonbuch/styles/
+Disallow: /admin/
+Disallow: /conf/
+Disallow: /inc/
+Disallow: /locale/
+Disallow: /logs/
+Disallow: /tld/
+Disallow: /WEB-INF/
+Disallow: /xsl/
+Disallow: /loglink.jsp
+
+User-agent: Cityreview*
+Disallow: /
+
+User-agent: Googlebot-Image
+Disallow: /
+
+User-agent: trovitBot
+Disallow: /
+
+User-agent: *
+Disallow: /scripts/
+Disallow: /styles/
+Disallow: /katalog/scripts/
+Disallow: /katalog/styles/
+Disallow: /telefonbuch/scripts/
+Disallow: /telefonbuch/styles/
+Disallow: /admin/
+Disallow: /conf/
+Disallow: /inc/
+Disallow: /locale/
+Disallow: /logs/
+Disallow: /tld/
+Disallow: /xsl/
+Disallow: /loglink.jsp
+Disallow: /katalog/img*
+Disallow: /telefonbuch/img*
+Disallow: /katalog/image*
+Disallow: /telefonbuch/image*
+
+# Sitemap files
+Sitemap: http://www.dastelefonbuch.de/xml-sitemaps/telefonbuch_nachnamen_sitemap_index.xml
+Sitemap: http://www.dastelefonbuch.de/xml-sitemaps/telefonbuch_behoerden_sitemap_index.xml
+Sitemap: http://www.dastelefonbuch.de/xml-sitemaps/telefonbuch_branchen_sitemap_index.xml
+Sitemap: http://www.dastelefonbuch.de/xml-sitemaps/telefonbuch_firmen_sitemap_index.xml
+Sitemap: http://www.dastelefonbuch.de/xml-sitemaps/telefonbuch_zip_search_sitemap_index.xml
+Sitemap: http://www.dastelefonbuch.de/xml-sitemaps/telefonbuch_area_code_search_sitemap_index.xml
+Sitemap: http://www.dastelefonbuch.de/xml-sitemaps/telefonbuch_vorname_nachname_sitemap_index.xml
+Sitemap: http://www.dastelefonbuch.de/xml-sitemaps/telefonbuch_vorname_nachname_ort_sitemap_index.xml
+Sitemap: http://www.dastelefonbuch.de/xml-sitemaps/telefonbuch_branchen_bigbelly_sitemap_index.xml

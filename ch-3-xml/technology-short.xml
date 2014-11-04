@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE document SYSTEM "technologystocks.dtd">
+<document>
+  <Apple>
+    <date>2013/11/13</date>
+    <close>520.634</close>
+    <volume>7022001.0000</volume>
+    <open>518</open>
+    <high>522.25</high>
+    <low>516.96</low>
+    <company>Apple</company>
+    <year>2013</year>
+  </Apple>
+  <Apple>
+    <date>2013/11/12</date>
+    <close>520.01</close>
+    <volume>7295400.0000</volume>
+    <open>517.67</open>
+    <high>523.92</high>
+    <low>517</low>
+    <company>Apple</company>
+    <year>2013</year>
+  </Apple>
+  (...)
+</document>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<places xmlns="http://where.yahooapis.com/v1/schema.rng" xmlns:yahoo="http://www.yahooapis.com/v1/base.rng" yahoo:start="0" yahoo:count="1" yahoo:total="1">
+  <place yahoo:uri="http://where.yahooapis.com/v1/place/2422673" xml:lang="en-US">
+    <woeid>2422673</woeid>
+    <placeTypeName code="7">Town</placeTypeName>
+    <name>Hoboken</name>
+    <country type="Country" code="US" woeid="23424977">United States</country>
+    <admin1 type="State" code="US-NJ" woeid="2347589">New Jersey</admin1>
+    <admin2 type="County" code="" woeid="12589266">Hudson</admin2>
+    <admin3/>
+    <locality1 type="Town" woeid="2422673">Hoboken</locality1>
+	...
+    <timezone type="Time Zone" woeid="56043648">America/New_York</timezone>
+  </place>
+</places>

@@ -1,0 +1,926 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CRAN Task View: Chemometrics and Computational Physics</title>
+  <link rel=stylesheet type="text/css" href="../CRAN_web.css" />
+</head>
+
+<body>
+  <h2>CRAN Task View: Chemometrics and Computational Physics</h2>
+  <table summary="ChemPhys task view information">
+    <tr><td valign="top"><b>Maintainer:</b></td><td>Katharine Mullen</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x6b;&#x61;&#x74;&#x68;&#x61;&#x72;&#x69;&#x6e;&#x65;&#x2e;&#x6d;&#x75;&#x6c;&#x6c;&#x65;&#x6e;&#x20;&#x61;&#x74;&#x20;&#x73;&#x74;&#x61;&#x74;&#x69;&#x73;&#x74;&#x69;&#x63;&#x73;&#x2e;&#x75;&#x63;&#x6c;&#x61;&#x2e;&#x65;&#x64;&#x75;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2013-12-12</td></tr>
+  </table>
+
+    <div>
+      <p>
+        Chemometrics and computational physics are concerned with the analysis 
+of data arising in chemistry and physics experiments, as well as the 
+simulation of physico-chemico systems.  Many of the functions in base 
+R are useful for these ends.
+      </p>
+      <p>
+        The book
+        <i>
+          Chemometrics with R
+        </i>
+        by Ron Wehrens, 
+ISBN: 978-3-642-17840-5, Springer, 2011, provides an introduction to 
+multivariate statistics in the life sciences, as well as coverage of several 
+specific topics from the area of chemometrics; the examples in the book are possible to 
+reproduce using the packages
+<a href="../packages/ChemometricsWithR/index.html">ChemometricsWithR</a>
+        and
+<a href="../packages/ChemometricsWithRData/index.html">ChemometricsWithRData</a>.
+      </p>
+      <p>
+        The book
+        <i>
+          Modern Statistical Methods for Astronomy With R Applications
+        </i>
+        by Eric D. Feigelson and G. Jogesh Babu, ISBN-13: 9780521767279, Cambridge, 2012, 
+provides an introduction to statistics for astronomers and an
+overview of the foremost methods being used in astrostatistical analysis,
+illustrated by examples in R.
+      </p>
+      <p>
+        The book by Kurt Varmuza and Peter Filzmoser,
+        <i>
+          Introduction to Multivariate Statistical Analysis in Chemometrics,
+        </i>
+        ISBN 978-1-420-05947-2, CRC Press, 2009, is associated with the 
+package
+<a href="../packages/chemometrics/index.html">chemometrics</a>.
+      </p>
+      <p>
+        A special issue of R News with a focus on
+        <a href="http://CRAN.R-project.org/doc/Rnews/Rnews_2006-3.pdf" target="_top">
+          R in Chemistry
+        </a>
+        was published in August 2006. A special volume of Journal of Statistical Software (JSS) dedicated to
+        <a href="http://www.jstatsoft.org/v18" target="_top">
+          Spectroscopy and Chemometrics in R
+        </a>
+        was published in January 2007.
+      </p>
+      <p>
+        <a href="mailto:katharine.mullen@stat.ucla.edu">
+          Please let us know
+        </a>
+        if 
+we have omitted something of importance, or if a new package or function
+should be mentioned here.
+      </p>
+      <p>
+        <strong>
+          Linear Regression Models
+        </strong>
+      </p>
+      <ul>
+        <li>
+          Linear models can be fitted (via OLS) with
+<tt>lm()</tt>
+          (from stats).  A least squares solution for
+<tt>x</tt>
+          in
+<tt>Ax = b</tt>
+          can also be computed as
+<tt>qr.coef(qr(A), b)</tt>.
+        </li>
+        <li>
+          The package
+<a href="../packages/nnls/index.html">nnls</a>
+          provides a means of constraining
+<tt>x</tt>
+          to non-negative or non-positive values; the package
+<a href="../packages/bvls/index.html">bvls</a>
+          allows other bounds on
+<tt>x</tt>
+          to be applied.
+        </li>
+        <li>
+          Functions for isotonic regression are available in the package
+<a href="../packages/Iso/index.html">Iso</a>,
+  and are useful to determine the unimodal vector that is closest to 
+  a given vector
+<tt>x</tt>
+          under least squares criteria.
+        </li>
+        <li>
+          Heteroskedastic linear models can be fit using the
+<tt>gls()</tt>
+          function of the
+<a href="../packages/nlme/index.html">nlme</a>
+          package.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Nonlinear Regression Models
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<tt>nls()</tt>
+          function 
+  (from stats) as well as the package
+<a href="../packages/minpack.lm/index.html">minpack.lm</a>
+          allow the solution of nonlinear 
+  least squares problems.
+        </li>
+        <li>
+          Correlated and/or 
+     unequal variances can be modeled using the
+<tt>gnls()</tt>
+          function of the
+<a href="../packages/nlme/index.html">nlme</a>
+          package.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Curve Resolution
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/PTAk/index.html">PTAk</a>
+          package provides functions for  
+  Principal Tensor Analysis on k modes.  
+  The package includes also some other multiway methods: 
+  PCAn (Tucker-n) and PARAFAC/CANDECOMP.
+        </li>
+        <li>
+          Multivariate curve resolution alternating least squares (MCR-ALS)
+  is implemented in the package
+<a href="../packages/ALS/index.html">ALS</a>.
+        </li>
+        <li>
+          The package
+<a href="../packages/drc/index.html">drc</a>
+          provides functions for the analysis
+  of one or multiple non-linear curves with focus on models for 
+   concentration-response, dose-response and time-response data.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Partial Least Squares
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The package
+<a href="../packages/pls/index.html">pls</a>
+          implements 
+    Partial Least Squares Regression (PLSR) and Principal 
+    Component Regression (PCR).
+        </li>
+        <li>
+          The package
+<a href="../packages/lspls/index.html">lspls</a>
+          implements the 
+    least squares-partial least squares (LS-PLS) method.
+        </li>
+        <li>
+          Penalized Partial Least Squares is implemented in the
+<a href="../packages/ppls/index.html">ppls</a>
+          package.
+        </li>
+        <li>
+          Sparse PLS is implemented in the package
+<a href="../packages/spls/index.html">spls</a>
+          package.
+        </li>
+        <li>
+          The
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/gpls.html"><span class="BioC">gpls</span></a>
+          package implements 
+    generalized partial least squares, based on the Iteratively
+    ReWeighted Least Squares (IRWLS) method of Brian Marx.
+        </li>
+        <li>
+          Package
+<a href="../packages/plspm/index.html">plspm</a>
+          contains, in addition to the 
+    usual functions for PLS regression, also functions for 
+    path modeling.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Principal Component Analysis
+        </strong>
+      </p>
+      <ul>
+        <li>
+          Principal component analysis (PCA) is in the package stats as functions
+<tt>princomp()</tt>. Some graphical PCA representations can be
+    found in the
+<a href="../packages/psy/index.html">psy</a>
+          package.
+        </li>
+        <li>
+          The
+<a href="../packages/homals/index.html">homals</a>
+          package provides nonlinear 
+    PCA and, by defining sets, nonlinear canonical
+    correlation analysis (models of the Gifi-family).
+        </li>
+        <li>
+          A desired number of robust principal components can be computed 
+    with the
+<a href="../packages/pcaPP/index.html">pcaPP</a>
+          package.  The package
+<a href="../packages/elasticnet/index.html">elasticnet</a>
+          is applicable to sparse PCA.  The package
+<a href="../packages/fpca/index.html">fpca</a>
+          can be applied to restricted MLE for functional PCA.
+        </li>
+        <li>
+          See the
+<a href="Multivariate.html">Multivariate</a>
+          task view for further packages dealing with 
+    PCA and other projection methods.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Factor Analysis
+        </strong>
+      </p>
+      <ul>
+        <li>
+          Factor analysis (FA) is in the package stats as functions
+<tt>factanal()</tt>; see
+<a href="Psychometrics.html">Psychometrics</a>
+          task view for details on extensions.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Independent Component Analysis
+        </strong>
+      </p>
+      <ul>
+        <li>
+          Independent component analysis (ICA) can be computed using
+<a href="../packages/fastICA/index.html">fastICA</a>.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Clustering
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="Cluster.html">Cluster</a>
+          task view provides a list of packages that can be
+    used for clustering problems.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Variable Selection
+        </strong>
+      </p>
+      <ul>
+        <li>
+          Stepwise variable selection for linear models, using AIC, is available
+  in function
+<tt>step()</tt>; package
+<a href="../packages/leaps/index.html">leaps</a>
+          implements
+  leaps-and-bounds variable 
+  selection, by default using Mallow's Cp.
+<a href="../packages/stepPlr/index.html">stepPlr</a>
+          provides
+  stepwise variable selection for penalized logistic regression.
+        </li>
+        <li>
+          Variable selection based on evolutionary
+  algorithms is available in package and
+<a href="../packages/subselect/index.html">subselect</a>. The latter also provides simulated annealing and
+  leaps-and-bounds algorithms, as well as local refinements.
+        </li>
+        <li>
+          Package
+<a href="../packages/varSelRF/index.html">varSelRF</a>
+          provides variable selection methods for random
+  forests. Cross-validation-based variable selection using Wilcoxon rank
+  sum tests is available in package
+<a href="../packages/WilcoxCV/index.html">WilcoxCV</a>, focused on
+  binary classification in microarrays. Package
+<a href="../packages/clustvarsel/index.html">clustvarsel</a>
+          implements variable selection for model-based clustering.
+        </li>
+        <li>
+          The
+<a href="../packages/BioMark/index.html">BioMark</a>
+          package
+implements two meta-methods for variable selection: stability selection (applying a primary selection method like a t-test, VIP value or PLSDA regression coefficient) to different subsets of the data, and higher criticism, which provides a data-driven choice of significance cutoffs in statistical testing.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Self-Organizing Maps
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/kohonen/index.html">kohonen</a>
+          package implements self-organizing maps as well as 
+  some extensions for supervised pattern recognition and data fusion.
+  The
+<a href="../packages/som/index.html">som</a>
+          package provides functions for self-organizing maps.
+        </li>
+        <li>
+          The package
+<a href="../packages/wccsom/index.html">wccsom</a>
+          provides SOM networks for comparing 
+  patterns with peak shifts.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Differential Equations
+        </strong>
+      </p>
+      <ul>
+        <li>
+          See the
+<a href="DifferentialEquations.html">DifferentialEquations</a>
+          task view packages dealing with 
+    differential equations.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Calibration
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/chemCal/index.html">chemCal</a>
+          package provides functions for plotting
+     linear calibration functions and estimating standard errors for
+     measurements.
+        </li>
+        <li>
+          The
+<a href="../packages/quantchem/index.html">quantchem</a>
+          package provides functions for 
+     statistical evaluation of calibration curves by different regression 
+     techniques.
+        </li>
+        <li>
+          The
+<a href="../packages/drm/index.html">drm</a>
+          package is useful for nonlinear calibration models.
+        </li>
+        <li>
+          The package
+<a href="../packages/represent/index.html">represent</a>
+          calculates the 'representativity'
+of two multidimensional 
+datasets, which involves comparison of the similarity of principal component
+analysis loading patterns, variance-covariance matrix structures, 
+and data set centroid locations.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Cellular Automata
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/simecol/index.html">simecol</a>
+          package includes functions for cellular automata
+modeling.    One-dimensional cellular automata are also possible to model with
+the package
+<a href="../packages/CellularAutomaton/index.html">CellularAutomaton</a>.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Thermodynamics
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/CHNOSZ/index.html">CHNOSZ</a>
+          package provides functions 
+  for calculating the standard Gibbs energies and 
+  other thermodynamic properties, and chemical affinities of reactions 
+between species contained in a thermodynamic database.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Interfaces to External Libraries
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The  package
+<a href="../packages/rcdk/index.html">rcdk</a>
+          allows 
+the user to access functionality in the
+          <a href="http://sourceforge.net/projects/cdk/" target="_top">
+            Chemistry Development Kit (CDK),
+          </a>
+          a Java framework for cheminformatics. This allows the
+  user to load molecules, evaluate fingerprints, calculate molecular
+  descriptors and so on. In addition, the CDK API allows the user to
+  view structures in 2D.  The
+<a href="../packages/rcdklibs/index.html">rcdklibs</a>
+          package provides the CDK 
+libraries for use in R.
+        </li>
+        <li>
+          The
+<a href="../packages/rpubchem/index.html">rpubchem</a>
+          package gives access 
+  to
+          <a href="http://pubchem.ncbi.nlm.nih.gov/" target="_top">
+            PubChem
+          </a>
+          data
+  (compounds, substance, assays).
+        </li>
+        <li>
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/ChemmineR.html"><span class="BioC">ChemmineR</span></a>
+          is
+a cheminformatics toolkit for analyzing small molecules in R. Its add-on
+packages include
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/fmcsR.html"><span class="BioC">fmcsR</span></a>
+          for
+mismatch tolerant maximum common substructure matching,
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/eiR.html"><span class="BioC">eiR</span></a>
+          for
+accelerated structure similarity searching;
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/bioassayR.html"><span class="BioC">bioassayR</span></a>
+          for analyzing bioactivity data, and
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/ChemmineOB.html"><span class="BioC">ChemmineOB</span></a>
+          for accessing
+          <a href="http://openbabel.org/wiki/Main_Page" target="_top">
+            OpenBabel
+          </a>
+          functionalities from R.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Spectroscopy
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/hyperSpec/index.html">hyperSpec</a>
+          packages allows analysis of 
+hyperspectral data, 
+i.e., spectra
+plus further information such as spatial information, time,
+concentrations, etc.  Such data are frequently encountered in the
+analysis of Raman, IR, NIR, UV/VIS, NMR, etc., spectroscopic data sets.
+        </li>
+        <li>
+          The
+<a href="../packages/ChemoSpec/index.html">ChemoSpec</a>
+          package collects user-friendly 
+   	   functions for plotting spectra (NMR, IR, etc) and 
+	   carrying top-down exploratory data analysis, such as HCA, PCA 
+           and model-based clustering.
+        </li>
+        <li>
+          The
+<a href="../packages/Peaks/index.html">Peaks</a>
+          package implements functions for spectrum
+  manipulation, ported from the ROOT/TSpectrum class.
+        </li>
+        <li>
+          Software for the book by Donald B. Percival and Andrew T. Walden,
+          <i>
+            Spectral Analysis for Physical Applications,
+          </i>
+          ISBN 978-0-521-43541-3, 
+  Cambridge University Press, 1993, is found in the package
+<a href="../packages/sapa/index.html">sapa</a>.
+        </li>
+        <li>
+          The package
+<a href="../packages/TIMP/index.html">TIMP</a>
+          provides a problem solving environment for fitting
+  separable nonlinear models in physics and chemistry applications, and has been
+  extensively applied to time-resolved spectroscopy data.
+        </li>
+        <li>
+          The package
+<a href="../packages/NMRS/index.html">NMRS</a>
+          is designed to load and preprocess nuclear magnetic resonance spectra measured
+  with Bruker instruments.
+        </li>
+        <li>
+          The package
+<a href="../packages/prospectr/index.html">prospectr</a>
+          provides functions for pretreatment and sample selection of visible and near infrared diffuse reflectance spectra.
+        </li>
+        <li>
+          Also note that the
+<a href="http://R-Forge.R-project.org/projects/photonics/"><span class="Rforge">photonics</span></a>
+          project on
+          <a href="http://R-Forge.R-project.org/" target="_top">
+            R-Forge
+          </a>
+          collects various packages related to spectroscopy and optics; however, 
+  these packages are not yet available on CRAN.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Mass Spectrometry
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/MSnbase.html"><span class="BioC">MSnbase</span></a>
+          defines infrastructure for 
+mass spectrometry-based proteomics data handling,
+plotting, processing and quantification.
+        </li>
+        <li>
+          The
+<a href="../packages/MALDIquant/index.html">MALDIquant</a>
+          provides tools for quantitative analysis 
+of MALDI-TOF mass spectrometry data, with support for  
+baseline correction, peak detection and plotting of mass spectra.
+        </li>
+        <li>
+          The
+<a href="../packages/OrgMassSpecR/index.html">OrgMassSpecR</a>
+          package 
+  is for organic/biological mass spectrometry, with a focus on 
+  graphical display, quantification
+  using stable isotope dilution, and protein hydrogen/deuterium
+  exchange experiments.
+        </li>
+        <li>
+          The
+<a href="../packages/FTICRMS/index.html">FTICRMS</a>
+          package provides functions 
+  for Analyzing Fourier Transform-Ion Cyclotron 
+  Resonance Mass Spectrometry Data.
+        </li>
+        <li>
+          The
+<a href="../packages/titan/index.html">titan</a>
+          provides a GUI to analyze mass spectrometric data
+  on the relative abundance of two substances from a titration series.
+        </li>
+        <li>
+          The Bioconductor packages
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/MassSpecWavelet.html"><span class="BioC">MassSpecWavelet</span></a>,
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/PROcess.html"><span class="BioC">PROcess</span></a>, and
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/xcms.html"><span class="BioC">xcms</span></a>
+          are designed for the analysis of mass spectrometry data.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Functional Magnetic Resonance Imaging
+        </strong>
+      </p>
+      <ul>
+        <li>
+          Functions for I/O, visualization and analysis of functional 
+    Magnetic Resonance Imaging (fMRI) datasets stored in the ANALYZE 
+    or NIFTI format are available in the package
+<a href="../packages/AnalyzeFMRI/index.html">AnalyzeFMRI</a>.
+    The package
+<a href="../packages/fmri/index.html">fmri</a>
+          contains functions to analyze fMRI data using
+    adaptive smoothing procedures.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Fluorescence Lifetime Imaging Microscopy
+        </strong>
+      </p>
+      <ul>
+        <li>
+          Functions for visualization and analysis of 
+    Fluorescence Lifetime Imaging Microscopy (FLIM) 
+    datasets are available in the package
+<a href="../packages/TIMP/index.html">TIMP</a>.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Carbon Dating
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The package
+<a href="../packages/Bchron/index.html">Bchron</a>
+          creates
+   chronologies based on radiocarbon and non-radiocarbon dated depths.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          X-Ray Diffractograms
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/diffractometry/index.html">diffractometry</a>
+          package provides 
+  baseline identification and peak decomposition for x-ray
+  diffractograms. Cross-correlation based comparison of diffractograms
+  is provided in package
+<a href="../packages/wccsom/index.html">wccsom</a>.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Astronomy and astrophysics
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/moonsun/index.html">moonsun</a>
+          package provides 
+  functions for basic astronomical calculations.
+        </li>
+        <li>
+          The
+<a href="../packages/solaR/index.html">solaR</a>
+          package provides functions to determine the movement of the sun from
+the earth and to determine incident solar radiation.
+        </li>
+        <li>
+          The
+<a href="../packages/FITSio/index.html">FITSio</a>
+          package provides utilities to read and write files in the FITS (Flexible Image Transport System) format, a standard format in astronomy.
+        </li>
+        <li>
+          The
+<a href="../packages/ringscale/index.html">ringscale</a>
+          package implements a method for detection of faint
+companions around young stars in speckle patterns of
+VLT/NACO cube mode images.
+        </li>
+        <li>
+          The
+<a href="../packages/stellaR/index.html">stellaR</a>
+          package manages and displays stellar tracks and isochrones from the Pisa low-mass database.
+        </li>
+        <li>
+          The
+<a href="../packages/astroFns/index.html">astroFns</a>
+          provides miscellaneous astronomy functions, utilities, and data.
+        </li>
+        <li>
+          The
+<a href="../packages/cosmoFns/index.html">cosmoFns</a>
+          contains standard expressions for
+distances, times, luminosities, and other quantities useful in
+observational cosmology, including molecular line observations.
+        </li>
+        <li>
+          The
+<a href="../packages/astro/index.html">astro</a>
+          package provides tools for astronomy; functions 
+provided may be grouped into 4 main areas: cosmology, FITS file manipulation, the Sersic function and general (plotting and scripting) tools.
+        </li>
+        <li>
+          The
+<a href="../packages/celestial/index.html">celestial</a>
+          package includes a number of common astronomy conversion routines, particularly the HMS and degrees schemes.
+        </li>
+        <li>
+          The
+<a href="../packages/SCEPtER/index.html">SCEPtER</a>
+          and
+<a href="../packages/SCEPtERextras/index.html">SCEPtERextras</a>
+          packages 
+are used to 
+estimate stellar mass and radius given observational data of effective 
+temperature, [Fe/H], and astroseismic parameters.
+        </li>
+        <li>
+          The
+          <a href="https://asaip.psu.edu/forums/software-forum" target="_top">
+            Astrostatistics and Astroinformatics Portal Software Forum
+          </a>
+          is an R-centric forum for issues concerning software for statistical analysis in astronomy.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Optics and Scattering Approximations
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/planar/index.html">planar</a>
+          package provides code to simulate
+reflection and transmission at a multilayer planar interface.
+        </li>
+        <li>
+          The
+<a href="../packages/cda/index.html">cda</a>
+          package calculates the polarizability tensor for the dipoles associated with a set of ellipsoidal nanoparticles, and solves the coupled-dipole equations by direct inversion of the interaction matrix.
+        </li>
+        <li>
+          The
+<a href="../packages/dielectric/index.html">dielectric</a>
+          package defines some physical constants and dielectric functions commonly used in optics and plasmonics.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Energy Modeling
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/solaR/index.html">solaR</a>
+          package provides functions to simulate and model systems involved in 
+the capture and use of solar energy, including 
+photovoltaics.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Positron Emission Tomography
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/PET/index.html">PET</a>
+          package 
+  implements different analytic/direct and iterative reconstruction methods
+  for positron emission tomography (PET) data.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Water and Soil Chemistry
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/AquaEnv/index.html">AquaEnv</a>
+          package is a toolbox for aquatic 
+ chemical modelling focused on (ocean) acidification and CO2 air-water 
+ exchange.
+        </li>
+        <li>
+          See the
+<a href="Environmetrics.html">Environmetrics</a>
+          task view for further related 
+   packages related to water and soil chemistry.
+        </li>
+      </ul>
+    </div>
+
+  <h3>CRAN packages:</h3>
+  <ul>
+    <li><a href="../packages/ALS/index.html">ALS</a> (core)</li>
+    <li><a href="../packages/AnalyzeFMRI/index.html">AnalyzeFMRI</a></li>
+    <li><a href="../packages/AquaEnv/index.html">AquaEnv</a></li>
+    <li><a href="../packages/astro/index.html">astro</a></li>
+    <li><a href="../packages/astroFns/index.html">astroFns</a></li>
+    <li><a href="../packages/Bchron/index.html">Bchron</a></li>
+    <li><a href="../packages/BioMark/index.html">BioMark</a></li>
+    <li><a href="../packages/bvls/index.html">bvls</a></li>
+    <li><a href="../packages/cda/index.html">cda</a></li>
+    <li><a href="../packages/celestial/index.html">celestial</a></li>
+    <li><a href="../packages/CellularAutomaton/index.html">CellularAutomaton</a></li>
+    <li><a href="../packages/chemCal/index.html">chemCal</a> (core)</li>
+    <li><a href="../packages/chemometrics/index.html">chemometrics</a></li>
+    <li><a href="../packages/ChemometricsWithR/index.html">ChemometricsWithR</a></li>
+    <li><a href="../packages/ChemometricsWithRData/index.html">ChemometricsWithRData</a></li>
+    <li><a href="../packages/ChemoSpec/index.html">ChemoSpec</a></li>
+    <li><a href="../packages/CHNOSZ/index.html">CHNOSZ</a></li>
+    <li><a href="../packages/clustvarsel/index.html">clustvarsel</a></li>
+    <li><a href="../packages/cosmoFns/index.html">cosmoFns</a></li>
+    <li><a href="../packages/dielectric/index.html">dielectric</a></li>
+    <li><a href="../packages/diffractometry/index.html">diffractometry</a></li>
+    <li><a href="../packages/drc/index.html">drc</a></li>
+    <li><a href="../packages/drm/index.html">drm</a></li>
+    <li><a href="../packages/elasticnet/index.html">elasticnet</a></li>
+    <li><a href="../packages/fastICA/index.html">fastICA</a></li>
+    <li><a href="../packages/FITSio/index.html">FITSio</a></li>
+    <li><a href="../packages/fmri/index.html">fmri</a></li>
+    <li><a href="../packages/fpca/index.html">fpca</a></li>
+    <li><a href="../packages/FTICRMS/index.html">FTICRMS</a></li>
+    <li><a href="../packages/homals/index.html">homals</a></li>
+    <li><a href="../packages/hyperSpec/index.html">hyperSpec</a></li>
+    <li><a href="../packages/Iso/index.html">Iso</a> (core)</li>
+    <li><a href="../packages/kohonen/index.html">kohonen</a> (core)</li>
+    <li><a href="../packages/leaps/index.html">leaps</a></li>
+    <li><a href="../packages/lspls/index.html">lspls</a></li>
+    <li><a href="../packages/MALDIquant/index.html">MALDIquant</a></li>
+    <li><a href="../packages/minpack.lm/index.html">minpack.lm</a></li>
+    <li><a href="../packages/moonsun/index.html">moonsun</a></li>
+    <li><a href="../packages/nlme/index.html">nlme</a></li>
+    <li><a href="../packages/NMRS/index.html">NMRS</a></li>
+    <li><a href="../packages/nnls/index.html">nnls</a> (core)</li>
+    <li><a href="../packages/OrgMassSpecR/index.html">OrgMassSpecR</a></li>
+    <li><a href="../packages/pcaPP/index.html">pcaPP</a></li>
+    <li><a href="../packages/Peaks/index.html">Peaks</a></li>
+    <li><a href="../packages/PET/index.html">PET</a></li>
+    <li><a href="../packages/planar/index.html">planar</a></li>
+    <li><a href="../packages/pls/index.html">pls</a> (core)</li>
+    <li><a href="../packages/plspm/index.html">plspm</a></li>
+    <li><a href="../packages/ppls/index.html">ppls</a></li>
+    <li><a href="../packages/prospectr/index.html">prospectr</a></li>
+    <li><a href="../packages/psy/index.html">psy</a></li>
+    <li><a href="../packages/PTAk/index.html">PTAk</a> (core)</li>
+    <li><a href="../packages/quantchem/index.html">quantchem</a></li>
+    <li><a href="../packages/rcdk/index.html">rcdk</a></li>
+    <li><a href="../packages/rcdklibs/index.html">rcdklibs</a></li>
+    <li><a href="../packages/represent/index.html">represent</a></li>
+    <li><a href="../packages/ringscale/index.html">ringscale</a></li>
+    <li><a href="../packages/rpubchem/index.html">rpubchem</a></li>
+    <li><a href="../packages/sapa/index.html">sapa</a></li>
+    <li><a href="../packages/SCEPtER/index.html">SCEPtER</a></li>
+    <li><a href="../packages/SCEPtERextras/index.html">SCEPtERextras</a></li>
+    <li><a href="../packages/simecol/index.html">simecol</a></li>
+    <li><a href="../packages/solaR/index.html">solaR</a></li>
+    <li><a href="../packages/som/index.html">som</a></li>
+    <li><a href="../packages/spls/index.html">spls</a></li>
+    <li><a href="../packages/stellaR/index.html">stellaR</a></li>
+    <li><a href="../packages/stepPlr/index.html">stepPlr</a></li>
+    <li><a href="../packages/subselect/index.html">subselect</a></li>
+    <li><a href="../packages/TIMP/index.html">TIMP</a></li>
+    <li><a href="../packages/titan/index.html">titan</a></li>
+    <li><a href="../packages/varSelRF/index.html">varSelRF</a></li>
+    <li><a href="../packages/wccsom/index.html">wccsom</a></li>
+    <li><a href="../packages/WilcoxCV/index.html">WilcoxCV</a></li>
+  </ul>
+
+  <h3>Related links:</h3>
+  <ul>
+    <li>CRAN Task View: <a href="DifferentialEquations.html">DifferentialEquations</a></li>
+    <li>CRAN Task View: <a href="Psychometrics.html">Psychometrics</a></li>
+    <li>CRAN Task View: <a href="Cluster.html">Cluster</a></li>
+    <li>CRAN Task View: <a href="Multivariate.html">Multivariate</a></li>
+    <li>CRAN Task View: <a href="Environmetrics.html">Environmetrics</a></li>
+    <li><a href="http://CRAN.R-project.org/doc/Rnews/Rnews_2006-3.pdf" target="_top">
+  R News: R in Chemistry
+</a></li>
+    <li><a href="http://www.jstatsoft.org/v18" target="_top">
+  Journal of Statistical Software: Spectroscopy and Chemometrics in R
+</a></li>
+    <li>R-Forge Project: <a href="http://R-Forge.R-project.org/projects/photonics/" target="_top"><span class="Rforge">photonics</span></a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/bioassayR.html" target="_top"><span class="BioC">bioassayR</span></a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/ChemmineOB.html" target="_top"><span class="BioC">ChemmineOB</span></a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/ChemmineR.html" target="_top"><span class="BioC">ChemmineR</span></a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/fmcsR.html" target="_top"><span class="BioC">fmcsR</span></a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/gpls.html" target="_top"><span class="BioC">gpls</span></a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/eiR.html" target="_top"><span class="BioC">eiR</span></a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/MassSpecWavelet.html" target="_top"><span class="BioC">MassSpecWavelet</span></a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/MSnbase.html" target="_top"><span class="BioC">MSnbase</span></a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/PROcess.html" target="_top"><span class="BioC">PROcess</span></a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/xcms.html" target="_top"><span class="BioC">xcms</span></a></li>
+    <li><a href="https://asaip.psu.edu/forums/software-forum" target="_top">
+  Astrostatistics and Astroinformatics Portal Software Forum
+</a></li>
+    <li><a href="http://sourceforge.net/projects/cdk/" target="_top">
+  Chemistry Development Kit (CDK)
+</a></li>
+    <li><a href="http://openbabel.org/wiki/Main_Page" target="_top">
+  OpenBabel
+</a></li>
+    <li><a href="http://pubchem.ncbi.nlm.nih.gov/" target="_top">
+  PubChem
+</a></li>
+  </ul>
+
+</body>
+</html>
+ 

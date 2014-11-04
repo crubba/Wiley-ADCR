@@ -1,0 +1,740 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CRAN Task View: Handling and Analyzing Spatio-Temporal Data</title>
+  <link rel=stylesheet type="text/css" href="../CRAN_web.css" />
+</head>
+
+<body>
+  <h2>CRAN Task View: Handling and Analyzing Spatio-Temporal Data</h2>
+  <table summary="SpatioTemporal task view information">
+    <tr><td valign="top"><b>Maintainer:</b></td><td>Edzer Pebesma</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x65;&#x64;&#x7a;&#x65;&#x72;&#x2e;&#x70;&#x65;&#x62;&#x65;&#x73;&#x6d;&#x61;&#x20;&#x61;&#x74;&#x20;&#x75;&#x6e;&#x69;&#x2d;&#x6d;&#x75;&#x65;&#x6e;&#x73;&#x74;&#x65;&#x72;&#x2e;&#x64;&#x65;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2014-01-12</td></tr>
+  </table>
+
+    <div>
+      <p>
+        This task view aims at presenting R packages that are useful for 
+  the analysis of spatio-temporal data.
+      </p>
+      <p>
+        Please let the
+        <a href="mailto:edzer.pebesma@uni-muenster.de">
+          maintainer
+        </a>
+        know if
+  something is inaccurate or missing.
+      </p>
+      <p>
+        The following people contributed to this task view: Roger Bivand, Achim
+  Zeileis, Michael Sumner, Ping Yang.
+      </p>
+      <p>
+        Although one could argue that all data are spatio-temporal, as they
+  must have been taken somewhere and at some point in time, in
+  many cases the spatial locations or times of observation are not
+  registered, and irrelevant to the purpose of the study. Here,
+  we will address the cases where both location
+        <em>
+          and
+        </em>
+        time
+  of observation are registered, and relevant for the analysis of
+  the data.  The
+<a href="Spatial.html">Spatial</a>
+        and
+<a href="TimeSeries.html">TimeSeries</a>
+        task views shed light on spatial, and temporal data handling and
+  analysis, individually.
+      </p>
+      <p>
+        <strong>
+          Representing data
+        </strong>
+      </p>
+      <ul>
+        <li>
+          <b>
+            In long tables:
+          </b>
+          In some cases, spatio-temporal data can be held in tables
+  (
+<tt>data.frame</tt>
+          objects), with longitude, latitude and
+  time as three of the columns, or an identifier for a location
+  or region and time as columns. For instance, data sets in
+  package
+<a href="../packages/plm/index.html">plm</a>
+          for linear panel models have repeated
+  observations for observational units, where these units often
+  refer to spatial areas (countries, states) by an index. This index
+  (a name, or number) can be matched to the spatial coordinates
+  (polygons) of the corresponding area, an example of this is given
+  by
+          <a href="http://www.jstatsoft.org/v51/i07/">
+            Pebesma (2012, Journal of Statistical Software)
+          </a>. As these
+  data sets usually contain more than one attribute, to hold the
+  data in a two-dimensional table a
+          <em>
+            long table
+          </em>
+          form is
+  chosen, where each record contains the index of the observational
+  unit, observation time, and all attributes.
+        </li>
+        <li>
+          <b>
+            In time-wide tables:
+          </b>
+          When a single attribute is considered, another layout is that
+  of the
+          <em>
+            time-wide table
+          </em>, where each observational
+  unit forms a record and each column an observation time.
+<a href="../packages/googleVis/index.html">googleVis</a>
+          lets you analyze such data in a way similar to
+  gapminder (see links).
+        </li>
+        <li>
+          <b>
+            In space-wide tables:
+          </b>
+          An acample of a space-wide table is the Irish wind data set,
+  obtained by
+<tt>data(wind)</tt>
+          in package
+<a href="../packages/gstat/index.html">gstat</a>.
+  It has time series as different columns, each column representing
+  one location (weather station).  The
+<tt>stConstruct</tt>
+          function in package
+<a href="../packages/spacetime/index.html">spacetime</a>
+          accepts data in long,
+  time-wide or space-wide tables.
+        </li>
+        <li>
+          <b>
+            Generic classes:
+          </b>
+          Formal classes for spatio-temporal data in R are provided by
+  the
+<a href="../packages/spacetime/index.html">spacetime</a>
+          package, which offers S4 classes for
+  full space-time grids (every observational unit contains an
+  observation for each observation time), sparse space-time grids
+  (regular, but incomplete grids), irregular space-time data
+  (each observational unit is observed at its own time), and
+  has limited support for trajectory data.
+<a href="../packages/spacetime/index.html">spacetime</a>
+          classes have
+<a href="../packages/sp/index.html">sp</a>
+          and
+<a href="../packages/xts/index.html">xts</a>
+          objects as slots
+  for the spatial and temporal components, and can deal with all
+  spatial classes (points, lines, polygons, grids) of
+<a href="../packages/sp/index.html">sp</a>,
+  regular and irregular time series, and extend the powerful methods
+  (selection, aggregation, plotting coercion) from both packages.
+        </li>
+        <li>
+          <b>
+            Dedicated classes:
+          </b>
+          dedicated classes are offered for:
+          <ul>
+            <li>
+              <b>
+                Geostatistical data:
+              </b>
+              Package
+<a href="../packages/SpatioTemporal/index.html">SpatioTemporal</a>
+              offers an S3 class
+<tt>STdata</tt>
+              which holds point observations and covariates
+    that can vary in space, time, and space-time, with the aim of
+	fitting and predicting a particular class of spatio-temporal models,
+	described in its vignettes.
+            </li>
+            <li>
+              <b>
+                Gridded/raster data:
+              </b>
+              package
+<a href="../packages/raster/index.html">raster</a>
+              deals with
+	sets of rasters (called bricks, or stacks), and a 
+	set may reflect a temporal sequence
+	(use
+<tt>setZ</tt>
+              on a brick or stack).
+            </li>
+            <li>
+              <b>
+                Lattice data:
+              </b>
+              package
+<a href="../packages/surveillance/index.html">surveillance</a>
+              provides a class
+<tt>sts</tt>, which holds a
+<tt>SpatialPolygonsDataFrame</tt>
+              slot for the areas, and
+	numeric slots to define a regular time series (no time objects, 
+	such as
+<tt>POSIXct</tt>).
+            </li>
+            <li>
+              <b>
+                Point patterns:
+              </b>
+              package
+<a href="../packages/stpp/index.html">stpp</a>
+              provides a class
+<tt>stpp</tt>
+              for a space-time point pattern.
+
+	  package
+<a href="../packages/stppResid/index.html">stppResid</a>
+              provides a class
+<tt>stwin</tt>
+              for a space-time cuboid, defining a (rectangular)
+	  space-time window, and class
+<tt>stpp</tt>
+              for a
+	  spatio-temporal point pattern (including window).
+
+	  Package
+<a href="../packages/spatstat/index.html">spatstat</a>
+              provides a class
+<tt>ppx</tt>
+              that
+	  deals spatial and temporal coordinate.
+
+	  None of the point pattern classes mentioned support spatial or
+	  explicit temporal reference systems.
+            </li>
+            <li>
+              <b>
+                Trajectory data:
+              </b>
+              Package
+<a href="../packages/adehabitatLT/index.html">adehabitatLT</a>
+              offers a class
+<tt>ltraj</tt>
+              for trajectories, and methods for analyzing them; the packages
+<a href="../packages/move/index.html">move</a>
+              and
+<a href="../packages/trip/index.html">trip</a>
+              both extend
+<a href="../packages/sp/index.html">sp</a>
+              based classes for trajectories.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <strong>
+        Analyzing data
+      </strong>
+      <ul>
+        <li>
+          <b>
+            Geostatistical data
+          </b>
+          <ul>
+            <li>
+<a href="../packages/gstat/index.html">gstat</a>
+              provides kriging, methods of moments
+	   variogram estimation and model fitting for a limited
+	   range of spatio-temporal models.
+            </li>
+            <li>
+<a href="../packages/RandomFields/index.html">RandomFields</a>
+              provides kriging, conditional simulation,
+       and covariance functions and maximum likelihood function fitting
+	   for a very wide range of spatio-temporal covariance models.
+            </li>
+            <li>
+              the
+<a href="../packages/spTimer/index.html">spTimer</a>
+              package is able to fit,
+	   spatially predict and temporally forecast large amounts
+	   of space-time data using Bayesian Gaussian Process
+	   (GP) Models, Bayesian Auto-Regressive (AR) Models,
+	   and Bayesian Gaussian Predictive Processes (GPP)
+	   based AR Models.
+            </li>
+            <li>
+              Package
+<a href="../packages/SpatioTemporal/index.html">SpatioTemporal</a>
+              fits and predicts
+	   a particular class of spatio-temporal models, described
+	   in detail in its vignettes.
+            </li>
+            <li>
+<a href="../packages/spBayes/index.html">spBayes</a>
+              provides functions for fitting Bayesian dynamic
+	   space-time regression models for  settings where space
+	   is viewed as continuous but time is taken to be discrete.
+            </li>
+            <li>
+<a href="../packages/Stem/index.html">Stem</a>
+              provides estimation of the parameters
+	   of a spatio-temporal model using the EM algorithm,
+	   estimation of the parameter standard errors using a
+	   spatio-temporal parametric bootstrap, spatial mapping.
+            </li>
+            <li>
+<a href="../packages/spate/index.html">spate</a>
+              provides spatio-temporal modeling
+	   of large data using a spectral SPDE approach.
+            </li>
+            <li>
+<a href="../packages/pastecs/index.html">pastecs</a>
+              is a package for the regulation, decomposition
+	   and analysis of space-time series.
+            </li>
+            <li>
+              R-Forge package
+<a href="http://R-Forge.R-project.org/projects/spcopula/"><span class="Rforge">spcopula</span></a>
+              provides a framework to analyze via copulas spatial
+	   and spatio-temporal data provided in the format of the
+	   spacetime package. Additionally, support for calculating
+	   different multivariate return periods is implemented.
+            </li>
+            <li>
+<a href="../packages/solaR/index.html">solaR</a>
+              is a package for computing solar radiation and photovoltaic
+	   systems performance.
+            </li>
+            <li>
+<a href="../packages/nlme/index.html">nlme</a>
+              and
+<a href="../packages/lme4/index.html">lme4</a>
+              contain functions
+	   to fit linear mixed models, and have facilities to model
+	   spatial and/or temporal effects.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>
+            Point patterns
+          </b>
+          <ul>
+            <li>
+<a href="../packages/splancs/index.html">splancs</a>
+              provides methods for spatial and
+	  space-time point pattern analysis (khat, kernel3d,
+	  visualizing).
+            </li>
+            <li>
+<a href="../packages/lgcp/index.html">lgcp</a>
+              is a package for spatial and spatio-temporal modelling of point patterns using the log-Gaussian Cox process.
+            </li>
+            <li>
+<a href="../packages/stpp/index.html">stpp</a>
+              allows Space-Time Point Pattern simulation, visualization and analysis.
+            </li>
+            <li>
+<a href="../packages/stppResid/index.html">stppResid</a>
+              performs residual analysis on space-time point process models.
+            </li>
+            <li>
+<a href="../packages/stam/index.html">stam</a>
+              is an evolving package that target on
+	  the various methods to conduct Spatio-Temporal Analysis and
+	  Modelling,including Exploratory Spatio-Temporal Analysis
+	  and Inferred Spatio-Temporal Modelling, currently provides
+	  mostly kernel density estimation.
+            </li>
+            <li>
+              <a href="http://www.biostat.jhsph.edu/~rpeng/software/">
+                ptproc
+              </a>
+              (off-CRAN) provides methods and classes for spatio-temporal 
+	  ("multi-dimensional") point process.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>
+            Lattice data
+          </b>
+          <ul>
+            <li>
+<a href="../packages/surveillance/index.html">surveillance</a>
+              provides temporal and spatio-temporal
+	 modeling and monitoring of epidemic phenomena.
+            </li>
+            <li>
+<a href="../packages/plm/index.html">plm</a>
+              fits linear panel models.
+            </li>
+            <li>
+<a href="../packages/splm/index.html">splm</a>
+              provides estimation and diagnostic
+	 testing of econometric models for spatial panel data.
+            </li>
+            <li>
+<a href="../packages/sphet/index.html">sphet</a>
+              fit spatial models with heteroskedastic
+	 innovations.
+            </li>
+            <li>
+<a href="../packages/nlme/index.html">nlme</a>
+              and
+<a href="../packages/lme4/index.html">lme4</a>
+              contain functions
+	 to fit linear mixed models, and have facilities to model
+	 spatial and/or temporal effects.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>
+            Moving objects, trajectories
+          </b>
+          <ul>
+            <li>
+<a href="../packages/adehabitatLT/index.html">adehabitatLT</a>
+              provides a	collection of tools
+	 for the analysis of animal movements, including biased random walk 
+	 simulation and home range estimation.
+            </li>
+            <li>
+<a href="../packages/trip/index.html">trip</a>
+              provides functions for accessing
+	 and manipulating spatial data for animal tracking. Filter
+	 for speed and create time spent plots from animal track
+	 data.
+            </li>
+            <li>
+<a href="../packages/tripEstimation/index.html">tripEstimation</a>
+              provides a Metropolis
+	 sampler and supporting functions for estimating animal
+	 movement from archival tags and satellite fixes.
+
+	 It further provides data handling and estimation functions
+	 for animal movement estimation from archival or satellite
+	 tags. Helper functions are included for making image
+	 summaries binned by time interval from MCMC simulations
+	 of point data.
+            </li>
+            <li>
+<a href="../packages/diveMove/index.html">diveMove</a>
+              provides utilities to represent,
+	 visualize, filter, analyze, and summarize time-depth
+	 recorder (TDR) data; miscellaneous functions for handling
+	 location data are also provided.
+            </li>
+            <li>
+<a href="../packages/argosfilter/index.html">argosfilter</a>
+              provides functions to filter
+	 animal satellite tracking data obtained from Argos. It is
+	 especially indicated for telemetry studies of marine
+	 animals, where Argos locations are predominantly of
+	 low-quality.
+            </li>
+            <li>
+<a href="../packages/GeoLight/index.html">GeoLight</a>
+              provides basic functions for global positioning
+	 based on light intensity measurements over time. Positioning process
+	 includes the determination of sun events, a discrimination of
+	 residency and movement periods, the calibration of period-specific
+	 data and, finally, the calculation of positions.
+            </li>
+            <li>
+<a href="../packages/crawl/index.html">crawl</a>:
+	 The (C)orrelated (RA)ndom (W)alk (L)ibrary of R functions
+	 was designed for fitting continuous-time correlated random
+	 walk (CTCRW) models with time indexed covariates. The
+	 model is fit using the Kalman-Filter on a state space
+	 version of the continuous-time stochastic movement process.
+            </li>
+            <li>
+<a href="../packages/move/index.html">move</a>
+              is a package for analyzing animal
+	 movement data; it contains functions to access movement data
+	 stored in
+              <a href="http://www.movebank.org/">
+                movebank
+              </a>
+              as well as tools to visualize and statistically analyse
+	 animal movement data.
+            </li>
+            <li>
+<a href="../packages/animalTrack/index.html">animalTrack</a>
+              provides animal track reconstruction
+	 for high frequency 2-dimensional (2D) or 3-dimensional (3D)
+	 movement data. 2D and 3D animal tracking data can be used to
+	 reconstruct tracks through time/space with correction based
+	 on known positions as well as 3D visualization of animal
+	 position and attitude.
+            </li>
+            <li>
+              The
+<a href="../packages/BBMM/index.html">BBMM</a>
+              (Brownian bridge movement model) package
+	 provides an empirical estimate of a movement path using
+	 discrete location data obtained at relatively short time
+	 intervals. This is a continuous-time stochastic model of
+	 movement in which the probability of being in an area during
+	 the time of observation is conditioned on starting and ending
+	 locations. A BBMM is typically fit to animal location data
+	 obtained by a Global Positioning System (GPS) or Very High
+	 Frequency (VHF) device.
+            </li>
+            <li>
+              The
+<a href="../packages/bcpa/index.html">bcpa</a>
+              package for behavioral change point
+	 analysis (BCPA) is a method of identifying hidden shifts in
+	 the underlying parameters of a time series, developed
+	 specifically to be applied to animal movement data which is
+	 irregularly sampled. The original paper on which it is based
+	 is: E. Gurarie, R. Andrews and K. Laidre A novel method for
+	 identifying behavioural changes in animal movement data
+	 (2009) Ecology Letters 12:5 395-408.
+            </li>
+            <li>
+              The
+<a href="../packages/smam/index.html">smam</a>
+              package provides Animal movement models
+	 including moving-resting process with embedded Brownian
+	 motion, Brownian motion with measurement error.
+            </li>
+            <li>
+              The
+              <a href="http://code.google.com/p/geolocation/">
+                Electronic Tagging Geolocation Packages Repository
+              </a>
+              site provides a collection of statistical models (and R packages)
+	 to estimate position errors, movement model parameters, 
+	 and most probable positions from tracking data.
+            </li>
+            <li>
+              <a href="http://ram.biology.dal.ca/~jonsen/code.html">
+                bsam
+              </a>
+              fits Bayesian state-space models to Argos satellite tracking
+	 data. Currently, models provided are DCRW (for location filtering),
+	 DCRWS (for location filtering and behavioural state estimation), and
+	 hDCRWS (a hierarchical model for location filtering and behavioural
+	 state estimation across multiple animals).
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Visualization
+        </strong>
+      </p>
+      <ul>
+        <li>
+<a href="../packages/rasterVis/index.html">rasterVis</a>
+          includes a variety of methods
+	that take advantage of the
+<tt>z</tt>
+          slot of a
+<tt>RasterStack</tt>
+          or
+<tt>RasterBrick</tt>
+          object. Its
+          <a href="http://rastervis.r-forge.r-project.org/">
+            webpage
+          </a>
+          includes several examples, from the hovmoller plot and
+	horizon graph, to the density and histogram plots.
+        </li>
+        <li>
+          package
+<a href="../packages/plotKML/index.html">plotKML</a>
+          provides methods to convert
+	spatio-temporal data into KML files, which can be displayed
+	by external viewers, in particular Google Earth. It has a
+          <a href="http://plotkml.r-forge.r-project.org/">
+            gallery
+          </a>
+          too.
+        </li>
+        <li>
+          package
+<a href="../packages/googleVis/index.html">googleVis</a>
+          provides an interface to show R data 
+	(tables) in the
+          <a href="https://developers.google.com/chart/">
+            Google Chart Tools
+          </a>.
+        </li>
+        <li>
+          package
+<a href="../packages/stpp/index.html">stpp</a>
+          and
+<a href="../packages/splancs/index.html">splancs</a>
+          provide
+	animation and 3D interactive plots (using
+<a href="../packages/rgl/index.html">rgl</a>)
+	for displaying spatio-temporal point patterns.
+        </li>
+        <li>
+<a href="../packages/mvtsplot/index.html">mvtsplot</a>
+          provides multivariate time series plots,
+	with examples on spatio-temporal data, published by
+          <a href="http://www.jstatsoft.org/v25/c01/">
+            Peng (2008, Journal of Statistical Software)
+          </a>.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Data sets
+        </strong>
+      </p>
+      <ul>
+        <li>
+          Table data for fitting linear panel models are found in
+<a href="../packages/plm/index.html">plm</a>.
+        </li>
+        <li>
+          Package
+<a href="../packages/cshapes/index.html">cshapes</a>
+          contains a data base with country boundaries,
+  varying over time.
+        </li>
+        <li>
+<a href="../packages/gstat/index.html">gstat</a>
+          contains the classic Irish wind data.
+        </li>
+        <li>
+<a href="../packages/spacetime/index.html">spacetime</a>
+          contains rural PM10 air quality 
+  measurements over Germany.
+        </li>
+        <li>
+          Some parts of the Cressie and Wikle (2011) book "Statistics for spatio-temporal
+  data" can be reproduced by
+<tt>demo(CressieWikle)</tt>
+          in
+<a href="../packages/spacetime/index.html">spacetime</a>.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Retrieving data
+        </strong>
+      </p>
+      Packages for retrieving data are:
+      <ul>
+        <li>
+          Package
+<a href="../packages/openair/index.html">openair</a>
+          has tools to analyze, interpret and understand air pollution data, but also tools to download UK air quality data.
+        </li>
+        <li>
+<a href="../packages/ncdf/index.html">ncdf</a>,
+<a href="../packages/ncdf4/index.html">ncdf4</a>
+          and
+<a href="../packages/RNetCDF/index.html">RNetCDF</a>
+          allow reading and writing
+          <a href="http://www.unidata.ucar.edu/software/netcdf/">
+            netcdf
+          </a>
+          files;
+<a href="../packages/pbdNCDF4/index.html">pbdNCDF4</a>
+          adds collective parallel read and write capability 
+  to
+<a href="../packages/ncdf4/index.html">ncdf4</a>.
+        </li>
+        <li>
+<a href="../packages/M3/index.html">M3</a>
+          contains functions to read in and manipulate air
+  quality model output from Models3-formatted files. This format
+  is used by the Community Multiscale Air Quaility (CMAQ) model.
+        </li>
+        <li>
+<a href="../packages/rmatio/index.html">rmatio</a>
+          is a package for reading and writing Matlab MAT files from R.
+        </li>
+      </ul>
+    </div>
+
+  <h3>CRAN packages:</h3>
+  <ul>
+    <li><a href="../packages/adehabitatLT/index.html">adehabitatLT</a> (core)</li>
+    <li><a href="../packages/animalTrack/index.html">animalTrack</a></li>
+    <li><a href="../packages/argosfilter/index.html">argosfilter</a></li>
+    <li><a href="../packages/BBMM/index.html">BBMM</a></li>
+    <li><a href="../packages/bcpa/index.html">bcpa</a></li>
+    <li><a href="../packages/crawl/index.html">crawl</a></li>
+    <li><a href="../packages/cshapes/index.html">cshapes</a></li>
+    <li><a href="../packages/diveMove/index.html">diveMove</a></li>
+    <li><a href="../packages/GeoLight/index.html">GeoLight</a></li>
+    <li><a href="../packages/googleVis/index.html">googleVis</a></li>
+    <li><a href="../packages/gstat/index.html">gstat</a> (core)</li>
+    <li><a href="../packages/lgcp/index.html">lgcp</a></li>
+    <li><a href="../packages/lme4/index.html">lme4</a></li>
+    <li><a href="../packages/M3/index.html">M3</a></li>
+    <li><a href="../packages/move/index.html">move</a></li>
+    <li><a href="../packages/mvtsplot/index.html">mvtsplot</a></li>
+    <li><a href="../packages/ncdf/index.html">ncdf</a></li>
+    <li><a href="../packages/ncdf4/index.html">ncdf4</a></li>
+    <li><a href="../packages/nlme/index.html">nlme</a></li>
+    <li><a href="../packages/openair/index.html">openair</a></li>
+    <li><a href="../packages/pastecs/index.html">pastecs</a></li>
+    <li><a href="../packages/pbdNCDF4/index.html">pbdNCDF4</a></li>
+    <li><a href="../packages/plm/index.html">plm</a></li>
+    <li><a href="../packages/plotKML/index.html">plotKML</a></li>
+    <li><a href="../packages/RandomFields/index.html">RandomFields</a> (core)</li>
+    <li><a href="../packages/raster/index.html">raster</a> (core)</li>
+    <li><a href="../packages/rasterVis/index.html">rasterVis</a></li>
+    <li><a href="../packages/rgl/index.html">rgl</a></li>
+    <li><a href="../packages/rmatio/index.html">rmatio</a></li>
+    <li><a href="../packages/RNetCDF/index.html">RNetCDF</a></li>
+    <li><a href="../packages/smam/index.html">smam</a></li>
+    <li><a href="../packages/solaR/index.html">solaR</a></li>
+    <li><a href="../packages/sp/index.html">sp</a> (core)</li>
+    <li><a href="../packages/spacetime/index.html">spacetime</a> (core)</li>
+    <li><a href="../packages/spate/index.html">spate</a></li>
+    <li><a href="../packages/SpatioTemporal/index.html">SpatioTemporal</a></li>
+    <li><a href="../packages/spatstat/index.html">spatstat</a></li>
+    <li><a href="../packages/spBayes/index.html">spBayes</a></li>
+    <li><a href="../packages/sphet/index.html">sphet</a></li>
+    <li><a href="../packages/splancs/index.html">splancs</a></li>
+    <li><a href="../packages/splm/index.html">splm</a></li>
+    <li><a href="../packages/spTimer/index.html">spTimer</a></li>
+    <li><a href="../packages/stam/index.html">stam</a></li>
+    <li><a href="../packages/Stem/index.html">Stem</a></li>
+    <li><a href="../packages/stpp/index.html">stpp</a> (core)</li>
+    <li><a href="../packages/stppResid/index.html">stppResid</a></li>
+    <li><a href="../packages/surveillance/index.html">surveillance</a> (core)</li>
+    <li><a href="../packages/trip/index.html">trip</a> (core)</li>
+    <li><a href="../packages/tripEstimation/index.html">tripEstimation</a></li>
+    <li><a href="../packages/xts/index.html">xts</a> (core)</li>
+  </ul>
+
+  <h3>Related links:</h3>
+  <ul>
+    <li>CRAN Task View: <a href="Spatial.html">Spatial</a></li>
+    <li>CRAN Task View: <a href="TimeSeries.html">TimeSeries</a></li>
+    <li>CRAN Task View: <a href="Econometrics.html">Econometrics</a></li>
+    <li>CRAN Task View: <a href="Environmetrics.html">Environmetrics</a></li>
+    <li>CRAN Task View: <a href="DifferentialEquations.html">DifferentialEquations</a></li>
+    <li>R-Forge Project: <a href="http://R-Forge.R-project.org/projects/spcopula/" target="_top"><span class="Rforge">spcopula</span></a></li>
+    <li><a href="http://www.jstatsoft.org/v51/i07/">
+  Pebesma (2012). spacetime: Spatio-Temporal Data in R. Journal of Statistical Software, 51(7).
+</a></li>
+    <li><a href="http://www.jstatsoft.org/v25/c01/">
+  Peng (2008). A Method for Visualizing Multivariate Time Series Data. Journal of Statistical Software, Code Snippets, 25(1).
+</a></li>
+    <li><a href="http://www.gapminder.org/world/">
+  Gapminder world: A tool for visualization of economic and health indicators per country (including access to the underlying tables in time-wide form).
+</a></li>
+  </ul>
+
+</body>
+</html>
+ 

@@ -1,0 +1,894 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CRAN Task View: Cluster Analysis &amp; Finite Mixture Models</title>
+  <link rel=stylesheet type="text/css" href="../CRAN_web.css" />
+</head>
+
+<body>
+  <h2>CRAN Task View: Cluster Analysis &amp; Finite Mixture Models</h2>
+  <table summary="Cluster task view information">
+    <tr><td valign="top"><b>Maintainer:</b></td><td>Friedrich Leisch and Bettina Gruen</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x42;&#x65;&#x74;&#x74;&#x69;&#x6e;&#x61;&#x2e;&#x47;&#x72;&#x75;&#x65;&#x6e;&#x20;&#x61;&#x74;&#x20;&#x6a;&#x6b;&#x75;&#x2e;&#x61;&#x74;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2014-02-21</td></tr>
+  </table>
+
+    <div>
+      This CRAN Task View contains a list of packages that can be
+used for finding groups in data and modeling unobserved
+cross-sectional heterogeneity. Many packages provide functionality for
+more than one of the topics listed below, the section headings are
+mainly meant as quick starting points rather than an ultimate
+categorization. Except for packages stats and cluster (which ship with
+base R and hence are part of every R installation), each package is
+listed only once.
+      <p>
+        Most of the packages listed in this CRAN Task View, but not all are
+distributed under the GPL. Please have a look at the DESCRIPTION file
+of each package to check under which license it is distributed.
+      </p>
+      <p>
+        <strong>
+          Hierarchical Clustering:
+        </strong>
+      </p>
+      <ul>
+        <li>
+          Functions
+<tt>hclust()</tt>
+          from package stats and
+<tt>agnes()</tt>
+          from
+<a href="../packages/cluster/index.html">cluster</a>
+          are the primary
+  functions for agglomerative hierarchical clustering, function
+<tt>diana()</tt>
+          can be used for divisive hierarchical
+  clustering. Faster alternatives to
+<tt>hclust()</tt>
+          are
+  provided by the packages
+<a href="../packages/fastcluster/index.html">fastcluster</a>
+          and
+<a href="../packages/flashClust/index.html">flashClust</a>.
+        </li>
+        <li>
+          Function
+<tt>dendrogram()</tt>
+          from stats and associated
+  methods can be used for improved visualization for cluster
+  dendrograms.
+        </li>
+        <li>
+          Package
+<a href="../packages/dynamicTreeCut/index.html">dynamicTreeCut</a>
+          contains methods for detection
+  of clusters in hierarchical clustering dendrograms.
+        </li>
+        <li>
+<a href="../packages/hybridHclust/index.html">hybridHclust</a>
+          implements hybrid hierarchical
+  clustering via mutual clusters.
+        </li>
+        <li>
+          Package
+<a href="../packages/isopam/index.html">isopam</a>
+          uses an algorithm which is based on
+  the classification of ordination scores from isometric feature
+  mapping. The classification is performed either as a hierarchical,
+  divisive method or as non-hierarchical partitioning.
+        </li>
+        <li>
+          The package
+<a href="../packages/protoclust/index.html">protoclust</a>
+          implements a form of
+  hierarchical clustering that associates a prototypical element with
+  each interior node of the dendrogram.  Using the package's
+<tt>plot()</tt>
+          function, one can produce dendrograms that are
+  prototype-labeled and are therefore easier to interpret.
+        </li>
+        <li>
+<a href="../packages/pvclust/index.html">pvclust</a>
+          is a package for assessing the uncertainty in
+  hierarchical cluster analysis. It provides approximately
+  unbiased p-values as well as bootstrap p-values.
+        </li>
+        <li>
+          Package
+<a href="../packages/sparcl/index.html">sparcl</a>
+          provides clustering for a set of
+          <i>
+            n
+          </i>
+          observations when
+          <i>
+            p
+          </i>
+          variables are available, where
+          <i>
+            p
+          </i>
+          >>
+          <i>
+            n
+          </i>. It adaptively chooses a set of variables
+  to use in clustering the observations. Sparse K-means clustering and
+  sparse hierarchical clustering are implemented.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Partitioning Clustering:
+        </strong>
+      </p>
+      <ul>
+        <li>
+          Function
+<tt>kmeans()</tt>
+          from package stats provides
+  several algorithms for computing partitions with respect to
+  Euclidean distance.
+        </li>
+        <li>
+          Function
+<tt>pam()</tt>
+          from package
+<a href="../packages/cluster/index.html">cluster</a>
+          implements
+  partitioning around medoids and can work with arbitrary
+  distances. Function
+<tt>clara()</tt>
+          is a
+  wrapper to
+<tt>pam()</tt>
+          for larger data sets. Silhouette plots
+  and spanning ellipses can be used for visualization.
+        </li>
+        <li>
+          Package
+<a href="../packages/apcluster/index.html">apcluster</a>
+          implements Frey's and Dueck's
+  Affinity Propagation clustering. The algorithms in the package are analogous
+  to the Matlab code published by Frey and Dueck.
+        </li>
+        <li>
+          Package
+<a href="../packages/bayesclust/index.html">bayesclust</a>
+          allows to test and search for
+  clusters in a hierarchical Bayes model.
+        </li>
+        <li>
+          Package
+<a href="../packages/clusterSim/index.html">clusterSim</a>
+          allows to search for the optimal
+  clustering procedure for a given dataset.
+        </li>
+        <li>
+          Package
+<a href="../packages/flexclust/index.html">flexclust</a>
+          provides k-centroid cluster
+  algorithms for arbitrary distance measures, hard competitive
+  learning, neural gas and QT clustering. Neighborhood graphs and
+  image plots of partitions are available for visualization. Some of
+  this functionality is also provided by package
+<a href="../packages/cclust/index.html">cclust</a>.
+        </li>
+        <li>
+          Package
+<a href="../packages/kernlab/index.html">kernlab</a>
+          provides a weighted kernel version of
+  the k-means algorithm by
+<tt>kkmeans</tt>
+          and spectral
+  clustering by
+<tt>specc</tt>.
+        </li>
+        <li>
+          Packages
+<a href="../packages/kml/index.html">kml</a>
+          and
+<a href="../packages/kml3d/index.html">kml3d</a>
+          provide k-means
+  clustering specifically for longitudinal (joint) data.
+        </li>
+        <li>
+          Package
+<a href="../packages/skmeans/index.html">skmeans</a>
+          allows spherical k-Means Clustering,
+   i.e. k-means clustering with cosine similarity. It features several
+   methods, including a genetic and a simple fixed-point algorithm and
+   an interface to the CLUTO vcluster program for clustering
+   high-dimensional datasets.
+        </li>
+        <li>
+          Package
+<a href="../packages/trimcluster/index.html">trimcluster</a>
+          provides trimmed k-means
+  clustering.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Model-Based Clustering:
+        </strong>
+      </p>
+      <ul>
+        <li>
+          ML estimation:
+          <ul>
+            <li>
+              For semi- or partially supervised problems, where for a part of
+  the observations labels are given with certainty or with some
+  probability, package
+<a href="../packages/bgmm/index.html">bgmm</a>
+              provides belief-based and
+  soft-label mixture modeling for mixtures of Gaussians with the EM
+  algorithm.
+            </li>
+            <li>
+<a href="../packages/EMCluster/index.html">EMCluster</a>
+              provides EM algorithms and several
+  efficient initialization methods for model-based clustering of
+  finite mixture Gaussian distribution with unstructured dispersion in
+  unsupervised as well as semi-supervised learning situation.
+            </li>
+            <li>
+              Package
+<a href="../packages/FisherEM/index.html">FisherEM</a>
+              is a subspace clustering method
+  which allows for efficient unsupervised classification of
+  high-dimensional data. It is based on the Gaussian mixture model and
+  on the idea that the data lives in a common and low dimensional
+  subspace. An EM-like algorithm estimates both the discriminative
+  subspace and the parameters of the mixture model.
+            </li>
+            <li>
+              Package
+<a href="../packages/HDclassif/index.html">HDclassif</a>
+              provides function
+<tt>hddc</tt>
+              to fit Gaussian mixture model to high-dimensional data where it is
+  assumed that the data lives in a lower dimension than the original
+  space.
+            </li>
+            <li>
+              Package
+<a href="../packages/HMMmix/index.html">HMMmix</a>
+              allows to fit mixtures of Gaussians
+  with a hidden Markov model for the latent component memberships of
+  the clusters which might be derived by combining components of the
+  mixture.
+            </li>
+            <li>
+              Package
+<a href="../packages/teigen/index.html">teigen</a>
+              allows to fit multivariate
+  t-distribution mixture models (with eigen-decomposed covariance
+  structure) from a clustering or classification point of
+  view. Package
+<a href="../packages/longclust/index.html">longclust</a>
+              allows to fit these models as
+  well as Gaussian mixture models to longitudinal data.
+            </li>
+            <li>
+              Package
+<a href="../packages/mclust/index.html">mclust</a>
+              fits mixtures of Gaussians using the
+  EM algorithm. It allows fine control of volume and shape of
+  covariance matrices and agglomerative hierarchical clustering based
+  on maximum likelihood. It provides comprehensive strategies using
+  hierarchical clustering, EM and the Bayesian Information Criterion
+  (BIC) for clustering, density estimation, and discriminant
+  analysis. Package
+<a href="../packages/Rmixmod/index.html">Rmixmod</a>
+              provides tools for fitting
+  mixture models of multivariate Gaussian or multinomial components to
+  a given data set with either a clustering, a density estimation or a
+  discriminant analysis point of view.
+<a href="../packages/mclust/index.html">mclust</a>
+              provides only
+  10 of the 14 possible variance-covariance structures based on the
+  eigenvalue decomposition. All 14 variants are provided by packages
+<a href="../packages/mixture/index.html">mixture</a>
+              and
+<a href="../packages/Rmixmod/index.html">Rmixmod</a>.
+            </li>
+            <li>
+              Package
+<a href="../packages/MetabolAnalyze/index.html">MetabolAnalyze</a>
+              fits mixtures of probabilistic
+  principal component analysis with the EM algorithm.
+            </li>
+            <li>
+              For grouped conditional data package
+<a href="../packages/mixdist/index.html">mixdist</a>
+              can be
+  used.
+            </li>
+            <li>
+              Fitting finite mixtures of uni- and multivariate scale mixtures
+  of skew-normal distributions with the EM algorithm is provided by
+  package
+<a href="../packages/mixsmsn/index.html">mixsmsn</a>.
+            </li>
+            <li>
+              Package
+<a href="../packages/movMF/index.html">movMF</a>
+              fits finite mixtures of von
+  Mises-Fisher distributions with the EM algorithm.
+            </li>
+            <li>
+              Package
+<a href="../packages/MFDA/index.html">MFDA</a>
+              implements model-based functional data
+  analysis.
+            </li>
+            <li>
+              Package
+<a href="../packages/GLDEX/index.html">GLDEX</a>
+              fits mixtures of generalized lambda
+  distributions and for grouped conditional data package
+<a href="../packages/mixdist/index.html">mixdist</a>
+              can be used.
+            </li>
+            <li>
+<a href="../packages/mritc/index.html">mritc</a>
+              provides tools for classification using normal
+  mixture models and (higher resolution) hidden Markov normal mixture
+  models fitted by various methods.
+            </li>
+            <li>
+              Parsimonious Gaussian mixture models allow to fit mixtures of
+  factor analyzers with a constraints on the components of the factor
+  models. Functionality to fit these models is provided in package
+<a href="../packages/pgmm/index.html">pgmm</a>.
+            </li>
+            <li>
+<a href="../packages/prabclus/index.html">prabclus</a>
+              clusters a presence-absence matrix
+  object by calculating an MDS 
+  from the distances, and applying maximum likelihood Gaussian
+  mixtures clustering to the MDS
+  points.
+            </li>
+            <li>
+              Package
+<a href="../packages/psychomix/index.html">psychomix</a>
+              estimates mixtures of the
+  dichotomous Rasch model (via conditional ML) and the Bradley-Terry
+  model. Package
+<a href="../packages/mixRasch/index.html">mixRasch</a>
+              estimates mixture Rasch models,
+  including the dichotomous Rasch model, the rating scale model, and
+  the partial credit model with joint maximum likelihood estimation.
+            </li>
+            <li>
+              Package
+<a href="../packages/pmclust/index.html">pmclust</a>
+              allows to use unsupervised
+  model-based clustering for high dimensional (ultra) large data. The
+  package uses pbdMPI to perform a parallel version of the EM
+  algorithm for mixtures of Gaussians.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Bayesian estimation:
+          <ul>
+            <li>
+              Bayesian estimation of finite mixtures of multivariate Gaussians
+  is possible using package
+<a href="../packages/bayesm/index.html">bayesm</a>. The package provides
+  functionality for sampling from such a mixture as well as estimating
+  the model using Gibbs sampling. Additional functionality for
+  analyzing the MCMC chains is available for averaging
+  the moments over MCMC draws, for determining the marginal densities,
+  for clustering observations and for plotting the uni- and bivariate
+  marginal densities.
+            </li>
+            <li>
+              Package
+<a href="../packages/bayesMCClust/index.html">bayesMCClust</a>
+              provides various Markov Chain
+  Monte Carlo samplers for model-based clustering of discrete-valued
+  time series obtained by observing a categorical variable with
+  several states using a Bayesian approach.
+            </li>
+            <li>
+              Package
+<a href="../packages/bayesmix/index.html">bayesmix</a>
+              provides Bayesian estimation using
+  JAGS.
+            </li>
+            <li>
+              Package
+<a href="../packages/bclust/index.html">bclust</a>
+              allows Bayesian clustering using a
+  spike-and-slab hierarchical model and is suitable for clustering
+  high-dimensional data.
+            </li>
+            <li>
+              Package
+<a href="../packages/Bmix/index.html">Bmix</a>
+              provides Bayesian Sampling for
+  stick-breaking mixtures.
+            </li>
+            <li>
+              Package
+<a href="../packages/dpmixsim/index.html">dpmixsim</a>
+              fits Dirichlet process mixture
+  models using conjugate models with normal structure. Package
+<a href="../packages/profdpm/index.html">profdpm</a>
+              determines the maximum posterior estimate for
+  product partition models where the Dirichlet process mixture is a
+  specific case in the class.
+            </li>
+            <li>
+              Package
+<a href="../packages/mixAK/index.html">mixAK</a>
+              contains a mixture of statistical
+  methods including the MCMC methods to analyze normal mixtures with
+  possibly censored data.
+            </li>
+            <li>
+              Package
+<a href="../packages/GSM/index.html">GSM</a>
+              fits mixtures of gamma distributions.
+            </li>
+            <li>
+              Package
+<a href="../packages/mcclust/index.html">mcclust</a>
+              implements methods for processing a
+  sample of (hard) clusterings, e.g. the MCMC output of a Bayesian
+  clustering model. Among them are methods that find a single best
+  clustering to represent the sample, which are based on the posterior
+  similarity matrix or a relabeling algorithm.
+            </li>
+            <li>
+              Package
+<a href="../packages/rjags/index.html">rjags</a>
+              provides an interface to the JAGS
+  MCMC library which includes a module for mixture modelling.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Other estimation methods:
+          <ul>
+            <li>
+              Package
+<a href="../packages/AdMit/index.html">AdMit</a>
+              allows to fit an adaptive mixture of Student-t
+  distributions to approximate a target density through its kernel
+  function.
+            </li>
+            <li>
+              Package
+<a href="../packages/pendensity/index.html">pendensity</a>
+              estimates densities with a penalized
+  mixture approach.
+            </li>
+            <li>
+              Robust estimation using Weighted Likelihood can be done with
+  package
+<a href="../packages/wle/index.html">wle</a>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Other Cluster Algorithms:
+        </strong>
+      </p>
+      <ul>
+        <li>
+          Package
+<a href="../packages/amap/index.html">amap</a>
+          provides alternative implementations
+  of k-means and agglomerative hierarchical clustering.
+        </li>
+        <li>
+          Package
+<a href="../packages/biclust/index.html">biclust</a>
+          provides several algorithms to find
+  biclusters in two-dimensional data.
+        </li>
+        <li>
+          Package
+<a href="../packages/cba/index.html">cba</a>
+          implements clustering techniques for
+  business analytics like "rock" and "proximus".
+        </li>
+        <li>
+          Package
+<a href="../packages/CHsharp/index.html">CHsharp</a>
+          clusters 3-dimensional data into
+  their local modes based on a convergent form of Choi and Hall's
+  (1999) data sharpening method.
+        </li>
+        <li>
+          Package
+<a href="../packages/clue/index.html">clue</a>
+          implements ensemble methods for both
+  hierarchical and partitioning cluster methods.
+        </li>
+        <li>
+          Package
+<a href="../packages/CoClust/index.html">CoClust</a>
+          implements a cluster algorithm that
+  is based on copula functions and therefore allows to group
+  observations according to the multivariate dependence structure of
+  the generating process without any assumptions on the margins.
+        </li>
+        <li>
+          Fuzzy clustering and bagged clustering are available in
+  package
+<a href="../packages/e1071/index.html">e1071</a>.
+        </li>
+        <li>
+          Package
+<a href="../packages/compHclust/index.html">compHclust</a>
+          provides complimentary
+  hierarchical clustering which was especially designed for microarray
+  data to uncover structures present in the data that arise from
+  'weak' genes.
+        </li>
+        <li>
+          Package
+<a href="../packages/FactoClass/index.html">FactoClass</a>
+          performs a combination of
+  factorial methods and cluster analysis.
+        </li>
+        <li>
+          The
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/hopach.html"><span class="BioC">hopach</span></a>
+          algorithm is a hybrid between
+  hierarchical methods and PAM and builds a tree by
+  recursively  partitioning a data set.
+        </li>
+        <li>
+          For graphs and networks model-based clustering approaches are
+  implemented in packages
+<a href="../packages/latentnet/index.html">latentnet</a>
+          and
+<a href="../packages/mixer/index.html">mixer</a>.
+        </li>
+        <li>
+          Package
+<a href="../packages/nnclust/index.html">nnclust</a>
+          allows fast clustering of large data sets
+  by constructing a minimum spanning tree for each cluster. For each
+  cluster the procedure is stopped when the nearest-neighbor distance
+  rises above a specified threshold. A set of clusters and a
+  set of "outliers" not in any cluster is returned. The algorithm works best for 
+  well-separated clusters in up to 8 dimensions, and sample sizes up
+  to hundreds of thousands.
+        </li>
+        <li>
+          Package
+<a href="../packages/optpart/index.html">optpart</a>
+          contains a set of algorithms for
+  creating partitions and coverings of objects largely based on
+  operations on similarity relations (or matrices).
+        </li>
+        <li>
+          Package
+<a href="../packages/pdfCluster/index.html">pdfCluster</a>
+          provides tools to perform cluster
+  analysis via kernel density estimation. Clusters are associated to
+  the maximally connected components with estimated density above a
+  threshold. In addition a tree structure associated with the
+  connected components is obtained.
+        </li>
+        <li>
+          Package
+<a href="../packages/randomLCA/index.html">randomLCA</a>
+          provides the fitting of latent
+  class models which optionally also include a random effect.  Package
+<a href="../packages/poLCA/index.html">poLCA</a>
+          allows for polytomous variable latent class
+  analysis and regression.
+<a href="../packages/BayesLCA/index.html">BayesLCA</a>
+          allows to fit Bayesian
+  LCA models employing the EM algorithm, Gibbs sampling or variational
+  Bayes methods.
+        </li>
+        <li>
+          Package
+<a href="../packages/RPMM/index.html">RPMM</a>
+          fits recursively partitioned mixture
+  models for Beta and Gaussian Mixtures. This is a model-based
+  clustering algorithm that returns a hierarchy of classes, similar to
+  hierarchical clustering, but also similar to finite mixture
+  models.
+        </li>
+        <li>
+          Self-organizing maps are available in package
+<a href="../packages/som/index.html">som</a>.
+        </li>
+        <li>
+          Several packages provide cluster algorithms which have been
+  developed for bioinformatics applications. These packages include
+<a href="../packages/FunCluster/index.html">FunCluster</a>
+          for profiling microarray expression data
+  and
+<a href="../packages/ORIClust/index.html">ORIClust</a>
+          for order-restricted information-based clustering.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Cluster-wise Regression:
+        </strong>
+      </p>
+      <ul>
+        <li>
+          Package
+<a href="../packages/flexmix/index.html">flexmix</a>
+          implements an user-extensible
+  framework for EM-estimation of mixtures of regression models,
+  including mixtures of (generalized) linear models.
+        </li>
+        <li>
+          Package
+<a href="../packages/fpc/index.html">fpc</a>
+          provides fixed-point methods both for
+  model-based clustering and linear regression. A collection of
+  asymmetric projection methods can be used to plot various
+  aspects of a clustering.
+        </li>
+        <li>
+          Multigroup mixtures of latent Markov models on mixed categorical
+  and continuous data (including time series) can be fitted using
+<a href="../packages/depmix/index.html">depmix</a>
+          or
+<a href="../packages/depmixS4/index.html">depmixS4</a>. The parameters are
+  optimized using a general purpose optimization routine given linear
+  and nonlinear constraints on the parameters.
+        </li>
+        <li>
+          Package
+<a href="../packages/mixreg/index.html">mixreg</a>
+          fits mixtures of one-variable
+  regressions and provides the bootstrap test for the number of
+  components.
+        </li>
+        <li>
+          Package
+<a href="../packages/lcmm/index.html">lcmm</a>
+          fits a latent class linear mixed model
+  which is also known as growth mixture model or heterogeneous linear
+  mixed model using a maximum likelihood method.
+        </li>
+        <li>
+<a href="../packages/mixtools/index.html">mixtools</a>
+          provides fitting with the EM algorithm for
+  parametric and non-parametric (multivariate) mixtures. Parametric
+  mixtures include mixtures of multinomials, multivariate normals,
+  normals with repeated measures, Poisson regressions and Gaussian
+  regressions (with random effects). Non-parametric mixtures include
+  the univariate semi-parametric case where symmetry is imposed for
+  identifiability and multivariate non-parametric mixtures with
+  conditional independent assumption. In addition fitting mixtures of
+  Gaussian regressions with the Metropolis-Hastings algorithm is
+  available.
+        </li>
+        <li>
+<a href="../packages/mixPHM/index.html">mixPHM</a>
+          fits mixtures of proportional hazard models
+  with the EM algorithm.
+        </li>
+        <li>
+          Package
+<a href="../packages/gamlss.mx/index.html">gamlss.mx</a>
+          fits
+  finite mixtures of gamlss family distributions.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Additional Functionality:
+        </strong>
+      </p>
+      <ul>
+        <li>
+          Mixtures of univariate normal distributions can be printed
+  and plotted using package
+<a href="../packages/nor1mix/index.html">nor1mix</a>.
+        </li>
+        <li>
+          Package
+<a href="../packages/gcExplorer/index.html">gcExplorer</a>
+          allows
+  to visualize the results of clustering algorithms.
+        </li>
+        <li>
+          Package
+<a href="../packages/clusterGeneration/index.html">clusterGeneration</a>
+          contains functions for
+  generating random clusters and random covariance/correlation
+  matrices, calculating a separation index (data and population
+  version) for pairs of clusters or cluster distributions, and 1-D and
+  2-D projection plots to visualize clusters.
+  Alternatively
+<a href="../packages/MixSim/index.html">MixSim</a>
+          generates a finite mixture model
+  with Gaussian components for prespecified levels of maximum and/or
+  average overlaps. This model can be used to simulate data for
+  studying the performance of cluster algorithms.
+        </li>
+        <li>
+          For cluster validation package
+<a href="../packages/clusterRepro/index.html">clusterRepro</a>
+          tests the
+  reproducibility of a cluster. Package
+<a href="../packages/clv/index.html">clv</a>
+          contains
+  popular internal and external cluster validation methods ready to
+  use for most of the outputs produced by functions from package
+<a href="../packages/cluster/index.html">cluster</a>
+          and
+<a href="../packages/clValid/index.html">clValid</a>
+          calculates several
+  stability measures.
+        </li>
+        <li>
+          Package
+<a href="../packages/clustvarsel/index.html">clustvarsel</a>
+          provides variable selection for
+  model-based clustering.
+        </li>
+        <li>
+          Functionality to compare the similarity between two cluster
+  solutions is provided by
+<tt>cluster.stats()</tt>
+          in package
+<a href="../packages/fpc/index.html">fpc</a>.
+        </li>
+        <li>
+          The stability of k-centroid clustering solutions fitted using
+  functions from package
+<a href="../packages/flexclust/index.html">flexclust</a>
+          can also be validated
+  via
+<tt>bootFlexclust()</tt>
+          using bootstrap methods.
+        </li>
+        <li>
+          Package
+<a href="../packages/MOCCA/index.html">MOCCA</a>
+          provides methods to analyze cluster
+  alternatives based on multi-objective optimization of cluster
+  validation indices.
+        </li>
+        <li>
+          Package
+<a href="../packages/seriation/index.html">seriation</a>
+          provides
+<tt>dissplot()</tt>
+          for
+  visualizing dissimilarity matrices using seriation and matrix shading. 
+  This also allows to inspect cluster quality by restricting objects 
+  belonging to the same cluster to be displayed in consecutive order.
+        </li>
+        <li>
+          Package
+<a href="../packages/sigclust/index.html">sigclust</a>
+          provides a statistical method for
+  testing the significance of clustering results.
+        </li>
+      </ul>
+    </div>
+
+  <h3>CRAN packages:</h3>
+  <ul>
+    <li><a href="../packages/AdMit/index.html">AdMit</a></li>
+    <li><a href="../packages/amap/index.html">amap</a></li>
+    <li><a href="../packages/apcluster/index.html">apcluster</a></li>
+    <li><a href="../packages/bayesclust/index.html">bayesclust</a></li>
+    <li><a href="../packages/BayesLCA/index.html">BayesLCA</a></li>
+    <li><a href="../packages/bayesm/index.html">bayesm</a></li>
+    <li><a href="../packages/bayesMCClust/index.html">bayesMCClust</a></li>
+    <li><a href="../packages/bayesmix/index.html">bayesmix</a></li>
+    <li><a href="../packages/bclust/index.html">bclust</a></li>
+    <li><a href="../packages/bgmm/index.html">bgmm</a></li>
+    <li><a href="../packages/biclust/index.html">biclust</a></li>
+    <li><a href="../packages/Bmix/index.html">Bmix</a></li>
+    <li><a href="../packages/cba/index.html">cba</a></li>
+    <li><a href="../packages/cclust/index.html">cclust</a></li>
+    <li><a href="../packages/CHsharp/index.html">CHsharp</a></li>
+    <li><a href="../packages/clue/index.html">clue</a></li>
+    <li><a href="../packages/cluster/index.html">cluster</a> (core)</li>
+    <li><a href="../packages/clusterGeneration/index.html">clusterGeneration</a></li>
+    <li><a href="../packages/clusterRepro/index.html">clusterRepro</a></li>
+    <li><a href="../packages/clusterSim/index.html">clusterSim</a></li>
+    <li><a href="../packages/clustvarsel/index.html">clustvarsel</a></li>
+    <li><a href="../packages/clv/index.html">clv</a></li>
+    <li><a href="../packages/clValid/index.html">clValid</a></li>
+    <li><a href="../packages/CoClust/index.html">CoClust</a></li>
+    <li><a href="../packages/compHclust/index.html">compHclust</a></li>
+    <li><a href="../packages/depmix/index.html">depmix</a></li>
+    <li><a href="../packages/depmixS4/index.html">depmixS4</a></li>
+    <li><a href="../packages/dpmixsim/index.html">dpmixsim</a></li>
+    <li><a href="../packages/dynamicTreeCut/index.html">dynamicTreeCut</a></li>
+    <li><a href="../packages/e1071/index.html">e1071</a></li>
+    <li><a href="../packages/EMCluster/index.html">EMCluster</a></li>
+    <li><a href="../packages/FactoClass/index.html">FactoClass</a></li>
+    <li><a href="../packages/fastcluster/index.html">fastcluster</a></li>
+    <li><a href="../packages/FisherEM/index.html">FisherEM</a></li>
+    <li><a href="../packages/flashClust/index.html">flashClust</a></li>
+    <li><a href="../packages/flexclust/index.html">flexclust</a> (core)</li>
+    <li><a href="../packages/flexmix/index.html">flexmix</a> (core)</li>
+    <li><a href="../packages/fpc/index.html">fpc</a></li>
+    <li><a href="../packages/FunCluster/index.html">FunCluster</a></li>
+    <li><a href="../packages/gamlss.mx/index.html">gamlss.mx</a></li>
+    <li><a href="../packages/gcExplorer/index.html">gcExplorer</a></li>
+    <li><a href="../packages/GLDEX/index.html">GLDEX</a></li>
+    <li><a href="../packages/GSM/index.html">GSM</a></li>
+    <li><a href="../packages/HDclassif/index.html">HDclassif</a></li>
+    <li><a href="../packages/HMMmix/index.html">HMMmix</a></li>
+    <li><a href="../packages/hybridHclust/index.html">hybridHclust</a></li>
+    <li><a href="../packages/isopam/index.html">isopam</a></li>
+    <li><a href="../packages/kernlab/index.html">kernlab</a></li>
+    <li><a href="../packages/kml/index.html">kml</a></li>
+    <li><a href="../packages/kml3d/index.html">kml3d</a></li>
+    <li><a href="../packages/latentnet/index.html">latentnet</a></li>
+    <li><a href="../packages/lcmm/index.html">lcmm</a></li>
+    <li><a href="../packages/longclust/index.html">longclust</a></li>
+    <li><a href="../packages/mcclust/index.html">mcclust</a></li>
+    <li><a href="../packages/mclust/index.html">mclust</a> (core)</li>
+    <li><a href="../packages/MetabolAnalyze/index.html">MetabolAnalyze</a></li>
+    <li><a href="../packages/MFDA/index.html">MFDA</a></li>
+    <li><a href="../packages/mixAK/index.html">mixAK</a></li>
+    <li><a href="../packages/mixdist/index.html">mixdist</a></li>
+    <li><a href="../packages/mixer/index.html">mixer</a></li>
+    <li><a href="../packages/mixPHM/index.html">mixPHM</a></li>
+    <li><a href="../packages/mixRasch/index.html">mixRasch</a></li>
+    <li><a href="../packages/mixreg/index.html">mixreg</a></li>
+    <li><a href="../packages/MixSim/index.html">MixSim</a></li>
+    <li><a href="../packages/mixsmsn/index.html">mixsmsn</a></li>
+    <li><a href="../packages/mixtools/index.html">mixtools</a></li>
+    <li><a href="../packages/mixture/index.html">mixture</a></li>
+    <li><a href="../packages/MOCCA/index.html">MOCCA</a></li>
+    <li><a href="../packages/movMF/index.html">movMF</a></li>
+    <li><a href="../packages/mritc/index.html">mritc</a></li>
+    <li><a href="../packages/nnclust/index.html">nnclust</a></li>
+    <li><a href="../packages/nor1mix/index.html">nor1mix</a></li>
+    <li><a href="../packages/optpart/index.html">optpart</a></li>
+    <li><a href="../packages/ORIClust/index.html">ORIClust</a></li>
+    <li><a href="../packages/pdfCluster/index.html">pdfCluster</a></li>
+    <li><a href="../packages/pendensity/index.html">pendensity</a></li>
+    <li><a href="../packages/pgmm/index.html">pgmm</a></li>
+    <li><a href="../packages/pmclust/index.html">pmclust</a></li>
+    <li><a href="../packages/poLCA/index.html">poLCA</a></li>
+    <li><a href="../packages/prabclus/index.html">prabclus</a></li>
+    <li><a href="../packages/profdpm/index.html">profdpm</a></li>
+    <li><a href="../packages/protoclust/index.html">protoclust</a></li>
+    <li><a href="../packages/psychomix/index.html">psychomix</a></li>
+    <li><a href="../packages/pvclust/index.html">pvclust</a></li>
+    <li><a href="../packages/randomLCA/index.html">randomLCA</a></li>
+    <li><a href="../packages/rjags/index.html">rjags</a></li>
+    <li><a href="../packages/Rmixmod/index.html">Rmixmod</a> (core)</li>
+    <li><a href="../packages/Rmpi/index.html">Rmpi</a></li>
+    <li><a href="../packages/RPMM/index.html">RPMM</a></li>
+    <li><a href="../packages/seriation/index.html">seriation</a></li>
+    <li><a href="../packages/sigclust/index.html">sigclust</a></li>
+    <li><a href="../packages/skmeans/index.html">skmeans</a></li>
+    <li><a href="../packages/som/index.html">som</a></li>
+    <li><a href="../packages/sparcl/index.html">sparcl</a></li>
+    <li><a href="../packages/teigen/index.html">teigen</a></li>
+    <li><a href="../packages/trimcluster/index.html">trimcluster</a></li>
+    <li><a href="../packages/wle/index.html">wle</a></li>
+  </ul>
+
+  <h3>Related links:</h3>
+  <ul>
+    <li>CRAN Task View: <a href="MachineLearning.html">MachineLearning</a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/hopach.html" target="_top"><span class="BioC">hopach</span></a></li>
+  </ul>
+
+</body>
+</html>
+ 

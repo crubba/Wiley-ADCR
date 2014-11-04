@@ -1,0 +1,804 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CRAN Task View: Statistics for the Social Sciences</title>
+  <link rel=stylesheet type="text/css" href="../CRAN_web.css" />
+</head>
+
+<body>
+  <h2>CRAN Task View: Statistics for the Social Sciences</h2>
+  <table summary="SocialSciences task view information">
+    <tr><td valign="top"><b>Maintainer:</b></td><td>John Fox</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x6a;&#x66;&#x6f;&#x78;&#x20;&#x61;&#x74;&#x20;&#x6d;&#x63;&#x6d;&#x61;&#x73;&#x74;&#x65;&#x72;&#x2e;&#x63;&#x61;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2013-12-10</td></tr>
+  </table>
+
+    <div>
+      <p>
+        Social scientists use a wide range of statistical methods. To make the burden carried by this task view lighter, I have suppressed detail in some areas that are well covered by related task views (e.g., the
+<a href="Spatial.html">Spatial</a>
+        task view for spatial statistics), and have pointed to those task views instead.
+      </p>
+      <p>
+        Most statistical data analysis in the social sciences is covered by the facilities in the base and recommended packages, which are part of the standard R distribution. In the package descriptions below, I identify base and recommended packages on first mention; packages that are not specifically identified as "R-base" or "recommended" are contributed packages.
+      </p>
+      <p>
+        One area of central interest to social scientists that I do not cover here is statistical graphics, even though this is one of the great strengths of R: Basic R graphics, trellis graphics (in the recommended
+<a href="../packages/lattice/index.html">lattice</a>
+        package), dynamic 3D graphs (via the
+<a href="../packages/rgl/index.html">rgl</a>
+        package), and the many packages that include facilities for various statistical graphs are just too extensive to detail here. Fortunately, a Graphics task view is currently in preparation.
+      </p>
+      <p>
+        If I have omitted something of importance, or if a new package or function should be mentioned here,
+        <a href="mailto:jfox@mcmaster.ca">
+          please let me know.
+        </a>
+      </p>
+      <p>
+        <strong>
+          Linear and Generalized Linear Models:
+        </strong>
+      </p>
+      <p>
+        Univariate and multivariate linear models are fit by the
+<tt>lm</tt>
+        function, generalized linear models by the
+<tt>glm</tt>
+        function, both in the R-base stats package. Beyond
+<tt>summary</tt>
+        and
+<tt>plot</tt>
+        methods for
+<tt>lm</tt>
+        and
+<tt>glm</tt>
+        objects, there is a wide array of functions that support these objects:
+      </p>
+      <ul>
+        <li>
+          The generic
+<tt>anova</tt>
+          function in the stats package constructs sequential analysis of variance and analysis of deviance tables, and can compute
+          <i>
+            F
+          </i>
+          and likelihood-ratio tests for nested models. (It is typical for other classes of statistical models in R to have
+<tt>anova</tt>
+          methods as well.) The generic
+<tt>Anova</tt>
+          function in the
+<a href="../packages/car/index.html">car</a>
+          package (associated with Fox,
+          <i>
+            An R and S-PLUS Companion to Applied Regression,
+          </i>
+          Sage, 2002) constructs so-called "Type-II" and "Type-III" tests for linear and generalized linear models.
+        </li>
+        <li>
+          <i>
+            F
+          </i>
+          and Wald tests for a variety of hypotheses are available from the
+<tt>coeftest</tt>
+          and
+<tt>waldtest</tt>
+          functions in the
+<a href="../packages/lmtest/index.html">lmtest</a>
+          package, and the
+<tt>linear.hypothesis</tt>
+          function in the
+<a href="../packages/car/index.html">car</a>
+          package. All of these functions permit the use of heteroscedasticity and heteroscedasticity/autocorrelation-consistent covariance matrices, as computed, e.g., by functions in the
+<a href="../packages/sandwich/index.html">sandwich</a>
+          and
+<a href="../packages/car/index.html">car</a>
+          packages. Also see the
+<tt>glh.test</tt>
+          function in the
+<a href="../packages/gmodels/index.html">gmodels</a>
+          package. Nonlinear functions of parameters can be tested via the
+<tt>delta.method</tt>
+          function in the
+<a href="../packages/alr3/index.html">alr3</a>
+          package (associated with Weisberg,
+          <i>
+            Applied Linear Regression, 3rd Ed.,
+          </i>
+          Wiley, 2005). The
+<a href="../packages/multcomp/index.html">multcomp</a>
+          package includes functions for multiple comparisons. The
+<tt>vuong</tt>
+          function in the
+<a href="../packages/pscl/index.html">pscl</a>
+          package tests non-nested hypotheses for generalized linear and some other models. Also see the
+<a href="../packages/rms/index.html">rms</a>
+          package for tests on linear and generalized linear models.
+        </li>
+        <li>
+          A basic R installation has excellent facilities for linear and generalized linear model
+	  "diagnostics," including, for example, hat-values and deletion statistics such as studentized
+	  residuals and Cook's distances (
+<tt>hatvalues</tt>,
+<tt>rstudent</tt>, and
+<tt>cooks.distance</tt>, all in the stats package). These are augmented by other packages: several functions in the
+<a href="../packages/car/index.html">car</a>
+          package, which emphasizes graphical methods, e.g.,
+<tt>cr.plots</tt>
+          for component-plus-residual plots and
+<tt>av.plots</tt>
+          for added-variable plots, in addition to numerical diagnostics, such
+<tt>vif</tt>
+          for (generalized) variance-inflation factors; the
+<a href="../packages/dr/index.html">dr</a>
+          package for dimension reduction in regression, including SIR, SAVE, and pHd; and the
+<a href="../packages/lmtest/index.html">lmtest</a>
+          package, which implements a wide variety of tests (e.g., for heteroscedasticity, nonlinearity, and autocorrelation). More diagnostic methods, e.g., for inverse-response plots, may be found in the
+<a href="../packages/alr3/index.html">alr3</a>
+          package. The
+<a href="../packages/forward/index.html">forward</a>
+          package implements diagnostics based on a "forward search" (Atkinson and Riani,
+          <i>
+            Robust Diagnostic Regression Analysis,
+          </i>
+          Springer, 2000). Other collinearity diagnostics are in the
+<a href="../packages/perturb/index.html">perturb</a>
+          package. Diagnostics may also be found in the
+<a href="../packages/rms/index.html">rms</a>
+          package.
+        </li>
+        <li>
+          Several packages contain functions that are useful for interpreting linear and generalized linear models that have been fit to data: The
+<a href="../packages/qvcalc/index.html">qvcalc</a>
+          packages computes "quasi variances" for factors in linear and generalized linear models (and more generally). The
+<a href="../packages/effects/index.html">effects</a>
+          package constructs effect displays, including, e.g., "adjusted means," for linear and generalized linear models. The
+<a href="../packages/Zelig/index.html">Zelig</a>
+          package (see under
+          <a href="#Collections">
+            "Collections"
+          </a>) creates displays for many kinds of statistical models.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Analysis of Categorical and Count Data:
+        </strong>
+      </p>
+      <p>
+        Binomial logit and probit models, as well as Poisson-regression and loglinear models for contingency
+    tables (including models for "over-dispersed" binomial and Poisson data), can be fit with the
+<tt>glm</tt>
+        function in the stats package. For over-dispersed data, see also the
+<a href="../packages/aod/index.html">aod</a>
+        package and the
+<tt>glm.nb</tt>
+        function in the recommended
+<a href="../packages/MASS/index.html">MASS</a>
+        package (associated with
+    Venables and Ripley,
+        <i>
+          Modern Applied Statistics in S, Fourth Ed.
+        </i>, Springer, 2002), which fits
+    negative-binomial GLMs. The multinomial logit model is fit by the
+<tt>multinom</tt>
+        function in the
+    recommended
+<a href="../packages/nnet/index.html">nnet</a>
+        package, and ordered logit and probit models by the
+<tt>polr</tt>
+        function in the MASS package. Also see the
+<a href="../packages/MNP/index.html">MNP</a>
+        package for the multinomial probit model, and
+<a href="../packages/multinomRob/index.html">multinomRob</a>
+        for the analysis of overdispersed multinomial data.
+      </p>
+      <p>
+        There are other noteworthy facilities for analyzing categorical and count data:
+      </p>
+      <ul>
+        <li>
+          The
+<tt>table</tt>
+          function in the R-base base package and the
+<tt>xtabs</tt>
+          and
+<tt>ftable</tt>
+          functions in the stats package construct contingency tables.
+        </li>
+        <li>
+          The
+<tt>chisq.test</tt>
+          and
+<tt>fisher.test</tt>
+          functions in the stats package may be used to test for independence in two-way contingency tables.
+        </li>
+        <li>
+          The
+<tt>loglm</tt>
+          and
+<tt>loglin</tt>
+          functions in the MASS package fit hierachical
+	  loglinear models to contingency tables, the former as a front end to
+<tt>glm</tt>, the latter by iterative proportional fitting.
+        </li>
+        <li>
+          Also see
+<a href="../packages/brglm/index.html">brglm</a>
+          package for bias-reduction in binomial-response GLMs (useful, e.g., in cases of complete separation);
+	  the
+<a href="../packages/exactLoglinTest/index.html">exactLoglinTest</a>
+          package for exact tests of loglinear models; the
+<tt>clogit</tt>
+          function in the
+<a href="../packages/survival/index.html">survival</a>
+          package for conditional logistic regression; and the
+<a href="../packages/vcd/index.html">vcd</a>
+          package for graphical displays of categorical data.
+        </li>
+        <li>
+          The
+<a href="../packages/gnm/index.html">gnm</a>
+          package estimates generalized
+          <i>
+            nonlinear
+          </i>
+          models, and can be used, e.g., to fit certain specialized models to mobility tables.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Other Regression Models:
+        </strong>
+      </p>
+      <p>
+        It is possible to fit a very wide variety of regression models with the facilities provided by the base and recommended packages, and a much wider variety of models with contributed packages:
+      </p>
+      <ul>
+        <li>
+          <i>
+            Nonlinear regression:
+          </i>
+          The
+<tt>nls</tt>
+          function in the stats package fits nonlinear models by least-squares.
+        </li>
+        <li>
+          <a NAME="GLS">
+            <i>
+              Generalized least-squares regression and time-series regression:
+            </i>
+          </a>
+          The
+<tt>gls</tt>
+          function in the
+	  recommended
+<a href="../packages/nlme/index.html">nlme</a>
+          package fits models by generalized least squares. The
+<tt>lm</tt>
+          function can also fit weighted least-squares regressions. Also see the
+<a href="../packages/dynlm/index.html">dynlm</a>
+          package, which allows
+<tt>lm</tt>
+          to handle time-series data structures, and the
+<a href="../packages/dyn/index.html">dyn</a>
+          package, which extends this
+	  capability to
+<tt>glm</tt>
+          and other regression functions that are sufficiently similar to
+<tt>lm</tt>
+          in their internal structure.
+        </li>
+        <li>
+          <i>
+            Mixed-effects models:
+          </i>
+          The recommended
+<a href="../packages/nlme/index.html">nlme</a>
+          package, associated with Pinheiro and Bates,
+          <i>
+            Mixed-Effects Models in S and S-PLUS
+          </i>
+          (Springer, 2000), fits linear and nonlinear mixed-effects models, commonly used in the social sciences for hierarchical and longitudinal data. Generalized linear mixed-effects models may be fit by the
+<tt>glmmPQL</tt>
+          function in the MASS package, and by the
+<tt>lmer</tt>
+          function in the
+<a href="../packages/Matrix/index.html">Matrix</a>
+          package (related to the
+<a href="../packages/lme4/index.html">lme4</a>
+          package, which largely supersedes
+<a href="../packages/nlme/index.html">nlme</a>
+          for
+          <i>
+            linear
+          </i>
+          mixed models). Also see the
+<a href="../packages/lmeSplines/index.html">lmeSplines</a>
+          and
+<a href="../packages/lmm/index.html">lmm</a>
+          packages.
+        </li>
+        <li>
+          <i>
+            Generalized estimating equations:
+          </i>
+          The
+<a href="../packages/gee/index.html">gee</a>
+          and
+<a href="../packages/geepack/index.html">geepack</a>
+          packages fit marginal models by generalized estimating equations.
+        </li>
+        <li>
+          <i>
+            Nonparametric regression analysis:
+          </i>
+          This is one of the conspicuous strengths of R. A standard
+	  R installation includes several functions for smoothing scatterplots, including
+<tt>loess.smooth</tt>
+          and
+<tt>smooth.spline</tt>, both in the stats package. The
+<tt>loess</tt>
+          function in the stats package fits simple and multiple-regression models by local polynomial regression. Generalized additive models are covered by several packages, including the recommended
+<a href="../packages/mgcv/index.html">mgcv</a>
+          package, and the
+<a href="../packages/gam/index.html">gam</a>
+          package, the latter associated with Hastie and Tibshirani,
+          <i>
+            Generalized Additive Models
+          </i>
+          (Chapman and Hall, 1990). Some other noteworthy contributed packages in this area are
+<a href="../packages/gss/index.html">gss</a>, which fits spline regressions,
+<a href="../packages/locfit/index.html">locfit</a>, for local-polynomial regression (and also density estimation) (Loader,
+          <i>
+            Local Regression and Likelihood,
+          </i>
+          Springer, 1999),
+<a href="../packages/sm/index.html">sm</a>, for a variety of smoothing techniques, including for regression (Bowman and Azzalini,
+          <i>
+            Applied Smoothing Techniques for Data Analysis,
+          </i>
+          Oxford, 1997), and
+<a href="../packages/acepack/index.html">acepack</a>
+          for ACE (alternating conditional expecations) and AVAS (additivity and variance stabilization) nonparametric transformation of the response and explanatory variables in regression.
+        </li>
+        <li>
+          <i>
+            Robust regression:
+          </i>
+          The
+<tt>rlm</tt>
+          function fits linear models by M-estimation and
+<tt>lqs</tt>
+          computes bounded-influence estimators; both are in the MASS package. (The
+<tt>cov.rob</tt>
+          function in the same package computes a robust covariance-matrix estimator.)
+	  Also see the
+<a href="../packages/quantreg/index.html">quantreg</a>
+          package, which computes linear, nonlinear, and nonparametric
+	  quantile regressions;
+<tt>lmrob</tt>
+          in
+<a href="../packages/robustbase/index.html">robustbase</a>
+          and
+<tt>lmRob</tt>
+          in
+<a href="../packages/robust/index.html">robust</a>
+          for MM estimation.
+        </li>
+        <li>
+          <i>
+            Structural-equation models:
+          </i>
+          The
+<a href="../packages/sem/index.html">sem</a>
+          package fits general (i.e., latent-variable) SEMs by FIML, and structural equations in observed-variable models by 2SLS. Categorical variables in SEMs can be accommodated via the
+<a href="../packages/polycor/index.html">polycor</a>
+          package. The
+<a href="../packages/systemfit/index.html">systemfit</a>
+          package implements a wider variety of estimators for observed-variables models, including nonlinear simultaneous-equations models. See also the
+<a href="../packages/pls/index.html">pls</a>
+          package, for partial least-squares estimation, and the
+<a href="gR.html">gR</a>
+          task view for graphical models.
+        </li>
+        <li>
+          <i>
+            Selection bias and censored regression:
+          </i>
+          Censored regression models, such as the tobit model, can be fit by the
+<tt>survreg</tt>
+          function in the recommended
+<a href="../packages/survival/index.html">survival</a>
+          package. The
+<tt>rq</tt>
+          function in the
+<a href="../packages/quantreg/index.html">quantreg</a>
+          package can estimate censored quantile-regression models. The
+<tt>hurdle</tt>
+          and
+<tt>zeroinfl</tt>
+          functions in the
+<a href="../packages/pscl/index.html">pscl</a>
+          package fit hurdle and zero-inflated Poisson and negative-binomial models to count data. The
+<tt>heckit</tt>
+          function in the
+<a href="../packages/micEcon/index.html">micEcon</a>
+          package implements two-step Heckman estimators to correct for sample-selection bias. Also see under
+          <a href="#Survival">
+            Survival Analysis
+          </a>
+          below.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Other Statistical Methods:
+        </strong>
+      </p>
+      <p>
+        Here is a brief survey of implementations in R of other statistical methods commonly used by social scientists:
+      </p>
+      <ul>
+        <li>
+          <a NAME="Survival">
+          </a>
+          <i>
+            Survival (Event-History) Analysis:
+          </i>
+          There is an extensive implementation of methods of survival analysis in the recommended
+<a href="../packages/survival/index.html">survival</a>
+          package, which is associated with Therneau and Grambsch,
+          <i>
+            Modeling Survival Data
+          </i>
+          (Springer, 2000). Also see the
+<a href="../packages/eha/index.html">eha</a>,
+<a href="../packages/survrec/index.html">survrec</a>,
+<a href="../packages/frailtypack/index.html">frailtypack</a>, and
+<a href="../packages/rms/index.html">rms</a>
+          packages.
+        </li>
+        <li>
+          <i>
+            "Dimensional" Analysis:
+          </i>
+          Exploratory maximum-likelihood factor analysis is implemented in the
+<tt>factanal</tt>
+          function in the stats package, which also provides for varimax and promax factor rotation.  (Confirmatory factor-analysis models can be fit with the
+<a href="../packages/sem/index.html">sem</a>
+          package.) Additional rotations are available through functions in the
+<a href="../packages/GPArotation/index.html">GPArotation</a>
+          package. The
+<tt>prcomp</tt>
+          and
+<tt>princomp</tt>
+          functions in the stats package perform principal-components analysis. The
+<tt>cmdscale</tt>
+          function in the stats package performs
+          <i>
+            metric
+          </i>
+          multidimensional scaling, while the
+<tt>isoMDS</tt>
+          and
+<tt>sammon</tt>
+          functions in the MASS package perform
+          <i>
+            non-metric
+          </i>
+          multidimensional scaling. For methods of cluster analysis and mixtures see the
+<a href="Cluster.html">Cluster</a>
+          task view. The
+<a href="../packages/BradleyTerry2/index.html">BradleyTerry2</a>
+          package fits the Bradley-Terry model for paired comparisons. The
+<a href="../packages/ltm/index.html">ltm</a>
+          package fits Rasch and other item-response models to binary items. The
+<a href="../packages/irr/index.html">irr</a>
+          package contains functions for assessing inter-rater reliability; also see the
+<a href="../packages/psy/index.html">psy</a>
+          package.
+        </li>
+        <li>
+          <i>
+            Other Multivariate Statistics:
+          </i>
+          See the
+<a href="Multivariate.html">Multivariate</a>
+          task view, which includes information on graphs for visualizing multivariate data.
+        </li>
+        <li>
+          <i>
+            Missing Data:
+          </i>
+          A variety of packages implement methods for handling missing data by multiple imputation, including the
+<a href="../packages/mix/index.html">mix</a>, and
+<a href="../packages/pan/index.html">pan</a>
+          packages associated with Shafer,
+          <i>
+            Analysis of Incomplete Multivariate Data
+          </i>
+          (Chapman and Hall, 1997), and the
+<a href="../packages/mice/index.html">mice</a>
+          and
+<a href="../packages/mitools/index.html">mitools</a>
+          packages (the latter for drawing inferences from multiply imputed data sets). There are also some facilities for missing-data imputation in the general
+<a href="../packages/Hmisc/index.html">Hmisc</a>
+          package, which is described below, under
+          <a href="#Collections">
+            "Collections"
+          </a>.
+        </li>
+        <li>
+          <i>
+            Bootstrapping and Other Resampling Methods:
+          </i>
+          The recommended package
+<a href="../packages/boot/index.html">boot</a>, associated with Davison and Hinkley,
+          <i>
+            Bootstrap Methods and Their Application
+          </i>
+          (Cambridge, 1997), has excellent facilities for bootstrapping and some related methods. Also notable is the
+<a href="../packages/bootstrap/index.html">bootstrap</a>
+          package, associated with Efron and Tibshirani,
+          <i>
+            An Introduction to the Bootstrap
+          </i>
+          (Chapman and Hall, 1993), which has functions for bootstrapping and jackknifing.
+        </li>
+        <li>
+          <i>
+            Model Selection:
+          </i>
+          The
+<tt>step</tt>
+          function in the stats package and the more broadly applicable
+<tt>stepAIC</tt>
+          function in the MASS package perform forward, backward, and forward-backward stepwise selection for a variety of statistical models. The
+<tt>regsubsets</tt>
+          function in the
+<a href="../packages/leaps/index.html">leaps</a>
+          package performs all-subsets regression. The
+<a href="../packages/BMA/index.html">BMA</a>
+          package performs Bayesian model averaging. Beyond these, see the
+<a href="MachineLearning.html">MachineLearning</a>
+          task view.
+        </li>
+        <li>
+          <i>
+            Social Network Analysis:
+          </i>
+          There are several packages useful for social network analysis, including
+<a href="../packages/sna/index.html">sna</a>
+          for sociometric analysis of networks (e.g., blockmodeling),
+<a href="../packages/network/index.html">network</a>
+          for manipulating and displaying network objects, and
+<a href="../packages/latentnet/index.html">latentnet</a>
+          for latent position and cluster models for networks.
+        </li>
+        <li>
+          <i>
+            Bayesian Statistical Methods:
+          </i>
+          Because of its easy programmability, R is a natural environment within which to implement and use Bayesian methods, and there are many packages that provide such methods, including interfaces to external Bayesian software, such as BUGS. For details, see the
+<a href="Bayesian.html">Bayesian</a>
+          task view.
+        </li>
+        <li>
+          <i>
+            Spatial Statistics:
+          </i>
+          In addition to the recommended
+<a href="../packages/spatial/index.html">spatial</a>
+          package, see the
+<a href="Spatial.html">Spatial</a>
+          task view  for an extensive list of functions and packages for spatial data analysis.
+        </li>
+        <li>
+          <i>
+            Time-Series Analysis:
+          </i>
+          Beyond time-series regression (see
+          <a href="#GLS">
+            generalized least-squares regression,
+          </a>
+          above), R has very extensive facilities for time-series analysis, both in the standard R distribution and in contributed packages; for details, see the
+<a href="Econometrics.html">Econometrics</a>
+          and
+<a href="Finance.html">Finance</a>
+          task views.
+        </li>
+        <li>
+          <i>
+            Surveys:
+          </i>
+          The
+<a href="../packages/sampling/index.html">sampling</a>
+          package includes functions for selecting survey samples; the
+<a href="../packages/survey/index.html">survey</a>
+          package includes functions for the analysis of data from complex sample surveys, among them functions for fitting linear and generalized linear models.
+        </li>
+        <li>
+          <i>
+            Meta Analysis:
+          </i>
+          See the
+<a href="../packages/meta/index.html">meta</a>
+          and
+<a href="../packages/rmeta/index.html">rmeta</a>
+          packages.
+        </li>
+        <li>
+          <i>
+            Propensity Scores and Matching:
+          </i>
+          See the
+<a href="../packages/Matching/index.html">Matching</a>,
+<a href="../packages/MatchIt/index.html">MatchIt</a>, and
+<a href="../packages/optmatch/index.html">optmatch</a>
+          packages.
+        </li>
+      </ul>
+      <p>
+        <a NAME="Collections">
+        </a>
+        <strong>
+          Collections of Functions:
+        </strong>
+      </p>
+      <p>
+        There are some packages that are so heterogeneous that they are difficult to classify, yet contain functions (typically in multiple domains) that are potentially of interest to social scientists:
+      </p>
+      <ul>
+        <li>
+          I have already made several references to the recommended
+<a href="../packages/MASS/index.html">MASS</a>
+          package, which is
+	  associated with Venables and Ripley's
+          <i>
+            Modern Applied Statistics With S
+          </i>. Other recommended
+	  packages associated with this book are
+<a href="../packages/nnet/index.html">nnet</a>, for fitting neural networks (but also, as
+	  mentioned, multinomial logistic-regression models);
+<a href="../packages/spatial/index.html">spatial</a>
+          for spatial statistics; and
+<a href="../packages/class/index.html">class</a>, which contains functions for classification.
+        </li>
+        <li>
+          The
+<a href="../packages/Hmisc/index.html">Hmisc</a>
+          and
+<a href="../packages/rms/index.html">rms</a>
+          packages (both mentioned above), associated with Harrell,
+          <i>
+            Regression Modeling Strategies
+          </i>
+          (Springer, 2001), provide functions for data manipulation, linear models, logistic-regression models, and survival analysis, many of them "front ends" to or modifications of other facilities in R.
+        </li>
+        <li>
+          The
+<a href="../packages/Zelig/index.html">Zelig</a>
+          package integrates a wide array of statistical models of interest to social scientists (see the
+          <a href="http://gking.harvard.edu/zelig">
+            Zelig web site
+          </a>
+          for details).
+        </li>
+      </ul>
+    </div>
+
+  <h3>CRAN packages:</h3>
+  <ul>
+    <li><a href="../packages/acepack/index.html">acepack</a></li>
+    <li><a href="../packages/alr3/index.html">alr3</a> (core)</li>
+    <li><a href="../packages/aod/index.html">aod</a></li>
+    <li><a href="../packages/BMA/index.html">BMA</a></li>
+    <li><a href="../packages/boot/index.html">boot</a> (core)</li>
+    <li><a href="../packages/bootstrap/index.html">bootstrap</a></li>
+    <li><a href="../packages/BradleyTerry2/index.html">BradleyTerry2</a></li>
+    <li><a href="../packages/brglm/index.html">brglm</a></li>
+    <li><a href="../packages/car/index.html">car</a> (core)</li>
+    <li><a href="../packages/class/index.html">class</a></li>
+    <li><a href="../packages/dr/index.html">dr</a></li>
+    <li><a href="../packages/dyn/index.html">dyn</a></li>
+    <li><a href="../packages/dynlm/index.html">dynlm</a></li>
+    <li><a href="../packages/effects/index.html">effects</a></li>
+    <li><a href="../packages/eha/index.html">eha</a></li>
+    <li><a href="../packages/exactLoglinTest/index.html">exactLoglinTest</a></li>
+    <li><a href="../packages/forward/index.html">forward</a></li>
+    <li><a href="../packages/frailtypack/index.html">frailtypack</a></li>
+    <li><a href="../packages/gam/index.html">gam</a> (core)</li>
+    <li><a href="../packages/gee/index.html">gee</a></li>
+    <li><a href="../packages/geepack/index.html">geepack</a></li>
+    <li><a href="../packages/gmodels/index.html">gmodels</a></li>
+    <li><a href="../packages/gnm/index.html">gnm</a></li>
+    <li><a href="../packages/GPArotation/index.html">GPArotation</a></li>
+    <li><a href="../packages/gss/index.html">gss</a></li>
+    <li><a href="../packages/Hmisc/index.html">Hmisc</a></li>
+    <li><a href="../packages/irr/index.html">irr</a></li>
+    <li><a href="../packages/latentnet/index.html">latentnet</a></li>
+    <li><a href="../packages/lattice/index.html">lattice</a></li>
+    <li><a href="../packages/leaps/index.html">leaps</a></li>
+    <li><a href="../packages/lme4/index.html">lme4</a></li>
+    <li><a href="../packages/lmeSplines/index.html">lmeSplines</a></li>
+    <li><a href="../packages/lmm/index.html">lmm</a></li>
+    <li><a href="../packages/lmtest/index.html">lmtest</a> (core)</li>
+    <li><a href="../packages/locfit/index.html">locfit</a></li>
+    <li><a href="../packages/ltm/index.html">ltm</a></li>
+    <li><a href="../packages/MASS/index.html">MASS</a> (core)</li>
+    <li><a href="../packages/Matching/index.html">Matching</a></li>
+    <li><a href="../packages/MatchIt/index.html">MatchIt</a></li>
+    <li><a href="../packages/Matrix/index.html">Matrix</a> (core)</li>
+    <li><a href="../packages/meta/index.html">meta</a></li>
+    <li><a href="../packages/mgcv/index.html">mgcv</a> (core)</li>
+    <li><a href="../packages/mice/index.html">mice</a> (core)</li>
+    <li><a href="../packages/micEcon/index.html">micEcon</a></li>
+    <li><a href="../packages/mitools/index.html">mitools</a> (core)</li>
+    <li><a href="../packages/mix/index.html">mix</a> (core)</li>
+    <li><a href="../packages/MNP/index.html">MNP</a></li>
+    <li><a href="../packages/multcomp/index.html">multcomp</a></li>
+    <li><a href="../packages/multinomRob/index.html">multinomRob</a></li>
+    <li><a href="../packages/mvnmle/index.html">mvnmle</a></li>
+    <li><a href="../packages/network/index.html">network</a></li>
+    <li><a href="../packages/nlme/index.html">nlme</a> (core)</li>
+    <li><a href="../packages/nnet/index.html">nnet</a></li>
+    <li><a href="../packages/optmatch/index.html">optmatch</a></li>
+    <li><a href="../packages/pan/index.html">pan</a> (core)</li>
+    <li><a href="../packages/perturb/index.html">perturb</a></li>
+    <li><a href="../packages/pls/index.html">pls</a></li>
+    <li><a href="../packages/polycor/index.html">polycor</a></li>
+    <li><a href="../packages/pscl/index.html">pscl</a></li>
+    <li><a href="../packages/psy/index.html">psy</a></li>
+    <li><a href="../packages/quantreg/index.html">quantreg</a> (core)</li>
+    <li><a href="../packages/qvcalc/index.html">qvcalc</a></li>
+    <li><a href="../packages/rgl/index.html">rgl</a></li>
+    <li><a href="../packages/rmeta/index.html">rmeta</a></li>
+    <li><a href="../packages/rms/index.html">rms</a></li>
+    <li><a href="../packages/robust/index.html">robust</a></li>
+    <li><a href="../packages/robustbase/index.html">robustbase</a></li>
+    <li><a href="../packages/sampling/index.html">sampling</a></li>
+    <li><a href="../packages/sandwich/index.html">sandwich</a> (core)</li>
+    <li><a href="../packages/sem/index.html">sem</a> (core)</li>
+    <li><a href="../packages/sm/index.html">sm</a></li>
+    <li><a href="../packages/sna/index.html">sna</a></li>
+    <li><a href="../packages/spatial/index.html">spatial</a></li>
+    <li><a href="../packages/survey/index.html">survey</a> (core)</li>
+    <li><a href="../packages/survival/index.html">survival</a> (core)</li>
+    <li><a href="../packages/survrec/index.html">survrec</a></li>
+    <li><a href="../packages/systemfit/index.html">systemfit</a> (core)</li>
+    <li><a href="../packages/vcd/index.html">vcd</a></li>
+    <li><a href="../packages/Zelig/index.html">Zelig</a> (core)</li>
+  </ul>
+
+  <h3>Related links:</h3>
+  <ul>
+    <li>CRAN Task View: <a href="Bayesian.html">Bayesian</a></li>
+    <li>CRAN Task View: <a href="Cluster.html">Cluster</a></li>
+    <li>CRAN Task View: <a href="Econometrics.html">Econometrics</a></li>
+    <li>CRAN Task View: <a href="Finance.html">Finance</a></li>
+    <li>CRAN Task View: <a href="gR.html">gR</a></li>
+    <li>CRAN Task View: <a href="MachineLearning.html">MachineLearning</a></li>
+    <li>CRAN Task View: <a href="Multivariate.html">Multivariate</a></li>
+    <li>CRAN Task View: <a href="Psychometrics.html">Psychometrics</a></li>
+    <li>CRAN Task View: <a href="Spatial.html">Spatial</a></li>
+    <li><a href="http://lib.stat.cmu.edu/S/Harrell/Design.html">
+  Design Library
+</a></li>
+    <li><a href="http://lib.stat.cmu.edu/S/Harrell/Hmisc.html">
+  The Hmisc Library
+</a></li>
+    <li><a href="http://www.stats.ox.ac.uk/pub/MASS4/">
+  Modern Applied Statistics with S, 4th ed
+</a></li>
+    <li><a href="http://socserv.socsci.mcmaster.ca/jfox/Books/Companion/index.html">
+  An R and S-PLUS Companion to Applied Regression
+</a></li>
+    <li><a href="http://gking.harvard.edu/zelig">
+  Zelig Software Website
+</a></li>
+  </ul>
+
+</body>
+</html>
+ 

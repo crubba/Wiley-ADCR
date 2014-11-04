@@ -1,0 +1,17 @@
+{
+	"name" : [
+		"van Pelt, Lucy",
+		"Peppermint, Patty",
+		"Brown, Charlie"
+	],
+	"sex" : [
+		"female",
+		"female",
+		"male"
+	],
+	"age" : [
+		32,
+		null,
+		27
+	]
+}

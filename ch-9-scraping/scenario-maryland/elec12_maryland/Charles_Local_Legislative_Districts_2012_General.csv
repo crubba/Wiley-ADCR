@@ -1,0 +1,54 @@
+"Vote Type (FOR=1,AGAINST=2)","Candidate Name","Party","Office Name","Office District","Winner","Write-In?", CONC 004,CONC 002,CONC 001,CONC 003
+1,"Barack Obama",DEM,President - Vice Pres,,Y,,10464,9488,6443,9935
+1,"Mitt Romney",REP,President - Vice Pres,,,,3948,5114,8635,3364
+1,"Gary Johnson",LIB,President - Vice Pres,,,,133,136,181,113
+1,"Jill Stein",GRN,President - Vice Pres,,,,75,72,73,57
+1,"Tiffany Renee Briscoe",DEM,President - Vice Pres,,,Y,0,0,0,0
+1,"Dennis Knill",DEM,President - Vice Pres,,,Y,0,0,0,0
+1,"Matthew Lydick",REP,President - Vice Pres,,,Y,0,0,0,0
+1,"Barbara A. Prokopich",REP,President - Vice Pres,,,Y,0,0,0,0
+1,"Santa Claus",IND,President - Vice Pres,,,Y,4,2,2,1
+1,"Richard Duncan",IND,President - Vice Pres,,,Y,0,0,0,0
+1,"Bruce Mlynski",IND,President - Vice Pres,,,Y,0,0,0,0
+1,"Kevin M. Thorne",IND,President - Vice Pres,,,Y,0,0,0,0
+1,"James Clymer",CON,President - Vice Pres,,,Y,0,0,0,0
+1,"Virgil Goode",CON,President - Vice Pres,,,Y,1,3,5,3
+1,"Ross C. Rocky Anderson",OTH,President - Vice Pres,,,Y,0,0,0,0
+1,"Andre Barnett",OTH,President - Vice Pres,,,Y,0,0,0,0
+1,"Roseanne Barr",OTH,President - Vice Pres,,,Y,0,1,0,1
+1,"Will Christensen",OTH,President - Vice Pres,,,Y,0,0,0,0
+1,"Stephen Durham",OTH,President - Vice Pres,,,Y,0,0,0,0
+1,"Merlin Miller",OTH,President - Vice Pres,,,Y,0,1,1,0
+1,"Leon Leo Ray",OTH,President - Vice Pres,,,Y,0,0,0,0
+1,"Michael David Boyles",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Theodis (Ted) Brown, Sr.",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Paul Chehade",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"David M. Crosby",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Fred Donald Dickson, Jr.",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Robert William Dietz",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Dwight Kenneth French",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Darrell Hykes",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Nelson Keyton",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Dean Morstad",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Deonia Neveu",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Terrance James O'Hara",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Jill Reed",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Cecil James Roth",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Sheila Tittle",UNF,President - Vice Pres,,,Y,0,0,0,0
+1,"Other Write-Ins",BOT,President - Vice Pres,,,Y,49,65,37,64
+1,"Ben Cardin",DEM,U.S. Senator           ,,Y,,9018,8181,5524,8559
+1,"Daniel John Bongino",REP,U.S. Senator           ,,,,2549,3270,5706,2148
+1,"Dean Ahmad",LIB,U.S. Senator           ,,,,161,161,165,105
+1,"S. Rob Sobhani",UNF,U.S. Senator           ,,,,2512,2845,3436,2411
+1,"Lih Young",DEM,U.S. Senator           ,,,Y,0,0,1,0
+1,"Mary Podlesak",REP,U.S. Senator           ,,,Y,0,0,0,0
+1,"Brandy Baker",UNF,U.S. Senator           ,,,Y,0,0,0,0
+1,"Ed Tinus",UNF,U.S. Senator           ,,,Y,0,0,0,0
+1,"Other Write-Ins",BOT,U.S. Senator           ,,,Y,17,4,12,11
+1,"Steny H. Hoyer",DEM,U.S. Congress,05,Y,,10665,9950,7621,10077
+1,"Tony O'Donnell",REP,U.S. Congress,05,,,3252,4139,6914,2816
+1,"Arvin Vohra",LIB,U.S. Congress,05,,,171,200,196,152
+1,"Bob Auerbach",GRN,U.S. Congress,05,,,155,184,206,165
+1,"Other Write-Ins",BOT,U.S. Congress,05,,Y,21,6,13,16
+1,"Stuart R. Berger",BOT,Judge Spec Appeal at Lg,,Y,,11468,11114,10833,10733
+2,"Stuart R. Berger",BOT,Judge Spec Appeal at Lg,,Y,,1633,1855,1993,1457

@@ -1,0 +1,75 @@
+"Vote Type (FOR=1,AGAINST=2)","Candidate Name","Party","Office Name","Office District","Winner","Write-In?", CONC 005,CONC 004,CONC 002,CONC 001,CONC 003
+1,"Barack Obama",DEM,President - Vice Pres,,Y,,44210,42833,40083,56517,40757
+1,"Mitt Romney",REP,President - Vice Pres,,,,9782,19423,21671,26973,18719
+1,"Gary Johnson",LIB,President - Vice Pres,,,,533,708,815,766,645
+1,"Jill Stein",GRN,President - Vice Pres,,,,541,480,415,552,430
+1,"Tiffany Renee Briscoe",DEM,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Dennis Knill",DEM,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Matthew Lydick",REP,President - Vice Pres,,,Y,1,0,0,0,1
+1,"Barbara A. Prokopich",REP,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Santa Claus",IND,President - Vice Pres,,,Y,8,8,8,7,8
+1,"Richard Duncan",IND,President - Vice Pres,,,Y,0,0,0,0,1
+1,"Bruce Mlynski",IND,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Kevin M. Thorne",IND,President - Vice Pres,,,Y,0,0,0,0,0
+1,"James Clymer",CON,President - Vice Pres,,,Y,0,1,0,0,1
+1,"Virgil Goode",CON,President - Vice Pres,,,Y,4,7,8,9,15
+1,"Ross C. Rocky Anderson",OTH,President - Vice Pres,,,Y,12,10,3,11,6
+1,"Andre Barnett",OTH,President - Vice Pres,,,Y,0,1,0,0,1
+1,"Roseanne Barr",OTH,President - Vice Pres,,,Y,1,0,3,2,1
+1,"Will Christensen",OTH,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Stephen Durham",OTH,President - Vice Pres,,,Y,0,1,0,1,1
+1,"Merlin Miller",OTH,President - Vice Pres,,,Y,1,2,2,1,2
+1,"Leon Leo Ray",OTH,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Michael David Boyles",UNF,President - Vice Pres,,,Y,0,1,0,0,0
+1,"Theodis (Ted) Brown, Sr.",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Paul Chehade",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"David M. Crosby",UNF,President - Vice Pres,,,Y,0,1,0,0,0
+1,"Fred Donald Dickson, Jr.",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Robert William Dietz",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Dwight Kenneth French",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Darrell Hykes",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Nelson Keyton",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Dean Morstad",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Deonia Neveu",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Terrance James O'Hara",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Jill Reed",UNF,President - Vice Pres,,,Y,0,0,0,0,1
+1,"Cecil James Roth",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Sheila Tittle",UNF,President - Vice Pres,,,Y,0,0,0,0,0
+1,"Other Write-Ins",BOT,President - Vice Pres,,,Y,184,246,239,220,195
+1,"Ben Cardin",DEM,U.S. Senator           ,,Y,,40148,37917,33986,52478,36165
+1,"Daniel John Bongino",REP,U.S. Senator           ,,,,7184,14704,17150,19625,14031
+1,"Dean Ahmad",LIB,U.S. Senator           ,,,,776,939,1014,965,853
+1,"S. Rob Sobhani",UNF,U.S. Senator           ,,,,5424,8159,9054,10074,7780
+1,"Lih Young",DEM,U.S. Senator           ,,,Y,0,4,4,3,6
+1,"Mary Podlesak",REP,U.S. Senator           ,,,Y,0,0,0,0,0
+1,"Brandy Baker",UNF,U.S. Senator           ,,,Y,12,8,3,0,3
+1,"Ed Tinus",UNF,U.S. Senator           ,,,Y,1,0,0,0,0
+1,"Other Write-Ins",BOT,U.S. Senator           ,,,Y,63,55,68,64,47
+1,"John Sarbanes",DEM,U.S. Congress,03,Y,,13239,9830,,,
+1,"Eric Delano Knowles",REP,U.S. Congress,03,,,3435,5733,,,
+1,"Paul W. Drgos, Jr.",LIB,U.S. Congress,03,,,379,421,,,
+1,"Other Write-Ins",BOT,U.S. Congress,03,,Y,26,41,,,
+1,"John Delaney",DEM,U.S. Congress,06,Y,,,3952,36844,12337,23143
+1,"Roscoe G. Bartlett",REP,U.S. Congress,06,,,,1879,16514,7108,9523
+1,"Nickolaus Mueller",LIB,U.S. Congress,06,,,,151,1661,417,900
+1,"Other Write-Ins",BOT,U.S. Congress,06,,Y,,8,94,35,49
+1,"Chris Van Hollen",DEM,U.S. Congress,08,Y,,29722,28727,2318,45918,17514
+1,"Ken Timmerman",REP,U.S. Congress,08,,,4716,8859,2791,15043,6219
+1,"Mark Grannis",LIB,U.S. Congress,08,,,662,706,117,1142,497
+1,"George Gluck",GRN,U.S. Congress,08,,,707,587,65,705,384
+1,"Other Write-Ins",BOT,U.S. Congress,08,,Y,47,45,6,65,25
+1,"Anne K. Albright",BOT,Judge Circuit Court,06,Y,,37289,41281,40907,54253,39425
+1,"Michael D. Mason",BOT,Judge Circuit Court,06,Y,,32356,36422,35476,50118,35160
+1,"Louise G. Scrivener",BOT,Judge Circuit Court,06,Y,,30739,33916,32978,49361,33358
+1,"Other Write-Ins",BOT,Judge Circuit Court,06,,Y,434,635,593,892,508
+1,"Stuart R. Berger",BOT,Judge Spec Appeal at Lg,,Y,,38102,42132,41716,55410,40388
+2,"Stuart R. Berger",BOT,Judge Spec Appeal at Lg,,Y,,4154,6419,6898,5857,5323
+1,"Phil Kauffman",NON,Board of Ed at Large,,Y,,29642,34127,33856,37582,31920
+1,"Morris Panner",NON,Board of Ed at Large,,,,10012,11921,12136,17645,11231
+1,"Other Write-Ins",NON,Board of Ed at Large,,,Y,198,257,259,334,214
+1,"Fred Evans",NON,Board of Education     ,002,,,19638,23827,23247,25051,21932
+1,"Rebecca Smondrowski",NON,Board of Education     ,002,Y,,20065,22338,23651,29458,21838
+1,"Other Write-Ins",NON,Board of Education     ,002,,Y,139,182,193,230,153
+1,"Christopher Barclay",NON,Board of Education     ,004,Y,,23233,26460,26674,29999,24386
+1,"Annita Seckinger",NON,Board of Education     ,004,,,15807,18439,18734,22284,17266
+1,"Other Write-Ins",NON,Board of Education     ,004,,Y,135,186,184,234,163

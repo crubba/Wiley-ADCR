@@ -1,0 +1,81 @@
+"Vote Type (FOR=1,AGAINST=2)","Candidate Name","Party","Office Name","Office District","Winner","Write-In?", CONC 005,CONC 008,CONC 004,CONC 002,CONC 006,CONC 007,CONC 009,CONC 001,CONC 003
+1,"Barack Obama",DEM,President - Vice Pres,,Y,,27732,31999,26127,15924,37160,28769,36442,24962,21638
+1,"Mitt Romney",REP,President - Vice Pres,,,,1232,2372,8040,1431,1668,438,4387,6371,3503
+1,"Gary Johnson",LIB,President - Vice Pres,,,,69,71,325,93,74,43,162,296,274
+1,"Jill Stein",GRN,President - Vice Pres,,,,70,46,222,129,63,33,107,195,198
+1,"Tiffany Renee Briscoe",DEM,President - Vice Pres,,,Y,0,1,0,1,0,1,0,1,0
+1,"Dennis Knill",DEM,President - Vice Pres,,,Y,0,0,0,0,0,0,0,0,0
+1,"Matthew Lydick",REP,President - Vice Pres,,,Y,0,0,0,0,0,0,0,0,0
+1,"Barbara A. Prokopich",REP,President - Vice Pres,,,Y,0,0,0,0,0,0,0,0,0
+1,"Santa Claus",IND,President - Vice Pres,,,Y,1,0,4,1,0,0,3,3,2
+1,"Richard Duncan",IND,President - Vice Pres,,,Y,0,0,1,0,0,0,0,0,0
+1,"Bruce Mlynski",IND,President - Vice Pres,,,Y,0,0,0,0,0,0,0,0,0
+1,"Kevin M. Thorne",IND,President - Vice Pres,,,Y,0,0,0,0,0,0,0,0,0
+1,"James Clymer",CON,President - Vice Pres,,,Y,0,0,0,0,0,0,1,1,1
+1,"Virgil Goode",CON,President - Vice Pres,,,Y,0,0,6,0,7,2,1,2,1
+1,"Ross C. Rocky Anderson",OTH,President - Vice Pres,,,Y,3,0,1,1,0,0,0,2,0
+1,"Andre Barnett",OTH,President - Vice Pres,,,Y,0,0,0,0,0,0,1,0,0
+1,"Roseanne Barr",OTH,President - Vice Pres,,,Y,0,0,0,1,0,0,1,0,2
+1,"Will Christensen",OTH,President - Vice Pres,,,Y,0,0,0,0,0,0,0,0,0
+1,"Stephen Durham",OTH,President - Vice Pres,,,Y,0,0,0,0,0,0,0,0,0
+1,"Merlin Miller",OTH,President - Vice Pres,,,Y,0,0,1,0,0,0,0,0,0
+1,"Leon Leo Ray",OTH,President - Vice Pres,,,Y,0,0,0,0,0,0,0,0,0
+1,"Michael David Boyles",UNF,President - Vice Pres,,,Y,0,0,1,0,0,0,0,0,0
+1,"Theodis (Ted) Brown, Sr.",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0,0,0
+1,"Paul Chehade",UNF,President - Vice Pres,,,Y,0,3,0,0,0,0,0,1,0
+1,"David M. Crosby",UNF,President - Vice Pres,,,Y,0,0,1,0,0,0,0,0,0
+1,"Fred Donald Dickson, Jr.",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0,0,0
+1,"Robert William Dietz",UNF,President - Vice Pres,,,Y,0,0,1,0,0,0,0,0,0
+1,"Dwight Kenneth French",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0,0,0
+1,"Darrell Hykes",UNF,President - Vice Pres,,,Y,0,1,0,0,0,1,1,0,0
+1,"Nelson Keyton",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0,0,0
+1,"Dean Morstad",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0,0,0
+1,"Deonia Neveu",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0,0,0
+1,"Terrance James O'Hara",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0,0,0
+1,"Jill Reed",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0,1,0
+1,"Cecil James Roth",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0,0,0
+1,"Sheila Tittle",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0,0,0
+1,"Other Write-Ins",BOT,President - Vice Pres,,,Y,58,69,138,43,90,50,107,80,117
+1,"Ben Cardin",DEM,U.S. Senator           ,,Y,,24215,27737,22806,14021,32465,24848,31420,21835,19083
+1,"Daniel John Bongino",REP,U.S. Senator           ,,,,927,1497,5695,1063,1130,440,2611,4403,2439
+1,"Dean Ahmad",LIB,U.S. Senator           ,,,,258,258,468,206,275,217,280,483,390
+1,"S. Rob Sobhani",UNF,U.S. Senator           ,,,,2664,4065,4952,1521,4183,2663,5863,4113,2755
+1,"Lih Young",DEM,U.S. Senator           ,,,Y,0,1,1,1,2,0,2,2,3
+1,"Mary Podlesak",REP,U.S. Senator           ,,,Y,0,0,0,0,0,0,0,0,0
+1,"Brandy Baker",UNF,U.S. Senator           ,,,Y,1,2,2,0,1,0,1,1,5
+1,"Ed Tinus",UNF,U.S. Senator           ,,,Y,0,0,0,0,0,0,0,0,0
+1,"Other Write-Ins",BOT,U.S. Senator           ,,,Y,19,24,30,24,31,26,33,23,25
+1,"Donna F. Edwards",DEM,U.S. Congress,04,Y,,26209,20715,,13264,34340,26994,3034,16902,5709
+1,"Faith M. Loudon",REP,U.S. Congress,04,,,1178,1245,,1009,1444,555,181,3735,443
+1,"Scott Soffen",LIB,U.S. Congress,04,,,313,277,,262,351,248,44,498,105
+1,"Other Write-Ins",BOT,U.S. Congress,04,,Y,28,26,,18,44,27,5,24,6
+1,"Steny H. Hoyer",DEM,U.S. Congress,05,Y,,,9937,25888,1608,1419,,32319,6959,14801
+1,"Tony O'Donnell",REP,U.S. Congress,05,,,,812,6660,251,125,,3658,1719,2561
+1,"Arvin Vohra",LIB,U.S. Congress,05,,,,85,482,35,15,,322,174,319
+1,"Bob Auerbach",GRN,U.S. Congress,05,,,,96,690,90,13,,305,207,449
+1,"Other Write-Ins",BOT,U.S. Congress,05,,Y,,12,47,6,2,,45,10,29
+1,"Krystal Alves",BOT,Judge Circuit Court,07,Y,,17259,21231,20413,10184,24576,16851,25099,18682,14697
+1,"DaNeeka Varner Cotton",BOT,Judge Circuit Court,07,Y,,14798,18343,18158,8608,21777,14215,21996,16269,12592
+1,"John P. Davey",BOT,Judge Circuit Court,07,Y,,14447,17796,18858,8607,20795,13433,21580,16932,12937
+1,"Hassan A. El-Amin",BOT,Judge Circuit Court,07,Y,,12901,15887,16837,7742,19017,11709,19085,14895,11570
+1,"Sherrie L. Krauser",BOT,Judge Circuit Court,07,Y,,14248,17809,18795,8486,20889,13556,21695,16602,12665
+1,"Other Write-Ins",BOT,Judge Circuit Court,07,,Y,162,198,333,145,189,121,250,286,220
+1,"Stuart R. Berger",BOT,Judge Spec Appeal at Lg,,Y,,20367,24666,23304,11681,28479,20402,29476,21059,17144
+2,"Stuart R. Berger",BOT,Judge Spec Appeal at Lg,,Y,,2885,3489,3368,1700,3607,3143,4358,3282,2505
+1,"Michele D. Hotten",BOT,Judge Spec Appeals,04,Y,,22473,27166,24950,12837,31183,22938,31974,22862,18462
+2,"Michele D. Hotten",BOT,Judge Spec Appeals,04,Y,,2338,2861,3075,1427,2729,2374,3592,2922,2166
+1,"Zabrina Epps",NON,Board of Education     ,001,Y,,,,1156,,,,,12336,
+1,"David Murray",NON,Board of Education     ,001,,,,,1228,,,,,12537,
+1,"Other Write-Ins",NON,Board of Education     ,001,,Y,,,11,,,,,58,
+1,"Patricia Eubanks",NON,Board of Education     ,004,Y,,8916,,,,,,,,3883
+1,"Micah Watson",NON,Board of Education     ,004,,,7270,,,,,,,,3760
+1,"Other Write-Ins",NON,Board of Education     ,004,,Y,23,,,,,,,,19
+1,"Raaheela Ahmed",NON,Board of Education     ,005,,,,,10166,,5836,,,,
+1,"Jeana Jacobs",NON,Board of Education     ,005,Y,,,,11181,,6654,,,,
+1,"Other Write-Ins",NON,Board of Education     ,005,,Y,,,60,,20,,,,
+1,"Henry P. Armwood, Jr.",NON,Board of Education     ,007,,,,420,,,3896,5178,1359,,
+1,"Carletta Fellows",NON,Board of Education     ,007,Y,,,448,,,4855,9169,1487,,
+1,"Other Write-Ins",NON,Board of Education     ,007,,Y,,1,,,12,23,6,,
+1,"Edward Burroughs, III",NON,Board of Education     ,008,Y,,,21264,,,,2214,921,,
+1,"André Nottingham",NON,Board of Education     ,008,,,,5635,,,,550,354,,
+1,"Other Write-Ins",NON,Board of Education     ,008,,Y,,72,,,,3,8,,

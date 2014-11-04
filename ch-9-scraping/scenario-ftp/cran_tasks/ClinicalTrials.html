@@ -1,0 +1,433 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CRAN Task View: Clinical Trial Design, Monitoring, and Analysis</title>
+  <link rel=stylesheet type="text/css" href="../CRAN_web.css" />
+</head>
+
+<body>
+  <h2>CRAN Task View: Clinical Trial Design, Monitoring, and Analysis</h2>
+  <table summary="ClinicalTrials task view information">
+    <tr><td valign="top"><b>Maintainer:</b></td><td>Ed Zhang and Harry G. Zhang</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x45;&#x64;&#x2e;&#x5a;&#x68;&#x61;&#x6e;&#x67;&#x2e;&#x6a;&#x72;&#x20;&#x61;&#x74;&#x20;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2014-02-02</td></tr>
+  </table>
+
+    <div>
+      <p>
+        This task view gathers information on specific R packages for design,
+monitoring and analysis of data from  clinical trials. It focuses on including
+packages for clinical trial design and monitoring in general plus data analysis
+packages for a specific type of design. Also, it gives a brief introduction to
+important packages for  analyzing clinical trial data. Please refer to task
+views
+<a href="ExperimentalDesign.html">ExperimentalDesign</a>,
+<a href="Survival.html">Survival</a>,
+<a href="Pharmacokinetics.html">Pharmacokinetics</a>
+        for more details on these topics. Please feel free
+to e-mail me regarding new packages or major package updates.
+      </p>
+      <p>
+        <strong>
+          Design and Monitoring
+        </strong>
+      </p>
+      <ul>
+        <li>
+<a href="../packages/TrialSize/index.html">TrialSize</a>
+          This package has more than 80 functions from the book
+          <i>
+            Sample Size Calculations in Clinical Research
+          </i>
+          (Chow &amp; Wang &amp; Shao, 2007, 2nd ed., Chapman &amp;Hall/CRC).
+        </li>
+        <li>
+<a href="../packages/asd/index.html">asd</a>
+          This Package runs simulations for adaptive seamless designs using early outcomes for treatment selection.
+        </li>
+        <li>
+<a href="../packages/bcrm/index.html">bcrm</a>
+          This package implements a wide variety of one and two-parameter Bayesian CRM designs. The program can run interactively, allowing the user to enter outcomes after each cohort has been recruited, or via simulation to assess operating characteristics.
+        </li>
+        <li>
+<a href="../packages/blockrand/index.html">blockrand</a>
+          creates randomizations for block random clinical
+trials. It can also produce a PDF file of randomization cards.
+        </li>
+        <li>
+<a href="../packages/conf.design/index.html">conf.design</a>
+          This small package contains a series of simple tools for constructing and manipulating confounded and fractional factorial designs.
+        </li>
+        <li>
+<a href="../packages/CRTSize/index.html">CRTSize</a>
+          This package contains basic tools for the purpose of sample size estimation in cluster (group) randomized trials. The package contains traditional power-based methods, empirical smoothing (Rotondi and Donner, 2009), and updated meta-analysis techniques (Rotondi and Donner, 2011).
+        </li>
+        <li>
+<a href="../packages/dfcrm/index.html">dfcrm</a>
+          This package provides functions to run the CRM and
+TITE-CRM in phase I trials and calibration tools for trial planning purposes.
+        </li>
+        <li>
+<a href="../packages/experiment/index.html">experiment</a>
+          contains tools for clinical experiments, e.g., a
+randomization tool, and it provides a few special analysis options for clinical
+trials.
+        </li>
+        <li>
+<a href="../packages/FrF2/index.html">FrF2</a>
+          This package creates regular and non-regular Fractional Factorial designs. Furthermore, analysis tools for Fractional Factorial designs with 2-level factors are offered (main effects and interaction plots for all factors simultaneously, cube plot for looking at the simultaneous effects of three factors, full or half normal plot, alias structure in a more readable format than with the built-in function alias). The package is currently subject to intensive development. While much of the intended functionality is already available, some changes and improvements are still to be expected.
+        </li>
+        <li>
+<a href="../packages/GroupSeq/index.html">GroupSeq</a>
+          performs computations related to group sequential
+designs via the alpha spending approach, i.e., interim analyses need not be
+equally spaced, and their number need not be specified in advance.
+        </li>
+        <li>
+<a href="../packages/gsDesign/index.html">gsDesign</a>
+          derives group sequential designs and describes their
+properties.
+        </li>
+        <li>
+<tt>ldBand</tt>
+          from
+<a href="../packages/Hmisc/index.html">Hmisc</a>
+          computes and plots group
+sequential stopping boundaries from the Lan-DeMets method with a variety of
+a-spending functions using the ld98 program from the Department of
+Biostatistics, University of Wisconsin written by DM Reboussin, DL DeMets, KM
+Kim, and KKG Lan.
+        </li>
+        <li>
+<a href="../packages/ldbounds/index.html">ldbounds</a>
+          uses Lan-DeMets Method for group sequential trial; its
+functions calculate bounds and probabilities of a group sequential trial.
+        </li>
+        <li>
+<a href="../packages/longpower/index.html">longpower</a>
+          The longpower package contains functions for computing power and sample size for linear models of longitudinal data based on the formula due to Liu and Liang (1997) and Diggle et al (2002). Either formula is expressed in terms of marginal model or Generalized Estimating Equations (GEE) parameters. This package contains functions which translate pilot mixed effect model parameters (e.g. random intercept and/or slope) into marginal model parameters so that the formulas of Diggle et al or Liu and Liang formula can be applied to produce sample size calculations for two sample longitudinal designs assuming known variance.
+        </li>
+        <li>
+<a href="../packages/PIPS/index.html">PIPS</a>
+          generates predicted interval plots, simulates
+and plots confidence intervals of an effect estimate given observed data
+and a hypothesis about the distribution of future data.
+        </li>
+        <li>
+<a href="../packages/PowerTOST/index.html">PowerTOST</a>
+          contains functions to calculate power and sample size for various study designs used for bioequivalence studies. See function known.designs() for study designs covered. Moreover the package contains functions for power and sample size based on 'expected' power in case of uncertain (estimated) variability. Added are functions for the power and sample size for the ratio of two means with normally distributed data on the original scale (based on Fieller's confidence ('fiducial') interval).
+        </li>
+        <li>
+<a href="../packages/pwr/index.html">pwr</a>
+          has power analysis functions along the lines of Cohen (1988).
+        </li>
+        <li>
+<a href="../packages/PwrGSD/index.html">PwrGSD</a>
+          is a set of tools to compute power in a group sequential
+design.
+        </li>
+        <li>
+<a href="../packages/qtlDesign/index.html">qtlDesign</a>
+          provides tools for the design of QTL experiments.
+        </li>
+        <li>
+<a href="../packages/samplesize/index.html">samplesize</a>
+          computes sample size for Student's t-test with equal and nonequal variances and for the Wilcoxon-Mann-Whitney test for categorical data with and without ties.
+        </li>
+        <li>
+<a href="../packages/seqmon/index.html">seqmon</a>
+          is computes the probability of crossing sequential
+efficacy and futility boundaries in a clinical trial. It implements the
+Armitage-McPherson and Rowe Algorithm using the method described in Schoenfeld
+(2001).
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Design and Analysis
+        </strong>
+      </p>
+      <ul>
+        <li>
+          Package
+<a href="../packages/AGSDest/index.html">AGSDest</a>
+          This package provides tools and functions for parameter estimation in adaptive group sequential trials.
+        </li>
+        <li>
+          Package
+<a href="../packages/clinfun/index.html">clinfun</a>
+          has functions for both design and analysis of
+clinical trials. For phase II trials, it has functions to calculate sample size,
+effect size, and power based on Fisher's exact test, the operating
+characteristics of a two-stage boundary, Optimal and Minimax 2-stage Phase II
+designs given by Richard Simon, the exact 1-stage Phase II design and can
+compute a stopping rule and its operating characteristics for toxicity
+monitoring based repeated significance testing. For phase III trials, it can
+calculate sample size for group sequential designs.
+        </li>
+        <li>
+          Package
+<a href="../packages/CRM/index.html">CRM</a>
+          Continual Reassessment Method (CRM) simulator for Phase I Clinical Trials.
+        </li>
+        <li>
+          Package
+<a href="../packages/DoseFinding/index.html">DoseFinding</a>
+          provides functions for the design and analysis 
+of dose-finding experiments (for example pharmaceutical Phase II clinical trials). 
+It provides functions for: multiple contrast tests, fitting non-linear dose-response models, 
+calculating optimal designs and an implementation of the
+<a href="../packages/MCPMod/index.html">MCPMod</a>
+          methodology. 
+Currently only normally distributed homoscedastic endpoints are supported.
+        </li>
+        <li>
+<a href="../packages/MCPMod/index.html">MCPMod</a>
+          This package implements a methodology for the design and analysis of dose-response studies that combines aspects of multiple comparison procedures and modeling approaches (Bretz, Pinheiro and Branson, 2005, Biometrics 61, 738-748). The package provides tools for the analysis of dose finding trials as well as a variety of tools necessary to plan a trial to be conducted with the MCPMod methodology.
+        </li>
+        <li>
+          Package
+<a href="../packages/TEQR/index.html">TEQR</a>
+          The target equivalence range (TEQR) design is a frequentist implementation of the modified toxicity probability interval (mTPI) design and a competitor to the standard 3+3 design (3+3). The 3+3 is the work horse design in Phase I. It is good at determining if a safe dose exits, but provides poor accuracy and precision in estimating the level of toxicity at the maximum tolerated dose (MTD). The TEQR is better than the 3+3 when compared on: 1) the number of times the dose at or nearest the target toxicity level was selected as the MTD, 2) the number of subjects assigned to doses levels, at or nearest the MTD, and 3) the overall trial DLT rate. TEQR more accurately and more precisely estimates the rate of toxicity at the MTD because a larger number of subjects are studied at the MTD dose. The TEQR on average uses fewer subjects and provide reasonably comparable results to the continual reassessment method (CRM) in the number of times the dose at or nearest the target toxicity level was selected as the MTD and the number of subjects assigned doses, at, or nearest the target and in overall DLT rate.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Analysis for Specific Designs
+        </strong>
+      </p>
+      <ul>
+        <li>
+<a href="../packages/adaptTest/index.html">adaptTest</a>
+          The functions defined in this program serve for implementing adaptive two-stage tests. Currently, four tests are included: Bauer and Koehne (1994), Lehmacher and Wassmer (1999), Vandemeulebroecke (2006), and the horizontal conditional error function. User-defined tests can also be implemented. Reference: Vandemeulebroecke, An investigation of two-stage tests, Statistica Sinica 2006.
+        </li>
+        <li>
+<a href="../packages/bifactorial/index.html">bifactorial</a>
+          makes global and multiple inferences for given bi-
+and trifactorial clinical trial designs using bootstrap methods and a classical
+approach.
+        </li>
+        <li>
+<a href="../packages/clinsig/index.html">clinsig</a>
+          This function calculates both parametric and non-parametric versions of the Jacobson-Truax estimates of clinical significance.
+        </li>
+        <li>
+<a href="../packages/MChtest/index.html">MChtest</a>
+          performs Monte Carlo hypothesis tests. It allows a couple
+of different sequential stopping boundaries (a truncated sequential probability
+ratio test boundary and a boundary proposed by Besag and Clifford (1991). It
+gives valid p-values and confidence intervals on p-values.
+        </li>
+        <li>
+<a href="../packages/nppbib/index.html">nppbib</a>
+          implements a nonparametric statistical test for rank or score data from partially-balanced incomplete block-design experiments.
+        </li>
+        <li>
+<a href="../packages/speff2trial/index.html">speff2trial</a>, the package performs estimation and testing of the
+treatment effect in a 2-group randomized clinical trial with a quantitative or
+dichotomous endpoint.
+        </li>
+        <li>
+<a href="../packages/tdm/index.html">tdm</a>
+          This package can be used to estimate individual pharmacokinetic parameters with one or more drug serum/plasma concentrations obtained from a single subject or multiple subjects using OpenBUGS (Bayesian inference Using Gibbs Sampling) interfaced through BRugs. Besides, it also can calculate a suggested dose with the target drug concentration (C ->D) or calculate a predicted drug concentration with a given dose (D -> C).
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Analysis in General
+        </strong>
+      </p>
+      <ul>
+        <li>
+          Base R, especially the stats package, has a lot of functionality useful
+for design and analysis of clinical trials. For example,
+<tt>chisq.test</tt>,
+<tt>prop.test</tt>,
+<tt>binom.test</tt>,
+<tt>t.test</tt>,
+<tt>wilcox.test</tt>,
+<tt>kruskal.test</tt>,
+<tt>mcnemar.test</tt>,
+<tt>cor.test</tt>,
+<tt>power.t.test</tt>,
+<tt>power.prop.test</tt>,
+<tt>power.anova.test</tt>,
+<tt>lm</tt>,
+<tt>glm</tt>,
+<tt>nls</tt>,
+<tt>anova</tt>
+          (and its
+<tt>lm</tt>
+          and
+<tt>glm</tt>
+          methods) among many others.
+        </li>
+        <li>
+<a href="../packages/asypow/index.html">asypow</a>
+          has a set of routines for calculating power and related
+quantities utilizing asymptotic likelihood ratio methods.
+        </li>
+        <li>
+<a href="../packages/coin/index.html">coin</a>
+          offers conditional inference procedures for the general
+independence problem including two-sample, K-sample (non-parametric ANOVA),
+correlation, censored, ordered and multivariate problems.
+        </li>
+        <li>
+<a href="../packages/epibasix/index.html">epibasix</a>
+          has functions such as
+<tt>diffdetect</tt>,
+<tt>n4means</tt>
+          for continuous outcome and
+<tt>n4props</tt>
+          and
+functions for matched pairs analysis in randomized trials.
+        </li>
+        <li>
+<a href="../packages/epicalc/index.html">epicalc</a>
+          provides a set of functions for sample size calculations,
+such as
+<tt>n.for.2means</tt>,
+<tt>n.for.2p</tt>,
+<tt>n.for.equi.2p</tt>,
+<tt>n.for.noninferior.2p</tt>,
+<tt>n.for.cluster.2p</tt>, etc.
+        </li>
+        <li>
+<tt>ae.dotplot</tt>
+          from
+<a href="../packages/HH/index.html">HH</a>
+          shows a two-panel display
+of the most frequently occurring adverse events
+in the active arm of a clinical study.
+        </li>
+        <li>
+          The
+<a href="../packages/Hmisc/index.html">Hmisc</a>
+          package contains around 200 miscellaneous functions useful for such things as data analysis,
+high-level graphics, utility operations, functions for computing sample size and power, translating
+SAS datasets into S, imputing missing values, advanced table making, variable clustering, character
+string manipulation, conversion of S objects to LaTeX code, recoding variables, and bootstrap repeated
+measures analysis.
+        </li>
+        <li>
+<a href="../packages/multcomp/index.html">multcomp</a>
+          covers simultaneous tests and confidence intervals for
+general linear hypotheses in parametric models, including linear, generalized
+linear, linear mixed effects, and survival models.
+        </li>
+        <li>
+<a href="../packages/survival/index.html">survival</a>
+          contains descriptive statistics, two-sample tests,
+parametric accelerated failure models, Cox model. Delayed entry (truncation)
+allowed for all models; interval censoring for parametric models. Case-cohort
+designs.
+        </li>
+        <li>
+<a href="../packages/ssanv/index.html">ssanv</a>
+          is a set of functions to calculate sample size for
+two-sample difference in means tests. Does adjustments for either nonadherence
+or variability that comes from using data to estimate parameters.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Meta-Analysis
+        </strong>
+      </p>
+      <ul>
+        <li>
+<a href="../packages/copas/index.html">copas</a>
+          is a package for statistical methods to model and adjust
+for bias in meta-analysis
+        </li>
+        <li>
+<a href="../packages/meta/index.html">meta</a>
+          is for fixed and random effects meta-analysis. It has
+Functions for tests of bias, forest and funnel plot.
+        </li>
+        <li>
+<a href="../packages/metafor/index.html">metafor</a>
+          consists of a collection of functions for conducting
+meta-analyses. Fixed- and random-effects models (with and without
+moderators) can be fitted via the general linear (mixed-effects) model. For 2x2
+table data, the Mantel-Haenszel and Peto's method are also implemented.
+        </li>
+        <li>
+<a href="../packages/metaLik/index.html">metaLik</a>
+          Likelihood inference in meta-analysis and meta-regression models.
+        </li>
+        <li>
+<a href="../packages/rmeta/index.html">rmeta</a>
+          has functions for simple fixed and random effects
+meta-analysis for two-sample comparisons and cumulative meta-analyses. Draws
+standard summary plots, funnel plots, and computes summaries and tests for
+association and heterogeneity.
+        </li>
+      </ul>
+    </div>
+
+  <h3>CRAN packages:</h3>
+  <ul>
+    <li><a href="../packages/adaptTest/index.html">adaptTest</a> (core)</li>
+    <li><a href="../packages/AGSDest/index.html">AGSDest</a></li>
+    <li><a href="../packages/asd/index.html">asd</a> (core)</li>
+    <li><a href="../packages/asypow/index.html">asypow</a></li>
+    <li><a href="../packages/bcrm/index.html">bcrm</a> (core)</li>
+    <li><a href="../packages/bifactorial/index.html">bifactorial</a> (core)</li>
+    <li><a href="../packages/blockrand/index.html">blockrand</a> (core)</li>
+    <li><a href="../packages/clinfun/index.html">clinfun</a> (core)</li>
+    <li><a href="../packages/clinsig/index.html">clinsig</a></li>
+    <li><a href="../packages/coin/index.html">coin</a></li>
+    <li><a href="../packages/conf.design/index.html">conf.design</a></li>
+    <li><a href="../packages/copas/index.html">copas</a></li>
+    <li><a href="../packages/CRM/index.html">CRM</a></li>
+    <li><a href="../packages/CRTSize/index.html">CRTSize</a> (core)</li>
+    <li><a href="../packages/dfcrm/index.html">dfcrm</a> (core)</li>
+    <li><a href="../packages/DoseFinding/index.html">DoseFinding</a></li>
+    <li><a href="../packages/epibasix/index.html">epibasix</a></li>
+    <li><a href="../packages/epicalc/index.html">epicalc</a></li>
+    <li><a href="../packages/experiment/index.html">experiment</a> (core)</li>
+    <li><a href="../packages/FrF2/index.html">FrF2</a></li>
+    <li><a href="../packages/GroupSeq/index.html">GroupSeq</a> (core)</li>
+    <li><a href="../packages/gsDesign/index.html">gsDesign</a> (core)</li>
+    <li><a href="../packages/HH/index.html">HH</a></li>
+    <li><a href="../packages/Hmisc/index.html">Hmisc</a> (core)</li>
+    <li><a href="../packages/ldbounds/index.html">ldbounds</a> (core)</li>
+    <li><a href="../packages/longpower/index.html">longpower</a></li>
+    <li><a href="../packages/MChtest/index.html">MChtest</a> (core)</li>
+    <li><a href="../packages/MCPMod/index.html">MCPMod</a></li>
+    <li><a href="../packages/meta/index.html">meta</a></li>
+    <li><a href="../packages/metafor/index.html">metafor</a></li>
+    <li><a href="../packages/metaLik/index.html">metaLik</a></li>
+    <li><a href="../packages/multcomp/index.html">multcomp</a></li>
+    <li><a href="../packages/nppbib/index.html">nppbib</a></li>
+    <li><a href="../packages/PIPS/index.html">PIPS</a> (core)</li>
+    <li><a href="../packages/PowerTOST/index.html">PowerTOST</a> (core)</li>
+    <li><a href="../packages/pwr/index.html">pwr</a> (core)</li>
+    <li><a href="../packages/PwrGSD/index.html">PwrGSD</a> (core)</li>
+    <li><a href="../packages/qtlDesign/index.html">qtlDesign</a> (core)</li>
+    <li><a href="../packages/rmeta/index.html">rmeta</a></li>
+    <li><a href="../packages/samplesize/index.html">samplesize</a> (core)</li>
+    <li><a href="../packages/seqmon/index.html">seqmon</a> (core)</li>
+    <li><a href="../packages/speff2trial/index.html">speff2trial</a> (core)</li>
+    <li><a href="../packages/ssanv/index.html">ssanv</a></li>
+    <li><a href="../packages/survival/index.html">survival</a> (core)</li>
+    <li><a href="../packages/tdm/index.html">tdm</a></li>
+    <li><a href="../packages/TEQR/index.html">TEQR</a> (core)</li>
+    <li><a href="../packages/TrialSize/index.html">TrialSize</a> (core)</li>
+  </ul>
+
+  <h3>Related links:</h3>
+  <ul>
+    <li>CRAN Task View: <a href="ExperimentalDesign.html">ExperimentalDesign</a></li>
+    <li>CRAN Task View: <a href="Survival.html">Survival</a></li>
+    <li>CRAN Task View: <a href="Pharmacokinetics.html">Pharmacokinetics</a></li>
+    <li><a href="http://www.R-project.org/doc/R-FDA.pdf">
+  Regulatory Compliance and Validation Issues (A Guidance Document for the Use of R in Regulated Clinical Trial Environments)
+</a></li>
+  </ul>
+
+</body>
+</html>
+ 

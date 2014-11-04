@@ -1,0 +1,1052 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CRAN Task View: Psychometric Models and Methods</title>
+  <link rel=stylesheet type="text/css" href="../CRAN_web.css" />
+</head>
+
+<body>
+  <h2>CRAN Task View: Psychometric Models and Methods</h2>
+  <table summary="Psychometrics task view information">
+    <tr><td valign="top"><b>Maintainer:</b></td><td>Patrick Mair</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x6d;&#x61;&#x69;&#x72;&#x20;&#x61;&#x74;&#x20;&#x66;&#x61;&#x73;&#x2e;&#x68;&#x61;&#x72;&#x76;&#x61;&#x72;&#x64;&#x2e;&#x65;&#x64;&#x75;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2014-02-02</td></tr>
+  </table>
+
+    <div>
+      Psychometrics is concerned with the design and analysis of research and
+the measurement of human characteristics. Psychometricians have also
+worked collaboratively with those in the field of statistics and
+quantitative methods to develop improved ways to organize and analyze
+data.  Since much functionality is already contained in base R and there
+is considerable overlap between tools for psychometry and tools
+described in other views, particularly in
+<a href="SocialSciences.html">SocialSciences</a>,
+we only give a brief overview of packages that are closely related to
+psychometric methodology.
+      <p>
+        <a href="mailto:mair@fas.harvard.edu">
+          Please let us know
+        </a>
+        if we have omitted
+something of importance, or if a new package or function
+should be mentioned here.
+      </p>
+      <p>
+        <strong>
+          Item Response Theory (IRT):
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/eRm/index.html">eRm</a>
+          package fits extended Rasch models, i.e. the ordinary
+     Rasch model for dichotomous data (RM), the linear logistic test model
+     (LLTM), the rating scale model (RSM) and its linear extension (LRSM),
+     the partial credit model (PCM) and its linear extension (LPCM) using
+     conditional ML estimation. Missing values are allowed.
+        </li>
+        <li>
+          The package
+<a href="../packages/ltm/index.html">ltm</a>
+          also fits the simple RM.  Additionally,
+     functions for estimating Birnbaum's 2- and 3-parameter models based on a
+     marginal ML approach are implemented as well as the graded response
+     model for polytomous data, and the linear multidimensional logistic
+     model.
+        </li>
+        <li>
+<a href="../packages/TAM/index.html">TAM</a>
+          fits unidimensional and multidimensional item response models and also includes multifaceted models, 
+    latent regression models and options for drawing plausible values.
+        </li>
+        <li>
+          The
+<a href="../packages/mirt/index.html">mirt</a>
+          allows for the analysis of dichotomous and polytomous response data using
+unidimensional and multidimensional latent trait models under the IRT paradigm. Exploratory and confirmatory models can be
+estimated with quadrature (EM) or stochastic (MHRM) methods. Confirmatory bi-factor and two-tier analyses are available for
+modeling item testlets. Multiple group analysis and mixed effects designs also are available for detecting differential item functioning
+and modelling item and person covariates.
+        </li>
+        <li>
+          The
+<a href="../packages/mcIRT/index.html">mcIRT</a>
+          package provides functions to estimate the Nominal Response Model and the Nested Logit Model. Both are models to examine multiple-choice items 
+  and other polytomous response formats. Some additional uni- and multidimensional item response models (especially for locally dependent item responses) and 
+  some exploratory methods (DETECT, LSDM, model-based reliability) are included in
+<a href="../packages/sirt/index.html">sirt</a>.
+        </li>
+        <li>
+<a href="../packages/MultiLCIRT/index.html">MultiLCIRT</a>
+          estimates IRT models under (1) multidimensionality assumption, (2) discreteness of
+latent traits, (3) binary and ordinal polytomous items.
+        </li>
+        <li>
+          Conditional maximum likelihood estimation via the EM algorithm and
+information-criterion-based model selection in binary mixed Rasch models are
+implemented in the
+<a href="../packages/mRm/index.html">mRm</a>
+          package and the
+<a href="../packages/psychomix/index.html">psychomix</a>
+          package.
+The
+<a href="../packages/mixRasch/index.html">mixRasch</a>
+          package estimates mixture Rasch models, including the
+dichotomous Rasch model, the rating scale model, and the partial credit model.
+        </li>
+        <li>
+          Item and ability parameters can be calibrated using the package
+<a href="../packages/plink/index.html">plink</a>. It provides unidimensional and multidimensional methods
+such as Mean/Mean, Mean/Sigma, Haebara, 
+     and Stocking-Lord methods for dichotomous (1PL, 2PL and 3PL) and/or
+polytomous (graded response, partial credit/generalized partial credit, nominal,
+and multiple-choice model) items. 
+     The multidimensional methods include the Reckase-Martineau method and
+extensions 
+     of the Haebara and Stocking-Lord method.
+        </li>
+        <li>
+          The
+<a href="../packages/equateIRT/index.html">equateIRT</a>
+          package computes direct, chain and average (bisector) equating coefficients with 
+  standard errors using Item Response Theory (IRT) methods for dichotomous items.
+        </li>
+        <li>
+          The
+<a href="../packages/EstCRM/index.html">EstCRM</a>
+          package calibrates the parameters for Samejima's
+Continuous IRT Model via EM algorithm and Maximum Likelihood. It allows to
+compute item fit residual statistics, to draw empirical 3D item category
+response curves, to draw theoretical 3D item category response curves, and to
+generate data under the CRM for simulation studies.
+        </li>
+        <li>
+          The
+<a href="../packages/difR/index.html">difR</a>
+          package contains several traditional methods to detect
+DIF in dichotomously scored items. Both uniform and non-uniform DIF effects can
+be detected, with methods relying upon item response models or not. Some methods
+deal with more than one focal group.
+        </li>
+        <li>
+          The package
+<a href="../packages/lordif/index.html">lordif</a>
+          provides a logistic regression framework for
+detecting various types of differential item functioning (DIF).
+        </li>
+        <li>
+          The
+<a href="../packages/catR/index.html">catR</a>
+          package allows for computarized adaptive testing using
+IRT methods.
+        </li>
+        <li>
+          The package
+<a href="../packages/plRasch/index.html">plRasch</a>
+          computes maximum likelihood estimates and
+     pseudo-likelihood estimates of parameters of Rasch models for polytomous
+     (or dichotomous) items and multiple (or single) latent traits. Robust
+     standard errors for the pseudo-likelihood estimates are also computed.
+        </li>
+        <li>
+          A multilevel Rasch model can be estimated using the package
+<a href="../packages/lme4/index.html">lme4</a>,
+<a href="../packages/nlme/index.html">nlme</a>, and
+<a href="../packages/MCMCglmm/index.html">MCMCglmm</a>
+          with functions for mixed-effects models with crossed or
+     partially crossed random effects. The
+<a href="../packages/ordinal/index.html">ordinal</a>
+          package implements this approach for polytomous models. An infrastructure for
+estimating tree-structured item response models of the GLMM family using
+<a href="../packages/lme4/index.html">lme4</a>
+          is provided in
+<a href="../packages/irtrees/index.html">irtrees</a>.
+        </li>
+        <li>
+          Nonparametric IRT analysis can be computed by means if the
+<a href="../packages/mokken/index.html">mokken</a>
+          package. It includes an automated item selection algorithm,
+and various checks of model assumptions. In relation to that,
+<a href="../packages/fwdmsa/index.html">fwdmsa</a>
+          performs the Forward Search for Mokken scale analysis. It detects outliers, it
+produces several types of diagnostic plots.
+        </li>
+        <li>
+          This
+<a href="../packages/KernSmoothIRT/index.html">KernSmoothIRT</a>
+          package fits nonparametric item and option
+characteristic curves using kernel smoothing. It allows for optimal selection of
+the smoothing bandwidth using cross-validation and a variety of exploratory
+plotting tools.
+        </li>
+        <li>
+          The
+<a href="../packages/RaschSampler/index.html">RaschSampler</a>
+          allows the construction of exact Rasch model
+tests by generating random zero-one matrices with given marginals.
+        </li>
+        <li>
+          Simple Rasch computations such a simulating data and joint maximum
+likelihood are included in the
+<a href="../packages/MiscPsycho/index.html">MiscPsycho</a>
+          package.
+        </li>
+        <li>
+<a href="../packages/cacIRT/index.html">cacIRT</a>
+          computes classification accuracy and consistency under
+Item Response Theory. Currently, only works for 3PL IRT models (or 2PL or 1PL)
+and only for independent cut scores.
+        </li>
+        <li>
+          The package
+<a href="../packages/irtoys/index.html">irtoys</a>
+          provides a simple common interface to the
+estimation of item parameters in IRT models for binary responses with three
+different programs (ICL, BILOG-MG, and ltm, and a variety of functions useful
+with IRT models.
+        </li>
+        <li>
+          The
+<a href="../packages/CDM/index.html">CDM</a>
+          package estimates cognitive diagnosis models (DINA, DINO and GDINA models) and the general diagnostic model with discrete and quasi-continuous multidimensional latent variables which also includes the multidimensional compensatory item response model.
+        </li>
+        <li>
+          Gaussian ordination, related to logistic IRT and also approximated as
+    maximum likelihood estimation through canonical correspondence analysis
+    is implemented in various forms in the package
+<a href="../packages/VGAM/index.html">VGAM</a>.
+        </li>
+        <li>
+          Two additional IRT packages (for Microsoft Windows only) are available and
+documented on the JSS site.
+    The package
+          <a href="http://www.jstatsoft.org/v20/i05/" target="_top">
+            mlirt
+          </a>
+          computes multilevel IRT models,
+    and
+          <a href="http://www.jstatsoft.org/v20/i07/" target="_top">
+            cirt
+          </a>
+          uses
+a joint
+    hierarchically built up likelihood for estimating a two-parameter normal
+    ogive model for responses and a log-normal model for response times.
+        </li>
+        <li>
+          Bayesian approaches for estimating item and person parameters by means of
+Gibbs-Sampling 
+    are included in
+<a href="../packages/MCMCpack/index.html">MCMCpack</a>. In addition, the
+<a href="../packages/pscl/index.html">pscl</a>
+          package allows for Bayesian IRT and roll call analysis.
+        </li>
+        <li>
+          The
+<a href="../packages/latdiag/index.html">latdiag</a>
+          package produces commands to drive the dot program
+from graphviz to produce a 
+     graph useful in deciding whether a set of binary items might have a latent
+scale with non-crossing ICCs.
+        </li>
+        <li>
+          The purpose of the
+<a href="../packages/rpf/index.html">rpf</a>
+          package is to factor out logic and math
+common to IRT fitting, diagnostics, and analysis. It is envisioned as core
+support code suitable for more specialized IRT packages to build upon.
+        </li>
+        <li>
+          The
+<a href="../packages/classify/index.html">classify</a>
+          package can be used to examine classification
+accuracy and consistency under IRT models.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Correspondence Analysis (CA):
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The package
+<a href="../packages/ca/index.html">ca</a>
+          comprises two parts, one for simple
+    correspondence analysis and one for multiple and joint correspondence
+    analysis.  Within each part, functions for computation, summaries and
+    visualization in two and three dimensions are provided, including
+    options to display supplementary points and perform subset analyses.
+    Other features are visualization functions that offer features such as
+    different scaling options for biplots and three-dimensional maps using
+    the rgl package. Graphical options include shading and
+    sizing plot symbols for the points according to their contributions to
+    the map and masses respectively.
+        </li>
+        <li>
+          Simple and canonical CA are provided by the package
+<a href="../packages/anacor/index.html">anacor</a>. It 
+    allows for diffenrent scaling methods such as standard scaling, Benzecri scaling, 
+    centroid scaling, and Goodman scaling. Along with well-known two- and three-dimensional 
+    joint plots including confidence ellipsoids, it offers alternative plotting possibilities 
+    in terms of transformation plots, Benzecri plots, and regression plots.
+        </li>
+        <li>
+          A GUI (Windows only) that allows the user to construct interactive Biplots is
+offered by the package
+<a href="../packages/BiplotGUI/index.html">BiplotGUI</a>.
+        </li>
+        <li>
+          Homogeneity analysis aka multiple CA and various Gifi extensions can be
+computed 
+    by means of the
+<a href="../packages/homals/index.html">homals</a>
+          package. Hull plots, span plots, Voronoi
+plots, star plots,
+    projection plots and many others can be produced.
+        </li>
+        <li>
+          Simple and multiple correspondence analysis can be performed using
+<tt>corresp()</tt>
+          and
+<tt>mca()</tt>
+          in package
+<a href="../packages/MASS/index.html">MASS</a>.
+        </li>
+        <li>
+          The package
+<a href="../packages/ade4/index.html">ade4</a>
+          contains an extensive set of
+    functions covering, e.g., principal components, simple and multiple,
+    fuzzy, non symmetric, and decentered correspondence
+    analysis.  Additional functionality is provided at
+          <a href="http://www.bioconductor.org/" target="_top">
+            Bioconductor
+          </a>
+          in
+    the package
+<tt>made4</tt>
+          (see also
+          <a href="http://bioinf.ucd.ie/people/aedin/R/" target="_top">
+            here
+          </a>).
+        </li>
+        <li>
+          The package
+<a href="../packages/cocorresp/index.html">cocorresp</a>
+          fits predictive and symmetric
+    co-correspondence analysis (CoCA) models to relate one data matrix to
+    another data matrix.
+        </li>
+        <li>
+          Apart from several factor analytic methods
+<a href="../packages/FactoMineR/index.html">FactoMineR</a>
+          performs CA including supplementary row and/or
+    column points and multiple correspondence analysis (MCA) with
+    supplementary individuals, supplementary quantitative variables and
+    supplementary qualitative variables.
+        </li>
+        <li>
+          Package
+<a href="../packages/vegan/index.html">vegan</a>
+          supports all basic ordination methods, including
+    non-metric multidimensional scaling. The constrained ordination methods
+    include constrained analysis of proximities, redundancy analysis, and
+    constrained (canonical) and partially constrained correspondence
+    analysis.
+        </li>
+        <li>
+          SVD based multivariate exploratory methods such as PCA, CA, MCA 
+    (as well as a Hellinger form of CA), generalized PCA are implemented in
+<a href="../packages/ExPosition/index.html">ExPosition</a>. 
+    The package also allows for supplementary data projection.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Structural Equation Models, Factor Analysis, PCA:
+        </strong>
+      </p>
+      <ul>
+        <li>
+          Ordinary factor analysis (FA) is the package stats as function
+<tt>factanal()</tt>. Principal component analysis (PCA) can be fitted with
+<tt>prcomp()</tt>
+          (based on
+<tt>svd()</tt>, preferred) as well as
+<tt>princomp()</tt>
+          (based on
+<tt>eigen()</tt>
+          for compatibility with
+S-PLUS). Additional
+    rotation methods for FA based on gradient projection algorithms
+    can be found in the package
+<a href="../packages/GPArotation/index.html">GPArotation</a>. The package
+<a href="../packages/nFactors/index.html">nFactors</a>
+          produces
+    a non-graphical solution to the Cattell scree test. Some graphical PCA
+representations
+    can be found in the
+<a href="../packages/psy/index.html">psy</a>
+          package.
+        </li>
+        <li>
+          The
+<a href="../packages/sem/index.html">sem</a>
+          package fits general (i.e., latent-variable) SEMs by
+FIML,
+    and structural equations in observed-variable models by 2SLS. Categorical
+    variables in SEMs can be accommodated via the
+<a href="../packages/polycor/index.html">polycor</a>
+          package.
+    The
+<a href="../packages/systemfit/index.html">systemfit</a>
+          package implements a wider variety of estimators
+    for observed-variables models, including nonlinear simultaneous-equations
+models.
+    See also the
+<a href="../packages/pls/index.html">pls</a>
+          package, for partial least-squares estimation,
+    the
+          <a href="http://CRAN.R-project.org/src/contrib/Views/gR.html" target="_top">
+            gR
+          </a>
+          task view for graphical models and the
+          <a href="http://CRAN.R-project.org/src/contrib/Views/SocialSciences.html" target="_top">
+            SocialSciences
+          </a>
+          task view for other related packages.
+        </li>
+        <li>
+          The package
+<a href="../packages/lavaan/index.html">lavaan</a>
+          can be used to estimate a large variety of
+multivariate statistical models, including path analysis, confirmatory factor
+analysis, structural equation modeling and growth curve models. It includes the
+lavaan model syntax which allows users to express their models in a compact way
+and allows for ML, GLS, WLS, robust ML using Satorra-Bentler corrections, and
+FIML for data with missing values. It fully supports for meanstructures and
+multiple groups and reports standardized solutions, fit measures, modification
+indices and more as output.
+        </li>
+        <li>
+          The
+<a href="../packages/lavaan.survey/index.html">lavaan.survey</a>
+          package allows for complex survey structural equation modeling (SEM). It fits structural equation models (SEM) including factor analysis, multivariate regression models with latent variables and many other latent variable models while correcting estimates, standard errors, and chi-square-derived fit measures for a complex sampling design. It incorporates clustering, stratification, sampling weights, and finite population corrections into a SEM analysis.
+        </li>
+        <li>
+          A general implementation of a computational framework for latent variable
+models (including structural equation models) is given in
+<a href="../packages/lava/index.html">lava</a>. The
+<a href="../packages/lava.tobit/index.html">lava.tobit</a>
+          package generalizes the framework to censored and
+dichotomous variables via a probit link formulation.
+        </li>
+        <li>
+          The package
+<a href="../packages/semPLS/index.html">semPLS</a>
+          fits structural equation models using partial
+least squares (PLS). The PLS approach is referred to as soft-modeling technique
+requiring no distributional assumptions on the observed data. PLS methods with
+emphasis on structural equation models with latent variables are given in
+<a href="../packages/plspm/index.html">plspm</a>
+          which also includes
+<a href="../packages/pathmox/index.html">pathmox</a>
+          as a companion package
+with approaches of segmentation trees in PLS path modeling.
+        </li>
+        <li>
+<a href="../packages/simsem/index.html">simsem</a>
+          is a package designed to aid in Monte Carlo simulations
+using SEM (for methodological investigations, power analyses and much more).
+        </li>
+        <li>
+<a href="../packages/semTools/index.html">semTools</a>
+          is a package of add on functions that can aid in fitting
+SEMs in R (for example one function automates imputing missing data, running
+imputed datasets and combining the results from these datasets).
+        </li>
+        <li>
+<a href="../packages/semPlot/index.html">semPlot</a>
+          produces path diagrams and visual analysis for outputs of various SEM packages.
+        </li>
+        <li>
+<a href="../packages/SEMModComp/index.html">SEMModComp</a>
+          conducts tests of difference in fit for mean and
+covariance structure models as in structural equation modeling (SEM).
+        </li>
+        <li>
+          The package
+<a href="../packages/FAiR/index.html">FAiR</a>
+          performs factor analysis based on a genetic algorithm
+    for optimization. This makes it possible to impose a wide range of restrictions on
+    the factor analysis model, whether using exploratory factor analysis, confirmatory
+    factor analysis, or a new estimator called semi-exploratory factor analysis (SEFA).
+        </li>
+        <li>
+          FA and PCA with supplementary individuals and supplementary
+quantitative/qualitative variables
+    can be performed using the
+<a href="../packages/FactoMineR/index.html">FactoMineR</a>
+          package whereas
+<a href="../packages/MCMCpack/index.html">MCMCpack</a>
+          has some options for sampling from
+    the posterior for ordinal and mixed factor models.
+        </li>
+        <li>
+          The
+<a href="../packages/homals/index.html">homals</a>
+          package provides nonlinear PCA (aka categorical PCA) and, by defining sets,
+nonlinear canonical
+    correlation analysis (models of the Gifi-family).
+        </li>
+        <li>
+          Independent component analysis (ICA) can be computed using
+<a href="../packages/fastICA/index.html">fastICA</a>.
+        </li>
+        <li>
+          A desired number of robust principal components can be computed with the
+<a href="../packages/pcaPP/index.html">pcaPP</a>
+          package.
+        </li>
+        <li>
+          The
+<a href="../packages/pcaPA/index.html">pcaPA</a>
+          package performs a parallel analysis of continuous, ordered 
+  (including dichotomous/binary as a special case) or mixed type of data associated with a principal components analysis.
+        </li>
+        <li>
+          The package
+<a href="../packages/psych/index.html">psych</a>
+          includes functions such as
+<tt>fa.parallel()</tt>
+          and
+<tt>VSS()</tt>
+          for estimating the
+    appropriate number of factors/components as well as
+<tt>ICLUST()</tt>
+          for item clustering.
+        </li>
+        <li>
+          An interface between the EQS software for SEM and R is provided by the
+<a href="../packages/REQS/index.html">REQS</a>
+          package.
+        </li>
+        <li>
+          The
+          <a href="http://openmx.psyc.virginia.edu/">
+            OpenMX
+          </a>
+          package allows
+estimation of a wide variety of advanced multivariate statistical models. It
+consists of a library of functions and optimizers that allow you to quickly and
+flexibly define an SEM model and estimate parameters given observed data. It is
+available under this
+          <a href="http://openmx.psyc.virginia.edu/">
+            link
+          </a>.
+        </li>
+        <li>
+          The
+<a href="../packages/MplusAutomation/index.html">MplusAutomation</a>
+          package allows to automate latent variable
+model estimation and interpretation using Mplus.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Multidimensional Scaling (MDS):
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/smacof/index.html">smacof</a>
+          package provides the following approaches of
+multidimensional scaling (MDS) based on stress 
+    minimization by means of majorization: Simple smacof on symmetric
+dissimilarity matrices,
+    smacof for rectangular matrices (unfolding models), smacof with constraints
+on the configuration, 
+    three-way smacof for individual differences (including constraints for
+idioscal, indscal, and 
+    identity), and spherical smacof (primal and dual algorithm). Each of these
+approaches is 
+    implemented in a metric and nonmetric manner including primary, secondary,
+and tertiary approaches 
+    for tie handling.
+        </li>
+        <li>
+          The
+<a href="../packages/PTAk/index.html">PTAk</a>
+          package provides a multiway method to decompose a
+    tensor (array) of any order, as a generalisation of SVD also supporting
+    non-identity metrics and penalisations. 2-way SVD with these extensions
+    is also available. Additionally, the package includes some other
+    multiway methods: PCAn (Tucker-n) and PARAFAC/CANDECOMP with extensions.
+        </li>
+        <li>
+<a href="../packages/MASS/index.html">MASS</a>
+          and stats provide
+    functionalities for computing classical MDS using the
+<tt>cmdscale()</tt>
+          function. Sammon mapping
+<tt>sammon()</tt>
+          and non-metric MDS
+<tt>isoMDS()</tt>
+          are other relevant functions.
+        </li>
+        <li>
+          Non-metric MDS can additionally be performed with
+<tt>metaMDS()</tt>
+          in
+<a href="../packages/vegan/index.html">vegan</a>. Furthermore,
+<a href="../packages/labdsv/index.html">labdsv</a>
+          and
+<a href="../packages/ecodist/index.html">ecodist</a>
+          provide the function
+<tt>nmds()</tt>
+          and some routines can be found in
+<a href="../packages/xgobi/index.html">xgobi</a>. Also, the
+<a href="../packages/ExPosition/index.html">ExPosition</a>
+          implements a function for
+metric MDS.
+        </li>
+        <li>
+          Principal coordinate analysis can be computed with
+<tt>capscale()</tt>
+          in
+<a href="../packages/vegan/index.html">vegan</a>;
+    in
+<a href="../packages/labdsv/index.html">labdsv</a>
+          and
+<a href="../packages/ecodist/index.html">ecodist</a>
+          using
+<tt>pco()</tt>
+          and
+with
+<tt>dudi.pco()</tt>
+          in
+<a href="../packages/ade4/index.html">ade4</a>.
+        </li>
+        <li>
+          Individual differences in multidimensional scaling can be computed with
+<tt>indscal()</tt>
+          in the
+<a href="../packages/SensoMineR/index.html">SensoMineR</a>
+          package.
+        </li>
+        <li>
+          The package
+<a href="../packages/MLDS/index.html">MLDS</a>
+          allows for the computation of maximum likelihood
+difference scaling (MLDS).
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Classical Test Theory (CTT):
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/CTT/index.html">CTT</a>
+          package can be used to perform a variety of tasks and
+analyses 
+    associated with classical test theory: score multiple-choice responses,
+perform reliability analyses, 
+    conduct item analyses, and transform scores onto different scales.
+        </li>
+        <li>
+          Functions for correlation theory, meta-analysis (validity generalization),
+reliability, item analysis, inter-rater reliability, and classical utility are
+contained in the
+<a href="../packages/psychometric/index.html">psychometric</a>
+          package.
+        </li>
+        <li>
+          The
+<a href="../packages/cocron/index.html">cocron</a>
+          package provides functions to statistically compare two or more alpha coefficients based 
+  on either dependent or independent groups of individuals.
+        </li>
+        <li>
+          The
+<a href="../packages/CMC/index.html">CMC</a>
+          package calculates and plots the step-by-step
+Cronbach-Mesbach curve, that is a method, based on the Cronbach alpha
+coefficient of reliability, for checking the unidimensionality of a measurement
+scale.
+        </li>
+        <li>
+          Cronbach alpha, kappa coefficients, and intra-class correlation coefficients
+(ICC) can be found in the
+<a href="../packages/psy/index.html">psy</a>
+          package. Functions for ICC computation can be also found in the packages
+<a href="../packages/psych/index.html">psych</a>,
+<a href="../packages/psychometric/index.html">psychometric</a>
+          and
+<a href="../packages/ICC/index.html">ICC</a>.
+        </li>
+        <li>
+          A number of routines for scale construction and reliability analysis useful
+    for personality and experimental psychology are contained in the
+    packages
+<a href="../packages/psych/index.html">psych</a>
+          and
+<a href="../packages/MiscPsycho/index.html">MiscPsycho</a>.
+        </li>
+        <li>
+          <a href="https://github.com/zief0002/QME">
+            QME
+          </a>
+          (not on CRAN) computes measures from generalizability theory.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Knowledge structure analysis:
+        </strong>
+      </p>
+      <ul>
+        <li>
+<a href="../packages/DAKS/index.html">DAKS</a>
+          provides functions and example datasets for the
+psychometric theory of knowledge 
+     spaces. This package implements data analysis methods and procedures for
+simulating data and 
+     transforming different formulations in knowledge space theory.
+        </li>
+        <li>
+          The
+<a href="../packages/kst/index.html">kst</a>
+          package contains basic functionality to generate, handle,
+and manipulate deterministic knowledge structures based on sets and relations.
+Functions for fitting probabilistic knowledge structures are included in the
+<a href="../packages/pks/index.html">pks</a>
+          package.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Other related packages:
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/psychotools/index.html">psychotools</a>
+          provides an infrastructure for psychometric
+modeling such as data classes (e.g., for paired comparisons) and basic model
+fitting functions (e.g., for Rasch and Bradley-Terry models).
+        </li>
+        <li>
+          Recursive partitioning based on psychometric models, employing the general
+MOB algorithm (from package party) are implemented in
+<a href="../packages/psychotree/index.html">psychotree</a>.
+Currently, only Bradley-Terry trees are provided.
+        </li>
+        <li>
+          Psychometric mixture models based on flexmix infrastructure are provided by
+means of the
+<a href="../packages/psychomix/index.html">psychomix</a>
+          package (at the moment Rasch mixture models
+and Bradley-Terry mixture models).
+        </li>
+        <li>
+          The
+<a href="../packages/equate/index.html">equate</a>
+          package contains functions for non-IRT equating under
+both random groups and nonequivalent groups with anchor test designs. Mean,
+linear, equipercentile and circle-arc equating are supported, as are methods for
+univariate and bivariate presmoothing of score distributions. Specific equating
+methods currently supported include Tucker, Levine observed score, Levine true
+score, Braun/Holland, frequency estimation, and chained equating.
+        </li>
+        <li>
+          The
+<a href="../packages/CopyDetect/index.html">CopyDetect</a>
+          package contains several IRT and non-IRT based
+statistical indices proposed in the literature for detecting answer copying on
+multiple-choice examinations.
+        </li>
+        <li>
+          Latent class analysis with random effects can be performed with the package
+<a href="../packages/randomLCA/index.html">randomLCA</a>.
+     In addition, the package
+<a href="../packages/e1071/index.html">e1071</a>
+          provides the function
+<tt>lca()</tt>. Another package is
+<a href="../packages/poLCA/index.html">poLCA</a>
+          for polytomous variable latent class analysis.
+        </li>
+        <li>
+          The
+<a href="../packages/cfa/index.html">cfa</a>
+          package allows for the computation of simple,
+more-sample, and
+     stepwise configural frequency analysis (CFA).
+        </li>
+        <li>
+          Coefficents for interrater reliability and agreements can be computed with
+the
+<a href="../packages/irr/index.html">irr</a>.
+        </li>
+        <li>
+<a href="../packages/prefmod/index.html">prefmod</a>
+          generates design matrices for analysing real paired
+comparisons and derived paired comparison data 
+    (Likert type items / ratings or rankings) using a loglinear approach. Fits
+loglinear Bradley-Terry model (LLBT) exploting an eliminate feature. Computes
+pattern models 
+    for paired comparisons, rankings, and ratings. Some treatment of missing
+values (MCAR and MNAR).
+        </li>
+        <li>
+          Bradley-Terry models for paired comparisons are implemented in the package
+<a href="../packages/BradleyTerry2/index.html">BradleyTerry2</a>
+          and in
+<a href="../packages/eba/index.html">eba</a>. The latter allows for the computation of
+elimination-by-aspects models.
+        </li>
+        <li>
+          Psychophysical data can be analyzed with the
+<a href="../packages/psyphy/index.html">psyphy</a>
+          package. The
+<a href="../packages/MLCM/index.html">MLCM</a>
+          package contains functions to estimate the contribution of the n
+scales to the judgment by a maximum likelihood method under several hypotheses
+of how the perceptual dimensions interact.
+        </li>
+        <li>
+          Functions and example datasets for Fechnerian scaling of discrete object
+sets are provided by
+<a href="../packages/fechner/index.html">fechner</a>. It computes Fechnerian 
+     distances among objects representing subjective dissimilarities, and other
+related information.
+        </li>
+        <li>
+          The
+<a href="../packages/modelfree/index.html">modelfree</a>
+          package provides functions for nonparametric
+estimation of a psychometric function and for estimation of a derived threshold
+and slope, and their standard deviations and confidence intervals.
+        </li>
+        <li>
+          Confidence intervals for standardized effect sizes: The
+<a href="../packages/MBESS/index.html">MBESS</a>
+          package.
+        </li>
+        <li>
+          The
+<a href="../packages/mediation/index.html">mediation</a>
+          allows both parametric and nonparametric causal mediation analysis. 
+  It also allows researchers to conduct sensitivity analysis for certain parametric models.
+        </li>
+        <li>
+          Functions for data screening, testing moderation, mediation, and estimating
+power are contained in the
+<a href="../packages/QuantPsyc/index.html">QuantPsyc</a>
+          package.
+        </li>
+        <li>
+          The package
+<a href="../packages/multiplex/index.html">multiplex</a>
+          is especially designed for social networks with relations at 
+  different levels. In this sense, the program has effective ways to treat multiple networks data 
+  sets with routines that combine algebraic structures like the partially ordered semigroup 
+  with the existing relational bundles found in multiple networks.
+        </li>
+        <li>
+          The
+<a href="../packages/qgraph/index.html">qgraph</a>
+          package can be used to visualize data as networks.
+        </li>
+        <li>
+          Social Relations Analyses for round robin designs are implemented in the
+<a href="../packages/TripleR/index.html">TripleR</a>
+          package. It implements all functionality of the SOREMO
+software, and provides new functions like the handling of missing values,
+significance tests for single groups, or the calculation of the self enhancement
+index.
+        </li>
+        <li>
+          Fitting and testing multinomial processing tree models, a class of statistical
+models for categorical data with latent parameters, can be performed using the
+<a href="../packages/mpt/index.html">mpt</a>
+          package. These parameters are the link probabilities of a
+tree-like graph and represent the cognitive processing steps executed to arrive
+at observable response categories.The
+<a href="../packages/MPTinR/index.html">MPTinR</a>
+          package provides a
+user-friendly way for analysis of multinomial processing tree (MPT) models.
+        </li>
+        <li>
+          Beta regression for modeling beta-distributed dependent variables, e.g., rates
+and proportions,
+  is available in
+<a href="../packages/betareg/index.html">betareg</a>.
+        </li>
+        <li>
+          The
+<a href="../packages/cocor/index.html">cocor</a>
+          package provides functions to compare two correlations based on either dependent or independent groups.
+        </li>
+        <li>
+          The
+<a href="../packages/profileR/index.html">profileR</a>
+          package provides a set of tools that implement profile
+analysis and cross-validation techniques.
+        </li>
+      </ul>
+    </div>
+
+  <h3>CRAN packages:</h3>
+  <ul>
+    <li><a href="../packages/ade4/index.html">ade4</a> (core)</li>
+    <li><a href="../packages/anacor/index.html">anacor</a> (core)</li>
+    <li><a href="../packages/betareg/index.html">betareg</a></li>
+    <li><a href="../packages/BiplotGUI/index.html">BiplotGUI</a></li>
+    <li><a href="../packages/BradleyTerry2/index.html">BradleyTerry2</a></li>
+    <li><a href="../packages/ca/index.html">ca</a> (core)</li>
+    <li><a href="../packages/cacIRT/index.html">cacIRT</a></li>
+    <li><a href="../packages/catR/index.html">catR</a></li>
+    <li><a href="../packages/CDM/index.html">CDM</a></li>
+    <li><a href="../packages/cfa/index.html">cfa</a></li>
+    <li><a href="../packages/classify/index.html">classify</a></li>
+    <li><a href="../packages/CMC/index.html">CMC</a></li>
+    <li><a href="../packages/cocor/index.html">cocor</a></li>
+    <li><a href="../packages/cocorresp/index.html">cocorresp</a></li>
+    <li><a href="../packages/cocron/index.html">cocron</a></li>
+    <li><a href="../packages/CopyDetect/index.html">CopyDetect</a></li>
+    <li><a href="../packages/CTT/index.html">CTT</a> (core)</li>
+    <li><a href="../packages/DAKS/index.html">DAKS</a></li>
+    <li><a href="../packages/difR/index.html">difR</a></li>
+    <li><a href="../packages/e1071/index.html">e1071</a></li>
+    <li><a href="../packages/eba/index.html">eba</a></li>
+    <li><a href="../packages/ecodist/index.html">ecodist</a></li>
+    <li><a href="../packages/equate/index.html">equate</a></li>
+    <li><a href="../packages/equateIRT/index.html">equateIRT</a></li>
+    <li><a href="../packages/eRm/index.html">eRm</a> (core)</li>
+    <li><a href="../packages/EstCRM/index.html">EstCRM</a></li>
+    <li><a href="../packages/ExPosition/index.html">ExPosition</a></li>
+    <li><a href="../packages/FactoMineR/index.html">FactoMineR</a></li>
+    <li><a href="../packages/FAiR/index.html">FAiR</a> (core)</li>
+    <li><a href="../packages/fastICA/index.html">fastICA</a></li>
+    <li><a href="../packages/fechner/index.html">fechner</a></li>
+    <li><a href="../packages/fwdmsa/index.html">fwdmsa</a></li>
+    <li><a href="../packages/GPArotation/index.html">GPArotation</a></li>
+    <li><a href="../packages/homals/index.html">homals</a> (core)</li>
+    <li><a href="../packages/ICC/index.html">ICC</a></li>
+    <li><a href="../packages/irr/index.html">irr</a></li>
+    <li><a href="../packages/irtoys/index.html">irtoys</a></li>
+    <li><a href="../packages/irtrees/index.html">irtrees</a></li>
+    <li><a href="../packages/KernSmoothIRT/index.html">KernSmoothIRT</a></li>
+    <li><a href="../packages/kst/index.html">kst</a></li>
+    <li><a href="../packages/labdsv/index.html">labdsv</a></li>
+    <li><a href="../packages/latdiag/index.html">latdiag</a></li>
+    <li><a href="../packages/lava/index.html">lava</a></li>
+    <li><a href="../packages/lava.tobit/index.html">lava.tobit</a></li>
+    <li><a href="../packages/lavaan/index.html">lavaan</a> (core)</li>
+    <li><a href="../packages/lavaan.survey/index.html">lavaan.survey</a></li>
+    <li><a href="../packages/lme4/index.html">lme4</a> (core)</li>
+    <li><a href="../packages/lordif/index.html">lordif</a></li>
+    <li><a href="../packages/ltm/index.html">ltm</a> (core)</li>
+    <li><a href="../packages/MASS/index.html">MASS</a></li>
+    <li><a href="../packages/MBESS/index.html">MBESS</a></li>
+    <li><a href="../packages/mcIRT/index.html">mcIRT</a></li>
+    <li><a href="../packages/MCMCglmm/index.html">MCMCglmm</a></li>
+    <li><a href="../packages/MCMCpack/index.html">MCMCpack</a></li>
+    <li><a href="../packages/mediation/index.html">mediation</a></li>
+    <li><a href="../packages/mirt/index.html">mirt</a> (core)</li>
+    <li><a href="../packages/MiscPsycho/index.html">MiscPsycho</a> (core)</li>
+    <li><a href="../packages/mixRasch/index.html">mixRasch</a></li>
+    <li><a href="../packages/MLCM/index.html">MLCM</a></li>
+    <li><a href="../packages/MLDS/index.html">MLDS</a></li>
+    <li><a href="../packages/modelfree/index.html">modelfree</a></li>
+    <li><a href="../packages/mokken/index.html">mokken</a> (core)</li>
+    <li><a href="../packages/MplusAutomation/index.html">MplusAutomation</a></li>
+    <li><a href="../packages/mpt/index.html">mpt</a></li>
+    <li><a href="../packages/MPTinR/index.html">MPTinR</a></li>
+    <li><a href="../packages/mRm/index.html">mRm</a></li>
+    <li><a href="../packages/MultiLCIRT/index.html">MultiLCIRT</a></li>
+    <li><a href="../packages/multiplex/index.html">multiplex</a></li>
+    <li><a href="../packages/nFactors/index.html">nFactors</a></li>
+    <li><a href="../packages/nlme/index.html">nlme</a></li>
+    <li><a href="../packages/ordinal/index.html">ordinal</a></li>
+    <li><a href="../packages/pathmox/index.html">pathmox</a></li>
+    <li><a href="../packages/pcaPA/index.html">pcaPA</a></li>
+    <li><a href="../packages/pcaPP/index.html">pcaPP</a></li>
+    <li><a href="../packages/pks/index.html">pks</a></li>
+    <li><a href="../packages/plink/index.html">plink</a> (core)</li>
+    <li><a href="../packages/plRasch/index.html">plRasch</a></li>
+    <li><a href="../packages/pls/index.html">pls</a></li>
+    <li><a href="../packages/plspm/index.html">plspm</a></li>
+    <li><a href="../packages/poLCA/index.html">poLCA</a></li>
+    <li><a href="../packages/polycor/index.html">polycor</a></li>
+    <li><a href="../packages/prefmod/index.html">prefmod</a> (core)</li>
+    <li><a href="../packages/profileR/index.html">profileR</a></li>
+    <li><a href="../packages/pscl/index.html">pscl</a></li>
+    <li><a href="../packages/psy/index.html">psy</a> (core)</li>
+    <li><a href="../packages/psych/index.html">psych</a> (core)</li>
+    <li><a href="../packages/psychometric/index.html">psychometric</a></li>
+    <li><a href="../packages/psychomix/index.html">psychomix</a></li>
+    <li><a href="../packages/psychotools/index.html">psychotools</a></li>
+    <li><a href="../packages/psychotree/index.html">psychotree</a></li>
+    <li><a href="../packages/psyphy/index.html">psyphy</a></li>
+    <li><a href="../packages/PTAk/index.html">PTAk</a></li>
+    <li><a href="../packages/qgraph/index.html">qgraph</a></li>
+    <li><a href="../packages/QuantPsyc/index.html">QuantPsyc</a></li>
+    <li><a href="../packages/randomLCA/index.html">randomLCA</a></li>
+    <li><a href="../packages/RaschSampler/index.html">RaschSampler</a></li>
+    <li><a href="../packages/REQS/index.html">REQS</a></li>
+    <li><a href="../packages/rpf/index.html">rpf</a></li>
+    <li><a href="../packages/sem/index.html">sem</a> (core)</li>
+    <li><a href="../packages/SEMModComp/index.html">SEMModComp</a></li>
+    <li><a href="../packages/semPlot/index.html">semPlot</a></li>
+    <li><a href="../packages/semPLS/index.html">semPLS</a></li>
+    <li><a href="../packages/semTools/index.html">semTools</a></li>
+    <li><a href="../packages/SensoMineR/index.html">SensoMineR</a></li>
+    <li><a href="../packages/simsem/index.html">simsem</a></li>
+    <li><a href="../packages/sirt/index.html">sirt</a></li>
+    <li><a href="../packages/smacof/index.html">smacof</a> (core)</li>
+    <li><a href="../packages/systemfit/index.html">systemfit</a></li>
+    <li><a href="../packages/TAM/index.html">TAM</a> (core)</li>
+    <li><a href="../packages/TripleR/index.html">TripleR</a></li>
+    <li><a href="../packages/vegan/index.html">vegan</a> (core)</li>
+    <li><a href="../packages/VGAM/index.html">VGAM</a></li>
+    <li><a href="../packages/xgobi/index.html">xgobi</a></li>
+  </ul>
+
+  <h3>Related links:</h3>
+  <ul>
+    <li>CRAN Task View: <a href="SocialSciences.html">SocialSciences</a></li>
+    <li>CRAN Task View: <a href="Cluster.html">Cluster</a></li>
+    <li>CRAN Task View: <a href="Multivariate.html">Multivariate</a></li>
+    <li><a href="http://www.jstatsoft.org/v20/" target="_top">
+  Journal of Statistical
+Software Special Volume: Psychometrics in R
+</a></li>
+    <li><a href="http://www.jstatsoft.org/v48/" target="_top">
+  Journal of Statistical
+Software Special Volume: Psychoco - Psychometric Computing in R
+</a></li>
+    <li><a href="http://r-forge.r-project.org/projects/psychor/" target="_top">
+  PsychoR project platform
+</a></li>
+    <li><a href="http://gifi.stat.ucla.edu/psychoR/" target="_top">
+  PsychoR
+snippets
+</a></li>
+    <li><a href="http://openmx.psyc.virginia.edu/">
+  OpenMx - Advanced Structural
+Equation Modeling
+</a></li>
+  </ul>
+
+</body>
+</html>
+ 

@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CRAN Task View: Differential Equations</title>
+  <link rel=stylesheet type="text/css" href="../CRAN_web.css" />
+</head>
+
+<body>
+  <h2>CRAN Task View: Differential Equations</h2>
+  <table summary="DifferentialEquations task view information">
+    <tr><td valign="top"><b>Maintainer:</b></td><td>Karline Soetaert and Thomas Petzoldt</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x6b;&#x61;&#x72;&#x6c;&#x69;&#x6e;&#x65;&#x2e;&#x73;&#x6f;&#x65;&#x74;&#x61;&#x65;&#x72;&#x74;&#x20;&#x61;&#x74;&#x20;&#x6e;&#x69;&#x6f;&#x7a;&#x2e;&#x6e;&#x6c;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2013-08-08</td></tr>
+  </table>
+
+    <div>
+      <p>
+        Differential equations (DE) are mathematical equations that describe how a 
+     quantity changes as a function of one or several (independent) variables, often 
+     time or space.   
+     Differential equations play an important role in biology, chemistry, physics,
+     engineering, economy and other disciplines.
+      </p>
+      <p>
+        Differential equations can be separated into stochastic versus deterministic
+     DEs. Problems can be split into initial value problems versus boundary value problems.
+     One also distinguishes ordinary differential equations from 
+     partial differential equations, differential algebraic equations and delay differential equations.
+     All these types of DEs can be solved in R. 
+     DE problems can be classified to be either stiff or nonstiff; the former type of problems are 
+     much more difficult to solve.
+      </p>
+      <p>
+        The
+        <a href="https://www.stat.math.ethz.ch/mailman/listinfo/r-sig-dynamic-models">
+          dynamic models SIG
+        </a>
+        is a suitable mailing list for discussing the use of R for solving differential equation 
+     and other dynamic models such as individual-based or agent-based models.
+      </p>
+      <p>
+        This task view was created to provide an overview on the topic.
+     If we forgot something, or if a new package should be mentioned here, please let
+        <a href="mailto:karline_DOT_soetaert_AT_nioz_DOT_nl;thomas_DOT_petzoldt_AT_tu-dresden_DOT_de?subject=DifferentialEquations%20Task%20View">
+          us
+        </a>
+        know.
+      </p>
+      <p>
+        <strong>
+          Stochastic Differential Equations (SDEs)
+        </strong>
+      </p>
+      In a stochastic differential equation, the unknown quantity is a 
+     stochastic process.
+      <ul>
+        <li>
+          The package
+<a href="../packages/sde/index.html">sde</a>
+          provides functions for simulation and inference for 
+        stochastic differential equations. It is the accompanying package to 
+        the book by Iacus (2008).
+        </li>
+        <li>
+          The package
+<a href="../packages/pomp/index.html">pomp</a>
+          contains functions for statistical inference for
+        partially observed Markov processes.
+        </li>
+        <li>
+          Packages
+<a href="../packages/adaptivetau/index.html">adaptivetau</a>
+          and
+<a href="../packages/GillespieSSA/index.html">GillespieSSA</a>
+          implement 
+        Gillespie's "exact" stochastic simulation algorithm (direct method) 
+        and several approximate methods.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Ordinary Differential Equations (ODEs)
+        </strong>
+      </p>
+      In an ODE, the unknown quantity is a function of a single independent variable.
+     Several packages offer to solve ODEs.
+      <ul>
+        <li>
+          The "odesolve" package was the first to solve ordinary differential equations in R.
+        It contains two integration methods. It is not actively maintained and has been replaced by the package
+<a href="../packages/deSolve/index.html">deSolve</a>.
+        </li>
+        <li>
+          The package
+<a href="../packages/deSolve/index.html">deSolve</a>
+          contains several solvers for solving ODEs. 
+        It can deal with stiff and nonstiff problems.
+        </li>
+        <li>
+          The package
+<a href="../packages/deTestSet/index.html">deTestSet</a>
+          contains solvers designed for solving 
+        very stiff equations.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Delay Differential Equations (DDEs)
+        </strong>
+      </p>
+      In a DDE, the derivative at a certain time is a function of the variable value at a previous time.
+      <ul>
+        <li>
+          The package
+<a href="../packages/PBSddesolve/index.html">PBSddesolve</a>
+          (originally published as "ddesolve") 
+        includes a solver for non-stiff DDE problems.
+        </li>
+        <li>
+          Functions in the package
+<a href="../packages/deSolve/index.html">deSolve</a>
+          can solve both stiff and non-stiff DDE problems.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Partial Differential Equations (PDEs)
+        </strong>
+      </p>
+      PDEs are differential equations in which the unknown quantity is a 
+      function of multiple independent variables. A common classification is 
+      into elliptic (time-independent), hyperbolic (time-dependent and wavelike), 
+      and parabolic (time-dependent and diffusive) equations. 
+      One way to solve them is to rewrite the PDEs as a set of coupled 
+      ODEs, and then use an efficient solver.
+      <ul>
+        <li>
+          The R-package
+<a href="../packages/ReacTran/index.html">ReacTran</a>
+          provides functions for converting the PDEs
+        into a set of ODEs. Its main target is in the field of ''reactive transport'' 
+        modelling, but it can be used to solve PDEs of the three main types. 
+        It provides functions for discretising PDEs on cartesian, polar, 
+        cylindrical and spherical grids.
+        </li>
+        <li>
+          The package
+<a href="../packages/deSolve/index.html">deSolve</a>
+          contains dedicated solvers for 1-D, 2-D and 
+        3-D time-varying ODE problems as generated from PDEs (e.g. by
+<a href="../packages/ReacTran/index.html">ReacTran</a>).
+        </li>
+        <li>
+          Solvers for 1-D time varying problems can also be found in the package
+<a href="../packages/deTestSet/index.html">deTestSet</a>.
+        </li>
+        <li>
+          The package
+<a href="../packages/rootSolve/index.html">rootSolve</a>
+          contains optimized solvers for 1-D, 2-D and 
+        3-D algebraic problems generated from (time-invariant) PDEs. 
+        It can thus be used for solving elliptic equations.
+        </li>
+      </ul>
+      Note that, to date, PDEs in R can only be solved using finite differences. 
+      At some point, we hope that finite element and spectral methods will become available.
+      <p>
+        <strong>
+          Differential Algebraic Equations (DAEs)
+        </strong>
+      </p>
+      Differential algebraic equations comprise both differential and algebraic terms.
+      An important feature of a DAE is its differentiation index; the higher this index, 
+      the more difficult to solve the DAE.
+      <ul>
+        <li>
+          The package
+<a href="../packages/deSolve/index.html">deSolve</a>
+          provides two solvers, that can handle DAEs up to index 3.
+        </li>
+        <li>
+          Three more DAE solvers are in the package
+<a href="../packages/deTestSet/index.html">deTestSet</a>.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Boundary Value Problems (BVPs)
+        </strong>
+      </p>
+      BVPs have solutions and/or derivative conditions specified 
+      at the boundaries of the independent variable.
+      <ul>
+        <li>
+          Package
+<a href="../packages/bvpSolve/index.html">bvpSolve</a>
+          deals only with this type of equations.
+        </li>
+        <li>
+          The package
+<a href="../packages/ReacTran/index.html">ReacTran</a>
+          can solve BVPs that belong to the 
+       class of reactive transport equations.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Other
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/simecol/index.html">simecol</a>
+          package provides an interactive environment to 
+        implement and simulate dynamic models. 
+        Next to DE models, it also provides functions for grid-oriented, 
+        individual-based, and particle diffusion models.
+        </li>
+        <li>
+          Packages
+<a href="../packages/scaRabee/index.html">scaRabee</a>,
+<a href="../packages/PKtools/index.html">PKtools</a>
+          and
+<a href="../packages/PKfit/index.html">PKfit</a>
+          offer frameworks for simulation and optimization of Pharmacokinetic-Pharmacodynamic Models.
+        </li>
+        <li>
+          In the package
+<a href="../packages/FME/index.html">FME</a>
+          are functions for inverse modelling (fitting to data), 
+       sensitivity analysis, identifiability and Monte Carlo Analysis of DE models.
+        </li>
+        <li>
+          The packages
+<a href="../packages/nlmeODE/index.html">nlmeODE</a>
+          and
+<a href="../packages/PSM/index.html">PSM</a>
+          have functions for 
+       mixed-effects modelling using differential equations.
+        </li>
+        <li>
+<a href="../packages/mkin/index.html">mkin</a>
+          provides routines for fitting kinetic models with one 
+       or more state variables to chemical degradation data.
+        </li>
+        <li>
+          The package
+<a href="../packages/CollocInfer/index.html">CollocInfer</a>
+          implements collocation-inference 
+       for continuous-time and discrete-time stochastic processes.
+        </li>
+        <li>
+          Root finding, equilibrium and steady-state analysis of ODEs can be 
+       done with the package
+<a href="../packages/rootSolve/index.html">rootSolve</a>.
+        </li>
+        <li>
+          The
+<a href="../packages/deTestSet/index.html">deTestSet</a>
+          package contains many test problems for differential equations.
+        </li>
+        <li>
+          Package
+<a href="../packages/pracma/index.html">pracma</a>
+          contains solvers for ODEs, as pure R scripts,
+       useful as a learning tool.
+        </li>
+        <li>
+          The
+<a href="../packages/PBSmodelling/index.html">PBSmodelling</a>
+          package adds GUI functions to models.
+        </li>
+        <li>
+          Package
+<a href="../packages/ecolMod/index.html">ecolMod</a>
+          contains the figures, data sets and examples from a book 
+       on ecological modelling (Soetaert and Herman, 2009).
+        </li>
+        <li>
+<a href="../packages/primer/index.html">primer</a>
+          is a support package for the book of Stevens (2009).
+        </li>
+      </ul>
+    </div>
+
+  <h3>CRAN packages:</h3>
+  <ul>
+    <li><a href="../packages/adaptivetau/index.html">adaptivetau</a></li>
+    <li><a href="../packages/bvpSolve/index.html">bvpSolve</a> (core)</li>
+    <li><a href="../packages/CollocInfer/index.html">CollocInfer</a></li>
+    <li><a href="../packages/deSolve/index.html">deSolve</a> (core)</li>
+    <li><a href="../packages/deTestSet/index.html">deTestSet</a></li>
+    <li><a href="../packages/ecolMod/index.html">ecolMod</a></li>
+    <li><a href="../packages/FME/index.html">FME</a></li>
+    <li><a href="../packages/GillespieSSA/index.html">GillespieSSA</a></li>
+    <li><a href="../packages/mkin/index.html">mkin</a></li>
+    <li><a href="../packages/nlmeODE/index.html">nlmeODE</a></li>
+    <li><a href="../packages/PBSddesolve/index.html">PBSddesolve</a></li>
+    <li><a href="../packages/PBSmodelling/index.html">PBSmodelling</a></li>
+    <li><a href="../packages/PKfit/index.html">PKfit</a></li>
+    <li><a href="../packages/PKtools/index.html">PKtools</a></li>
+    <li><a href="../packages/pomp/index.html">pomp</a></li>
+    <li><a href="../packages/pracma/index.html">pracma</a></li>
+    <li><a href="../packages/primer/index.html">primer</a></li>
+    <li><a href="../packages/PSM/index.html">PSM</a></li>
+    <li><a href="../packages/ReacTran/index.html">ReacTran</a></li>
+    <li><a href="../packages/rootSolve/index.html">rootSolve</a> (core)</li>
+    <li><a href="../packages/scaRabee/index.html">scaRabee</a></li>
+    <li><a href="../packages/sde/index.html">sde</a> (core)</li>
+    <li><a href="../packages/simecol/index.html">simecol</a></li>
+  </ul>
+
+  <h3>Related links:</h3>
+  <ul>
+    <li>CRAN Task View: <a href="ChemPhys.html">ChemPhys</a></li>
+    <li>CRAN Task View: <a href="Econometrics.html">Econometrics</a></li>
+    <li>CRAN Task View: <a href="Environmetrics.html">Environmetrics</a></li>
+    <li>CRAN Task View: <a href="Optimization.html">Optimization</a></li>
+    <li>CRAN Task View: <a href="Pharmacokinetics.html">Pharmacokinetics</a></li>
+    <li><a href="http://en.wikipedia.org/wiki/Differential_equation">
+  Wikipedia: Differential equation
+</a></li>
+    <li><a href="http://pomp.r-forge.r-project.org">
+  R-Forge website for package pomp
+</a></li>
+    <li><a href="http://deSolve.r-forge.r-project.org">
+  R-Forge website for package deSolve
+</a></li>
+    <li><a href="http://www.springer.com/978-0-387-75838-1">
+  Book: Iacus, SM. 2008. Simulation and Inference for Stochastic Differential Equations: with R examples, Springer
+</a></li>
+    <li><a href="http://www.springer.com/life+sciences/ecology/book/978-1-4020-8623-6">
+  Book: Soetaert, K. and P.M.J. Herman, 2009. A Practical Guide to Ecological Modelling, using R as a simulation Platform, Springer.
+</a></li>
+    <li><a href="http://www.springer.com/life+sci/ecology/book/978-0-387-89881-0">
+  Book: Stevens, H, 2009. A Primer of Ecology with R, Springer.
+</a></li>
+    <li><a href="http://www.springer.com/statistics/computanional+statistics/book/978-3-642-28069-6">
+  Book: Soetaert, K., Cash, J. and Mazzia, F. 2012. Solving Differential Equations in R, Springer.
+</a></li>
+  </ul>
+
+</body>
+</html>
+ 

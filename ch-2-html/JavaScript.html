@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="htmlresources/javascript.ico" type="image/x-icon" />
+    <title>J-J-Java-Script</title>
+    <style type="text/css"> 
+        p.over {background-color:black;color:white;font-family:"Comic Sans MS";font-size:120%}
+        p.out  {font-family:"Comic Sans MS";font-size:120%}
+    </style>
+ </head>
+<body>
+    <h1 id="heading" >JavaScript Examples - Ho!</h1>
+        
+    <br>
+    <h2>Plain and Simple Internal JavaScript Usage</h2>
+        <p>What was the time and date again? ... <script> document.write( Date() ); </script></p>
+        
+    <br>
+    <h2>... And a Little Bit More Dynamic</h2>
+        <p>What was the time and date again? ... <span id="datefield"></span>
+            <script> 
+             setInterval(function(){ 
+                    document.getElementById("datefield").innerHTML =  Date() ;
+             }, 1000); 
+            </script></p>
+        
+        
+    <br>
+    <h2>Using External JavaScript-File</h2>
+
+        <p> Thanks to Peter-Paul Koch on <a href="http://www.quirksmode.org/js/detect.html">QuirksMode</a> we know what you are browsing with...<br> 
+        <script src="htmlresources/browserdetect.js"></script>
+        <script>
+            document.write('<p class="accent">You\'re using ' 
+                            + BrowserDetect.browser + ' ' 
+                            + BrowserDetect.version + ' on ' 
+                            + BrowserDetect.OS + '!</p>');
+        </script>
+        </p>
+        
+        <br>
+        <h2>Event Driven Usage of JavaScript</h2>
+        
+        <p onmouseover="this.className='over'" onmouseout="this.className='out'">Hover Me!</p>
+        
+    <br>
+    <h2>And another example (just in case...)</h2>
+
+        <p id="textfield"></p>
+        <p>Put in text and hit enter:<br>
+            <input id="textinput" type="text" size="30" maxlength="30" onchange='document.getElementById("textfield").innerHTML = document.getElementById("textinput").value;'>
+        </p>
+</body>
+</html>
+

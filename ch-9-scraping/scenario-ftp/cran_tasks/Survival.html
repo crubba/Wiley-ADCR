@@ -1,0 +1,1725 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CRAN Task View: Survival Analysis</title>
+  <link rel=stylesheet type="text/css" href="../CRAN_web.css" />
+</head>
+
+<body>
+  <h2>CRAN Task View: Survival Analysis</h2>
+  <table summary="Survival task view information">
+    <tr><td valign="top"><b>Maintainer:</b></td><td>Arthur Allignol and Aurelien Latouche</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x61;&#x72;&#x74;&#x68;&#x75;&#x72;&#x2e;&#x61;&#x6c;&#x6c;&#x69;&#x67;&#x6e;&#x6f;&#x6c;&#x20;&#x61;&#x74;&#x20;&#x75;&#x6e;&#x69;&#x2d;&#x75;&#x6c;&#x6d;&#x2e;&#x64;&#x65;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2014-02-28</td></tr>
+  </table>
+
+    <div>
+      <p>
+        Survival analysis, also called event history analysis in social science,
+or reliability analysis in engineering, deals with time until occurrence
+of an event of interest. However, this failure time may not be observed
+within the relevant time period, producing so-called censored observations.
+      </p>
+      <p>
+        This task view aims at presenting the useful R packages for the analysis
+of time to event data.
+      </p>
+      <p>
+        Please let the
+        <a href="mailto:arthur.allignol@uni-ulm.de">
+          maintainers
+        </a>
+        know if 
+something is inaccurate or missing.
+      </p>
+      <h1>
+        Standard Survival Analysis
+      </h1>
+      <p>
+        <strong>
+          Estimation of the Survival Distribution
+        </strong>
+      </p>
+      <ul>
+        <li>
+          <b>
+            <em>
+              Kaplan-Meier:
+            </em>
+          </b>
+          The
+<tt>survfit</tt>
+          function from the
+<a href="../packages/survival/index.html">survival</a>
+          package 
+    computes the Kaplan-Meier estimator for truncated and/or censored data.
+<a href="../packages/rms/index.html">rms</a>
+          (replacement of the Design package) 
+    proposes a modified version of the
+<tt>survfit</tt>
+          function.
+    The
+<a href="../packages/prodlim/index.html">prodlim</a>
+          package implements a fast algorithm and some features
+    not included in
+<a href="../packages/survival/index.html">survival</a>.
+    Various confidence intervals and confidence bands for the Kaplan-Meier estimator 
+    are implemented in the
+<a href="../packages/km.ci/index.html">km.ci</a>
+          package.
+<tt>plot.Surv</tt>
+          of package
+<a href="../packages/eha/index.html">eha</a>
+          plots
+    the Kaplan-Meier estimator.
+    The
+<a href="../packages/NADA/index.html">NADA</a>
+          package includes a function to compute the Kaplan-Meier 
+    estimator for left-censored data.
+<tt>svykm</tt>
+          in
+<a href="../packages/survey/index.html">survey</a>
+          provides a weighted
+    Kaplan-Meier estimator.
+<tt>nested.km</tt>
+          in
+<a href="../packages/NestedCohort/index.html">NestedCohort</a>
+          estimates the
+    survival curve for each level of categorical variables with
+    missing data.  The
+<tt>kaplan-meier</tt>
+          function
+    in
+<a href="../packages/spatstat/index.html">spatstat</a>
+          computes the Kaplan-Meier estimator from
+    histogram data.  The
+<a href="../packages/MAMSE/index.html">MAMSE</a>
+          package permits to compute a
+    weighted Kaplan-Meier estimate.  The
+<tt>KM</tt>
+          function in
+    package
+<a href="../packages/rhosp/index.html">rhosp</a>
+          plots the survival function using a
+    variant of the Kaplan-Meier estimator in a hospitalisation risk
+    context.  The
+<a href="../packages/survPresmooth/index.html">survPresmooth</a>
+          package computes
+    presmoothed estimates of the main quantities used for
+    right-censored data, i.e., survival, hazard and density functions.
+    The
+<a href="../packages/asbio/index.html">asbio</a>
+          package permits to compute the Kaplan-Meier
+    estimator following Pollock et al. (1998). The
+<a href="../packages/bpcp/index.html">bpcp</a>
+          package provides several functions for computing confidence
+    intervals of the survival distribution (e.g., beta product
+    confidence procedure). The
+<a href="../packages/jackknifeKME/index.html">jackknifeKME</a>
+          package
+    implements the modified jackknife estimator of the Kaplan-Meier
+    estimator. The
+<a href="../packages/lbiassurv/index.html">lbiassurv</a>
+          package offers various
+    length-bias corrections to survival curve
+    estimation. Nonparametric confidance bands for the Kaplan-Meier
+    estimator can be computed using the
+<a href="../packages/kmconfband/index.html">kmconfband</a>
+          package.
+    The
+<a href="../packages/kmc/index.html">kmc</a>
+          package implements the Kaplan-Meier estimator
+    with constraints.
+        </li>
+        <li>
+          <b>
+            <em>
+              Nonparametric maximum likelihood estimation (NPMLE):
+            </em>
+          </b>
+          The
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/Icens.html"><span class="BioC">Icens</span></a>
+          package provides several ways to compute the NPMLE
+    of the survival distribution for various censoring and truncation 
+    schemes.
+<a href="../packages/MLEcens/index.html">MLEcens</a>
+          can also be used to compute the MLE for interval-censored data.
+<a href="../packages/dblcens/index.html">dblcens</a>
+          permits to compute the NPMLE of the cumulative distribution
+    function for left- and right-censored data.
+    The
+<tt>icfit</tt>
+          function in package
+<a href="../packages/interval/index.html">interval</a>
+          computes the NPMLE
+    for interval-censored data.
+    The
+<a href="../packages/DTDA/index.html">DTDA</a>
+          implements several algorithms permitting to analyse possibly doubly 
+    truncated survival data.
+        </li>
+        <li>
+          <b>
+            <em>
+              MLE:
+            </em>
+          </b>
+          The
+<a href="../packages/fitdistrplus/index.html">fitdistrplus</a>
+          package permits to fit an univariate 
+    distribution by maximum likelihood. Data can be interval censored.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Hazard Estimation
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/muhaz/index.html">muhaz</a>
+          package permits
+    to estimate the hazard function through kernel methods for right-censored data.
+        </li>
+        <li>
+          The
+<tt>epi.insthaz</tt>
+          function from
+<a href="../packages/epiR/index.html">epiR</a>
+          computes
+    the instantaneous hazard from the Kaplan-Meier estimator.
+        </li>
+        <li>
+<a href="../packages/polspline/index.html">polspline</a>,
+<a href="../packages/gss/index.html">gss</a>
+          and
+<a href="../packages/logspline/index.html">logspline</a>
+          allow 
+    to estimate the hazard function using splines.
+        </li>
+        <li>
+          The
+<a href="../packages/ICE/index.html">ICE</a>
+          package aims at estimating the hazard function for interval
+    censored data.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Testing
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<tt>survdiff</tt>
+          function in
+<a href="../packages/survival/index.html">survival</a>
+          compares survival curves using the Fleming-Harrington G-rho family of test.
+<a href="../packages/NADA/index.html">NADA</a>
+          implements this class of tests for left-censored
+    data.
+        </li>
+        <li>
+<a href="../packages/clinfun/index.html">clinfun</a>
+          implements a permutation version of the 
+    logrank test and a version of the logrank that adjusts for 
+    covariates.
+        </li>
+        <li>
+          The
+<a href="../packages/exactRankTests/index.html">exactRankTests</a>
+          implements the shift-algorithm by Streitberg and Roehmel for 
+    computing exact conditional p-values and quantiles, possibly for censored data.
+        </li>
+        <li>
+<tt>SurvTest</tt>
+          in the
+<a href="../packages/coin/index.html">coin</a>
+          package implements 
+    the logrank test reformulated as a linear rank test.
+        </li>
+        <li>
+          The
+<a href="../packages/maxstat/index.html">maxstat</a>
+          package performs tests using maximally selected 
+    rank statistics.
+        </li>
+        <li>
+          The
+<a href="../packages/interval/index.html">interval</a>
+          package implements logrank and Wilcoxon type tests 
+    for interval-censored data.
+        </li>
+        <li>
+          Three generalised logrank tests and a score test for interval-censored data
+    are implemented in the
+<a href="../packages/glrt/index.html">glrt</a>
+          package.
+        </li>
+        <li>
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/survcomp.html"><span class="BioC">survcomp</span></a>
+          compares 2 hazard ratios.
+        </li>
+        <li>
+          The
+<a href="../packages/TSHRC/index.html">TSHRC</a>
+          implements a two stage procedure for comparing
+    hazard functions.
+        </li>
+        <li>
+          The
+<a href="../packages/Survgini/index.html">Survgini</a>
+          package proposes to test the equality of
+    two survival distributions based on the Gini index.
+        </li>
+        <li>
+          The
+<a href="../packages/FHtest/index.html">FHtest</a>
+          package offers several tests based on the
+    Fleming-Harrington class for comparing surival curves with right-
+    and interval-censored data.
+        </li>
+        <li>
+          The
+<a href="../packages/LogrankA/index.html">LogrankA</a>
+          package provides a logrank test for which
+    aggregated data can be used as input.
+        </li>
+        <li>
+          The short term and long term hazard ratio model for two samples
+    survival data can be found in the
+<a href="../packages/YPmodel/index.html">YPmodel</a>
+          package.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Regression Modelling
+        </strong>
+      </p>
+      <ul>
+        <li>
+          <em>
+            <b>
+              Cox model:
+            </b>
+          </em>
+          The
+<tt>coxph</tt>
+          function in
+    the
+<a href="../packages/survival/index.html">survival</a>
+          package fits the Cox model.
+<tt>cph</tt>
+          in the
+<a href="../packages/rms/index.html">rms</a>
+          package and
+    the
+<a href="../packages/eha/index.html">eha</a>
+          package propose some extensions to the
+<tt>coxph</tt>
+          function.  The package
+<a href="../packages/coxphf/index.html">coxphf</a>
+          implements the Firth's penalised maximum likelihood bias reduction
+    method for the Cox model.  An implementation of weighted
+    estimation in Cox regression can be found in
+<a href="../packages/coxphw/index.html">coxphw</a>.
+    The
+<a href="../packages/coxrobust/index.html">coxrobust</a>
+          package proposes a robust implementation
+    of the Cox model.
+<tt>timecox</tt>
+          in package
+<a href="../packages/timereg/index.html">timereg</a>
+          fits Cox models
+    with possibly time-varying effects.  The
+<a href="../packages/mfp/index.html">mfp</a>
+          package
+    permits to fit Cox models with multiple fractional polynomial.
+    The
+<a href="../packages/NestedCohort/index.html">NestedCohort</a>
+          fits Cox models for covariates with
+    missing data.  A Cox model model can be fitted to data from
+    complex survey design using the
+<tt>svycoxph</tt>
+          function
+    in
+<a href="../packages/survey/index.html">survey</a>. The
+<a href="../packages/intcox/index.html">intcox</a>
+          package implements the
+    Cox model for interval-censored data using the ICM-algorithm.
+    The
+<a href="../packages/dynsurv/index.html">dynsurv</a>
+          package fits time-varying coefficient
+    models for interval censored and right censored survival data
+    using a Bayesian Cox model, a spline based Cox model or a
+    transformation model.  The
+<a href="../packages/CPHshape/index.html">CPHshape</a>
+          package computes
+    the Cox proportional hazards model with shape constrained hazard
+    functions.  The
+<a href="../packages/OrdFacReg/index.html">OrdFacReg</a>
+          package implements the Cox
+    model using an active set algorithm for dummy variables of ordered
+    factors.
+<br/>
+          The
+<tt>cumres</tt>
+          function in
+<a href="../packages/gof/index.html">gof</a>
+          computes goodness-of-fit methods for the Cox proportional hazards
+    model.  The proportionality assumption can be checked using
+    the
+<tt>cox.zph</tt>
+          function in
+<a href="../packages/survival/index.html">survival</a>.
+    The
+<a href="../packages/CPE/index.html">CPE</a>
+          package calculates concordance probability
+    estimate for the Cox model, as does the
+<tt>coxphCPE</tt>
+          function in
+<a href="../packages/clinfun/index.html">clinfun</a>.  The
+<tt>coxphQuantile</tt>
+          in
+    the latter package draws a quantile curve of the survival
+    distribution as a function of covariates.  The
+<a href="../packages/multcomp/index.html">multcomp</a>
+          package computes simultaneous tests and confidence intervals for
+    the Cox model and other parametric survival models.
+    The
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/multtest.html"><span class="BioC">multtest</span></a>
+          package on Bioconductor proposes a
+    resampling based multiple hypothesis testing that can be applied
+    to the Cox model.  Testing coefficients of Cox regression models
+    using a Wald test with a sandwich estimator of variance can be
+    done using the
+<a href="../packages/saws/index.html">saws</a>
+          package.  The
+<a href="../packages/rankhazard/index.html">rankhazard</a>
+          package permits to plot visualisation of the relative importance
+    of covariates in a proportional hazards
+    model. The
+<a href="../packages/smoothHR/index.html">smoothHR</a>
+          package provides hazard ratio
+    curves that allows for nonlinear relationship between predictor
+    and survival.
+        </li>
+        <li>
+          <b>
+            <em>
+              Parametric Proportional Hazards Model:
+            </em>
+          </b>
+<tt>survreg</tt>
+          (from
+<a href="../packages/survival/index.html">survival</a>) fits a parametric
+    proportional hazards model.  The
+<a href="../packages/eha/index.html">eha</a>
+          and
+<a href="../packages/mixPHM/index.html">mixPHM</a>
+          packages implement a proportional hazards
+    model with a parametric baseline hazard. The
+<tt>pphsm</tt>
+          in
+<a href="../packages/rms/index.html">rms</a>
+          translates an AFT model to a proportional
+    hazards form. The
+<a href="../packages/polspline/index.html">polspline</a>
+          package includes
+    the
+<tt>hare</tt>
+          function that fits a hazard regression
+    model, using splines to model the baseline hazard. Hazards can be,
+    but not necessarily, proportional. The
+<a href="../packages/flexsurv/index.html">flexsurv</a>
+          package
+    implements the model of Royston and Parmar (2002). The model uses
+    natural cubic splines for the baseline survival function, and
+    proportional hazards, proportional odds or probit functions for
+    regression. The
+<a href="../packages/SurvRegCensCov/index.html">SurvRegCensCov</a>
+          package fits a Weibull
+    regression model for right-censored data in which one covariate
+    might be censored.
+        </li>
+        <li>
+          <em>
+            <b>
+              Accelerated Failure Time (AFT) Models:
+            </b>
+          </em>
+          The
+<tt>survreg</tt>
+          function in package
+<a href="../packages/survival/index.html">survival</a>
+          can fit an accelerated failure time model.
+    A modified version of
+<tt>survreg</tt>
+          is implemented in the
+<a href="../packages/rms/index.html">rms</a>
+          package (
+<tt>psm</tt>
+          function). It permits to
+    use some of the
+<a href="../packages/rms/index.html">rms</a>
+          functionalities.
+    The
+<a href="../packages/eha/index.html">eha</a>
+          package also proposes an implementation of the
+    AFT model (function
+<tt>aftreg</tt>).  An AFT model with an
+    error distribution assumed to be a mixture of G-splines is
+    implemented in the
+<a href="../packages/smoothSurv/index.html">smoothSurv</a>
+          package.
+    The
+<a href="../packages/NADA/index.html">NADA</a>
+          package proposes the front end of
+    the
+<tt>survreg</tt>
+          function for left-censored data.  A
+    least-square principled implementation of the AFT model can be
+    found in the
+<a href="../packages/lss/index.html">lss</a>
+          package.  The
+<a href="../packages/simexaft/index.html">simexaft</a>
+          package implements the Simulation-Extrapolation algorithm for the
+    AFT model, that can be used when covariates are subject to
+    measurement error.  A robust version of the accelerated failure
+    time model can be found
+    in
+<a href="../packages/RobustAFT/index.html">RobustAFT</a>. The
+<a href="../packages/coarseDataTools/index.html">coarseDataTools</a>
+          package
+    fits AFT models for interval censored data.
+        </li>
+        <li>
+          <b>
+            <em>
+              Additive Models:
+            </em>
+          </b>
+          Both
+<a href="../packages/survival/index.html">survival</a>
+          and
+<a href="../packages/timereg/index.html">timereg</a>
+          fit the additive hazards model of Aalen in
+    functions
+<tt>aareg</tt>
+          and
+<tt>aalen</tt>,
+    respectively.
+<a href="../packages/timereg/index.html">timereg</a>
+          also proposes an implementation
+    of the Cox-Aalen model (that can also be used to perform the Lin, Wei and
+    Ying (1994) goodness-of-fit for Cox regression models) and the
+    partly parametric additive risk model of McKeague and Sasieni.
+        </li>
+        <li>
+          <b>
+            <em>
+              Buckley-James Models:
+            </em>
+          </b>
+          The
+<tt>bj</tt>
+          function in
+<a href="../packages/rms/index.html">rms</a>
+          and
+<tt>BJnoint</tt>
+          in
+<a href="../packages/emplik/index.html">emplik</a>
+          compute the 
+    Buckley-James model, though the latter does it without 
+    an intercept term.
+        </li>
+        <li>
+          <b>
+            <em>
+              Other models:
+            </em>
+          </b>
+          Functions like
+<tt>survreg</tt>
+          can fit other types
+    of models depending on the chosen distribution,
+          <em>
+            e.g.
+          </em>,
+    a tobit model.
+    The
+<a href="../packages/AER/index.html">AER</a>
+          package provides the
+<tt>tobit</tt>
+          function,
+    which is a wrapper of
+<tt>survreg</tt>
+          to fit the tobit model.
+    An implementation of the tobit model for cross-sectional data and panel data
+    can be found in the
+<a href="../packages/censReg/index.html">censReg</a>
+          package.
+    The
+<a href="../packages/timereg/index.html">timereg</a>
+          package provides implementation of 
+    the proportional odds model and of the proportional excess hazards
+    model.
+    The
+<a href="../packages/pseudo/index.html">pseudo</a>
+          package computes the pseudo-observation for 
+    modelling the survival function based on the Kaplan-Meier estimator
+    and the restricted mean.
+<a href="../packages/flexsurv/index.html">flexsurv</a>
+          fits parametric time-to-event models, in which
+    any parametric distribution can be used to model the survival
+    probability, and where one of the parameters is a linear function
+    of covariates.  The
+<tt>Icens</tt>
+          function in
+    package
+<a href="../packages/Epi/index.html">Epi</a>
+          provides a multiplicative relative risk and
+    an additive excess risk model for interval-censored data.
+    The
+<a href="../packages/VGAM/index.html">VGAM</a>
+          package can fit vector generalised linear and
+    additive models for censored data.  The
+<a href="../packages/gamlss.cens/index.html">gamlss.cens</a>
+          package implements the generalised additive model for location,
+    scale and shape that can be fitted to censored data.
+    The
+<tt>locfit.censor</tt>
+          function in
+<a href="../packages/locfit/index.html">locfit</a>
+          produces local regression estimates.  The
+<tt>crq</tt>
+          function included in the
+<a href="../packages/quantreg/index.html">quantreg</a>
+          package implements a
+    conditional quantile regression model for censored data.
+    The
+<a href="../packages/JM/index.html">JM</a>
+          package fits shared parameter models for the
+    joint modelling of a longitudinal response and event times.  The
+    temporal process regression model is implemented in
+    the
+<a href="../packages/tpr/index.html">tpr</a>
+          package.  Aster models, which combine aspects
+    of generalized linear models and Cox models, are implemented in
+    the
+<a href="../packages/aster/index.html">aster</a>
+          and
+<a href="../packages/aster2/index.html">aster2</a>
+          packages.
+    The
+<a href="../packages/concreg/index.html">concreg</a>
+          package implements conditional logistic
+    regression for survival data as an alternative to the Cox model
+    when hazards are non-proportional.
+<a href="../packages/lava.tobit/index.html">lava.tobit</a>, an
+    extension of the
+          <b>
+            lava
+          </b>
+          package, fits latent variable models
+    for censored outcomes via a probit link
+    formulation. The
+<a href="../packages/BGPhazard/index.html">BGPhazard</a>
+          package implements Markov
+    beta and gamma processes for modelling the hazard ratio for
+    discrete failure time data. The
+<a href="../packages/surv2sampleComp/index.html">surv2sampleComp</a>
+          packages proposes some model-free contrast comparison measures
+    such as difference/ratio of cumulative hazards, quantiles and
+    restricted mean.
+        </li>
+      </ul>
+      <h1>
+        Multistate Models
+      </h1>
+      <ul>
+        <li>
+          <em>
+            <b>
+              General Multistate Models:
+            </b>
+          </em>
+          The
+<tt>coxph</tt>
+          function from package
+<a href="../packages/survival/index.html">survival</a>
+          can be fitted for any
+    transition of a multistate model. It can also be used for
+    comparing two transition hazards, using correspondence between
+    multistate models and time-dependent covariates. Besides, all the
+    regression methods presented above can be used for multistate
+    models as long as they allow for left-truncation.
+<br/>
+          The
+<a href="../packages/mvna/index.html">mvna</a>
+          package provides convenient functions for
+    estimating and plotting the cumulative transition hazards in any
+    multistate model, possibly subject to right-censoring and
+    left-truncation.
+<a href="../packages/changeLOS/index.html">changeLOS</a>
+          permits to estimate and
+    plot the transition probabilities for any multistate model. It
+    also estimates the change of length of hospital stay.  The
+<a href="../packages/etm/index.html">etm</a>
+          package estimates and plots transition
+    probabilities for any multistate models. It can also estimate the
+    variance of the Aalen-Johansen estimator, and handles
+    left-truncated data. It also implements the technique for
+    estimating the length of hospital stay included in
+<a href="../packages/changeLOS/index.html">changeLOS</a>
+          in the presence of left-truncation.  The
+<a href="../packages/msSurv/index.html">msSurv</a>
+          package provides nonparametric estimation for
+    multistate models subject to right-censoring (possibly
+    state-dependent) and left-truncation. The
+<a href="../packages/mstate/index.html">mstate</a>
+          package permits to estimate hazards and probabilities, possibly
+    depending on covariates, and to obtain prediction probabilities in
+    the context of competing risks and multistate models.  The
+<a href="../packages/msm/index.html">msm</a>
+          package contains functions for fitting general
+    continuous-time Markov and hidden Markov multistate models to
+    longitudinal data. Transition rates and output processes can be
+    modelled in terms of covariates. The
+<a href="../packages/SemiMarkov/index.html">SemiMarkov</a>
+          package
+    can be used to fit semi-Markov multistate models in continuous
+    time.  The distribution of the waiting times can be chosen between
+    the exponential, the Weibull and exponentiated Weibull
+    distributions.  Nonparametric estimates in illness-death models
+    and other three state models can be obtained with package
+<a href="../packages/p3state.msm/index.html">p3state.msm</a>. The
+<a href="../packages/TPmsm/index.html">TPmsm</a>
+          package permits to
+    estimate transition probabilities of an illness-death model or
+    three-state progressive model. The
+<a href="../packages/SmoothHazard/index.html">SmoothHazard</a>
+          package
+    fits illness-death model with possibly interval-censored data for
+    the transition time into the transient state. Weibull baseline
+    intensities or a semi-parametric approach with M-splines
+    approximation of baseline intensities is used.
+<br/>
+          The
+<a href="../packages/Epi/index.html">Epi</a>
+          package implements
+    Lexis objects as a way to represent, manipulate and summarise data
+    from multistate models.  The
+<a href="../packages/TraMineR/index.html">TraMineR</a>
+          package is
+    intended for analysing state or event sequences that describe life
+    courses. The
+<a href="../packages/Biograph/index.html">Biograph</a>
+          package permits to describe and
+    analyse life histories following a multistate perspective on the
+    life course.
+<a href="../packages/asbio/index.html">asbio</a>
+          computes the
+    expected numbers of individuals in specified age classes or life
+    stages given survivorship probabilities from a transition matrix.
+        </li>
+        <li>
+          <em>
+            <b>
+              Competing risks:
+            </b>
+          </em>
+          The package
+<a href="../packages/cmprsk/index.html">cmprsk</a>
+          estimates the cumulative incidence functions, but they can be
+    compared in more than two samples.  The package also implements
+    the Fine and Gray model for regressing the subdistribution hazard
+    of a competing risk.
+<a href="../packages/crrSC/index.html">crrSC</a>
+          extends the
+<a href="../packages/cmprsk/index.html">cmprsk</a>
+          package to
+    stratified and clustered data.  The
+<a href="../packages/kmi/index.html">kmi</a>
+          package
+    performs a Kaplan-Meier multiple imputation to recover missing
+    potential censoring information from competing risks events,
+    permitting to use standard right-censored methods to analyse
+    cumulative incidence functions. The
+<a href="../packages/crrstep/index.html">crrstep</a>
+          package
+    implements stepwise covariate selection for the Fine and Gray
+    model. Package
+<a href="../packages/pseudo/index.html">pseudo</a>
+          computes pseudo observations for
+    modelling competing risks based on the cumulative incidence
+    functions.
+<a href="../packages/timereg/index.html">timereg</a>
+          does flexible regression modelling for
+    competing risks data based on the on the
+    inverse-probability-censoring-weights and direct binomial
+    regression approach.
+<a href="../packages/riskRegression/index.html">riskRegression</a>
+          implements risk regression for competing
+    risks data, along with other extensions of existing packages
+    useful for survival analysis and competing risks data.
+    The
+<a href="../packages/Cprob/index.html">Cprob</a>
+          package estimates the conditional probability
+    of a competing event, aka., the conditional cumulative
+    incidence. It also implements a proportional-odds model using
+    either the temporal process regression or the pseudo-value
+    approaches.  Packages
+<a href="../packages/survival/index.html">survival</a>
+          (via
+<tt>survfit</tt>) and
+<a href="../packages/prodlim/index.html">prodlim</a>
+          can also be used
+    to estimate the cumulative incidence function.
+    The
+<a href="../packages/compeir/index.html">compeir</a>
+          package estimates event-specific incidence
+    rates, rate ratios, event-specific incidence proportions and
+    cumulative incidence functions.
+<a href="../packages/randomSurvivalForest/index.html">randomSurvivalForest</a>
+          provides summary measures for
+    competing risk such as ensemble CIF.  The
+<a href="../packages/NPMLEcmprsk/index.html">NPMLEcmprsk</a>
+          package implements the semiparametric mixture model for competing
+    risks data. The
+<a href="../packages/wtcrsk/index.html">wtcrsk</a>
+          package implements a proportional
+    subdistribution hazards model with adjustment for
+    covariate-dependent censoring.
+        </li>
+        <li>
+          <em>
+            <b>
+              Recurrent event data:
+            </b>
+          </em>
+<tt>coxph</tt>
+          from the
+<a href="../packages/survival/index.html">survival</a>
+          package can be used to analyse recurrent event
+    data.  The
+<tt>cph</tt>
+          function of the
+<a href="../packages/rms/index.html">rms</a>
+          package
+    fits the Anderson-Gill model for recurrent events, model that can
+    also be fitted with the
+<a href="../packages/frailtypack/index.html">frailtypack</a>
+          package. The latter
+    also permits to fit joint frailty models for joint modelling of
+    recurrent events and a terminal event.  The
+<a href="../packages/survrec/index.html">survrec</a>
+          package proposes implementations of several models for recurrent
+    events data, such as the Peña-Strawderman-Hollander,
+    Wang-Chang estimators, and MLE estimation under a Gamma Frailty
+    model.  The
+<a href="../packages/condGEE/index.html">condGEE</a>
+          package
+    implements the conditional GEE for recurrent event gap times.
+    The
+<a href="../packages/TestSurvRec/index.html">TestSurvRec</a>
+          package
+    implements weighted logrank type tests for recurrent events.
+        </li>
+      </ul>
+      <h1>
+        Relative Survival
+      </h1>
+      <ul>
+        <li>
+          The
+<a href="../packages/relsurv/index.html">relsurv</a>
+          package proposes several functions to deal
+    with relative survival data. For example,
+<tt>rs.surv</tt>
+          computes a relative
+    survival curve.
+<tt>rs.add</tt>
+          fits an additive model and
+<tt>rsmul</tt>
+          fits the Cox model of Andersen et al. for relative survival, while
+<tt>rstrans</tt>
+          fits a Cox model in transformed time.
+        </li>
+        <li>
+          The
+<a href="../packages/timereg/index.html">timereg</a>
+          package permits to fit relative survival models like 
+    the proportional excess and additive excess models.
+        </li>
+        <li>
+          The
+<a href="../packages/JPSurv/index.html">JPSurv</a>
+          package implements methods for
+    population-based survival analysis, like the proportional hazard
+    relative survival model and the join point relative survival model.
+        </li>
+        <li>
+          The
+<a href="../packages/survexp.fr/index.html">survexp.fr</a>
+          package computes relative survival,
+    absolute excess risk and standardized mortality ratio based on
+    French death rates.
+        </li>
+        <li>
+          The
+<a href="../packages/MRsurv/index.html">MRsurv</a>
+          package permits to fit multiplicative
+    regression models for relative survival.
+        </li>
+        <li>
+          The
+<a href="../packages/ROCt/index.html">ROCt</a>
+          package implements time-dependent ROC curves
+    and extensions to relative survival.
+        </li>
+      </ul>
+      <h1>
+        Random Effect Models
+      </h1>
+      <ul>
+        <li>
+          <em>
+            <b>
+              Frailties:
+            </b>
+          </em>
+          Frailty terms can be added
+    in
+<tt>coxph</tt>
+          and
+<tt>survreg</tt>
+          functions in
+    package
+<a href="../packages/survival/index.html">survival</a>. A mixed-effects Cox model is
+    implemented in the
+<a href="../packages/coxme/index.html">coxme</a>
+          package.
+    The
+<tt>two.stage</tt>
+          function in the
+<a href="../packages/timereg/index.html">timereg</a>
+          package fits the Clayton-Oakes-Glidden model.
+    The
+<a href="../packages/parfm/index.html">parfm</a>
+          package fits fully parametric frailty models
+    via maximisation of the marginal likelihood.
+    The
+<a href="../packages/frailtypack/index.html">frailtypack</a>
+          package fits proportional hazards
+    models with a shared Gamma frailty to right-censored and/or
+    left-truncated data using a penalised likelihood on the hazard
+    function. The package also fits additive and nested frailty models
+    that can be used for, e.g., meta-analysis and for hierarchically
+    clustered data (with 2 levels of clustering), respectively.  A
+    proportional hazards model with mixed effects can be fitted using
+    the
+<a href="../packages/phmm/index.html">phmm</a>
+          package.  The
+<a href="../packages/lmec/index.html">lmec</a>
+          package fits a
+    linear mixed-effects model for left-censored data. The Cox model
+    using h-likelihood estimation for the frailty terms can be fitted
+    using the
+<a href="../packages/frailtyHL/index.html">frailtyHL</a>
+          package.  The
+<a href="../packages/tlmec/index.html">tlmec</a>
+          package implements a linear mixed effects model for censored data
+    with Student-t or normal distributions. The
+<a href="../packages/jmec/index.html">jmec</a>
+          package fits joint models for event and censoring times,
+    respectively.
+        </li>
+        <li>
+          <em>
+            <b>
+              Joint modelling of time-to-event and longitudinal
+    data:
+            </b>
+          </em>
+          The
+<a href="../packages/joineR/index.html">joineR</a>
+          package allows the analysis
+    of repeated measurements and time-to-event data via joint random effects
+    models.
+        </li>
+      </ul>
+      <h1>
+        Multivariate Survival
+      </h1>
+      <p>
+        Multivariate survival refers to the analysis of unit, e.g., the
+  survival of twins or a family. To analyse such data, we can estimate
+  the joint distribution of the survival times
+      </p>
+      <ul>
+        <li>
+          <em>
+            <b>
+              Joint modelling:
+            </b>
+          </em>
+          Both
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/Icens.html"><span class="BioC">Icens</span></a>
+          and
+<a href="../packages/MLEcens/index.html">MLEcens</a>
+          can estimate bivariate
+    survival data subject to interval censoring.
+        </li>
+        <li>
+          The
+<a href="../packages/mets/index.html">mets</a>
+          package implements various statistical models
+    for multivariate event history data, e.g., multivariate cumulative
+    incidence models, bivariate random effects probit models,
+    Clayton-Oakes model.
+        </li>
+      </ul>
+      <h1>
+        Bayesian Models
+      </h1>
+      <ul>
+        <li>
+<a href="../packages/survBayes/index.html">survBayes</a>
+          fits through a Bayesian approach a proportional hazards 
+    model for right and interval-censored data.
+        </li>
+        <li>
+          The
+<a href="../packages/bayesSurv/index.html">bayesSurv</a>
+          package proposes an implementation of a bivariate
+    AFT model.
+        </li>
+        <li>
+          The package
+<a href="../packages/BMA/index.html">BMA</a>
+          computes a Bayesian model averaging for
+    Cox proportional hazards models.
+        </li>
+        <li>
+          The
+<tt>DPsurvint</tt>
+          function in
+<a href="../packages/DPpackage/index.html">DPpackage</a>
+          fits a Bayesian
+    semiparametric AFT model.
+<tt>LDDPsurvival</tt>
+          in the same package 
+    fits a Linear Dependent Dirichlet Process Mixture of survival models.
+        </li>
+        <li>
+<tt>NMixMCMC</tt>
+          in
+<a href="../packages/mixAK/index.html">mixAK</a>
+          performs an MCMC estimation
+    of normal mixtures for censored data.
+        </li>
+        <li>
+          A MCMC for Gaussian linear regression with left-, right- or interval-censored 
+    data can be fitted using the
+<tt>MCMCtobit</tt>
+          in
+<a href="../packages/MCMCpack/index.html">MCMCpack</a>.
+        </li>
+        <li>
+          The
+<a href="../packages/BayHaz/index.html">BayHaz</a>
+          package estimates the hazard function from censored 
+    data in a Bayesian framework.
+        </li>
+        <li>
+          The
+<tt>weibullregpost</tt>
+          function in
+<a href="../packages/LearnBayes/index.html">LearnBayes</a>
+          computes
+    the log posterior density for a Weibull proportional-odds regression model.
+        </li>
+        <li>
+          The
+<a href="../packages/MCMCglmm/index.html">MCMCglmm</a>
+          fits generalised linear mixed models using MCMC
+    to right-, left- and interval censored data.
+        </li>
+        <li>
+          The
+<a href="../packages/BaSTA/index.html">BaSTA</a>
+          package aims at drawing inference on
+    age-specific mortality from capture-recapture/recovery data when
+    some or all records have missing information on times of birth
+    and death. Covariates can also be included in the model.
+        </li>
+        <li>
+          The
+<a href="../packages/JMbayes/index.html">JMbayes</a>
+          package performs joint modelling of
+    longitudinal and time-to-event data under a bayesian approach.
+        </li>
+        <li>
+          Bayesian parametric and semiparametric estimation for
+    semi-competing risks data is available via the
+<a href="../packages/SemiCompRisks/index.html">SemiCompRisks</a>
+          package.
+        </li>
+        <li>
+          The
+<a href="../packages/psbcGroup/index.html">psbcGroup</a>
+          package implements penalized
+  semiparametric Bayesian Cox models with elastic net, fused lasso and
+  group lasso priors.
+        </li>
+        <li>
+          The
+<a href="../packages/spatsurv/index.html">spatsurv</a>
+          package fits a Bayesian parametric
+    proportional hazards model for which events have been geo-located.
+        </li>
+      </ul>
+      <h1>
+        High-Dimensional Data
+      </h1>
+      <ul>
+        <li>
+          <em>
+            <b>
+              Recursive partitioning:
+            </b>
+          </em>
+<a href="../packages/rpart/index.html">rpart</a>
+          and
+<a href="../packages/mvpart/index.html">mvpart</a>
+          packages implement CART-like trees that can be used with 
+    censored outcomes.
+    The
+<a href="../packages/party/index.html">party</a>
+          package implements recursive partitioning for survival
+    data.
+<a href="../packages/LogicReg/index.html">LogicReg</a>
+          can perform logic regression.
+<a href="../packages/kaps/index.html">kaps</a>
+          implements K-adaptive partitioning and recursive
+    partitioning algorithms for censored survival data
+        </li>
+        <li>
+          <em>
+            <b>
+              Random forest:
+            </b>
+          </em>
+          Package
+<a href="../packages/ipred/index.html">ipred</a>
+          implements bagging for survival data.
+    The
+<a href="../packages/randomSurvivalForest/index.html">randomSurvivalForest</a>
+          package fits random forest
+    to survival data,
+    while a variant of the random forest is implemented in
+<a href="../packages/party/index.html">party</a>.
+    Another implementation is proposed in the
+<a href="../packages/randomForestSRC/index.html">randomForestSRC</a>
+          package.
+        </li>
+        <li>
+          <b>
+            <em>
+              Regularised and shrinkage methods:
+            </em>
+          </b>
+          The
+<a href="../packages/glmpath/index.html">glmpath</a>
+          package implements a L1 regularised Cox
+    proportional hazards model.  An L1 and L2 penalised Cox models are
+    available in
+<a href="../packages/penalized/index.html">penalized</a>.  The
+<a href="../packages/pamr/index.html">pamr</a>
+          package
+    computes a nearest shrunken centroid for survival gene expression
+    data.  A high dimensional Cox model using univariate shrinkage is
+    available in
+<a href="../packages/uniCox/index.html">uniCox</a>.  The
+<a href="../packages/lpc/index.html">lpc</a>
+          package
+    implements the lassoed principal components method.
+    The
+<a href="../packages/ahaz/index.html">ahaz</a>
+          package implements the LASSO and elastic net
+    estimator for the additive risk model.  The
+<a href="../packages/fastcox/index.html">fastcox</a>
+          package implements the Lasso and elastic-net penalized Cox's
+    regression using the cockail algorithm.  The
+<a href="../packages/SGL/index.html">SGL</a>
+          package permits to fit Cox models with a combination of lasso and
+    group lasso regularisation.
+<a href="../packages/CoxRidge/index.html">CoxRidge</a>
+          fits Cox models
+    with penalized ridge-type (ridge, dynamic and weighted dynamic)
+    partial likelihood. The
+<a href="../packages/AdapEnetClass/index.html">AdapEnetClass</a>
+          package implements
+    accelerated failure time models using regularised weighted least
+    squares (e.g., weighted elastic net, adaptive elastic net).
+        </li>
+        <li>
+          <em>
+            <b>
+              Boosting:
+            </b>
+          </em>
+          Gradient boosting for the Cox model is implemented in the
+<a href="../packages/gbm/index.html">gbm</a>
+          package.
+    The
+<a href="../packages/mboost/index.html">mboost</a>
+          package includes a generic gradient boosting algorithm 
+    for the construction of prognostic and diagnostic models for right-censored data.
+<a href="../packages/globalboosttest/index.html">globalboosttest</a>
+          implements permutation-based testing procedure to test 
+    the additional predictive value of high-dimensional data. It is based on
+<a href="../packages/mboost/index.html">mboost</a>.
+<a href="../packages/CoxBoost/index.html">CoxBoost</a>
+          provides routines for fitting the Cox proportional hazards model 
+    and the Fine and Gray model by likelihood based boosting.
+        </li>
+        <li>
+          <em>
+            <b>
+              Other:
+            </b>
+          </em>
+          The
+<a href="../packages/superpc/index.html">superpc</a>
+          package implements
+    the supervised principal components for survival data.
+    The
+<a href="../packages/AIM/index.html">AIM</a>
+          package can construct index models for survival
+    outcomes, that is, construct scores based on a training dataset.
+    The
+<a href="../packages/compound.Cox/index.html">compound.Cox</a>
+          package fits Cox proportional hazards
+    model using the compound covariate method.
+<a href="../packages/plsRcox/index.html">plsRcox</a>
+          provides partial least squares regression and various techniques
+    for fitting Cox models in high dimensionnal
+    settings. The
+<a href="../packages/rsig/index.html">rsig</a>
+          package implements feature selection
+    algorithms based on subsampling and averaging linear models
+    obtained from the Lasso algorithm for predicting survival risk.
+        </li>
+      </ul>
+      <h1>
+        Predictions and Prediction Performance
+      </h1>
+      <ul>
+        <li>
+          The
+<a href="../packages/pec/index.html">pec</a>
+          package provides utilities to plot prediction error 
+    curves for several survival models
+        </li>
+        <li>
+<a href="../packages/peperr/index.html">peperr</a>
+          implements prediction error techniques which can
+    be computed in a parallelised way. Useful for high-dimensional
+    data.
+        </li>
+        <li>
+          The
+<a href="../packages/timeROC/index.html">timeROC</a>
+          package permits to estimate time-dependent
+    ROC curves and time-dependent AUC with censored data, possibly
+    with competing risks.
+        </li>
+        <li>
+<a href="../packages/survivalROC/index.html">survivalROC</a>
+          computes time-dependent ROC curves and time-dependent AUC from 
+    censored data using Kaplan-Meier or Akritas's nearest neighbour estimation method 
+    (Cumulative sensitivity and dynamic specificity).
+        </li>
+        <li>
+<a href="../packages/risksetROC/index.html">risksetROC</a>
+          implements time-dependent ROC curves,
+    AUC and integrated AUC of Heagerty and Zheng (Biometrics, 2005).
+        </li>
+        <li>
+          Various time-dependent true/false positive rates and 
+    Cumulative/Dynamic AUC are implemented in the
+<a href="../packages/survAUC/index.html">survAUC</a>
+          package.
+        </li>
+        <li>
+          The
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/survcomp.html"><span class="BioC">survcomp</span></a>
+          package provides several functions to 
+    assess and compare the performance of survival models.
+        </li>
+        <li>
+          C-statistics for risk prediction models with censored survival
+    data can be computed via the
+<a href="../packages/survC1/index.html">survC1</a>
+          package.
+        </li>
+        <li>
+          The
+<a href="../packages/survIDINRI/index.html">survIDINRI</a>
+          package implements the integrated
+    discrimination improvement index and the category-less net
+    reclassification index for comparing competing risks prediction
+    models.
+        </li>
+      </ul>
+      <h1>
+        Power Analysis
+      </h1>
+      <ul>
+        <li>
+          The
+<a href="../packages/CR/index.html">CR</a>
+          package proposes power calculation for weighted
+    Log-Rank tests in cure rate models.
+        </li>
+        <li>
+          The
+<a href="../packages/NPHMC/index.html">NPHMC</a>
+          permits to calculate sample size based on
+    proportional hazards mixture cure models.
+        </li>
+        <li>
+          The
+<a href="../packages/powerSurvEpi/index.html">powerSurvEpi</a>
+          package provides power and sample size
+    calculation for survival analysis (with a focus towards
+    epidemiological studies).
+        </li>
+        <li>
+          The
+<a href="../packages/JMLSD/index.html">JMLSD</a>
+          package performs power
+    calculation for joint modelling of time-to-event and longitudinal
+    data.
+        </li>
+        <li>
+          Power analysis and sample size calculation for SNP association
+    studies with time-to-event outcomes can be done using
+    the
+<a href="../packages/survSNP/index.html">survSNP</a>
+          package.
+        </li>
+      </ul>
+      <h1>
+        Simulation
+      </h1>
+      <ul>
+        <li>
+          The
+<a href="../packages/genSurv/index.html">genSurv</a>
+          package permits to generate data wih one
+    binary time-dependent covariate and data stemming from a
+    progressive illness-death model.
+        </li>
+        <li>
+          The
+<a href="../packages/PermAlgo/index.html">PermAlgo</a>
+          package permits the user to simulate
+    complex survival data, in which event and censoring times could be
+    conditional on an user-specified list of (possibly time-dependent)
+    covariates.
+        </li>
+        <li>
+          The
+<a href="../packages/complex.surv.dat.sim/index.html">complex.surv.dat.sim</a>
+          package permits to simulate
+    complex survival cohort data (e.g., multiple events, recurrent
+    events, ...).
+        </li>
+        <li>
+          The
+<a href="../packages/prodlim/index.html">prodlim</a>
+          package proposes some functions for
+    simulating complex event history data.
+        </li>
+        <li>
+          The
+<a href="../packages/gems/index.html">gems</a>
+          package also permits to simulate and analyse
+    multistate models. The package allows for a general specification
+    of the transition hazard functions, for non-Markov models and
+    for dependencies on the history.
+        </li>
+        <li>
+          The
+<a href="../packages/simMSM/index.html">simMSM</a>
+          package provides functions for simulating
+    complex multistate models data with possibly nonlinear baseline
+    hazards and nonlinear covariate effects.
+        </li>
+        <li>
+          The
+<a href="../packages/simPH/index.html">simPH</a>
+          package implements tools for simulating and
+    plotting quantities of interest estimated from proportional
+    hazards models.
+        </li>
+        <li>
+          The
+<a href="../packages/survsim/index.html">survsim</a>
+          package permits to simulate simple and
+    complex survival data such as recurrent event data and competing
+    risks.
+        </li>
+      </ul>
+      <h1>
+        Miscellaneous
+      </h1>
+      <ul>
+        <li>
+<a href="../packages/dynpred/index.html">dynpred</a>
+          is the companion package to "Dynamic Prediction
+    in Clinical Survival Analysis".
+        </li>
+        <li>
+          Inverse probability weights can be estimated using the
+<a href="../packages/ipw/index.html">ipw</a>
+          package.
+    These can be used to fit marginal structural models to estimate causal effects
+    from observational data.
+        </li>
+        <li>
+          Package
+<a href="../packages/boot/index.html">boot</a>
+          proposes the
+<tt>censboot</tt>
+          function that 
+    implements several types of bootstrap techniques for right-censored data.
+        </li>
+        <li>
+          The
+<a href="../packages/currentSurvival/index.html">currentSurvival</a>
+          package estimates the current
+    cumulative incidence and the current leukaemia free survival function.
+        </li>
+        <li>
+          The
+<a href="../packages/survJamda/index.html">survJamda</a>
+          package provides functions for performing meta-analyses 
+    of gene expression data and to predict patients' survival and risk assessment.
+        </li>
+        <li>
+<a href="../packages/ipdmeta/index.html">ipdmeta</a>
+          provides tools for individual patient data meta-analysis, mixed-level meta-analysis with patient 
+    level data and mulivariate survival estimates for aggregate studies.
+        </li>
+        <li>
+          The
+<a href="../packages/KMsurv/index.html">KMsurv</a>
+          package includes the data sets from Klein
+    and Moeschberger (1997).  Some supplementary data sets and
+    functions can be found in the
+<a href="../packages/OIsurv/index.html">OIsurv</a>
+          package.  The
+    package
+<a href="../packages/SMIR/index.html">SMIR</a>
+          that accompanies Aitkin et al. (2009),
+<a href="../packages/SMPracticals/index.html">SMPracticals</a>
+          that accompanies Davidson (2003)
+    and
+<a href="../packages/DAAG/index.html">DAAG</a>
+          that accompanies Maindonald, J.H. and Braun,
+    W.J. (2003, 2007) also contain survival data sets.
+        </li>
+        <li>
+          The
+<a href="../packages/SvyNom/index.html">SvyNom</a>
+          package permits to construct, validate and
+    calibrate nomograms stemming from complex right-censored survey
+    data.
+        </li>
+        <li>
+          The
+<a href="../packages/logconcens/index.html">logconcens</a>
+          package compute the MLE of a density
+    (log-concave) possibly for interval censored data.
+        </li>
+        <li>
+          The
+<a href="../packages/TBSSurvival/index.html">TBSSurvival</a>
+          package fits parametric
+    Transform-both-sides models used in reliability analysis
+        </li>
+        <li>
+          The
+<a href="../packages/OutlierDC/index.html">OutlierDC</a>
+          package implements algorithms to detect outliers
+  based on quantile regression for censored data.
+        </li>
+        <li>
+          The
+<a href="../packages/survMisc/index.html">survMisc</a>
+          package proposes miscellaneous functions
+  that extends the
+<a href="../packages/survival/index.html">survival</a>
+          package, e.g., additional
+  logrank type tests, goodness of fit plots.
+        </li>
+        <li>
+          The
+<a href="../packages/coarseDataTools/index.html">coarseDataTools</a>
+          package implements an EM algorithm
+    to estimate the relative case fatality ratio between two groups.
+        </li>
+      </ul>
+    </div>
+
+  <h3>CRAN packages:</h3>
+  <ul>
+    <li><a href="../packages/AdapEnetClass/index.html">AdapEnetClass</a></li>
+    <li><a href="../packages/AER/index.html">AER</a></li>
+    <li><a href="../packages/ahaz/index.html">ahaz</a></li>
+    <li><a href="../packages/AIM/index.html">AIM</a></li>
+    <li><a href="../packages/asbio/index.html">asbio</a></li>
+    <li><a href="../packages/aster/index.html">aster</a></li>
+    <li><a href="../packages/aster2/index.html">aster2</a></li>
+    <li><a href="../packages/BaSTA/index.html">BaSTA</a></li>
+    <li><a href="../packages/bayesSurv/index.html">bayesSurv</a></li>
+    <li><a href="../packages/BayHaz/index.html">BayHaz</a></li>
+    <li><a href="../packages/BGPhazard/index.html">BGPhazard</a></li>
+    <li><a href="../packages/Biograph/index.html">Biograph</a></li>
+    <li><a href="../packages/BMA/index.html">BMA</a></li>
+    <li><a href="../packages/boot/index.html">boot</a></li>
+    <li><a href="../packages/bpcp/index.html">bpcp</a></li>
+    <li><a href="../packages/censReg/index.html">censReg</a></li>
+    <li><a href="../packages/changeLOS/index.html">changeLOS</a></li>
+    <li><a href="../packages/clinfun/index.html">clinfun</a></li>
+    <li><a href="../packages/cmprsk/index.html">cmprsk</a> (core)</li>
+    <li><a href="../packages/coarseDataTools/index.html">coarseDataTools</a></li>
+    <li><a href="../packages/coin/index.html">coin</a></li>
+    <li><a href="../packages/compeir/index.html">compeir</a></li>
+    <li><a href="../packages/complex.surv.dat.sim/index.html">complex.surv.dat.sim</a></li>
+    <li><a href="../packages/compound.Cox/index.html">compound.Cox</a></li>
+    <li><a href="../packages/concreg/index.html">concreg</a></li>
+    <li><a href="../packages/condGEE/index.html">condGEE</a></li>
+    <li><a href="../packages/CoxBoost/index.html">CoxBoost</a></li>
+    <li><a href="../packages/coxme/index.html">coxme</a></li>
+    <li><a href="../packages/coxphf/index.html">coxphf</a></li>
+    <li><a href="../packages/coxphw/index.html">coxphw</a></li>
+    <li><a href="../packages/CoxRidge/index.html">CoxRidge</a></li>
+    <li><a href="../packages/coxrobust/index.html">coxrobust</a></li>
+    <li><a href="../packages/CPE/index.html">CPE</a></li>
+    <li><a href="../packages/CPHshape/index.html">CPHshape</a></li>
+    <li><a href="../packages/Cprob/index.html">Cprob</a></li>
+    <li><a href="../packages/CR/index.html">CR</a></li>
+    <li><a href="../packages/crrSC/index.html">crrSC</a></li>
+    <li><a href="../packages/crrstep/index.html">crrstep</a></li>
+    <li><a href="../packages/currentSurvival/index.html">currentSurvival</a></li>
+    <li><a href="../packages/DAAG/index.html">DAAG</a></li>
+    <li><a href="../packages/dblcens/index.html">dblcens</a></li>
+    <li><a href="../packages/DPpackage/index.html">DPpackage</a></li>
+    <li><a href="../packages/DTDA/index.html">DTDA</a></li>
+    <li><a href="../packages/dynpred/index.html">dynpred</a></li>
+    <li><a href="../packages/dynsurv/index.html">dynsurv</a></li>
+    <li><a href="../packages/eha/index.html">eha</a> (core)</li>
+    <li><a href="../packages/emplik/index.html">emplik</a></li>
+    <li><a href="../packages/Epi/index.html">Epi</a></li>
+    <li><a href="../packages/epiR/index.html">epiR</a></li>
+    <li><a href="../packages/etm/index.html">etm</a></li>
+    <li><a href="../packages/exactRankTests/index.html">exactRankTests</a></li>
+    <li><a href="../packages/fastcox/index.html">fastcox</a></li>
+    <li><a href="../packages/FHtest/index.html">FHtest</a></li>
+    <li><a href="../packages/fitdistrplus/index.html">fitdistrplus</a></li>
+    <li><a href="../packages/flexsurv/index.html">flexsurv</a></li>
+    <li><a href="../packages/frailtyHL/index.html">frailtyHL</a></li>
+    <li><a href="../packages/frailtypack/index.html">frailtypack</a></li>
+    <li><a href="../packages/gamlss.cens/index.html">gamlss.cens</a></li>
+    <li><a href="../packages/gbm/index.html">gbm</a></li>
+    <li><a href="../packages/gems/index.html">gems</a></li>
+    <li><a href="../packages/genSurv/index.html">genSurv</a></li>
+    <li><a href="../packages/glmpath/index.html">glmpath</a></li>
+    <li><a href="../packages/globalboosttest/index.html">globalboosttest</a></li>
+    <li><a href="../packages/glrt/index.html">glrt</a></li>
+    <li><a href="../packages/gof/index.html">gof</a></li>
+    <li><a href="../packages/gss/index.html">gss</a></li>
+    <li><a href="../packages/ICE/index.html">ICE</a></li>
+    <li><a href="../packages/intcox/index.html">intcox</a></li>
+    <li><a href="../packages/interval/index.html">interval</a></li>
+    <li><a href="../packages/ipdmeta/index.html">ipdmeta</a></li>
+    <li><a href="../packages/ipred/index.html">ipred</a></li>
+    <li><a href="../packages/ipw/index.html">ipw</a></li>
+    <li><a href="../packages/jackknifeKME/index.html">jackknifeKME</a></li>
+    <li><a href="../packages/JM/index.html">JM</a></li>
+    <li><a href="../packages/JMbayes/index.html">JMbayes</a></li>
+    <li><a href="../packages/jmec/index.html">jmec</a></li>
+    <li><a href="../packages/JMLSD/index.html">JMLSD</a></li>
+    <li><a href="../packages/joineR/index.html">joineR</a></li>
+    <li><a href="../packages/JPSurv/index.html">JPSurv</a></li>
+    <li><a href="../packages/kaps/index.html">kaps</a></li>
+    <li><a href="../packages/km.ci/index.html">km.ci</a></li>
+    <li><a href="../packages/kmc/index.html">kmc</a></li>
+    <li><a href="../packages/kmconfband/index.html">kmconfband</a></li>
+    <li><a href="../packages/kmi/index.html">kmi</a></li>
+    <li><a href="../packages/KMsurv/index.html">KMsurv</a></li>
+    <li><a href="../packages/lava.tobit/index.html">lava.tobit</a></li>
+    <li><a href="../packages/lbiassurv/index.html">lbiassurv</a></li>
+    <li><a href="../packages/LearnBayes/index.html">LearnBayes</a></li>
+    <li><a href="../packages/lmec/index.html">lmec</a></li>
+    <li><a href="../packages/locfit/index.html">locfit</a></li>
+    <li><a href="../packages/logconcens/index.html">logconcens</a></li>
+    <li><a href="../packages/LogicReg/index.html">LogicReg</a></li>
+    <li><a href="../packages/LogrankA/index.html">LogrankA</a></li>
+    <li><a href="../packages/logspline/index.html">logspline</a></li>
+    <li><a href="../packages/lpc/index.html">lpc</a></li>
+    <li><a href="../packages/lss/index.html">lss</a></li>
+    <li><a href="../packages/MAMSE/index.html">MAMSE</a></li>
+    <li><a href="../packages/maxstat/index.html">maxstat</a></li>
+    <li><a href="../packages/mboost/index.html">mboost</a></li>
+    <li><a href="../packages/MCMCglmm/index.html">MCMCglmm</a></li>
+    <li><a href="../packages/MCMCpack/index.html">MCMCpack</a></li>
+    <li><a href="../packages/mets/index.html">mets</a></li>
+    <li><a href="../packages/mfp/index.html">mfp</a></li>
+    <li><a href="../packages/mixAK/index.html">mixAK</a></li>
+    <li><a href="../packages/mixPHM/index.html">mixPHM</a></li>
+    <li><a href="../packages/MLEcens/index.html">MLEcens</a></li>
+    <li><a href="../packages/MRsurv/index.html">MRsurv</a></li>
+    <li><a href="../packages/msm/index.html">msm</a></li>
+    <li><a href="../packages/msSurv/index.html">msSurv</a></li>
+    <li><a href="../packages/mstate/index.html">mstate</a></li>
+    <li><a href="../packages/muhaz/index.html">muhaz</a> (core)</li>
+    <li><a href="../packages/multcomp/index.html">multcomp</a></li>
+    <li><a href="../packages/mvna/index.html">mvna</a></li>
+    <li><a href="../packages/mvpart/index.html">mvpart</a></li>
+    <li><a href="../packages/NADA/index.html">NADA</a></li>
+    <li><a href="../packages/NestedCohort/index.html">NestedCohort</a></li>
+    <li><a href="../packages/NPHMC/index.html">NPHMC</a></li>
+    <li><a href="../packages/NPMLEcmprsk/index.html">NPMLEcmprsk</a></li>
+    <li><a href="../packages/OIsurv/index.html">OIsurv</a></li>
+    <li><a href="../packages/OrdFacReg/index.html">OrdFacReg</a></li>
+    <li><a href="../packages/OutlierDC/index.html">OutlierDC</a></li>
+    <li><a href="../packages/p3state.msm/index.html">p3state.msm</a></li>
+    <li><a href="../packages/pamr/index.html">pamr</a></li>
+    <li><a href="../packages/parfm/index.html">parfm</a></li>
+    <li><a href="../packages/party/index.html">party</a></li>
+    <li><a href="../packages/pec/index.html">pec</a></li>
+    <li><a href="../packages/penalized/index.html">penalized</a></li>
+    <li><a href="../packages/peperr/index.html">peperr</a></li>
+    <li><a href="../packages/PermAlgo/index.html">PermAlgo</a></li>
+    <li><a href="../packages/phmm/index.html">phmm</a></li>
+    <li><a href="../packages/plsRcox/index.html">plsRcox</a></li>
+    <li><a href="../packages/polspline/index.html">polspline</a></li>
+    <li><a href="../packages/powerSurvEpi/index.html">powerSurvEpi</a></li>
+    <li><a href="../packages/prodlim/index.html">prodlim</a></li>
+    <li><a href="../packages/psbcGroup/index.html">psbcGroup</a></li>
+    <li><a href="../packages/pseudo/index.html">pseudo</a></li>
+    <li><a href="../packages/quantreg/index.html">quantreg</a></li>
+    <li><a href="../packages/randomForestSRC/index.html">randomForestSRC</a></li>
+    <li><a href="../packages/randomSurvivalForest/index.html">randomSurvivalForest</a></li>
+    <li><a href="../packages/rankhazard/index.html">rankhazard</a></li>
+    <li><a href="../packages/relsurv/index.html">relsurv</a></li>
+    <li><a href="../packages/rhosp/index.html">rhosp</a></li>
+    <li><a href="../packages/riskRegression/index.html">riskRegression</a></li>
+    <li><a href="../packages/risksetROC/index.html">risksetROC</a></li>
+    <li><a href="../packages/rms/index.html">rms</a> (core)</li>
+    <li><a href="../packages/RobustAFT/index.html">RobustAFT</a></li>
+    <li><a href="../packages/ROCt/index.html">ROCt</a></li>
+    <li><a href="../packages/rpart/index.html">rpart</a></li>
+    <li><a href="../packages/rsig/index.html">rsig</a></li>
+    <li><a href="../packages/saws/index.html">saws</a></li>
+    <li><a href="../packages/SemiCompRisks/index.html">SemiCompRisks</a></li>
+    <li><a href="../packages/SemiMarkov/index.html">SemiMarkov</a></li>
+    <li><a href="../packages/SGL/index.html">SGL</a></li>
+    <li><a href="../packages/simexaft/index.html">simexaft</a></li>
+    <li><a href="../packages/simMSM/index.html">simMSM</a></li>
+    <li><a href="../packages/simPH/index.html">simPH</a></li>
+    <li><a href="../packages/SMIR/index.html">SMIR</a></li>
+    <li><a href="../packages/SmoothHazard/index.html">SmoothHazard</a></li>
+    <li><a href="../packages/smoothHR/index.html">smoothHR</a></li>
+    <li><a href="../packages/smoothSurv/index.html">smoothSurv</a></li>
+    <li><a href="../packages/SMPracticals/index.html">SMPracticals</a></li>
+    <li><a href="../packages/spatstat/index.html">spatstat</a></li>
+    <li><a href="../packages/spatsurv/index.html">spatsurv</a></li>
+    <li><a href="../packages/superpc/index.html">superpc</a></li>
+    <li><a href="../packages/surv2sampleComp/index.html">surv2sampleComp</a></li>
+    <li><a href="../packages/survAUC/index.html">survAUC</a></li>
+    <li><a href="../packages/survBayes/index.html">survBayes</a></li>
+    <li><a href="../packages/survC1/index.html">survC1</a></li>
+    <li><a href="../packages/survexp.fr/index.html">survexp.fr</a></li>
+    <li><a href="../packages/survey/index.html">survey</a></li>
+    <li><a href="../packages/Survgini/index.html">Survgini</a></li>
+    <li><a href="../packages/survIDINRI/index.html">survIDINRI</a></li>
+    <li><a href="../packages/survival/index.html">survival</a> (core)</li>
+    <li><a href="../packages/survivalROC/index.html">survivalROC</a></li>
+    <li><a href="../packages/survJamda/index.html">survJamda</a></li>
+    <li><a href="../packages/survMisc/index.html">survMisc</a></li>
+    <li><a href="../packages/survPresmooth/index.html">survPresmooth</a></li>
+    <li><a href="../packages/survrec/index.html">survrec</a></li>
+    <li><a href="../packages/SurvRegCensCov/index.html">SurvRegCensCov</a></li>
+    <li><a href="../packages/survsim/index.html">survsim</a></li>
+    <li><a href="../packages/survSNP/index.html">survSNP</a></li>
+    <li><a href="../packages/SvyNom/index.html">SvyNom</a></li>
+    <li><a href="../packages/TBSSurvival/index.html">TBSSurvival</a></li>
+    <li><a href="../packages/TestSurvRec/index.html">TestSurvRec</a></li>
+    <li><a href="../packages/timereg/index.html">timereg</a> (core)</li>
+    <li><a href="../packages/timeROC/index.html">timeROC</a></li>
+    <li><a href="../packages/tlmec/index.html">tlmec</a></li>
+    <li><a href="../packages/TPmsm/index.html">TPmsm</a></li>
+    <li><a href="../packages/tpr/index.html">tpr</a></li>
+    <li><a href="../packages/TraMineR/index.html">TraMineR</a></li>
+    <li><a href="../packages/TSHRC/index.html">TSHRC</a></li>
+    <li><a href="../packages/uniCox/index.html">uniCox</a></li>
+    <li><a href="../packages/VGAM/index.html">VGAM</a></li>
+    <li><a href="../packages/wtcrsk/index.html">wtcrsk</a></li>
+    <li><a href="../packages/YPmodel/index.html">YPmodel</a></li>
+  </ul>
+
+  <h3>Related links:</h3>
+  <ul>
+    <li>CRAN Task View: <a href="ClinicalTrials.html">ClinicalTrials</a></li>
+    <li>CRAN Task View: <a href="SocialSciences.html">SocialSciences</a></li>
+    <li>CRAN Task View: <a href="Bayesian.html">Bayesian</a></li>
+    <li>CRAN Task View: <a href="MachineLearning.html">MachineLearning</a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/Icens.html" target="_top"><span class="BioC">Icens</span></a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/multtest.html" target="_top"><span class="BioC">multtest</span></a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/survcomp.html" target="_top"><span class="BioC">survcomp</span></a></li>
+    <li><a href="http://www.imbi.uni-freiburg.de/comprisksmultistate">
+  Competing Risks and Multistate Models with R
+</a></li>
+    <li><a href="http://www.msbi.nl/DynamicPrediction">
+  Dynamic prediction in clinical survival analysis
+</a></li>
+    <li><a href="http://biostat.mc.vanderbilt.edu/twiki/bin/view/Main/RmS">
+  Regression modelling strategy
+</a></li>
+    <li><a href="http://www.gamlss.com/">
+  GAMLSS
+</a></li>
+    <li><a href="http://www3.interscience.wiley.com/cgi-bin/abstract/113390852/ABSTRACT">
+  Tutorial in competing 
+    risks and multistate models
+</a></li>
+    <li><a href="http://www.msbi.nl/dnn/Research/SurvivalAnalysis/Multistate/tabid/144/Default.aspx">
+  Associated
+    functions from the tutorial
+</a></li>
+    <li><a href="http://www.math.uu.se/staff/pages/?uname=garmo">
+  Course and exercise on survival analysis
+</a></li>
+    <li><a href="http://cran.r-project.org/doc/contrib/Fox-Companion/appendix-cox-regression.pdf">
+  Proportional-Hazards
+    Regression for Survival Data. Appendix to An R and S-PLUS
+    Companion to Applied Regression.
+</a></li>
+    <li><a href="http://www.jstatsoft.org/v38">
+  Journal of Statistical Software. Special Volume: Competing Risks and Multi-State Models
+</a></li>
+  </ul>
+
+</body>
+</html>
+ 

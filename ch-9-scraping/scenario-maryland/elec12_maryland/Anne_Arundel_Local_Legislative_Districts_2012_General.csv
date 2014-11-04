@@ -1,0 +1,75 @@
+"Vote Type (FOR=1,AGAINST=2)","Candidate Name","Party","Office Name","Office District","Winner","Write-In?", CONC 005,CONC 004,CONC 006,CONC 002,CONC 007,CONC 001,CONC 003
+1,"Barack Obama",DEM,President - Vice Pres,,Y,,13791,16033,14354,13007,13499,12515,10735
+1,"Mitt Romney",REP,President - Vice Pres,,,,19187,11476,11935,12340,18110,11004,18997
+1,"Gary Johnson",LIB,President - Vice Pres,,,,538,440,374,468,442,416,510
+1,"Jill Stein",GRN,President - Vice Pres,,,,231,177,160,220,216,202,241
+1,"Tiffany Renee Briscoe",DEM,President - Vice Pres,,,Y,0,0,0,0,1,0,0
+1,"Dennis Knill",DEM,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Matthew Lydick",REP,President - Vice Pres,,,Y,0,0,0,0,1,0,1
+1,"Barbara A. Prokopich",REP,President - Vice Pres,,,Y,0,0,0,1,0,1,0
+1,"Santa Claus",IND,President - Vice Pres,,,Y,11,10,10,11,15,10,16
+1,"Richard Duncan",IND,President - Vice Pres,,,Y,0,0,0,0,1,1,0
+1,"Bruce Mlynski",IND,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Kevin M. Thorne",IND,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"James Clymer",CON,President - Vice Pres,,,Y,0,0,0,0,2,0,0
+1,"Virgil Goode",CON,President - Vice Pres,,,Y,11,8,7,3,6,8,4
+1,"Ross C. Rocky Anderson",OTH,President - Vice Pres,,,Y,3,2,1,1,3,4,2
+1,"Andre Barnett",OTH,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Roseanne Barr",OTH,President - Vice Pres,,,Y,0,1,2,2,2,2,1
+1,"Will Christensen",OTH,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Stephen Durham",OTH,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Merlin Miller",OTH,President - Vice Pres,,,Y,1,0,0,0,0,1,0
+1,"Leon Leo Ray",OTH,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Michael David Boyles",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Theodis (Ted) Brown, Sr.",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Paul Chehade",UNF,President - Vice Pres,,,Y,0,1,0,0,0,1,0
+1,"David M. Crosby",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Fred Donald Dickson, Jr.",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Robert William Dietz",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Dwight Kenneth French",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Darrell Hykes",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Nelson Keyton",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Dean Morstad",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Deonia Neveu",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Terrance James O'Hara",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Jill Reed",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Cecil James Roth",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Sheila Tittle",UNF,President - Vice Pres,,,Y,0,0,0,0,0,0,0
+1,"Other Write-Ins",BOT,President - Vice Pres,,,Y,117,121,82,126,115,100,154
+1,"Ben Cardin",DEM,U.S. Senator           ,,Y,,11353,13398,12394,10843,11120,10634,8836
+1,"Daniel John Bongino",REP,U.S. Senator           ,,,,15582,8449,9009,8239,13156,7027,13010
+1,"Dean Ahmad",LIB,U.S. Senator           ,,,,410,424,389,384,393,330,399
+1,"S. Rob Sobhani",UNF,U.S. Senator           ,,,,5817,5329,4468,6068,6891,5622,7683
+1,"Lih Young",DEM,U.S. Senator           ,,,Y,1,2,0,1,0,3,1
+1,"Mary Podlesak",REP,U.S. Senator           ,,,Y,0,0,0,0,0,0,0
+1,"Brandy Baker",UNF,U.S. Senator           ,,,Y,3,1,1,1,0,1,1
+1,"Ed Tinus",UNF,U.S. Senator           ,,,Y,1,2,0,0,0,0,1
+1,"Other Write-Ins",BOT,U.S. Senator           ,,,Y,32,32,12,16,18,27,32
+1,"C. A. Dutch Ruppersberger",DEM,U.S. Congress,02,Y,,,4545,,,,10264,
+1,"Nancy C. Jacobs",REP,U.S. Congress,02,,,,1197,,,,6009,
+1,"Leo Wayne Dymowski",LIB,U.S. Congress,02,,,,174,,,,685,
+1,"Ray Bly",REP,U.S. Congress,02,,Y,,0,,,,1,
+1,"Other Write-Ins",BOT,U.S. Congress,02,,Y,,2,,,,21,
+1,"John Sarbanes",DEM,U.S. Congress,03,Y,,3520,6040,11806,11741,,2957,5749
+1,"Eric Delano Knowles",REP,U.S. Congress,03,,,3622,2952,6723,7247,,2797,6389
+1,"Paul W. Drgos, Jr.",LIB,U.S. Congress,03,,,255,350,702,886,,294,679
+1,"Other Write-Ins",BOT,U.S. Congress,03,,Y,15,23,22,37,,7,14
+1,"Donna F. Edwards",DEM,U.S. Congress,04,Y,,9202,4775,2458,2095,3452,,5129
+1,"Faith M. Loudon",REP,U.S. Congress,04,,,14617,6282,3659,2597,4866,,10270
+1,"Scott Soffen",LIB,U.S. Congress,04,,,972,509,248,243,363,,737
+1,"Other Write-Ins",BOT,U.S. Congress,04,,Y,32,22,7,8,13,,26
+1,"Steny H. Hoyer",DEM,U.S. Congress,05,Y,,,34,,,10067,,
+1,"Tony O'Donnell",REP,U.S. Congress,05,,,,42,,,11035,,
+1,"Arvin Vohra",LIB,U.S. Congress,05,,,,1,,,479,,
+1,"Bob Auerbach",GRN,U.S. Congress,05,,,,3,,,586,,
+1,"Other Write-Ins",BOT,U.S. Congress,05,,Y,,0,,,33,,
+1,"Pamela L. North",BOT,Judge Circuit Court,05,Y,,25437,21817,20488,20318,23893,18486,22816
+1,"Other Write-Ins",BOT,Judge Circuit Court,05,,Y,365,236,212,218,323,196,319
+1,"Stuart R. Berger",BOT,Judge Spec Appeal at Lg,,Y,,22302,19353,18076,17575,20833,16082,19260
+2,"Stuart R. Berger",BOT,Judge Spec Appeal at Lg,,Y,,4687,3818,3358,4107,4481,3880,5561
+1,"Patricia Ray Nalley",NON,Board of Ed At Large,,Y,,21487,19281,17579,17422,20495,15983,18803
+2,"Patricia Ray Nalley",NON,Board of Ed At Large,,Y,,5843,4072,3890,4431,5261,4083,6235
+1,"Stacy L. Korbelak",NON,Board of Education,21,Y,,21080,19147,17306,17261,20032,15798,18580
+2,"Stacy L. Korbelak",NON,Board of Education,21,Y,,5835,4072,3837,4374,5231,4099,6175
+1,"Amalie Elizabeth Brandenburg",NON,Board of Education,33,Y,,21117,18964,17234,17142,19998,15669,18529
+2,"Amalie Elizabeth Brandenburg",NON,Board of Education,33,Y,,5670,4041,3826,4348,5147,4037,6075

@@ -1,0 +1,403 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CRAN Task View: Phylogenetics, Especially Comparative Methods</title>
+  <link rel=stylesheet type="text/css" href="../CRAN_web.css" />
+</head>
+
+<body>
+  <h2>CRAN Task View: Phylogenetics, Especially Comparative Methods</h2>
+  <table summary="Phylogenetics task view information">
+    <tr><td valign="top"><b>Maintainer:</b></td><td>Brian O'Meara</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x6f;&#x6d;&#x65;&#x61;&#x72;&#x61;&#x2e;&#x62;&#x72;&#x69;&#x61;&#x6e;&#x20;&#x61;&#x74;&#x20;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2014-02-28</td></tr>
+  </table>
+
+    <div>
+      <p>
+        The history of life unfolds within a phylogenetic context. Comparative phylogenetic methods are statistical approaches for analyzing historical patterns along phylogenetic trees.  This task view describes R packages that implement a variety of different comparative phylogenetic methods.  This is an active research area and much of the information is subject to change. One thing to note is that many important packages are not on CRAN: either they were formerly on CRAN and were later archived (for example, if they failed to incorporate necessary changes as R is updated) or they are developed elsewhere and have not been put on CRAN yet. Such packages may be found on github, R-forge, or authors' websites.
+      </p>
+      <p>
+        <i>
+          Getting trees into R
+        </i>: Trees in R are usually stored in the S3 phylo class (implemented in
+<a href="../packages/ape/index.html">ape</a>), though the S4 phylo4 class (implemented in
+<a href="../packages/phylobase/index.html">phylobase</a>) is also available.
+<a href="../packages/ape/index.html">ape</a>
+        can read trees from external files in newick format (sometimes popularly known as phylip format) or NEXUS format. It can also read trees input by hand as a newick string (i.e., "(human,(chimp,bonobo));").
+<a href="../packages/treebase/index.html">treebase</a>
+        can search for and load trees from the online tree repository TreeBASE. PHYLOCH can load trees from BEAST, MrBayes, and other phylogenetics programs (PHYLOCH is only available from the author's
+        <a href="http://www.christophheibl.de/Rpackages.html">
+          website
+        </a>).
+      </p>
+      <p>
+        <i>
+          Utility functions:
+        </i>
+        These packages include functions for manipulating trees or associated data.
+<a href="../packages/ape/index.html">ape</a>
+        has functions for randomly resolving polytomies, creating branch lengths, getting information about tree size or other properties, and many more.
+<a href="../packages/phylobase/index.html">phylobase</a>
+        has functions for traversing a tree (i.e., getting all descendants from a particular node specified by just two of its descendants).
+<a href="../packages/geiger/index.html">geiger</a>
+        can prune trees and data to an overlapping set of taxa.
+<a href="../packages/evobiR/index.html">evobiR</a>
+        can do fuzzy matching of names (to allow some differences).
+      </p>
+      <p>
+        <i>
+          Ancestral state reconstruction
+        </i>: Continuous characters can be reconstructed using maximum likelihood, generalised least squares or independent contrasts in
+<a href="../packages/ape/index.html">ape</a>. Root ancestral character states under Brownian motion or Ornstein-Uhlenbeck models can be reconstructed in
+<a href="../packages/ouch/index.html">ouch</a>, though ancestral states at the internal nodes are not. Discrete characters can be reconstructed using a variety of Markovian models that parameterize the transition rates among states using
+<a href="../packages/ape/index.html">ape</a>.
+<a href="../packages/phytools/index.html">phytools</a>
+        can do stochastic character mapping of traits on trees.
+      </p>
+      <p>
+        <i>
+          Diversification Analysis:
+        </i>
+        Lineage through time plots can be done in
+<a href="../packages/ape/index.html">ape</a>.  A simple birth-death model for when you have extant species only (sensu Nee et al. 1994) can be fitted in ape as can survival models and goodness-of-fit tests (as applied to testing of models of diversification).
+<a href="../packages/TESS/index.html">TESS</a>
+        can calculate the likelihood of a tree under a model with time-dependent diversification, including mass extinctions. Net rates of diversification (sensu Magellon and Sanderson) can be calculated in
+<a href="../packages/geiger/index.html">geiger</a>.
+<a href="../packages/diversitree/index.html">diversitree</a>
+        implements the BiSSE method (Maddison et al. 1997) and later improvements (FitzJohn et al. 2009).
+<a href="../packages/TreePar/index.html">TreePar</a>
+        estimates speciation and extinction rates with models where rates can change as a function of time (i.e., at mass extinction events) or as a function of the number of species.
+<a href="../packages/caper/index.html">caper</a>
+        can do the macrocaic test to evaluate the effect of a a trait on diversity.
+<a href="../packages/apTreeshape/index.html">apTreeshape</a>
+        also has tests for differential diversification (see
+        <a href="http://bioinformatics.oxfordjournals.org/cgi/content/full/22/3/363">
+          description
+        </a>).
+<a href="../packages/iteRates/index.html">iteRates</a>
+        can identify and visualize areas on a tree undergoing differential diversification.
+<a href="../packages/DDD/index.html">DDD</a>
+        can fit density dependent models as well as models with occasional escape from density-dependence.
+      </p>
+      <p>
+        <i>
+          Divergence Times:
+        </i>
+        Non-parametric rate smoothing (NPRS) and penalized likelihood can be implemented in
+<a href="../packages/ape/index.html">ape</a>.
+      </p>
+      <p>
+        <i>
+          Phylogenetic Inference:
+        </i>
+        UPGMA, neighbour joining, bio-nj and fast ME methods of phylogenetic reconstruction are all implemented in the package
+<a href="../packages/ape/index.html">ape</a>.
+<a href="../packages/phangorn/index.html">phangorn</a>
+        can estimate trees using distance, parsimony, and likelihood.
+<a href="../packages/phyclust/index.html">phyclust</a>
+        can cluster sequences.
+<a href="../packages/phytools/index.html">phytools</a>
+        can build trees using MRP supertree estimation and least squares.
+<a href="../packages/scaleboot/index.html">scaleboot</a>
+        can perform the Shimodaira-Hasegawa test for comparing trees.
+<a href="../packages/phylotools/index.html">phylotools</a>
+        can build supermatrices for analyses in other software. For more information on importing sequence data, see the
+<a href="Genetics.html">Genetics</a>
+        task view.
+      </p>
+      <p>
+        <i>
+          Time series:
+        </i>
+        Paleontological time series data can be analyzed using a likelihood-based framework for fitting and comparing models (using a model testing approach) of phyletic evolution (based on the random walk or stasis model) using
+<a href="../packages/paleoTS/index.html">paleoTS</a>.
+      </p>
+      <p>
+        <i>
+          Tree Simulations:
+        </i>
+        Trees can be simulated using constant-rate birth-death with various constraints in
+<a href="../packages/TreeSim/index.html">TreeSim</a>
+        and a birth-death process in
+<a href="../packages/geiger/index.html">geiger</a>. Random trees can be generated in
+<a href="../packages/ape/index.html">ape</a>
+        by random splitting of edges (for non-parametric trees) or random clustering of tips (for coalescent trees).
+<a href="../packages/paleotree/index.html">paleotree</a>
+        can simulate fossil deposition, sampling, and the tree arising from this as well as trees conditioned on observed fossil taxa.
+<a href="../packages/TESS/index.html">TESS</a>
+        can simulate trees with time-dependent speciation and/or extinction rates, including mass extinctions.
+      </p>
+      <p>
+        <i>
+          Trait evolution:
+        </i>
+        Independent contrasts for continuous characters can be calculated using
+<a href="../packages/ape/index.html">ape</a>,
+<a href="../packages/picante/index.html">picante</a>, or
+<a href="../packages/caper/index.html">caper</a>
+        (which also implements the brunch and crunch algorithms). Analyses of discrete trait evolution, including models of unequal rates or rates changing at a given instant of time, as well as Pagel's transformations, can be performed in
+<a href="../packages/geiger/index.html">geiger</a>.
+<a href="../packages/corHMM/index.html">corHMM</a>
+        can look for hidden rates in discrete traits as well as fit correlational models for two or three binary traits (similar to Pagel's old Discrete program) and complex models for multistate traits (similar to Pagel's old Multistate program). Brownian motion models can be fit in
+<a href="../packages/geiger/index.html">geiger</a>,
+<a href="../packages/ape/index.html">ape</a>, and
+<a href="../packages/paleotree/index.html">paleotree</a>. Multiple-rate Brownian motion can be fit
+in motmot and RBrownie (both currently not on CRAN, but older versions can be downloaded obtained from the
+        <a href="http://cran.r-project.org/src/contrib/Archive/">
+          archive
+        </a>). Deviations from Brownian motion can be investigated in
+<a href="../packages/geiger/index.html">geiger</a>,
+<a href="../packages/OUwie/index.html">OUwie</a>, and
+<a href="../packages/PVR/index.html">PVR</a>. Ornstein-Uhlenbeck (OU) models can be fitted in
+<a href="../packages/geiger/index.html">geiger</a>,
+<a href="../packages/ape/index.html">ape</a>,
+<a href="../packages/ouch/index.html">ouch</a>
+        (with multiple means), and
+<a href="../packages/OUwie/index.html">OUwie</a>
+        (with multiple means, rates, and attraction values).
+        <a href="http://bioinformatics.oxfordjournals.org/content/26/1/132.short">
+          maticce
+        </a>
+        uses ouch to search for where a regime transition occurs (it was recently removed from CRAN and will not install from R-forge).
+<a href="../packages/geiger/index.html">geiger</a>
+        fits only single-optimum models. Other continuous models, including Pagel's transforms and models with trends, can be fit with
+<a href="../packages/geiger/index.html">geiger</a>. ANOVA's and MANOVA's in a phylogenetic context can also be implemented in
+<a href="../packages/geiger/index.html">geiger</a>. Traditional GLS methods (sensu Grafen or Martins) can be implemented in
+<a href="../packages/ape/index.html">ape</a>
+        or
+<a href="../packages/caper/index.html">caper</a>. Phylogenetic autoregression (sensu Cheverud et al) and Phylogenetic autocorrelation (Moran's I) can be implemented in
+<a href="../packages/ape/index.html">ape</a>
+        or--if you wish the significance test of Moran's I to be calculated via a randomization procedure--in
+<a href="../packages/adephylo/index.html">adephylo</a>. Correlation between traits using a GLMM can also be investigated using
+<a href="../packages/MCMCglmm/index.html">MCMCglmm</a>.
+<a href="../packages/phylolm/index.html">phylolm</a>
+        can fit phylogenetic linear regression and phylogenetic logistic regresssion models using a fast algorithm, making it suitable for large trees.
+<a href="../packages/phytools/index.html">phytools</a>
+        can also investigate rates of trait evolution and do stochastic character mapping.
+<a href="../packages/metafor/index.html">metafor</a>
+        can perform meta-analyses accounting for phylogenetic structure.
+<a href="../packages/geomorph/index.html">geomorph</a>
+        can do geometric morphometric analysis in a phylogenetic context.
+      </p>
+      <p>
+        <i>
+          Trait Simulations
+        </i>: Continuous traits can be simulated using brownian motion in
+<a href="../packages/ouch/index.html">ouch</a>,
+<a href="../packages/geiger/index.html">geiger</a>,
+<a href="../packages/ape/index.html">ape</a>,
+<a href="../packages/picante/index.html">picante</a>,
+<a href="../packages/OUwie/index.html">OUwie</a>, and
+<a href="../packages/caper/index.html">caper</a>, the Hansen model (a form of the OU) in
+<a href="../packages/ouch/index.html">ouch</a>
+        and
+<a href="../packages/OUwie/index.html">OUwie</a>
+        and a speciational model in
+<a href="../packages/geiger/index.html">geiger</a>.  Discrete traits can be simulated using a continuous time Markov model in
+<a href="../packages/geiger/index.html">geiger</a>.
+<a href="../packages/phangorn/index.html">phangorn</a>
+        can simulate DNA or amino acids, and
+<a href="../packages/phylosim/index.html">phylosim</a>
+        can do all these with also insertions and deletions. Both discrete and continuous traits can be simulated under models where rates change through time in
+<a href="../packages/geiger/index.html">geiger</a>.
+<a href="../packages/phytools/index.html">phytools</a>
+        can simulate discrete characters using stochastic character mapping.
+<a href="../packages/phylolm/index.html">phylolm</a>
+        can simulate continuous or binary traits along a tree.
+      </p>
+      <p>
+        <i>
+          Tree Manipulation
+        </i>: Branch length scaling using ACDC; Pagel's (1999) lambda, delta and kappa parameters; and the Ornstein-Uhlenbeck alpha parameter (for ultrametric trees only) are available in
+<a href="../packages/geiger/index.html">geiger</a>.
+<a href="../packages/phytools/index.html">phytools</a>
+        also allows branch length scaling, as well as several tree transformations (adding tips, finding subtrees). Rooting, resolving polytomies, dropping of tips, setting of branch lengths including Grafen's method can all be done using
+<a href="../packages/ape/index.html">ape</a>. Extinct taxa can be pruned using
+<a href="../packages/geiger/index.html">geiger</a>.
+<a href="../packages/phylobase/index.html">phylobase</a>
+        offers numerous functions for querying and using trees (S4). Tree rearrangements (NNI and SPR) can be performed with
+<a href="../packages/phangorn/index.html">phangorn</a>.
+<a href="../packages/paleotree/index.html">paleotree</a>
+        has functions for manipulating trees based on sampling issues that arise with fossil taxa as well as more universal transformations.
+      </p>
+      <p>
+        <i>
+          Community/Microbial Ecology
+        </i>:
+<a href="../packages/picante/index.html">picante</a>,
+<a href="../packages/vegan/index.html">vegan</a>,
+<a href="../packages/SYNCSA/index.html">SYNCSA</a>,
+<a href="../packages/phylotools/index.html">phylotools</a>
+        and
+<a href="../packages/caper/index.html">caper</a>
+        integrate several tools for using phylogenetics with community ecology.
+<a href="../packages/HMPTrees/index.html">HMPTrees</a>
+        and
+<a href="../packages/GUniFrac/index.html">GUniFrac</a>
+        provide tools for comparing microbial communities.
+      </p>
+      <p>
+        <i>
+          Phyloclimatic Modeling
+        </i>:
+<a href="../packages/phyloclim/index.html">phyloclim</a>
+        integrates several new tools in this area.
+      </p>
+      <p>
+        <i>
+          Species/Population Delimitation
+        </i>:
+<a href="../packages/spider/index.html">spider</a>
+        can use DNA barcoding data to investigate species delimitation and related studies.
+      </p>
+      <p>
+        <i>
+          Tree Plotting and Visualization:
+        </i>
+        User trees can be plotted using
+<a href="../packages/ape/index.html">ape</a>,
+<a href="../packages/adephylo/index.html">adephylo</a>,
+<a href="../packages/phylobase/index.html">phylobase</a>,
+<a href="../packages/phytools/index.html">phytools</a>, and
+<a href="../packages/ouch/index.html">ouch</a>.
+<a href="http://R-Forge.R-project.org/projects/paleophylo/"><span class="Rforge">paleoPhylo</span></a>
+        and
+<a href="../packages/paleotree/index.html">paleotree</a>
+        are specialized for drawing paleobiological phylogenies. Trees can also be examined (zoomed) and viewed as correlograms using
+<a href="../packages/ape/index.html">ape</a>. Ancestral state reconstructions can be visualized along branches using
+<a href="../packages/ape/index.html">ape</a>
+        and
+<a href="../packages/paleotree/index.html">paleotree</a>.
+<a href="../packages/phytools/index.html">phytools</a>
+        can project a tree into a morphospace.
+      </p>
+      <p>
+        <i>
+          Tree Comparison:
+        </i>
+        Tree-tree distances can be evaluated, and used in additional analyses, in
+<a href="../packages/distory/index.html">distory</a>.
+<a href="../packages/ape/index.html">ape</a>
+        can compute tree-tree distances and also create a plot showing two trees with links between associated tips.
+      </p>
+      <p>
+        <i>
+          Miscellaneous:
+        </i>
+<a href="../packages/treebase/index.html">treebase</a>
+        offers ways to download trees from TreeBase, an online repository of phylogenies and phylogenetic data.
+<a href="http://R-Forge.R-project.org/projects/rmesquite/"><span class="Rforge">rmesquite</span></a>
+        offers a way to call headless
+        <a href="http://mesquiteproject.org/">
+          Mesquite
+        </a>
+        from R, useful for many kinds of analyses. To do the reverse, use
+        <a href="http://mesquiteproject.org/packages/Mesquite.R/MesquiteCallsR/MesquiteR.html">
+          R.Mesquite
+        </a>.
+      </p>
+      <p>
+        <b>
+          References
+        </b>
+      </p>
+      <ul>
+        <li>
+          Butler MA, King AA 2004 Phylogenetic comparative analysis: A modeling approach for adaptive evolution. American Naturalist 164, 683-695.
+        </li>
+        <li>
+          Cheverud JM, Dow MM, Leutenegger W 1985 The quantitative assessment of phylogenetic constraints in comparative analyses: Sexual dimorphism in body weight among primates. Evolution 39, 1335-1351.
+        </li>
+        <li>
+          FitzJohn RG, Maddison WP, and Otto SP 2009. Estimating trait-dependent speciation and extinction rates from incompletely resolved phylogenies. Systematic Biology 58: 595-611.
+        </li>
+        <li>
+          Garland T, Harvey PH, Ives AR 1992 Procedures for the analysis of comparative data using phylogenetically independent contrasts. Systematic Biology 41, 18-32.
+        </li>
+        <li>
+          Hansen TF 1997. Stabilizing selection and the comparative analysis of adaptation. Evolution 51: 1341-1351.
+        </li>
+        <li>
+          Maddison WP, Midford PE, and Otto SP 2007. Estimating a binary character's effect on speciation and extinction. Systematic Biology 56: 701–710.
+        </li>
+        <li>
+          Magallon S, Sanderson, M.J. 2001. Absolute Diversification Rates in Angiosperm Clades. Evolution 55(9):1762-1780.
+        </li>
+        <li>
+          Moore, BR, Chan, KMA, Donoghue, MJ (2004) Detecting diversification rate variation in supertrees. In Bininda-Emonds ORP (ed) Phylogenetic Supertrees: Combining Information to Reveal the Tree of Life, Kluwer Academic pgs 487-533.
+        </li>
+        <li>
+          Nee S, May RM, Harvey PH 1994. The reconstructed evolutionary process. Philosophical Transactions of the Royal Society of London Series B Biological Sciences 344: 305-311.
+        </li>
+        <li>
+          Pagel M 1999 Inferring the historical patterns of biological evolution. Nature 401, 877-884
+        </li>
+        <li>
+          Pybus OG, Harvey PH 2000. Testing macro-evolutionary models using incomplete molecular phylogenies. Proceedings of the Royal Society of London Series B Biological Sciences 267, 2267-2272.
+        </li>
+      </ul>
+    </div>
+
+  <h3>CRAN packages:</h3>
+  <ul>
+    <li><a href="../packages/adephylo/index.html">adephylo</a></li>
+    <li><a href="../packages/ape/index.html">ape</a> (core)</li>
+    <li><a href="../packages/apTreeshape/index.html">apTreeshape</a></li>
+    <li><a href="../packages/caper/index.html">caper</a></li>
+    <li><a href="../packages/corHMM/index.html">corHMM</a></li>
+    <li><a href="../packages/DDD/index.html">DDD</a></li>
+    <li><a href="../packages/distory/index.html">distory</a></li>
+    <li><a href="../packages/diversitree/index.html">diversitree</a></li>
+    <li><a href="../packages/evobiR/index.html">evobiR</a></li>
+    <li><a href="../packages/geiger/index.html">geiger</a></li>
+    <li><a href="../packages/geomorph/index.html">geomorph</a></li>
+    <li><a href="../packages/GUniFrac/index.html">GUniFrac</a></li>
+    <li><a href="../packages/HMPTrees/index.html">HMPTrees</a></li>
+    <li><a href="../packages/iteRates/index.html">iteRates</a></li>
+    <li><a href="../packages/MCMCglmm/index.html">MCMCglmm</a></li>
+    <li><a href="../packages/metafor/index.html">metafor</a></li>
+    <li><a href="../packages/ouch/index.html">ouch</a></li>
+    <li><a href="../packages/OUwie/index.html">OUwie</a></li>
+    <li><a href="../packages/paleotree/index.html">paleotree</a></li>
+    <li><a href="../packages/paleoTS/index.html">paleoTS</a></li>
+    <li><a href="../packages/phangorn/index.html">phangorn</a></li>
+    <li><a href="../packages/phyclust/index.html">phyclust</a></li>
+    <li><a href="../packages/phylobase/index.html">phylobase</a></li>
+    <li><a href="../packages/phyloclim/index.html">phyloclim</a></li>
+    <li><a href="../packages/phylolm/index.html">phylolm</a></li>
+    <li><a href="../packages/phylosim/index.html">phylosim</a></li>
+    <li><a href="../packages/phylotools/index.html">phylotools</a></li>
+    <li><a href="../packages/phytools/index.html">phytools</a></li>
+    <li><a href="../packages/picante/index.html">picante</a></li>
+    <li><a href="../packages/PVR/index.html">PVR</a></li>
+    <li><a href="../packages/scaleboot/index.html">scaleboot</a></li>
+    <li><a href="../packages/spider/index.html">spider</a></li>
+    <li><a href="../packages/SYNCSA/index.html">SYNCSA</a></li>
+    <li><a href="../packages/TESS/index.html">TESS</a></li>
+    <li><a href="../packages/treebase/index.html">treebase</a></li>
+    <li><a href="../packages/TreePar/index.html">TreePar</a></li>
+    <li><a href="../packages/TreeSim/index.html">TreeSim</a></li>
+    <li><a href="../packages/vegan/index.html">vegan</a></li>
+  </ul>
+
+  <h3>Related links:</h3>
+  <ul>
+    <li>CRAN Task View: <a href="Genetics.html">Genetics</a></li>
+    <li>CRAN Task View: <a href="Environmetrics.html">Environmetrics</a></li>
+    <li><a href="http://bioinformatics.oxfordjournals.org/content/26/1/132.short">
+  maticce
+</a></li>
+    <li>R-Forge Project: <a href="http://R-Forge.R-project.org/projects/paleophylo/" target="_top"><span class="Rforge">paleoPhylo</span></a></li>
+    <li>R-Forge Project: <a href="http://R-Forge.R-project.org/projects/rmesquite/" target="_top"><span class="Rforge">rmesquite</span></a></li>
+    <li><a href="http://www.christophheibl.de/Rpackages.html">
+  PHYLOCH, LAGOPUS, and PHYLOCLIM packages
+</a></li>
+    <li><a href="http://www.r-phylo.org/wiki/Main_Page">
+  Comparative Phylogenetics in R Help Wiki
+</a></li>
+  </ul>
+
+</body>
+</html>
+ 

@@ -1,0 +1,12 @@
+<!ELEMENT document (Apple,IBM,Google)>
+<!ELEMENT Apple (date,close,volume,open,high,low,company,year)>
+<!ELEMENT Google (date,close,volume,open,high,low,company,year)>
+<!ELEMENT IBM (date,close,volume,open,high,low,company,year)>
+<!ELEMENT close (#PCDATA)>
+<!ELEMENT company (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT high (#PCDATA)>
+<!ELEMENT low (#PCDATA)>
+<!ELEMENT open (#PCDATA)>
+<!ELEMENT volume (#PCDATA)>
+<!ELEMENT year (#PCDATA)>

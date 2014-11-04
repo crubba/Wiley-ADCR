@@ -1,0 +1,387 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CRAN Task View: Graphic Displays &amp; Dynamic Graphics &amp; Graphic Devices &amp; Visualization</title>
+  <link rel=stylesheet type="text/css" href="../CRAN_web.css" />
+</head>
+
+<body>
+  <h2>CRAN Task View: Graphic Displays &amp; Dynamic Graphics &amp; Graphic Devices &amp; Visualization</h2>
+  <table summary="Graphics task view information">
+    <tr><td valign="top"><b>Maintainer:</b></td><td>Nicholas Lewin-Koh</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x6e;&#x69;&#x6b;&#x6b;&#x6f;&#x20;&#x61;&#x74;&#x20;&#x68;&#x61;&#x69;&#x6c;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x6e;&#x65;&#x74;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2013-01-29</td></tr>
+  </table>
+
+    <div>
+      <p>
+        R is rich with facilities for creating and developing interesting graphics.
+    Base R contains functionality for many plot types including coplots, 
+    mosaic plots, biplots, and the list goes on. There are devices such as 
+    postscript, png, jpeg and pdf for outputting graphics as well as device
+    drivers for all platforms running R.
+<a href="../packages/lattice/index.html">lattice</a>
+        and 
+    grid are supplied with R's recommended packages and are 
+    included in every binary distribution.
+<a href="../packages/lattice/index.html">lattice</a>
+        is an R 
+    implementation of William Cleveland's trellis graphics, while grid 
+    defines a much more flexible graphics environment than the base R graphics.
+      </p>
+      <p>
+        R's base graphics are implemented in the same way as in the S3
+    system developed by Becker, Chambers, and Wilks. There is a static
+    device, which is treated as a static canvas and objects are drawn on
+    the device through R plotting commands. The device has a set of global
+    parameters such as margins and layouts which can be manipulated by the
+    user using
+<tt>par()</tt>
+        commands. The R graphics engine does not maintain a
+    user visible graphics list, and there is no system of double
+    buffering, so objects cannot be easily edited without redrawing a whole
+    plot. This situation may change in R 2.7.x, where developers are working on double 
+    buffering for R devices. Even so, the base R graphics can produce many plots with
+    extremely fine graphics in many specialized instances.
+      </p>
+      <p>
+        One can quickly run into trouble with R's base graphic system if
+    one wants to design complex layouts where scaling is maintained
+    properly on resizing, nested graphs are desired or more interactivity
+    is needed. grid was designed by Paul Murrell to overcome
+    some of these limitations and as a result packages like
+<a href="../packages/lattice/index.html">lattice</a>,
+<a href="../packages/ggplot2/index.html">ggplot2</a>,
+<a href="../packages/vcd/index.html">vcd</a>
+        or hexbin
+    (on
+        <a href="http://www.Bioconductor.org/">
+          Bioconductor
+        </a>) use
+    grid for the underlying primitives. When using plots designed with
+    grid one needs to keep in mind that grid is based on a system of
+    viewports and graphic objects. To add objects one needs to use grid
+    commands, e.g.,
+<tt>grid.polygon()</tt>
+        rather than
+<tt>polygon()</tt>. Also grid
+    maintains a stack of viewports from the device and one needs to make
+    sure the desired viewport is at the top of the stack. There is a great
+    deal of explanatory documentation included with grid as
+    vignettes.
+      </p>
+      <p>
+        The graphics packages in R can be organized roughly into the following 
+    topics, which range from the more user oriented at the top to the more developer 
+    oriented at the bottom. The categories are not mutually exclusive but are for the 
+    convenience of presentation:
+      </p>
+      <ul>
+        <li>
+          <i>
+            Plotting
+          </i>:
+          Enhancements for specialized plots can be found in
+<a href="../packages/plotrix/index.html">plotrix</a>,
+	  for polar plotting,
+<a href="../packages/vcd/index.html">vcd</a>
+          for categorical data, hexbin
+	  (on
+          <a href="http://www.Bioconductor.org/">
+            Bioconductor
+          </a>)
+	  for hexagon binning,
+<a href="../packages/gclus/index.html">gclus</a>
+          for ordering plots and
+<a href="../packages/gplots/index.html">gplots</a>
+          for some plotting enhancements. Some specialized graphs, like Chernoff faces 
+          are implemented in
+<a href="../packages/aplpack/index.html">aplpack</a>, which also has a nice implementation 
+          of Tukey's bag plot.
+          
+          For 3D plots
+<a href="../packages/lattice/index.html">lattice</a>,
+<a href="../packages/scatterplot3d/index.html">scatterplot3d</a>
+          and
+<a href="../packages/misc3d/index.html">misc3d</a>
+          provide a selection of plots for
+	  different kinds of 3D plotting.
+<a href="../packages/scatterplot3d/index.html">scatterplot3d</a>
+          is based on R's base
+	  graphics system, while
+<a href="../packages/misc3d/index.html">misc3d</a>
+          is based on
+<a href="../packages/rgl/index.html">rgl</a>. The package
+<a href="../packages/onion/index.html">onion</a>
+          for visualizing 
+          quaternions and octonions is well suited to display 3D graphics
+          based on derived meshes.
+        </li>
+        <li>
+          <i>
+            Graphic Applications
+          </i>: This area is not much different from the plotting 
+          section except that these packages have tools that may not for display, but can 
+          aid in creating effective displays. Also included are packages with more esoteric 
+          plotting methods. For specific subject areas, like maps, or clustering the excellent
+          task views contributed by other dedicated useRs is an excellent place to start.
+          <ul>
+            <li>
+              <i>
+                Effect ordering
+              </i>:
+          The
+<a href="../packages/gclus/index.html">gclus</a>
+              package focuses on the ordering of graphs to accentuate cluster 
+           structure or natural ordering in the data. While not for graphics directly
+<a href="../packages/cba/index.html">cba</a>
+              and
+<a href="../packages/seriation/index.html">seriation</a>
+              have functions for creating 1 dimensional orderings from higher dimensional criteria. 
+ 	  For ordering an array of displays,
+<a href="../packages/biclust/index.html">biclust</a>
+              can be useful.
+            </li>
+            <li>
+              <i>
+                Large Data Sets
+              </i>:
+	  Large data sets can present very different challenges from moderate and small 
+          datasets. Aside from overplotting, rendering 1,000,000 points can tax even modern 
+          GPU's. For bivariate data
+<a href="../packages/ash/index.html">ash</a>
+              can produce a bivariate smoothed histogram very 
+          quickly, and 
+          hexbin, on
+              <a href="http://www.Bioconductor.org/">
+                Bioconductor
+              </a>, can bin bivariate
+          data onto a hexagonal lattice, the advantage being that the irregular lines and 
+          orientation of hexagons do not create linear artifacts. For multivariate data, 
+          hexbin can be used to create a scatterplot matrix, combined with
+<a href="../packages/lattice/index.html">lattice</a>.
+          An alternative is to use
+<a href="../packages/scagnostics/index.html">scagnostics</a>
+              to produce a scaterplot matrix
+          of "data about the data", and look for interesting combinations of variables.
+            </li>
+            <li>
+              <i>
+                Trees and Graphs
+              </i>:
+<a href="../packages/ape/index.html">ape</a>
+              and
+<a href="../packages/ade4/index.html">ade4</a>
+              have functions for plotting 
+           phylogenetic trees, which can be used for plotting dendrograms from 
+           clustering procedures. While these packages produce decent graphics, they 
+           do not use sophisticated algorithms for node placement, so may not be useful
+           for very large trees.
+<a href="../packages/igraph/index.html">igraph</a>
+              has the Tilford-Rheingold algorithm 
+           implementead and is useful for plotting larger trees.
+<a href="../packages/diagram/index.html">diagram</a>
+              has 
+           facilities for flow diagrams and simple graphs. For more sophisticated graphs
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/Rgraphviz.html"><span class="BioC">Rgraphviz</span></a>
+              and
+<a href="../packages/igraph/index.html">igraph</a>
+              have functions for plotting and 
+           layout, especially useful for representing large networks.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <i>
+            Graphics Systems
+          </i>:
+<a href="../packages/lattice/index.html">lattice</a>
+          is built on top of the grid
+          graphics system and is an R implementation of William Cleveland's trellis
+	  system for S-PLUS.
+<a href="../packages/lattice/index.html">lattice</a>
+          allows for building many types of plots
+	  with sophisticated layouts based on conditioning.
+<a href="../packages/ggplot2/index.html">ggplot2</a>
+          is an R 
+          implementation of the system described in "A Grammar of Graphics" by Leland 
+          Wilkinson. Like
+<a href="../packages/lattice/index.html">lattice</a>,
+<a href="../packages/ggplot2/index.html">ggplot2</a>
+          (also built on top of grid)
+	  assists in trellis-like graphics, but allows for much more. Since it is built on
+	  the idea of a semantics for graphics there is much more emphasis on reshaping
+	  data, transformation, and assembling the elements of a plot.
+        </li>
+        <li>
+          <i>
+            Devices
+          </i>: Whereas grid is built on top of
+          the R graphics engine, many in the R community have found the R
+          graphics engine somewhat inflexible and have written separate device
+          drivers that either emphasize interactivity or plotting in various
+          graphics formats. R base supplies devices for PostScript, PDF, JPEG
+          and other formats. Devices on CRAN include
+<a href="../packages/cairoDevice/index.html">cairoDevice</a>
+          which
+          is a device based libcairo, which can actually render to many device
+          types. The cairo device is desgned to work with
+<a href="../packages/RGtk2/index.html">RGtk2</a>,
+          which is an interface to the Gimp Tool Kit, similar to pyGTK2.
+<a href="../packages/RSvgDevice/index.html">RSvgDevice</a>
+          is an SVG device driver and interfaces well with
+          with vector drawing programs. When SVG devices are for web display developers should be
+          aware that internet explorer does not support SVG, but has their own
+          standard. Trust Microsoft.
+<a href="../packages/rgl/index.html">rgl</a>
+          provides a device driver
+          based on OpenGL, and is good for 3D and interactive
+          development. Lastly, the Augsburg group supplies a set of packages
+          that includes a Java-based device,
+<a href="../packages/JavaGD/index.html">JavaGD</a>.
+        </li>
+        <li>
+          <i>
+            Colors
+          </i>: The package
+<a href="../packages/colorspace/index.html">colorspace</a>
+          provides a set of functions for
+          transforming between color spaces and
+<tt>mixcolor()</tt>
+          for mixing colors
+          within a color space.
+	  Based on the HCL colors provided in
+<a href="../packages/colorspace/index.html">colorspace</a>,
+<a href="../packages/vcd/index.html">vcd</a>
+          provides a set of functions for choosing color palettes suitable for
+	  coding categorical variables (
+<tt>rainbow_hcl()</tt>) and numerical 
+	  information (
+<tt>sequential_hcl()</tt>,
+<tt>diverge_hcl()</tt>). Similar
+	  types of palettes are provided in
+<a href="../packages/RColorBrewer/index.html">RColorBrewer</a>.
+<a href="../packages/dichromat/index.html">dichromat</a>
+          is focused on palettes for color-impaired viewers.
+        </li>
+        <li>
+          <i>
+            Interactive Graphics
+          </i>: There are several efforts to
+          implement interactive graphics systems that interface well with R. In an interactive 
+          system the user can interactively query the graphics on the screen with the mouse, 
+          or a moveable brush to zoom, pan and query on the device as well as link with 
+          other views of the data.
+<a href="../packages/rggobi/index.html">rggobi</a>
+          embeds the GGobi interactive graphics system within R, so that one can display a data
+          frame or several in GGobi directly from R. The package has functions
+          to support longitudinal data, and graphs using GGobi's edge set
+          functionality. The RoSuDA repository maintained and developed by the
+          University of Augsburg group has two packages,
+<a href="../packages/iplots/index.html">iplots</a>
+          and iwidgets as
+          well as their Java development environment including a Java
+          device,
+<a href="../packages/JavaGD/index.html">JavaGD</a>. Their interactive graphics tools contain functions for
+          alpha blending, which produces darker shading around areas with more
+          data. This is exceptionally useful for parallel coordinate plots where
+          many lines can quickly obscure patterns.
+<a href="../packages/playwith/index.html">playwith</a>
+          has facilities for 
+          building interactive versions of R graphics using the
+<a href="../packages/cairoDevice/index.html">cairoDevice</a>
+          and
+<a href="../packages/RGtk2/index.html">RGtk2</a>. Lastly, the
+<a href="../packages/rgl/index.html">rgl</a>
+          package has mechanisms for
+          interactive manipulation of plots, especially 3D rotations and surfaces.
+        </li>
+        <li>
+          <i>
+            Development
+          </i>: For development of specialized
+          graphics packages in R, grid should probably be the first
+          consideration for any new plot type.
+<a href="../packages/rgl/index.html">rgl</a>
+          has better tools for
+          3D graphics, since the device is interactive, though it can be slow. 
+          An alternative is to use Java and
+          the Java device in the RoSuDA packages, though Java has its own
+          drawbacks. For porting plotting code to grid, using the
+          package
+<a href="../packages/gridBase/index.html">gridBase</a>
+          presents a nice intermediate step to embed
+          base graphics in grid graphics and vice versa.
+        </li>
+      </ul>
+    </div>
+
+  <h3>CRAN packages:</h3>
+  <ul>
+    <li><a href="../packages/ade4/index.html">ade4</a></li>
+    <li><a href="../packages/animation/index.html">animation</a></li>
+    <li><a href="../packages/ape/index.html">ape</a></li>
+    <li><a href="../packages/aplpack/index.html">aplpack</a></li>
+    <li><a href="../packages/ash/index.html">ash</a></li>
+    <li><a href="../packages/biclust/index.html">biclust</a></li>
+    <li><a href="../packages/Cairo/index.html">Cairo</a></li>
+    <li><a href="../packages/cairoDevice/index.html">cairoDevice</a></li>
+    <li><a href="../packages/cba/index.html">cba</a></li>
+    <li><a href="../packages/colorspace/index.html">colorspace</a></li>
+    <li><a href="../packages/diagram/index.html">diagram</a></li>
+    <li><a href="../packages/dichromat/index.html">dichromat</a></li>
+    <li><a href="../packages/gclus/index.html">gclus</a></li>
+    <li><a href="../packages/ggplot2/index.html">ggplot2</a> (core)</li>
+    <li><a href="../packages/gplots/index.html">gplots</a></li>
+    <li><a href="../packages/gridBase/index.html">gridBase</a></li>
+    <li><a href="../packages/IDPmisc/index.html">IDPmisc</a></li>
+    <li><a href="../packages/igraph/index.html">igraph</a></li>
+    <li><a href="../packages/iplots/index.html">iplots</a></li>
+    <li><a href="../packages/JavaGD/index.html">JavaGD</a></li>
+    <li><a href="../packages/klaR/index.html">klaR</a></li>
+    <li><a href="../packages/lattice/index.html">lattice</a> (core)</li>
+    <li><a href="../packages/latticeExtra/index.html">latticeExtra</a></li>
+    <li><a href="../packages/misc3d/index.html">misc3d</a></li>
+    <li><a href="../packages/onion/index.html">onion</a></li>
+    <li><a href="../packages/playwith/index.html">playwith</a></li>
+    <li><a href="../packages/plotrix/index.html">plotrix</a> (core)</li>
+    <li><a href="../packages/RColorBrewer/index.html">RColorBrewer</a> (core)</li>
+    <li><a href="../packages/rggobi/index.html">rggobi</a></li>
+    <li><a href="../packages/rgl/index.html">rgl</a> (core)</li>
+    <li><a href="../packages/RGraphics/index.html">RGraphics</a></li>
+    <li><a href="../packages/RGtk2/index.html">RGtk2</a></li>
+    <li><a href="../packages/RSvgDevice/index.html">RSvgDevice</a></li>
+    <li><a href="../packages/RSVGTipsDevice/index.html">RSVGTipsDevice</a></li>
+    <li><a href="../packages/scagnostics/index.html">scagnostics</a></li>
+    <li><a href="../packages/scatterplot3d/index.html">scatterplot3d</a></li>
+    <li><a href="../packages/seriation/index.html">seriation</a></li>
+    <li><a href="../packages/tkrplot/index.html">tkrplot</a></li>
+    <li><a href="../packages/vcd/index.html">vcd</a> (core)</li>
+    <li><a href="../packages/vioplot/index.html">vioplot</a></li>
+    <li><a href="../packages/xgobi/index.html">xgobi</a></li>
+  </ul>
+
+  <h3>Related links:</h3>
+  <ul>
+    <li>CRAN Task View: <a href="Cluster.html">Cluster</a></li>
+    <li>CRAN Task View: <a href="Multivariate.html">Multivariate</a></li>
+    <li>CRAN Task View: <a href="Spatial.html">Spatial</a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/hexbin.html" target="_top"><span class="BioC">hexbin</span></a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/Rgraphviz.html" target="_top"><span class="BioC">Rgraphviz</span></a></li>
+    <li><a href="http://AddictedToR.free.fr/graphiques/">
+  R Graph Gallery
+</a></li>
+    <li><a href="http://www.stat.auckland.ac.nz/~paul/">
+  Paul Murrell's home page
+</a></li>
+    <li><a href="http://stats.math.uni-augsburg.de/R/">
+  RoSuDA R packages
+</a></li>
+    <li><a href="http://www.ggobi.org/">
+  GGobi Data Visualization System
+</a></li>
+  </ul>
+
+</body>
+</html>
+ 

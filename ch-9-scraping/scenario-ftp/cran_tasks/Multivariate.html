@@ -1,0 +1,979 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CRAN Task View: Multivariate Statistics</title>
+  <link rel=stylesheet type="text/css" href="../CRAN_web.css" />
+</head>
+
+<body>
+  <h2>CRAN Task View: Multivariate Statistics</h2>
+  <table summary="Multivariate task view information">
+    <tr><td valign="top"><b>Maintainer:</b></td><td>Paul Hewson</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x50;&#x61;&#x75;&#x6c;&#x2e;&#x48;&#x65;&#x77;&#x73;&#x6f;&#x6e;&#x20;&#x61;&#x74;&#x20;&#x70;&#x6c;&#x79;&#x6d;&#x6f;&#x75;&#x74;&#x68;&#x2e;&#x61;&#x63;&#x2e;&#x75;&#x6b;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2013-12-12</td></tr>
+  </table>
+
+    <div>
+      <p>
+        Base R contains most of the functionality for classical multivariate analysis,
+       somewhere. There are a large number of packages on CRAN which extend this methodology,
+       a brief overview is given below. Application-specific uses of multivariate statistics
+       are described in relevant task views, for example whilst principal components are listed here, 
+       ordination is covered in the
+<a href="Environmetrics.html">Environmetrics</a>
+        task view.   Further information on supervised classification can be found in the
+<a href="MachineLearning.html">MachineLearning</a>
+        task view, and unsupervised classification in the
+<a href="Cluster.html">Cluster</a>
+        task view.
+      </p>
+      <p>
+        The packages in this view can be roughly structured into the following topics.
+       If you think that some package is missing from the list, please let me know.
+      </p>
+      <p>
+        <strong>
+          Visualising multivariate data
+        </strong>
+      </p>
+      <ul>
+        <li>
+          <i>
+            Graphical Procedures:
+          </i>
+          A range of base graphics (e.g.
+<tt>pairs()</tt>
+          and
+<tt>coplot()</tt>) and
+<a href="../packages/lattice/index.html">lattice</a>
+          functions (e.g.
+<tt>xyplot()</tt>
+          and
+<tt>splom()</tt>) are useful for
+	  visualising pairwise arrays of 2-dimensional scatterplots, clouds and 3-dimensional densities.
+<tt>scatterplot.matrix</tt>
+          in the
+<a href="../packages/car/index.html">car</a>
+          provides usefully enhanced pairwise scatterplots.
+          Beyond this,
+<a href="../packages/scatterplot3d/index.html">scatterplot3d</a>
+          provides 3 dimensional scatterplots,
+<a href="../packages/aplpack/index.html">aplpack</a>
+          provides bagplots and
+<tt>spin3R()</tt>,
+          a function for rotating 3d clouds.
+<a href="../packages/misc3d/index.html">misc3d</a>, dependent upon
+<a href="../packages/rgl/index.html">rgl</a>,
+	  provides animated functions within R useful for visualising densities.
+<a href="../packages/YaleToolkit/index.html">YaleToolkit</a>
+          provides a range of useful visualisation techniques for multivariate data.
+	  More specialised multivariate plots include the following:
+<tt>faces()</tt>
+          in
+<a href="../packages/aplpack/index.html">aplpack</a>
+          provides Chernoff's faces;
+<tt>parcoord()</tt>
+          from
+<a href="../packages/MASS/index.html">MASS</a>
+          provides parallel 
+          coordinate plots;
+<tt>stars()</tt>
+          in graphics provides a choice of star, radar 
+          and cobweb plots respectively.
+<tt>mstree()</tt>
+          in
+<a href="../packages/ade4/index.html">ade4</a>
+          and
+<tt>spantree()</tt>
+          in
+<a href="../packages/vegan/index.html">vegan</a>
+          provide minimum spanning tree functionality.
+<a href="../packages/calibrate/index.html">calibrate</a>
+          supports biplot and scatterplot 
+          axis labelling.
+<a href="../packages/geometry/index.html">geometry</a>, 
+          which provides an interface to the qhull library,
+          gives indices to the relevant points via
+<tt>convexhulln()</tt>.
+<a href="../packages/ellipse/index.html">ellipse</a>
+          draws ellipses for two parameters, and provides
+<tt>plotcorr()</tt>,
+          visual display of a correlation matrix.
+<a href="../packages/denpro/index.html">denpro</a>
+          provides level set trees 
+          for multivariate visualisation.  Mosaic plots are available via
+<tt>mosaicplot()</tt>
+          in graphics and
+<tt>mosaic()</tt>
+          in
+<a href="../packages/vcd/index.html">vcd</a>
+          that also contains other visualization techniques for multivariate
+	  categorical data.
+<a href="../packages/gclus/index.html">gclus</a>
+          provides a number of 
+          cluster specific graphical enhancements for scatterplots and parallel coordinate plots
+	  See the links for a reference to GGobi.
+<a href="../packages/rggobi/index.html">rggobi</a>
+          interfaces with GGobi.
+<a href="../packages/xgobi/index.html">xgobi</a>
+          interfaces to the XGobi
+	  and XGvis programs which allow linked, dynamic multivariate plots as well as
+	  projection pursuit.   Finally,
+<a href="../packages/iplots/index.html">iplots</a>
+          allows particularly powerful dynamic interactive 
+          graphics, of which interactive parallel co-ordinate plots and mosaic plots may be of great interest.
+	  Seriation methods are provided by
+<a href="../packages/seriation/index.html">seriation</a>
+          which can reorder matrices and dendrograms.
+        </li>
+        <li>
+          <i>
+            Data Preprocessing:
+          </i>
+<tt>summarize()</tt>
+          and
+<tt>summary.formula()</tt>
+          in
+<a href="../packages/Hmisc/index.html">Hmisc</a>
+          assist with descriptive functions; from the same package
+<tt>varclus()</tt>
+          offers variable 
+          clustering while
+<tt>dataRep()</tt>
+          and
+<tt>find.matches()</tt>
+          assist in exploring a given 
+          dataset in terms of representativeness and finding matches.  
+          Whilst
+<tt>dist()</tt>
+          in base and
+<tt>daisy()</tt>
+          in
+<a href="../packages/cluster/index.html">cluster</a>
+          provide a wide range of distance measures,
+<a href="../packages/proxy/index.html">proxy</a>
+          provides a framework for more distance measures, including measures between matrices.
+<a href="../packages/simba/index.html">simba</a>
+          provides functions for dealing with presence / absence data including similarity matrices and reshaping.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Hypothesis testing
+        </strong>
+      </p>
+      <ul>
+        <li>
+<a href="../packages/ICSNP/index.html">ICSNP</a>
+          provides Hotellings T2 test as well as a range of non-parametric tests including location tests based on marginal ranks, spatial median and spatial signs computation, estimates of shape.  Non-parametric two sample tests are also available from
+<a href="../packages/cramer/index.html">cramer</a>
+          and spatial sign and rank tests to investigate location, sphericity and independence are available in
+<a href="../packages/SpatialNP/index.html">SpatialNP</a>.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Multivariate distributions
+        </strong>
+      </p>
+      <ul>
+        <li>
+          <i>
+            Descriptive measures:
+          </i>
+<tt>cov()</tt>
+          and
+<tt>cor()</tt>
+          in stats 
+          will provide estimates of the covariance
+          and correlation  matrices respectively.
+<a href="../packages/ICSNP/index.html">ICSNP</a>
+          offers several descriptive measures such as
+<tt>spatial.median()</tt>
+          which provides an estimate of the spatial median and further functions which provide estimates of scatter.   Further robust methods are provided such as
+<tt>cov.rob()</tt>
+          in MASS which
+          provides robust estimates of the variance-covariance matrix by minimum volume 
+          ellipsoid, minimum covariance determinant or classical product-moment.
+<a href="../packages/covRobust/index.html">covRobust</a>
+          provides robust covariance estimation via nearest neighbor variance estimation.
+<a href="../packages/robustbase/index.html">robustbase</a>
+          provides robust covariance estimation via fast minimum covariance determinant with
+<tt>covMCD()</tt>
+          and the Orthogonalized pairwise estimate of Gnanadesikan-Kettenring via
+<tt>covOGK()</tt>.   Scalable robust methods are provided within
+<a href="../packages/rrcov/index.html">rrcov</a>
+          also using fast minimum covariance determinant with
+<tt>covMcd()</tt>
+          as well as M-estimators with
+<tt>covMest()</tt>.
+<a href="../packages/corpcor/index.html">corpcor</a>
+          provides shrinkage estimation of large scale covariance
+	  and (partial) correlation matrices.
+        </li>
+        <li>
+          <i>
+            Densities (estimation and simulation):
+          </i>
+<tt>mvnorm()</tt>
+          in MASS simulates from the multivariate normal 
+          distribution.
+<a href="../packages/mvtnorm/index.html">mvtnorm</a>
+          also provides simulation as well as probability and 
+          quantile functions for both the multivariate t distribution and multivariate normal 
+          distributions as well as density functions for the multivariate normal distribution.
+<a href="../packages/mnormt/index.html">mnormt</a>
+          provides multivariate normal and multivariate t density and distribution
+          functions as well as random number simulation.
+<a href="../packages/sn/index.html">sn</a>
+          provides density, distribution and random number generation for the multivariate skew normal and skew t distribution.
+	  Comprehensive information on mixtures is given in the
+<a href="Cluster.html">Cluster</a>
+          view, 
+          some density estimates and random numbers are provided by
+<tt>rmvnorm.mixt()</tt>
+          and
+<tt>dmvnorm.mixt()</tt>
+          in
+<a href="../packages/ks/index.html">ks</a>, mixture fitting 
+          is also provided within
+<a href="../packages/bayesm/index.html">bayesm</a>.   Functions to simulate from the 
+          Wishart distribution are provided in a number of places, such 
+          as
+<tt>rwishart()</tt>
+          in
+<a href="../packages/bayesm/index.html">bayesm</a>
+          and
+<tt>rwish()</tt>
+          in
+<a href="../packages/MCMCpack/index.html">MCMCpack</a>
+          (the latter also has a density
+          function
+<tt>dwish()</tt>).
+<tt>bkde2D()</tt>
+          from
+<a href="../packages/KernSmooth/index.html">KernSmooth</a>
+          and
+<tt>kde2d()</tt>
+          from MASS provide binned and non-binned 2-dimensional kernel density 
+          estimation,
+<a href="../packages/ks/index.html">ks</a>
+          also provides multivariate kernel smoothing as does
+<a href="../packages/ash/index.html">ash</a>
+          and
+<a href="../packages/GenKern/index.html">GenKern</a>.
+<a href="../packages/prim/index.html">prim</a>
+          provides patient rule induction methods to attempt to find regions of high density in high dimensional multivariate data,
+<a href="../packages/feature/index.html">feature</a>
+          also provides methods for determining feature significance in multivariate data (such as in relation to local modes).
+        </li>
+        <li>
+          <i>
+            Assessing normality:
+          </i>
+<a href="../packages/mvnormtest/index.html">mvnormtest</a>
+          provides a multivariate extension
+	  to the Shapiro-Wilks test,
+<a href="../packages/mvoutlier/index.html">mvoutlier</a>
+          provides multivariate outlier detection based
+	  on robust methods.
+<a href="../packages/ICS/index.html">ICS</a>
+          provides tests for multi-normality.
+<tt>mvnorm.etest()</tt>
+          in
+<a href="../packages/energy/index.html">energy</a>
+          provides an assessment 
+          of normality based on E statistics (energy); in the same package
+<tt>k.sample()</tt>
+          assesses a number of samples for equal distributions. Tests for Wishart-distributed covariance matrices 
+          are given by
+<tt>mauchly.test()</tt>
+          in stats.
+        </li>
+        <li>
+          <i>
+            Copulas:
+          </i>
+<a href="../packages/copula/index.html">copula</a>
+          provides 
+          routines for a range of (elliptical and archimedean) copulas including 
+          normal, t, Clayton, Frank, Gumbel,
+<a href="../packages/fgac/index.html">fgac</a>
+          provides 
+          generalised archimedian copula.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Linear models
+        </strong>
+      </p>
+      <ul>
+        <li>
+          From stats,
+<tt>lm()</tt>
+          (with a matrix specified as the dependent variable)
+	  offers multivariate linear models,
+<tt>anova.mlm()</tt>
+          provides comparison of 
+          multivariate linear models.
+<tt>manova()</tt>
+          offers MANOVA.
+<a href="../packages/sn/index.html">sn</a>
+          provides
+<tt>msn.mle()</tt>
+          and
+<tt>mst.mle()</tt>
+          which fit multivariate skew normal and multivariate skew t models.
+<a href="../packages/pls/index.html">pls</a>
+          provides partial least squares regression (PLSR) and principal component regression,
+<a href="../packages/ppls/index.html">ppls</a>
+          provides penalized partial least squares,
+<a href="../packages/dr/index.html">dr</a>
+          provides dimension reduction regression options such as
+<tt>"sir"</tt>
+          (sliced
+	  inverse regression),
+<tt>"save"</tt>
+          (sliced average variance estimation).
+<a href="../packages/plsgenomics/index.html">plsgenomics</a>
+          provides partial least squares analyses for genomics.
+<a href="../packages/relaimpo/index.html">relaimpo</a>
+          provides functions to investigate the relative importance of regression parameters.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Projection methods
+        </strong>
+      </p>
+      <ul>
+        <li>
+          <i>
+            Principal components:
+          </i>
+          these can be fitted with
+<tt>prcomp()</tt>
+          (based on
+<tt>svd()</tt>,
+	  preferred) as well as
+<tt>princomp()</tt>
+          (based on
+<tt>eigen()</tt>
+          for  compatibility
+	  with S-PLUS) from stats.
+<a href="../packages/sca/index.html">sca</a>
+          provides simple components.
+<tt>pc1()</tt>
+          in
+<a href="../packages/Hmisc/index.html">Hmisc</a>
+          provides the first principal component and gives coefficients for unscaled 
+          data.  Additional support for an assessment of the scree plot can be found in
+<a href="../packages/nFactors/index.html">nFactors</a>, whereas
+<a href="../packages/paran/index.html">paran</a>
+          provides routines for Horn's evaluation of the number of dimensions to retain.
+<a href="../packages/pcurve/index.html">pcurve</a>
+          provides Principal Curve analysis and visualisation as well as a further principal component method.
+	  For wide matrices,
+<a href="../packages/gmodels/index.html">gmodels</a>
+          provides
+<tt>fast.prcomp()</tt>
+          and
+<tt>fast.svd()</tt>.
+<a href="../packages/kernlab/index.html">kernlab</a>
+          uses kernel methods to provide a form of non-linear principal components with
+<tt>kpca()</tt>.
+<a href="../packages/pcaPP/index.html">pcaPP</a>
+          provides robust principal components by means
+          of projection pursuit.
+<a href="../packages/amap/index.html">amap</a>
+          provides
+	  further robust and parallelised methods such as a form of generalised 
+	  and robust principal component analysis via
+<tt>acpgen()</tt>
+          and
+<tt>acprob()</tt>
+          respectively.   Further options for principal components 
+          in an ecological setting are available within
+<a href="../packages/ade4/index.html">ade4</a>
+          and in a sensory setting in
+<a href="../packages/SensoMineR/index.html">SensoMineR</a>.
+<a href="../packages/psy/index.html">psy</a>
+          provides a
+          variety of routines useful in psychometry, in this context these include
+<tt>sphpca()</tt>
+          which 
+          maps onto a sphere and
+<tt>fpca()</tt>
+          where some variables may be considered as 
+          dependent as well as
+<tt>scree.plot()</tt>
+          which has the option of adding simulation results to help assess the observed data.
+<a href="../packages/PTAk/index.html">PTAk</a>
+          provides principal tensor analysis analagous to both PCA and correspondence analysis.
+<a href="../packages/smatr/index.html">smatr</a>
+          provides standardised major axis estimation with specific application to allometry.
+        </li>
+        <li>
+          <i>
+            Canonical Correlation:
+          </i>
+<tt>cancor()</tt>
+          in stats provides 
+          canonical correlation.
+<a href="../packages/kernlab/index.html">kernlab</a>
+          uses kernel methods to provide robust canonical correlation with
+<tt>kcca()</tt>.
+<a href="../packages/concor/index.html">concor</a>
+          provides a number of concordance methods.
+        </li>
+        <li>
+          <i>
+            Redundancy Analysis:
+          </i>
+<a href="../packages/calibrate/index.html">calibrate</a>
+          provides
+<tt>rda()</tt>
+          for 
+          redundancy analysis as well as further options for canonical correlation.
+<a href="../packages/fso/index.html">fso</a>
+          provides fuzzy set ordination, which extends ordination beyond methods available from linear algebra.
+        </li>
+        <li>
+          <i>
+            Independent Components:
+          </i>
+<a href="../packages/fastICA/index.html">fastICA</a>
+          provides fastICA 
+         algorithms to perform independent
+	  component analysis (ICA) and Projection Pursuit, and
+<a href="../packages/PearsonICA/index.html">PearsonICA</a>
+          uses score functions.
+<a href="../packages/ICS/index.html">ICS</a>
+          provides either an invariant co-ordinate system or independent components.
+<a href="../packages/JADE/index.html">JADE</a>
+          adds an interface to the JADE algorithm, as well as providing some diagnostics for ICA.
+        </li>
+        <li>
+          <i>
+            Procrustes analysis:
+          </i>
+<tt>procrustes()</tt>
+          in
+<a href="../packages/vegan/index.html">vegan</a>
+          provides procrustes analysis, this package also provides functions
+	  for ordination and further information on that area is given in the
+<a href="Environmetrics.html">Environmetrics</a>
+          task view.    Generalised procrustes analysis via
+<tt>GPA()</tt>
+          is available from
+<a href="../packages/FactoMineR/index.html">FactoMineR</a>.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Principal coordinates / scaling methods
+        </strong>
+      </p>
+      <ul>
+        <li>
+<tt>cmdscale()</tt>
+          in stats provides classical multidimensional scaling
+	  (principal coordinates analysis),
+<tt>sammon()</tt>
+          and
+<tt>isoMDS()</tt>
+          in MASS 
+	  offer Sammon and Kruskal's non-metric multidimensional scaling.
+<a href="../packages/vegan/index.html">vegan</a>
+          provides wrappers and post-processing for non-metric MDS.
+<tt>indscal()</tt>
+          is provided by
+<a href="../packages/SensoMineR/index.html">SensoMineR</a>.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Unsupervised classification
+        </strong>
+      </p>
+      <ul>
+        <li>
+          <i>
+            Cluster analysis:
+          </i>
+          A comprehensive overview of clustering 
+          methods available within R is provided by the
+<a href="Cluster.html">Cluster</a>
+          task view.  Standard techniques include hierarchical clustering by
+<tt>hclust()</tt>
+          and k-means clustering by
+<tt>kmeans()</tt>
+          in stats.
+	   A range of established
+          clustering and visualisation techniques are also available in
+<a href="../packages/cluster/index.html">cluster</a>, some cluster validation routines are available in
+<a href="../packages/clv/index.html">clv</a>
+          and the Rand index can be computed from
+<tt>classAgreement()</tt>
+          in
+<a href="../packages/e1071/index.html">e1071</a>.  Trimmed cluster analysis is available from
+<a href="../packages/trimcluster/index.html">trimcluster</a>, cluster ensembles are available from
+<a href="../packages/clue/index.html">clue</a>, methods to assist with choice of routines are available in
+<a href="../packages/clusterSim/index.html">clusterSim</a>
+          and hybrid methodology is provided by
+<a href="../packages/hybridHclust/index.html">hybridHclust</a>.  Distance 
+          measures  (
+<tt>edist()</tt>) and hierarchical clustering (
+<tt>hclust.energy()</tt>) based on            E-statistics are available in
+<a href="../packages/energy/index.html">energy</a>.   Mahalanobis distance based clustering (for fixed points as well as clusterwise regression) are available from
+<a href="../packages/fpc/index.html">fpc</a>.
+<a href="../packages/clustvarsel/index.html">clustvarsel</a>
+          provides variable selection within model-based clustering.
+	  Fuzzy clustering is available within
+<a href="../packages/cluster/index.html">cluster</a>
+          as well as via the
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/hopach.html"><span class="BioC">hopach</span></a>
+          (Hierarchical Ordered Partitioning and 
+          Collapsing Hybrid) algorithm.
+<a href="../packages/kohonen/index.html">kohonen</a>
+          provides supervised and unsuperised SOMs 
+          for high dimensional spectra or patterns.
+<a href="../packages/clusterGeneration/index.html">clusterGeneration</a>
+          helps simulate clusters. The
+<a href="Environmetrics.html">Environmetrics</a>
+          task view also gives a topic-related overview of some clustering techniques.   Model based clustering is available in
+<a href="../packages/mclust/index.html">mclust</a>
+          and model based clustering for functional data is available in
+<a href="../packages/MFDA/index.html">MFDA</a>.
+        </li>
+        <li>
+          <i>
+            Tree methods:
+          </i>
+          Full details on tree methods are given in the
+<a href="MachineLearning.html">MachineLearning</a>
+          task view.   
+	  Suffice to say here that classification trees are sometimes considered within 
+          multivariate methods;
+<a href="../packages/rpart/index.html">rpart</a>
+          is most used for this purpose.
+<a href="../packages/TWIX/index.html">TWIX</a>
+          provides trees with extra splits.
+<a href="../packages/mvpart/index.html">mvpart</a>
+          extend regression trees to cover multivariate 
+          regression trees,
+<a href="../packages/party/index.html">party</a>
+          provides recursive partitioning.   Classification and regression training is provided by
+<a href="../packages/caret/index.html">caret</a>.
+<a href="../packages/kknn/index.html">kknn</a>
+          provides k-nearest neighbour methods which can be used for regression as well as classification.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Supervised classification and discriminant analysis
+        </strong>
+      </p>
+      <ul>
+        <li>
+<tt>lda()</tt>
+          and
+<tt>qda()</tt>
+          within MASS provide linear
+	  and quadratic discrimination respectively.
+<a href="../packages/mda/index.html">mda</a>
+          provides mixture and
+	  flexible discriminant analysis with
+<tt>mda()</tt>
+          and
+<tt>fda()</tt>
+          as well as
+	  multivariate adaptive regression splines with
+<tt>mars()</tt>
+          and adaptive spline
+	  backfitting with the
+<tt>bruto()</tt>
+          function.   Multivariate adaptive regression splines can also be found in
+<a href="../packages/earth/index.html">earth</a>.
+<a href="../packages/rda/index.html">rda</a>
+          provides classification 
+          for high dimensional data by means of shrunken centroids regularized discriminant analysis.
+          Package
+<a href="../packages/class/index.html">class</a>
+          provides k-nearest 
+          neighbours by
+<tt>knn()</tt>.
+<a href="../packages/SensoMineR/index.html">SensoMineR</a>
+          provides
+<tt>FDA()</tt>
+          for factorial discriminant analysis.   A number of packages provide for 
+	  dimension reduction with the classification.
+<a href="../packages/klaR/index.html">klaR</a>
+          includes variable
+	  selection and robustness against multicollinearity as well as a number of
+	  visualisation routines.
+<a href="../packages/superpc/index.html">superpc</a>
+          provides principal components for
+	  supervised classification, whereas
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/gpls.html"><span class="BioC">gpls</span></a>
+          provides classification using
+	  generalised partial least squares.
+<a href="../packages/hddplot/index.html">hddplot</a>
+          provides cross-validated linear discriminant calculations to determine the optimum number of features.
+<a href="../packages/ROCR/index.html">ROCR</a>
+          provides a range of methods for assessing classifier performance.
+        Further information on supervised classification can be found in 
+          the
+<a href="MachineLearning.html">MachineLearning</a>
+          task view.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Correspondence analysis
+        </strong>
+      </p>
+      <ul>
+        <li>
+<tt>corresp()</tt>
+          and
+<tt>mca()</tt>
+          in MASS provide simple and
+	  multiple correspondence analysis respectively.
+<a href="../packages/ca/index.html">ca</a>
+          also provides single, multiple and joint correspondence analysis.
+<tt>ca()</tt>
+          and
+<tt>mca()</tt>
+          in
+<a href="../packages/ade4/index.html">ade4</a>
+          provide correspondence and multiple correspondence analysis
+	  respectively, as well as adding homogeneous table analysis with
+<tt>hta()</tt>.
+	  Further functionality is also available within
+<a href="../packages/vegan/index.html">vegan</a>
+          co-correspondence 
+          is available from
+<a href="../packages/cocorresp/index.html">cocorresp</a>.
+<a href="../packages/FactoMineR/index.html">FactoMineR</a>
+          provides
+<tt>CA()</tt>
+          and
+<tt>MCA()</tt>
+          which also enable simple and multiple corresondence analysis as well as associated graphical routines.
+<a href="../packages/homals/index.html">homals</a>
+          provides homogeneity analysis.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Missing data
+        </strong>
+      </p>
+      <ul>
+        <li>
+<a href="../packages/mitools/index.html">mitools</a>
+          provides tools for multiple imputation,
+<a href="../packages/mice/index.html">mice</a>
+          provides
+	  multivariate imputation by chained equations
+<a href="../packages/mvnmle/index.html">mvnmle</a>
+          provides ML estimation
+	  for multivariate normal data with missing values,
+<a href="../packages/mix/index.html">mix</a>
+          provides multiple imputation for mixed categorical and continuous data.
+<a href="../packages/pan/index.html">pan</a>
+          provides multiple imputation for
+	  missing panel data.
+<a href="../packages/VIM/index.html">VIM</a>
+          provides methods for the visualisation as well as imputation of missing data.
+<tt>aregImpute()</tt>
+          and
+<tt>transcan()</tt>
+          from
+<a href="../packages/Hmisc/index.html">Hmisc</a>
+          provide further imputation methods.
+<a href="../packages/monomvn/index.html">monomvn</a>
+          deals with estimation models where the missing data pattern is monotone.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Latent variable approaches
+        </strong>
+      </p>
+      <ul>
+        <li>
+<tt>factanal()</tt>
+          in stats provides factor analysis by maximum
+	  likelihood, Bayesian factor analysis
+	  is provided for Gaussian, ordinal and mixed variables in
+<a href="../packages/MCMCpack/index.html">MCMCpack</a>.
+<a href="../packages/GPArotation/index.html">GPArotation</a>
+          offers GPA (gradient projection algorithm) factor rotation.
+<a href="../packages/FAiR/index.html">FAiR</a>
+          provides factor analysis solved using genetic algorithms.
+<a href="../packages/sem/index.html">sem</a>
+          fits linear structural equation models and
+<a href="../packages/ltm/index.html">ltm</a>
+          provides
+	  latent trait models under item response theory and range of extensions to Rasch models can be found in
+<a href="../packages/eRm/index.html">eRm</a>.
+<a href="../packages/FactoMineR/index.html">FactoMineR</a>
+          provides a wide range of Factor Analysis methods, including
+<tt>MFA()</tt>
+          and
+<tt>HMFA()</tt>
+          for multiple and hierarchical multiple factor analysis as well as
+<tt>ADFM()</tt>
+          for multiple factor analysis of quantitative and qualitative data.
+<a href="../packages/tsfa/index.html">tsfa</a>
+          provides factor analysis for time series.
+<a href="../packages/poLCA/index.html">poLCA</a>
+          provides latent class and latent class regression models for a variety of outcome variables.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Modelling non-Gaussian data
+        </strong>
+      </p>
+      <ul>
+        <li>
+<a href="../packages/MNP/index.html">MNP</a>
+          provides Bayesian multinomial probit models,
+<a href="../packages/polycor/index.html">polycor</a>
+          provides 
+          polchoric and tetrachoric
+	  correlation matrices.
+<a href="../packages/bayesm/index.html">bayesm</a>
+          provides a range of models such as seemingly 
+          unrelated regression, multinomial logit/probit, multivariate probit and instrumental 
+          variables.
+<a href="../packages/VGAM/index.html">VGAM</a>
+          provides Vector Generalised Linear and Additive Models, Reduced Rank regression
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Matrix manipulations
+        </strong>
+      </p>
+      <ul>
+        <li>
+          As a vector- and matrix-based language, base R ships with many powerful tools for
+	  doing matrix manipulations, which are complemented by the packages
+<a href="../packages/Matrix/index.html">Matrix</a>
+          and
+<a href="../packages/SparseM/index.html">SparseM</a>.
+<a href="../packages/matrixcalc/index.html">matrixcalc</a>
+          adds functions for matrix differential calculus.   Some further sparse matrix functionality is also available from
+<a href="../packages/spam/index.html">spam</a>.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Miscellaneous utitlies
+        </strong>
+      </p>
+      <ul>
+        <li>
+<a href="../packages/abind/index.html">abind</a>
+          generalises
+<tt>cbind()</tt>
+          and
+<tt>rbind()</tt>
+          for arrays,
+<tt>mApply()</tt>
+          in
+<a href="../packages/Hmisc/index.html">Hmisc</a>
+          generalises
+<tt>apply()</tt>
+          for matrices and passes multiple functions.   In addition to functions listed earlier,
+<a href="../packages/sn/index.html">sn</a>
+          provides operations such as marginalisation, affine transformations and graphics for the multivariate skew normal and skew t distribution.
+<a href="../packages/mAr/index.html">mAr</a>
+          provides for vector auto-regression,
+<a href="../packages/MSBVAR/index.html">MSBVAR</a>
+          provides for
+	  Bayesian vector autoregression models, along with impulse responses and forecasting.
+<tt>rm.boot()</tt>
+          from
+<a href="../packages/Hmisc/index.html">Hmisc</a>
+          bootstraps repeated measures models.
+<a href="../packages/cramer/index.html">cramer</a>
+          Multivariate nonparametric Cramer-Test for the two-sample-problem
+<a href="../packages/psy/index.html">psy</a>
+          also provides a range of statistics based on Cohen's kappa including weighted measures and agreement among more than 2 raters.
+<a href="../packages/cwhmisc/index.html">cwhmisc</a>
+          contains a number of interesting support functions which are of interest, such as
+<tt>ellipse()</tt>,
+<tt>normalise()</tt>
+          and various rotation functions.
+<a href="../packages/desirability/index.html">desirability</a>
+          provides functions for multivariate optimisation.
+<a href="../packages/geozoo/index.html">geozoo</a>
+          provides plotting of geometric objects in GGobi.
+        </li>
+      </ul>
+    </div>
+
+  <h3>CRAN packages:</h3>
+  <ul>
+    <li><a href="../packages/abind/index.html">abind</a></li>
+    <li><a href="../packages/ade4/index.html">ade4</a> (core)</li>
+    <li><a href="../packages/amap/index.html">amap</a></li>
+    <li><a href="../packages/aplpack/index.html">aplpack</a></li>
+    <li><a href="../packages/ash/index.html">ash</a></li>
+    <li><a href="../packages/bayesm/index.html">bayesm</a></li>
+    <li><a href="../packages/ca/index.html">ca</a></li>
+    <li><a href="../packages/calibrate/index.html">calibrate</a></li>
+    <li><a href="../packages/car/index.html">car</a></li>
+    <li><a href="../packages/caret/index.html">caret</a></li>
+    <li><a href="../packages/class/index.html">class</a></li>
+    <li><a href="../packages/clue/index.html">clue</a></li>
+    <li><a href="../packages/cluster/index.html">cluster</a> (core)</li>
+    <li><a href="../packages/clusterGeneration/index.html">clusterGeneration</a></li>
+    <li><a href="../packages/clusterSim/index.html">clusterSim</a></li>
+    <li><a href="../packages/clustvarsel/index.html">clustvarsel</a></li>
+    <li><a href="../packages/clv/index.html">clv</a></li>
+    <li><a href="../packages/cocorresp/index.html">cocorresp</a></li>
+    <li><a href="../packages/concor/index.html">concor</a></li>
+    <li><a href="../packages/copula/index.html">copula</a></li>
+    <li><a href="../packages/corpcor/index.html">corpcor</a></li>
+    <li><a href="../packages/covRobust/index.html">covRobust</a></li>
+    <li><a href="../packages/cramer/index.html">cramer</a></li>
+    <li><a href="../packages/cwhmisc/index.html">cwhmisc</a></li>
+    <li><a href="../packages/denpro/index.html">denpro</a></li>
+    <li><a href="../packages/desirability/index.html">desirability</a></li>
+    <li><a href="../packages/dr/index.html">dr</a></li>
+    <li><a href="../packages/e1071/index.html">e1071</a></li>
+    <li><a href="../packages/earth/index.html">earth</a></li>
+    <li><a href="../packages/ellipse/index.html">ellipse</a></li>
+    <li><a href="../packages/energy/index.html">energy</a></li>
+    <li><a href="../packages/eRm/index.html">eRm</a></li>
+    <li><a href="../packages/FactoMineR/index.html">FactoMineR</a></li>
+    <li><a href="../packages/FAiR/index.html">FAiR</a></li>
+    <li><a href="../packages/fastICA/index.html">fastICA</a></li>
+    <li><a href="../packages/feature/index.html">feature</a></li>
+    <li><a href="../packages/fgac/index.html">fgac</a></li>
+    <li><a href="../packages/fpc/index.html">fpc</a></li>
+    <li><a href="../packages/fso/index.html">fso</a></li>
+    <li><a href="../packages/gclus/index.html">gclus</a></li>
+    <li><a href="../packages/GenKern/index.html">GenKern</a></li>
+    <li><a href="../packages/geometry/index.html">geometry</a></li>
+    <li><a href="../packages/geozoo/index.html">geozoo</a></li>
+    <li><a href="../packages/gmodels/index.html">gmodels</a></li>
+    <li><a href="../packages/GPArotation/index.html">GPArotation</a></li>
+    <li><a href="../packages/hddplot/index.html">hddplot</a></li>
+    <li><a href="../packages/Hmisc/index.html">Hmisc</a></li>
+    <li><a href="../packages/homals/index.html">homals</a></li>
+    <li><a href="../packages/hybridHclust/index.html">hybridHclust</a></li>
+    <li><a href="../packages/ICS/index.html">ICS</a></li>
+    <li><a href="../packages/ICSNP/index.html">ICSNP</a></li>
+    <li><a href="../packages/iplots/index.html">iplots</a></li>
+    <li><a href="../packages/JADE/index.html">JADE</a></li>
+    <li><a href="../packages/kernlab/index.html">kernlab</a></li>
+    <li><a href="../packages/KernSmooth/index.html">KernSmooth</a></li>
+    <li><a href="../packages/kknn/index.html">kknn</a></li>
+    <li><a href="../packages/klaR/index.html">klaR</a></li>
+    <li><a href="../packages/kohonen/index.html">kohonen</a></li>
+    <li><a href="../packages/ks/index.html">ks</a></li>
+    <li><a href="../packages/lattice/index.html">lattice</a></li>
+    <li><a href="../packages/ltm/index.html">ltm</a></li>
+    <li><a href="../packages/mAr/index.html">mAr</a></li>
+    <li><a href="../packages/MASS/index.html">MASS</a> (core)</li>
+    <li><a href="../packages/Matrix/index.html">Matrix</a></li>
+    <li><a href="../packages/matrixcalc/index.html">matrixcalc</a></li>
+    <li><a href="../packages/mclust/index.html">mclust</a></li>
+    <li><a href="../packages/MCMCpack/index.html">MCMCpack</a></li>
+    <li><a href="../packages/mda/index.html">mda</a></li>
+    <li><a href="../packages/MFDA/index.html">MFDA</a></li>
+    <li><a href="../packages/mice/index.html">mice</a></li>
+    <li><a href="../packages/misc3d/index.html">misc3d</a></li>
+    <li><a href="../packages/mitools/index.html">mitools</a></li>
+    <li><a href="../packages/mix/index.html">mix</a></li>
+    <li><a href="../packages/mnormt/index.html">mnormt</a></li>
+    <li><a href="../packages/MNP/index.html">MNP</a></li>
+    <li><a href="../packages/monomvn/index.html">monomvn</a></li>
+    <li><a href="../packages/MSBVAR/index.html">MSBVAR</a></li>
+    <li><a href="../packages/mvnmle/index.html">mvnmle</a></li>
+    <li><a href="../packages/mvnormtest/index.html">mvnormtest</a></li>
+    <li><a href="../packages/mvoutlier/index.html">mvoutlier</a></li>
+    <li><a href="../packages/mvpart/index.html">mvpart</a></li>
+    <li><a href="../packages/mvtnorm/index.html">mvtnorm</a></li>
+    <li><a href="../packages/nFactors/index.html">nFactors</a></li>
+    <li><a href="../packages/pan/index.html">pan</a></li>
+    <li><a href="../packages/paran/index.html">paran</a></li>
+    <li><a href="../packages/party/index.html">party</a></li>
+    <li><a href="../packages/pcaPP/index.html">pcaPP</a></li>
+    <li><a href="../packages/pcurve/index.html">pcurve</a></li>
+    <li><a href="../packages/PearsonICA/index.html">PearsonICA</a></li>
+    <li><a href="../packages/pls/index.html">pls</a></li>
+    <li><a href="../packages/plsgenomics/index.html">plsgenomics</a></li>
+    <li><a href="../packages/poLCA/index.html">poLCA</a></li>
+    <li><a href="../packages/polycor/index.html">polycor</a></li>
+    <li><a href="../packages/ppls/index.html">ppls</a></li>
+    <li><a href="../packages/prim/index.html">prim</a></li>
+    <li><a href="../packages/proxy/index.html">proxy</a></li>
+    <li><a href="../packages/psy/index.html">psy</a></li>
+    <li><a href="../packages/PTAk/index.html">PTAk</a></li>
+    <li><a href="../packages/rda/index.html">rda</a></li>
+    <li><a href="../packages/relaimpo/index.html">relaimpo</a></li>
+    <li><a href="../packages/rggobi/index.html">rggobi</a></li>
+    <li><a href="../packages/rgl/index.html">rgl</a></li>
+    <li><a href="../packages/robustbase/index.html">robustbase</a></li>
+    <li><a href="../packages/ROCR/index.html">ROCR</a></li>
+    <li><a href="../packages/rpart/index.html">rpart</a></li>
+    <li><a href="../packages/rrcov/index.html">rrcov</a></li>
+    <li><a href="../packages/sca/index.html">sca</a></li>
+    <li><a href="../packages/scatterplot3d/index.html">scatterplot3d</a></li>
+    <li><a href="../packages/sem/index.html">sem</a></li>
+    <li><a href="../packages/SensoMineR/index.html">SensoMineR</a></li>
+    <li><a href="../packages/seriation/index.html">seriation</a></li>
+    <li><a href="../packages/simba/index.html">simba</a></li>
+    <li><a href="../packages/smatr/index.html">smatr</a></li>
+    <li><a href="../packages/sn/index.html">sn</a></li>
+    <li><a href="../packages/spam/index.html">spam</a></li>
+    <li><a href="../packages/SparseM/index.html">SparseM</a></li>
+    <li><a href="../packages/SpatialNP/index.html">SpatialNP</a></li>
+    <li><a href="../packages/superpc/index.html">superpc</a></li>
+    <li><a href="../packages/trimcluster/index.html">trimcluster</a></li>
+    <li><a href="../packages/tsfa/index.html">tsfa</a></li>
+    <li><a href="../packages/TWIX/index.html">TWIX</a></li>
+    <li><a href="../packages/vcd/index.html">vcd</a></li>
+    <li><a href="../packages/vegan/index.html">vegan</a> (core)</li>
+    <li><a href="../packages/VGAM/index.html">VGAM</a></li>
+    <li><a href="../packages/VIM/index.html">VIM</a></li>
+    <li><a href="../packages/xgobi/index.html">xgobi</a></li>
+    <li><a href="../packages/YaleToolkit/index.html">YaleToolkit</a></li>
+  </ul>
+
+  <h3>Related links:</h3>
+  <ul>
+    <li>CRAN Task View: <a href="Cluster.html">Cluster</a></li>
+    <li>CRAN Task View: <a href="Environmetrics.html">Environmetrics</a></li>
+    <li>CRAN Task View: <a href="MachineLearning.html">MachineLearning</a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/gpls.html" target="_top"><span class="BioC">gpls</span></a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/hopach.html" target="_top"><span class="BioC">hopach</span></a></li>
+    <li><a href="http://www.ggobi.org">
+  GGobi (interactive dynamic visualisation software, available standalone or as an R library)
+</a></li>
+    <li><a href="http://www.research.att.com/areas/stat/xgobi/">
+  XGobi (interactive, dynamic visulisation software), XGvis (for proximity data / multidimensional scaling)
+</a></li>
+    <li><a href="http://biostat.mc.vanderbilt.edu/twiki/bin/view/Main/HmiscMultivar">
+  Hmisc functions related to multivariate analysis
+</a></li>
+    <li><a href="http://www.cuddyvalley.org/psychoR/">
+  Psychometrics in R, Jan de Leeuw
+</a></li>
+    <li><a href="http://www.qhull.org">
+  qhull library
+</a></li>
+  </ul>
+
+</body>
+</html>
+ 

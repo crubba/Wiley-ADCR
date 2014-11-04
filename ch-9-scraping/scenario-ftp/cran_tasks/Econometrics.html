@@ -1,0 +1,759 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CRAN Task View: Computational Econometrics</title>
+  <link rel=stylesheet type="text/css" href="../CRAN_web.css" />
+</head>
+
+<body>
+  <h2>CRAN Task View: Computational Econometrics</h2>
+  <table summary="Econometrics task view information">
+    <tr><td valign="top"><b>Maintainer:</b></td><td>Achim Zeileis</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x41;&#x63;&#x68;&#x69;&#x6d;&#x2e;&#x5a;&#x65;&#x69;&#x6c;&#x65;&#x69;&#x73;&#x20;&#x61;&#x74;&#x20;&#x52;&#x2d;&#x70;&#x72;&#x6f;&#x6a;&#x65;&#x63;&#x74;&#x2e;&#x6f;&#x72;&#x67;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2014-02-28</td></tr>
+  </table>
+
+    <div>
+      <p>
+        Base R ships with a lot of functionality useful for computational
+    econometrics, in particular in the stats package. This
+    functionality is complemented by many packages on CRAN, a brief overview
+    is given below. There is also a considerable overlap between the tools
+    for econometrics in this view and for finance in the
+<a href="Finance.html">Finance</a>
+        view.
+    Furthermore, the
+        <a href="https://www.stat.math.ethz.ch/mailman/listinfo/R-SIG-Finance/">
+          Finance SIG
+        </a>
+        is a suitable mailing list for obtaining help
+    and discussing questions about both computational finance and econometrics.
+    Finally, there is also some overlap with the
+<a href="SocialSciences.html">SocialSciences</a>
+        that
+    also covers a broad variety of tools for social sciences, e.g., including political science.
+      </p>
+      <p>
+        The packages in this view can be roughly structured into the following topics.
+    If you think that some package is missing from the list, please let me know.
+      </p>
+      <p>
+        <strong>
+          Linear regression models
+        </strong>
+      </p>
+      <ul>
+        <li>
+          Linear models can be fitted (via OLS) with
+<tt>lm()</tt>
+          (from stats) and standard tests for model comparisons are available in various
+	  methods such as
+<tt>summary()</tt>
+          and
+<tt>anova()</tt>.
+        </li>
+        <li>
+          Analogous functions
+	  that also support asymptotic tests (
+          <i>
+            z
+          </i>
+          instead of
+          <i>
+            t
+          </i>
+          tests, and
+	  Chi-squared instead of
+          <i>
+            F
+          </i>
+          tests) and plug-in of other covariance
+	  matrices are
+<tt>coeftest()</tt>
+          and
+<tt>waldtest()</tt>
+          in
+<a href="../packages/lmtest/index.html">lmtest</a>.
+        </li>
+        <li>
+          Tests of more general linear hypotheses are implemented in
+<tt>linear.hypothesis()</tt>
+          in
+<a href="../packages/car/index.html">car</a>.
+        </li>
+        <li>
+          HC and HAC covariance matrices that can be plugged
+	  into these functions are available in
+<a href="../packages/sandwich/index.html">sandwich</a>.
+        </li>
+        <li>
+          Diagnost checking: The packages
+<a href="../packages/car/index.html">car</a>
+          and
+<a href="../packages/lmtest/index.html">lmtest</a>
+          provide a large collection
+	  of regression diagonstics and diagnostic tests.
+        </li>
+        <li>
+          Instrumental variables regression (two-stage least squares) is
+	  provided by
+<tt>ivreg()</tt>
+          in
+<a href="../packages/AER/index.html">AER</a>, another implementation
+	  is
+<tt>tsls()</tt>
+          in package
+<a href="../packages/sem/index.html">sem</a>.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Microeconometrics
+        </strong>
+      </p>
+      <ul>
+        <li>
+          Many standard microeconometric models belong to the
+          family of generalized linear models (GLM) and can be fitted by
+<tt>glm()</tt>
+          from package stats. This includes in particular logit and probit models
+	  for modeling choice data and poisson models for count data. Effects for typical
+	  values of regressors in these models can be obtained and visualized using
+<a href="../packages/effects/index.html">effects</a>.
+	  Marginal effects tables for certain GLMs can be obtained using the
+<a href="../packages/mfx/index.html">mfx</a>
+          package.
+        </li>
+        <li>
+          Negative binomial GLMs are available via
+<tt>glm.nb()</tt>
+          in package
+<a href="../packages/MASS/index.html">MASS</a>.
+	  Another implementation of negative binomial models
+	  is provided by
+<a href="../packages/aod/index.html">aod</a>, which also contains other models for overdispersed
+	  data.
+        </li>
+        <li>
+          Zero-inflated and hurdle count models are provided in package
+<a href="../packages/pscl/index.html">pscl</a>.
+        </li>
+        <li>
+          Multinomial responses: Multinomial models
+	  with individual-specific covariates only are available in
+<tt>multinom()</tt>
+          from package
+<a href="../packages/nnet/index.html">nnet</a>. Implementations with both individual- and
+	  choice-specific variables are
+<a href="../packages/mlogit/index.html">mlogit</a>
+          and
+<a href="../packages/mnlogit/index.html">mnlogit</a>. Generalized additive models
+	  (GAMs) for multinomial responses can be fitted with the
+<a href="../packages/VGAM/index.html">VGAM</a>
+          package.	  
+	  A Bayesian approach to multinomial probit models is provided by
+<a href="../packages/MNP/index.html">MNP</a>.
+	  Various Bayesian multinomial models (including logit and probit) are available
+	  in
+<a href="../packages/bayesm/index.html">bayesm</a>. Furthermore, the package
+<a href="../packages/RSGHB/index.html">RSGHB</a>
+          fits various
+	  hierarchical Bayesian specifications based on direct specification of the likelihood
+	  function.
+        </li>
+        <li>
+          Ordered responses: Proportional-odds regression for ordered responses is implemented
+          in
+<tt>polr()</tt>
+          from package
+<a href="../packages/MASS/index.html">MASS</a>. The package
+<a href="../packages/ordinal/index.html">ordinal</a>
+          provides cumulative link models for ordered data which encompasses proportional
+	  odds models but also includes more general specifications. Bayesian ordered probit
+	  models are provided by
+<a href="../packages/bayesm/index.html">bayesm</a>.
+        </li>
+        <li>
+          Censored responses: Basic censored regression models (e.g., tobit models)
+	  can be fitted by
+<tt>survreg()</tt>
+          in
+<a href="../packages/survival/index.html">survival</a>, a convenience
+	  interface
+<tt>tobit()</tt>
+          is in package
+<a href="../packages/AER/index.html">AER</a>. Further censored
+	  regression models, including models for panel data, are provided in
+<a href="../packages/censReg/index.html">censReg</a>.
+	  Interval regression models are in
+<a href="../packages/intReg/index.html">intReg</a>. Censored regression models with
+	  conditional heteroskedasticity are in
+<a href="../packages/crch/index.html">crch</a>.
+	  Furthermore, hurdle models for left-censored data at zero can be estimated with
+<a href="../packages/mhurdle/index.html">mhurdle</a>. Models for sample selection are available in
+<a href="../packages/sampleSelection/index.html">sampleSelection</a>
+          and semiparametric extensions of these are provided by
+<a href="../packages/SemiParSampleSel/index.html">SemiParSampleSel</a>.
+        </li>
+        <li>
+          Instrumental variables for binary responses: The
+<a href="../packages/LARF/index.html">LARF</a>
+          package estimates
+          local average response functions for binary treatments and binary instruments.
+        </li>
+        <li>
+          Multivariate probit models: Estimation and marginal effect computations can be
+          carried out with
+<a href="../packages/mvProbit/index.html">mvProbit</a>.
+        </li>
+        <li>
+          Miscellaneous: Further more refined tools for microecnometrics are provided in
+	  the
+<a href="../packages/micEcon/index.html">micEcon</a>
+          family of packages: Analysis with
+	  Cobb-Douglas, translog, and quadratic functions is in
+<a href="../packages/micEcon/index.html">micEcon</a>;
+	  the constant elasticity of scale (CES) function is in
+<a href="../packages/micEconCES/index.html">micEconCES</a>;
+	  the symmetric normalized quadratic profit (SNQP) function is in
+<a href="../packages/micEconSNQP/index.html">micEconSNQP</a>.
+          The almost ideal demand system (AIDS) is in
+<a href="../packages/micEconAids/index.html">micEconAids</a>.	  
+	  Stochastic frontier analysis is in
+<a href="../packages/frontier/index.html">frontier</a>.
+	  The package
+<a href="../packages/bayesm/index.html">bayesm</a>
+          implements a Bayesian
+	  approach to microeconometrics and marketing. Inference for relative
+	  distributions is contained in package
+<a href="../packages/reldist/index.html">reldist</a>.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Further regression models
+        </strong>
+      </p>
+      <ul>
+        <li>
+          Nonlinear least squares modeling is availble in
+<tt>nls()</tt>
+          in package stats.
+        </li>
+        <li>
+          Quantile regression:
+<a href="../packages/quantreg/index.html">quantreg</a>
+          (including linear, nonlinear, censored,
+          locally polynomial and additive quantile regressions).
+        </li>
+        <li>
+          Linear models for panel data:
+<a href="../packages/plm/index.html">plm</a>, providing a wide range of within,
+          between, and random-effect methods (among others) along with corrected standard
+	  errors, tests, etc. For panel-corrected standard errors in OLS and GEE models,
+	  see
+<a href="../packages/geepack/index.html">geepack</a>
+          and
+<a href="../packages/pcse/index.html">pcse</a>. Estimation of linear models with
+	  multiple group fixed effects is contained in
+<a href="../packages/lfe/index.html">lfe</a>.
+        </li>
+        <li>
+          Generalized method of moments (GMM) and generalized empirical likelihood (GEL):
+<a href="../packages/gmm/index.html">gmm</a>.
+        </li>
+        <li>
+          Spatial econometric models: The
+<a href="Spatial.html">Spatial</a>
+          view gives details about
+          handling spatial data, along with information about (regression) modeling. In particular,
+	  spatial regression models can be fitted using
+<a href="../packages/spdep/index.html">spdep</a>
+          and
+<a href="../packages/sphet/index.html">sphet</a>
+          (the
+	  latter using a GMM approach).
+<a href="../packages/splm/index.html">splm</a>
+          is a package for spatial panel
+          models. Spatial probit models are available in
+<a href="../packages/spatialprobit/index.html">spatialprobit</a>.
+        </li>
+        <li>
+          Linear structural equation models:
+<a href="../packages/sem/index.html">sem</a>
+          (including two-stage least squares).
+        </li>
+        <li>
+          Simultaneous equation estimation:
+<a href="../packages/systemfit/index.html">systemfit</a>.
+        </li>
+        <li>
+          Nonparametric kernel methods:
+<a href="../packages/np/index.html">np</a>.
+        </li>
+        <li>
+          Beta regression:
+<a href="../packages/betareg/index.html">betareg</a>
+          and
+<a href="../packages/gamlss/index.html">gamlss</a>.
+        </li>
+        <li>
+          Truncated (Gaussian) regression:
+<a href="../packages/truncreg/index.html">truncreg</a>.
+        </li>
+        <li>
+          Nonlinear mixed-effect models:
+<a href="../packages/nlme/index.html">nlme</a>
+          and
+<a href="../packages/lme4/index.html">lme4</a>.
+        </li>
+        <li>
+          Generalized additive models (GAMs):
+<a href="../packages/mgcv/index.html">mgcv</a>,
+<a href="../packages/gam/index.html">gam</a>,
+<a href="../packages/gamlss/index.html">gamlss</a>
+          and
+<a href="../packages/VGAM/index.html">VGAM</a>.
+        </li>
+        <li>
+          Mixed data sampling regression:
+<a href="../packages/midasr/index.html">midasr</a>.
+        </li>
+        <li>
+          Miscellaneous: The packages
+<a href="../packages/VGAM/index.html">VGAM</a>,
+<a href="../packages/rms/index.html">rms</a>
+          and
+<a href="../packages/Hmisc/index.html">Hmisc</a>
+          provide several tools for extended
+	  handling of (generalized) linear regression models.
+<a href="../packages/Zelig/index.html">Zelig</a>
+          is a unified
+	  easy-to-use interface to a wide range of regression models.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Basic time series infrastructure
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="TimeSeries.html">TimeSeries</a>
+          task view provides much more detailed
+          information. Here, only the most important aspects are briefly mentioned.
+        </li>
+        <li>
+          The class
+<tt>"ts"</tt>
+          in package stats is R's standard class for
+          regularly spaced time series (especially annual, quarterly, and monthly data).
+        </li>
+        <li>
+          Time series in
+<tt>"ts"</tt>
+          format can be
+	  coerced back and forth without loss of information to
+<tt>"zooreg"</tt>
+          from package
+<a href="../packages/zoo/index.html">zoo</a>.
+<a href="../packages/zoo/index.html">zoo</a>
+          provides infrastructure for
+	  both regularly and irregularly spaced time series (the latter via the class
+<tt>"zoo"</tt>) where the time information can be of arbitrary class.
+	  This includes daily series (typically with
+<tt>"Date"</tt>
+          time index)
+	  or intra-day series (e.g., with
+<tt>"POSIXct"</tt>
+          time index).
+        </li>
+        <li>
+          Several
+	  other implementations of irregular time series building on the
+<tt>"POSIXct"</tt>
+          time-date class are available in
+<a href="../packages/its/index.html">its</a>,
+<a href="../packages/tseries/index.html">tseries</a>
+          and
+<a href="../packages/timeSeries/index.html">timeSeries</a>
+          (previously: fSeries) which are all aimed particularly at
+	  finance applications. See the
+<a href="Finance.html">Finance</a>
+          task view for
+	  more information.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Time series modeling
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="TimeSeries.html">TimeSeries</a>
+          task view contains detailed information about time series analysis in R.
+          Time series models for financial econometrics (e.g., GARCH, stochastic volatility models, or 
+	  stochastic differential equations, etc.) are described in the
+<a href="Finance.html">Finance</a>. Here, only a brief overview
+	  of the most important methods for econometrics is given.
+        </li>
+        <li>
+          Classical time series modeling tools are
+          contained in the stats package and include
+<tt>arima()</tt>
+          for ARIMA modeling
+	  and Box-Jenkins-type analysis.
+        </li>
+        <li>
+          Fitting linear regression models with AR error terms via OLS is possible
+          using
+<tt>gls()</tt>
+          from
+<a href="../packages/nlme/index.html">nlme</a>.
+        </li>
+        <li>
+          Structural time series models are provided by
+<tt>StructTS()</tt>
+          in stats.
+        </li>
+        <li>
+          Filtering and decomposition for time series is available in
+<tt>decompose()</tt>
+          and
+<tt>HoltWinters()</tt>
+          in stats.
+        </li>
+        <li>
+          Extensions to these
+	  methods, in particular for forecasting and model selection, are provided in
+	  the
+<a href="../packages/forecast/index.html">forecast</a>
+          package.
+        </li>
+        <li>
+          Miscellaneous time series filters are available in
+<a href="../packages/mFilter/index.html">mFilter</a>.
+        </li>
+        <li>
+          For estimating VAR models, several
+	  methods are available: simple models can be fitted by
+<tt>ar()</tt>
+          in stats, more
+	  elaborate models are provided in package
+<a href="../packages/vars/index.html">vars</a>,
+<tt>estVARXls()</tt>
+          in
+<a href="../packages/dse/index.html">dse</a>
+          and a Bayesian approach is available in
+<a href="../packages/MSBVAR/index.html">MSBVAR</a>. A
+	  convenient interface for fitting dynamic regression models via OLS is available
+	  in
+<a href="../packages/dynlm/index.html">dynlm</a>; a different approach
+	  that also works with other regression functions is implemented in
+<a href="../packages/dyn/index.html">dyn</a>.
+        </li>
+        <li>
+          More advanced dynamic system equations can be fitted using
+<a href="../packages/dse/index.html">dse</a>.
+        </li>
+        <li>
+          Periodic autoregressive models are provided by
+<a href="../packages/partsm/index.html">partsm</a>.
+        </li>
+        <li>
+          Gaussian linear state space models can be fitted using
+<a href="../packages/dlm/index.html">dlm</a>
+          (via maximum likelihood,
+	  Kalman filtering/smoothing and Bayesian methods).
+        </li>
+        <li>
+          Unit root and cointegration techniques are available in
+<a href="../packages/urca/index.html">urca</a>,
+<a href="../packages/tseries/index.html">tseries</a>,
+<a href="../packages/CADFtest/index.html">CADFtest</a>.
+        </li>
+        <li>
+          Time series factor analysis is available in
+<a href="../packages/tsfa/index.html">tsfa</a>.
+        </li>
+        <li>
+          Asymmetric price transmission modeling is available in
+<a href="../packages/apt/index.html">apt</a>.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Data sets
+        </strong>
+      </p>
+      <ul>
+        <li>
+          Packages
+<a href="../packages/AER/index.html">AER</a>
+          and
+<a href="../packages/Ecdat/index.html">Ecdat</a>
+          contain a comprehensive collections of data sets from various standard econometric
+	  textbooks as well as several data sets from the Journal of
+	  Applied Econometrics and the Journal of Business &amp; Economic Statistics
+	  data archives.
+        </li>
+        <li>
+<a href="../packages/AER/index.html">AER</a>
+          additionally provides an extensive set of
+	  examples reproducing analyses from the textbooks/papers, illustrating
+	  various econometric methods.
+        </li>
+        <li>
+<a href="../packages/FinTS/index.html">FinTS</a>
+          is the R companion to Tsay's 'Analysis of
+	  Financial Time Series' (2nd ed., 2005, Wiley) containing data sets, functions
+          and script files required to work some of the examples.
+        </li>
+        <li>
+<a href="../packages/CDNmoney/index.html">CDNmoney</a>
+          provides Canadian monetary aggregates.
+        </li>
+        <li>
+<a href="../packages/pwt/index.html">pwt</a>
+          provides the Penn World Table from versions 5.6, 6.x, 7.x. The version 8.x
+          data are available in
+<a href="../packages/pwt8/index.html">pwt8</a>.
+        </li>
+        <li>
+          The packages
+<a href="../packages/expsmooth/index.html">expsmooth</a>,
+<a href="../packages/fma/index.html">fma</a>, and
+<a href="../packages/Mcomp/index.html">Mcomp</a>
+          are
+          data packages with time series data
+	  from the books 'Forecasting with Exponential Smoothing: The State Space Approach'
+	  (Hyndman, Koehler, Ord, Snyder, 2008, Springer) and 'Forecasting: Methods and Applications'
+	  (Makridakis, Wheelwright, Hyndman, 3rd ed., 1998, Wiley) and the M-competitions,
+	  respectively.
+        </li>
+        <li>
+          Package
+<a href="../packages/erer/index.html">erer</a>
+          contains functions and datasets for the book of
+          'Empirical Research in Economics: Growing up with R' (Sun, forthcoming).
+        </li>
+        <li>
+          The package
+          <a href="http://github.com/floswald/psidR/">
+            psidR
+          </a>
+          available from GitHub can build panel data
+          sets from the Panel Study of Income Dynamics (PSID).
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Miscellaneous
+        </strong>
+      </p>
+      <ul>
+        <li>
+          <i>
+            Matrix manipulations
+          </i>: As a vector- and matrix-based language, base R
+          ships with many powerful tools for doing matrix manipulations, which are 
+	  complemented by the packages
+<a href="../packages/Matrix/index.html">Matrix</a>
+          and
+<a href="../packages/SparseM/index.html">SparseM</a>.
+        </li>
+        <li>
+          <i>
+            Optimization and mathematical programming
+          </i>: R and many of its contributed
+          packages provide many specialized functions for solving particular optimization
+	  problems, e.g., in regression as discussed above. Further functionality for
+	  solving more general optimization problems, e.g., likelihood maximization, is
+	  discussed in the the
+<a href="Optimization.html">Optimization</a>
+          task view.
+        </li>
+        <li>
+          <i>
+            Bootstrap
+          </i>: In addition to the recommended
+<a href="../packages/boot/index.html">boot</a>
+          package,
+          there are some other general bootstrapping techniques available in
+<a href="../packages/bootstrap/index.html">bootstrap</a>
+          or
+<a href="../packages/simpleboot/index.html">simpleboot</a>
+          as well some bootstrap techniques
+	  designed for time-series data, such as the maximum entropy bootstrap in
+<a href="../packages/meboot/index.html">meboot</a>
+          or the
+<tt>tsbootstrap()</tt>
+          from
+<a href="../packages/tseries/index.html">tseries</a>.
+        </li>
+        <li>
+          <i>
+            Inequality
+          </i>: For measuring inequality, concentration and poverty the
+          package
+<a href="../packages/ineq/index.html">ineq</a>
+          provides some basic tools such as Lorenz curves,
+	  Pen's parade, the Gini coefficient and many more.
+        </li>
+        <li>
+          <i>
+            Structural change
+          </i>: R is particularly strong when dealing with
+          structural changes and changepoints in parametric models, see
+<a href="../packages/strucchange/index.html">strucchange</a>
+          and
+<a href="../packages/segmented/index.html">segmented</a>.
+        </li>
+        <li>
+          <i>
+            Exchange rate regimes
+          </i>: Methods for inference about exchange
+          rate regimes, in particular in a structural change setting, are provided
+	  by
+<a href="../packages/fxregime/index.html">fxregime</a>.
+        </li>
+      </ul>
+    </div>
+
+  <h3>CRAN packages:</h3>
+  <ul>
+    <li><a href="../packages/AER/index.html">AER</a> (core)</li>
+    <li><a href="../packages/aod/index.html">aod</a></li>
+    <li><a href="../packages/apt/index.html">apt</a></li>
+    <li><a href="../packages/AutoSEARCH/index.html">AutoSEARCH</a></li>
+    <li><a href="../packages/bayesm/index.html">bayesm</a></li>
+    <li><a href="../packages/betareg/index.html">betareg</a></li>
+    <li><a href="../packages/boot/index.html">boot</a></li>
+    <li><a href="../packages/bootstrap/index.html">bootstrap</a></li>
+    <li><a href="../packages/CADFtest/index.html">CADFtest</a></li>
+    <li><a href="../packages/car/index.html">car</a> (core)</li>
+    <li><a href="../packages/CDNmoney/index.html">CDNmoney</a></li>
+    <li><a href="../packages/censReg/index.html">censReg</a></li>
+    <li><a href="../packages/crch/index.html">crch</a></li>
+    <li><a href="../packages/dlm/index.html">dlm</a></li>
+    <li><a href="../packages/dse/index.html">dse</a></li>
+    <li><a href="../packages/dyn/index.html">dyn</a></li>
+    <li><a href="../packages/dynlm/index.html">dynlm</a></li>
+    <li><a href="../packages/Ecdat/index.html">Ecdat</a></li>
+    <li><a href="../packages/effects/index.html">effects</a></li>
+    <li><a href="../packages/erer/index.html">erer</a></li>
+    <li><a href="../packages/expsmooth/index.html">expsmooth</a></li>
+    <li><a href="../packages/FinTS/index.html">FinTS</a></li>
+    <li><a href="../packages/fma/index.html">fma</a></li>
+    <li><a href="../packages/forecast/index.html">forecast</a></li>
+    <li><a href="../packages/frontier/index.html">frontier</a></li>
+    <li><a href="../packages/fxregime/index.html">fxregime</a></li>
+    <li><a href="../packages/gam/index.html">gam</a></li>
+    <li><a href="../packages/gamlss/index.html">gamlss</a></li>
+    <li><a href="../packages/geepack/index.html">geepack</a></li>
+    <li><a href="../packages/gmm/index.html">gmm</a></li>
+    <li><a href="../packages/Hmisc/index.html">Hmisc</a></li>
+    <li><a href="../packages/ineq/index.html">ineq</a></li>
+    <li><a href="../packages/intReg/index.html">intReg</a></li>
+    <li><a href="../packages/its/index.html">its</a></li>
+    <li><a href="../packages/LARF/index.html">LARF</a></li>
+    <li><a href="../packages/lfe/index.html">lfe</a></li>
+    <li><a href="../packages/lme4/index.html">lme4</a></li>
+    <li><a href="../packages/lmtest/index.html">lmtest</a> (core)</li>
+    <li><a href="../packages/MASS/index.html">MASS</a></li>
+    <li><a href="../packages/Matrix/index.html">Matrix</a></li>
+    <li><a href="../packages/Mcomp/index.html">Mcomp</a></li>
+    <li><a href="../packages/meboot/index.html">meboot</a></li>
+    <li><a href="../packages/mFilter/index.html">mFilter</a></li>
+    <li><a href="../packages/mfx/index.html">mfx</a></li>
+    <li><a href="../packages/mgcv/index.html">mgcv</a></li>
+    <li><a href="../packages/mhurdle/index.html">mhurdle</a></li>
+    <li><a href="../packages/micEcon/index.html">micEcon</a></li>
+    <li><a href="../packages/micEconAids/index.html">micEconAids</a></li>
+    <li><a href="../packages/micEconCES/index.html">micEconCES</a></li>
+    <li><a href="../packages/micEconSNQP/index.html">micEconSNQP</a></li>
+    <li><a href="../packages/midasr/index.html">midasr</a></li>
+    <li><a href="../packages/mlogit/index.html">mlogit</a></li>
+    <li><a href="../packages/mnlogit/index.html">mnlogit</a></li>
+    <li><a href="../packages/MNP/index.html">MNP</a></li>
+    <li><a href="../packages/MSBVAR/index.html">MSBVAR</a></li>
+    <li><a href="../packages/mvProbit/index.html">mvProbit</a></li>
+    <li><a href="../packages/nlme/index.html">nlme</a></li>
+    <li><a href="../packages/nnet/index.html">nnet</a></li>
+    <li><a href="../packages/np/index.html">np</a></li>
+    <li><a href="../packages/ordinal/index.html">ordinal</a></li>
+    <li><a href="../packages/partsm/index.html">partsm</a></li>
+    <li><a href="../packages/pcse/index.html">pcse</a></li>
+    <li><a href="../packages/plm/index.html">plm</a> (core)</li>
+    <li><a href="../packages/pscl/index.html">pscl</a></li>
+    <li><a href="../packages/pwt/index.html">pwt</a></li>
+    <li><a href="../packages/pwt8/index.html">pwt8</a></li>
+    <li><a href="../packages/quantreg/index.html">quantreg</a></li>
+    <li><a href="../packages/reldist/index.html">reldist</a></li>
+    <li><a href="../packages/rms/index.html">rms</a></li>
+    <li><a href="../packages/RSGHB/index.html">RSGHB</a></li>
+    <li><a href="../packages/sampleSelection/index.html">sampleSelection</a></li>
+    <li><a href="../packages/sandwich/index.html">sandwich</a> (core)</li>
+    <li><a href="../packages/sde/index.html">sde</a></li>
+    <li><a href="../packages/segmented/index.html">segmented</a></li>
+    <li><a href="../packages/sem/index.html">sem</a></li>
+    <li><a href="../packages/SemiParSampleSel/index.html">SemiParSampleSel</a></li>
+    <li><a href="../packages/simpleboot/index.html">simpleboot</a></li>
+    <li><a href="../packages/SparseM/index.html">SparseM</a></li>
+    <li><a href="../packages/spatialprobit/index.html">spatialprobit</a></li>
+    <li><a href="../packages/spdep/index.html">spdep</a></li>
+    <li><a href="../packages/sphet/index.html">sphet</a></li>
+    <li><a href="../packages/splm/index.html">splm</a></li>
+    <li><a href="../packages/strucchange/index.html">strucchange</a></li>
+    <li><a href="../packages/survival/index.html">survival</a></li>
+    <li><a href="../packages/systemfit/index.html">systemfit</a></li>
+    <li><a href="../packages/timeSeries/index.html">timeSeries</a></li>
+    <li><a href="../packages/truncreg/index.html">truncreg</a></li>
+    <li><a href="../packages/tseries/index.html">tseries</a> (core)</li>
+    <li><a href="../packages/tsfa/index.html">tsfa</a></li>
+    <li><a href="../packages/urca/index.html">urca</a> (core)</li>
+    <li><a href="../packages/vars/index.html">vars</a></li>
+    <li><a href="../packages/VGAM/index.html">VGAM</a></li>
+    <li><a href="../packages/Zelig/index.html">Zelig</a></li>
+    <li><a href="../packages/zoo/index.html">zoo</a> (core)</li>
+  </ul>
+
+  <h3>Related links:</h3>
+  <ul>
+    <li>CRAN Task View: <a href="Finance.html">Finance</a></li>
+    <li>CRAN Task View: <a href="Optimization.html">Optimization</a></li>
+    <li>CRAN Task View: <a href="SocialSciences.html">SocialSciences</a></li>
+    <li>CRAN Task View: <a href="Spatial.html">Spatial</a></li>
+    <li>CRAN Task View: <a href="TimeSeries.html">TimeSeries</a></li>
+    <li><a href="https://www.stat.math.ethz.ch/mailman/listinfo/R-SIG-Finance/">
+  Mailing List: R Special Interest Group Finance
+</a></li>
+    <li><a href="http://www.jstatsoft.org/v27/">
+  Journal of Statistical Software: Special Volume on 'Econometrics in R'
+</a></li>
+    <li><a href="http://people.su.se/~ma/R_intro/">
+  A Brief Guide to R for Beginners in Econometrics
+</a></li>
+    <li><a href="http://www.mayin.org/ajayshah/KB/R/R_for_economists.html">
+  R for Economists
+</a></li>
+    <li><a href="http://www.springer.com/978-0-387-77316-2">
+  Book: Applied Econometrics with R (Kleiber and Zeileis)
+</a></li>
+    <li><a href="http://www.worldscibooks.com/economics/6895.html">
+  Book: Hands-On Intermediate Econometrics Using R (Vinod)
+</a></li>
+    <li><a href="http://www2.cirano.qc.ca/~bacc/">
+  BACC Software for Bayesian Econometrics (Bayesian Analysis, Computation and Communication)
+</a></li>
+    <li><a href="http://github.com/floswald/psidR/">
+  psidR Package (GitHub)
+</a></li>
+  </ul>
+
+</body>
+</html>
+ 

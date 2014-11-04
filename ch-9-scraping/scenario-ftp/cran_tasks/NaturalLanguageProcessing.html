@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CRAN Task View: Natural Language Processing</title>
+  <link rel=stylesheet type="text/css" href="../CRAN_web.css" />
+</head>
+
+<body>
+  <h2>CRAN Task View: Natural Language Processing</h2>
+  <table summary="NaturalLanguageProcessing task view information">
+    <tr><td valign="top"><b>Maintainer:</b></td><td>Fridolin Wild, Knowledge Media Institute (KMi), The Open University, UK</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x66;&#x72;&#x69;&#x64;&#x6f;&#x6c;&#x69;&#x6e;&#x2e;&#x77;&#x69;&#x6c;&#x64;&#x20;&#x61;&#x74;&#x20;&#x6f;&#x70;&#x65;&#x6e;&#x2e;&#x61;&#x63;&#x2e;&#x75;&#x6b;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2014-01-01</td></tr>
+  </table>
+
+    <div>
+      <p>
+        Natural language processing has come a long way since its foundations were laid in the 1940s and 50s (for an introduction see, e.g., Jurafsky and Martin (2008): Speech and Language Processing, Pearson Prentice Hall). This CRAN task view collects relevant R packages that support computational linguists in conducting analysis of speech and language on a variety of levels - setting focus on words, syntax, semantics, and pragmatics.
+      </p>
+      <p>
+        In recent years, we have elaborated a framework to be used in
+      packages dealing with the processing of written material: the package
+<a href="../packages/tm/index.html">tm</a>.
+      Extension packages in this area are highly recommended to interface with tm's basic routines
+      and useRs are cordially invited to join in the discussion on further developments of this
+      framework package. To get into natural language processing, the
+        <a href="http://cRunch.kmi.open.ac.uk">
+          cRunch service
+        </a>
+        and
+        <a href="http://cRunch.kmi.open.ac.uk/w/index.php/Tutorials">
+          tutorials
+        </a>
+        may be helpful.
+      </p>
+      <h4>
+        Frameworks:
+      </h4>
+      <ul>
+        <li>
+<a href="../packages/tm/index.html">tm</a>
+          provides a comprehensive text mining framework for R. The
+          <a href="http://www.jstatsoft.org/">
+            Journal of Statistical Software
+          </a>
+          article
+          <a href="http://www.jstatsoft.org/v25/i05/">
+            Text Mining Infrastructure in R
+          </a>
+          gives a detailed overview and presents techniques for count-based analysis methods, text clustering, text classification and string kernels.
+        </li>
+        <li>
+<a href="../packages/tm.plugin.dc/index.html">tm.plugin.dc</a>
+          allows for distributing corpora across storage devices (local files or Hadoop Distributed File System).
+        </li>
+        <li>
+<a href="../packages/tm.plugin.mail/index.html">tm.plugin.mail</a>
+          helps with importing mail messages from archive files such as used in Thunderbird (mbox, eml).
+        </li>
+        <li>
+<a href="../packages/tm.plugin.factiva/index.html">tm.plugin.factiva</a>
+          allows importing press/Web corpora from Dow Jones Factiva.
+        </li>
+        <li>
+<a href="../packages/RcmdrPlugin.temis/index.html">RcmdrPlugin.temis</a>
+          is an Rcommander plug-in providing an integrated solution to perform a series of text mining tasks such as importing and cleaning a corpus, and analyses like terms and documents counts, vocabulary tables, terms co-occurrences and documents similarity measures, time series analysis, correspondence analysis and hierarchical clustering.
+        </li>
+        <li>
+<a href="../packages/openNLP/index.html">openNLP</a>
+          provides an R interface to
+          <a href="http://opennlp.sourceforge.net/">
+            OpenNLP
+          </a>, a collection of natural language processing tools including a sentence detector, tokenizer, pos-tagger, shallow and full syntactic parser, and named-entity detector, using the Maxent Java package for training and using maximum entropy models.
+        </li>
+        <li>
+          Trained models for English and Spanish to be used with
+<a href="../packages/openNLP/index.html">openNLP</a>
+          are available from
+          <a href="http://datacube.wu.ac.at/">
+            http://datacube.wu.ac.at/
+          </a>
+          as packages openNLPmodels.en and openNLPmodels.es, respectively.
+        </li>
+        <li>
+<a href="../packages/RWeka/index.html">RWeka</a>
+          is a interface to
+          <a href="http://www.cs.waikato.ac.nz/ml/weka/">
+            Weka
+          </a>
+          which is a collection of machine learning algorithms for data mining tasks written in Java. Especially useful in the context of natural language processing is its functionality for tokenization and stemming.
+        </li>
+      </ul>
+      <h4>
+        Words (lexical DBs, keyword extraction, string manipulation, stemming)
+      </h4>
+      <ul>
+        <li>
+<a href="../packages/wordnet/index.html">wordnet</a>
+          provides an R interface to
+          <a href="http://wordnet.princeton.edu/">
+            WordNet
+          </a>, a large lexical database of English.
+        </li>
+        <li>
+          R's base package already provides a rich set of character manipulation routines. See
+<tt>help.search(keyword = "character", package = "base")</tt>
+          for more information on these capabilities.
+        </li>
+        <li>
+<a href="../packages/RKEA/index.html">RKEA</a>
+          provides an R interface to
+          <a href="http://www.nzdl.org/Kea/">
+            KEA
+          </a>
+          (Version 5.0). KEA (for Keyphrase Extraction Algorithm) allows for extracting keyphrases from text documents. It can be either used for free indexing or for indexing with a controlled vocabulary.
+        </li>
+        <li>
+<a href="../packages/gsubfn/index.html">gsubfn</a>
+          can be used for certain parsing tasks such as extracting words from strings by content rather than by delimiters.
+<tt>demo("gsubfn-gries")</tt>
+          shows an example of this in a natural language processing context.
+        </li>
+        <li>
+<a href="../packages/tau/index.html">tau</a>
+          contains basic string manipulation and analysis routines needed in text processing such as dealing with character encoding, language, pattern counting, and tokenization.
+        </li>
+        <li>
+<a href="../packages/Snowball/index.html">Snowball</a>
+          provides the Snowball stemmers which contain the Porter stemmer and several other stemmers for different languages. See the
+          <a href="http://snowball.tartarus.org/">
+            Snowball
+          </a>
+          webpage for details.
+        </li>
+        <li>
+<a href="../packages/SnowballC/index.html">SnowballC</a>
+          provides exactly the same API as Rstem, but uses a slightly different design of the C libstemmer library from the Snowball project. It also supports two more languages.
+        </li>
+        <li>
+<a href="http://www.Omegahat.org/Rstem/"><span class="Ohat">Rstem</span></a>
+          (available from Omegahat) is an alternative interface to a C version of Porter's word stemming algorithm.
+        </li>
+        <li>
+<a href="../packages/KoNLP/index.html">KoNLP</a>
+          provides a collection of conversion routines (e.g. Hangul to Jamos), stemming, and part of speech tagging through interfacing with the Lucene's HanNanum analyzer. In version 0.0-8.0, the documentation is sparse and still needs some help.
+        </li>
+        <li>
+<a href="../packages/koRpus/index.html">koRpus</a>
+          is a diverse collection of functions for automatic language detection, hyphenation, several indices of lexical diversity (e.g., type token ratio, HD-D/vocd-D, MTLD) and readability (e.g., Flesch, SMOG, LIX, Dale-Chall). See the
+          <a href="http://reaktanz.de/?c=hacking&amp;s=koRpus">
+            web page
+          </a>
+          for more information.
+        </li>
+        <li>
+<a href="../packages/zipfR/index.html">zipfR</a>
+          offers some statistical models for word frequency distributions. The utilities include functions for loading, manipulating and visualizing word frequency data and vocabulary growth curves. The package also implements several statistical models for the distribution of word frequencies in a population. (The name of this library derives from the most famous word frequency distribution, Zipf's law.)
+        </li>
+        <li>
+<a href="../packages/maxent/index.html">maxent</a>
+          is an implementation of maxinum entropy minimising memory consumption of very large data-sets.
+        </li>
+        <li>
+<a href="../packages/wordcloud/index.html">wordcloud</a>
+          provides a visualisation similar to the famous wordle ones: it horizontally and vertically distributes features in a pleasing visualisation with the font size scaled by frequency.
+        </li>
+      </ul>
+      <h4>
+        Semantics:
+      </h4>
+      <ul>
+        <li>
+<a href="../packages/lsa/index.html">lsa</a>
+          provides routines for performing a latent semantic analysis with R. The basic idea of latent semantic analysis (LSA) is,  that text do have a higher order (=latent semantic) structure which, 
+ however, is obscured by word usage (e.g. through the use of synonyms  or polysemy). By using conceptual indices that are derived statistically via a truncated singular value decomposition (a two-mode  factor analysis) over a given document-term matrix, this variability problem can be overcome. The article
+          <a href="http://www.springerlink.com/content/g7u377132gq5623g/">
+            Investigating Unstructured Texts with Latent Semantic Analysis
+          </a>
+          gives a detailed overview and demonstrates the use of the package with examples from the are of technology-enhanced learning.
+        </li>
+        <li>
+<a href="../packages/topicmodels/index.html">topicmodels</a>
+          provides an interface to the C code for Latent Dirichlet Allocation (LDA) models and Correlated Topics Models (CTM) by David M. Blei and co-authors and the C++ code for fitting LDA models using Gibbs sampling by Xuan-Hieu Phan and co-authors.
+        </li>
+        <li>
+<a href="../packages/lda/index.html">lda</a>
+          implements Latent Dirichlet Allocation and related models similar to LSA and topicmodels.
+        </li>
+        <li>
+<a href="../packages/kernlab/index.html">kernlab</a>
+          allows to create and compute with string kernels, like full string, spectrum, or bounded range string kernels. It can directly use the document format used by
+<a href="../packages/tm/index.html">tm</a>
+          as input.
+        </li>
+        <li>
+<a href="../packages/skmeans/index.html">skmeans</a>
+          helps with clustering providing several algorithms for spherical k-means partitioning.
+        </li>
+        <li>
+<a href="../packages/movMF/index.html">movMF</a>
+          provides another clustering alternative (approximations are fitted with von Mises-Fisher distributions of the unit length vectors).
+        </li>
+        <li>
+<a href="../packages/textir/index.html">textir</a>
+          is a suite of tools for text and sentiment mining.
+        </li>
+        <li>
+<a href="../packages/textcat/index.html">textcat</a>
+          provides support for n-gram based text categorization.
+        </li>
+        <li>
+<a href="../packages/corpora/index.html">corpora</a>
+          offers utility functions for the statistical analysis of corpus frequency data.
+        </li>
+      </ul>
+      <h4>
+        Pragmatics:
+      </h4>
+      <ul>
+        <li>
+<a href="../packages/qdap/index.html">qdap</a>
+          helps with quantitative discourse analysis of transcripts.
+        </li>
+      </ul>
+    </div>
+
+  <h3>CRAN packages:</h3>
+  <ul>
+    <li><a href="../packages/corpora/index.html">corpora</a></li>
+    <li><a href="../packages/gsubfn/index.html">gsubfn</a></li>
+    <li><a href="../packages/kernlab/index.html">kernlab</a></li>
+    <li><a href="../packages/KoNLP/index.html">KoNLP</a></li>
+    <li><a href="../packages/koRpus/index.html">koRpus</a></li>
+    <li><a href="../packages/lda/index.html">lda</a></li>
+    <li><a href="../packages/lsa/index.html">lsa</a></li>
+    <li><a href="../packages/maxent/index.html">maxent</a></li>
+    <li><a href="../packages/movMF/index.html">movMF</a></li>
+    <li><a href="../packages/openNLP/index.html">openNLP</a></li>
+    <li><a href="../packages/qdap/index.html">qdap</a></li>
+    <li><a href="../packages/RcmdrPlugin.temis/index.html">RcmdrPlugin.temis</a></li>
+    <li><a href="../packages/RKEA/index.html">RKEA</a></li>
+    <li><a href="../packages/RWeka/index.html">RWeka</a></li>
+    <li><a href="../packages/skmeans/index.html">skmeans</a></li>
+    <li><a href="../packages/Snowball/index.html">Snowball</a></li>
+    <li><a href="../packages/SnowballC/index.html">SnowballC</a></li>
+    <li><a href="../packages/tau/index.html">tau</a></li>
+    <li><a href="../packages/textcat/index.html">textcat</a></li>
+    <li><a href="../packages/textir/index.html">textir</a></li>
+    <li><a href="../packages/tm/index.html">tm</a> (core)</li>
+    <li><a href="../packages/tm.plugin.dc/index.html">tm.plugin.dc</a></li>
+    <li><a href="../packages/tm.plugin.factiva/index.html">tm.plugin.factiva</a></li>
+    <li><a href="../packages/tm.plugin.mail/index.html">tm.plugin.mail</a></li>
+    <li><a href="../packages/topicmodels/index.html">topicmodels</a></li>
+    <li><a href="../packages/wordcloud/index.html">wordcloud</a></li>
+    <li><a href="../packages/wordnet/index.html">wordnet</a></li>
+    <li><a href="../packages/zipfR/index.html">zipfR</a></li>
+  </ul>
+
+  <h3>Related links:</h3>
+  <ul>
+    <li>CRAN Task View: <a href="Cluster.html">Cluster</a></li>
+    <li>CRAN Task View: <a href="MachineLearning.html">MachineLearning</a></li>
+    <li>Omegahat Package: <a href="http://www.Omegahat.org/Rstem/" target="_top"><span class="Ohat">Rstem</span></a></li>
+    <li><a href="http://crunch.kmi.open.ac.uk/w/index.php/Tutorials">
+  The KMi cRunch tutorials
+</a></li>
+    <li><a href="http://www.cogsci.uni-osnabrueck.de/~severt/SIGIL/index.html">
+  A Gentle Introduction to Statistics for (Computational) Linguists (SIGIL)
+</a></li>
+    <li><a href="http://www.routledge.com/books/details/9780415962704/">
+  Stefan Th. Gries (2009): Quantitative Corpus Linguistics with R, Routledge.
+</a></li>
+    <li><a href="http://wwwpeople.unil.ch/jean-pierre.mueller/archive_ttda.html">
+  ttda: Tools for Textual Data Analysis (Deprecated)
+</a></li>
+    <li><a href="http://datacube.wu.ac.at/">
+  Corpora and NLP model packages at http://datacube.wu.ac.at/
+</a></li>
+  </ul>
+
+</body>
+</html>
+ 

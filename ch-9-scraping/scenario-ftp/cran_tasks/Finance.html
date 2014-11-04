@@ -1,0 +1,849 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CRAN Task View: Empirical Finance</title>
+  <link rel=stylesheet type="text/css" href="../CRAN_web.css" />
+</head>
+
+<body>
+  <h2>CRAN Task View: Empirical Finance</h2>
+  <table summary="Finance task view information">
+    <tr><td valign="top"><b>Maintainer:</b></td><td>Dirk Eddelbuettel</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x44;&#x69;&#x72;&#x6b;&#x2e;&#x45;&#x64;&#x64;&#x65;&#x6c;&#x62;&#x75;&#x65;&#x74;&#x74;&#x65;&#x6c;&#x20;&#x61;&#x74;&#x20;&#x52;&#x2d;&#x70;&#x72;&#x6f;&#x6a;&#x65;&#x63;&#x74;&#x2e;&#x6f;&#x72;&#x67;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2014-02-28</td></tr>
+  </table>
+
+    <div>
+      <p>
+        This CRAN Task View contains a list of packages useful for
+      empirical work in Finance, grouped by topic.
+      </p>
+      <p>
+        Besides these packages, a very wide variety of functions suitable for
+      empirical work in Finance is provided by both the basic R 
+      system (and its set of recommended core packages), and a number of
+      other packages on the Comprehensive R Archive Network (CRAN). 
+      Consequently, several of the other CRAN Task Views may contain suitable
+      packages, in particular the
+<a href="Econometrics.html">Econometrics</a>,
+<a href="Multivariate.html">Multivariate</a>,
+<a href="Optimization.html">Optimization</a>,
+<a href="Robust.html">Robust</a>,
+<a href="SocialSciences.html">SocialSciences</a>
+        and
+<a href="TimeSeries.html">TimeSeries</a>
+        Task Views.
+      </p>
+      <p>
+        Please send suggestions for additions and extensions for this task
+      view to the
+        <a href="mailto:Dirk.Eddelbuettel@R-project.org">
+          task view maintainer
+        </a>.
+      </p>
+      <p>
+        <strong>
+          Standard regression models
+        </strong>
+      </p>
+      <ul>
+        <li>
+          A detailed overview of the available regression methodologies is
+	provided by the
+<a href="Econometrics.html">Econometrics</a>
+          task view. This is
+	complemented by the
+<a href="Robust.html">Robust</a>
+          which focuses on more robust
+	and resistant methods.
+        </li>
+        <li>
+          Linear models such as ordinary least squares (OLS) can be estimated
+        by
+<tt>lm()</tt>
+          (from by the stats package contained in the basic R
+        distribution). Maximum Likelihood (ML) estimation can be undertaken
+        with the standard
+<tt>optim()</tt>
+          function. Many other suitable methods
+        are listed in the
+<a href="Optimization.html">Optimization</a>
+          view. Non-linear least squares can
+	be estimated with the
+<tt>nls()</tt>
+          function, as well as with
+<tt>nlme()</tt>
+          from the
+<a href="../packages/nlme/index.html">nlme</a>
+          package.
+        </li>
+        <li>
+          For the linear model, a variety of regression diagnostic tests 
+        are provided by the
+<a href="../packages/car/index.html">car</a>,
+<a href="../packages/lmtest/index.html">lmtest</a>,
+<a href="../packages/strucchange/index.html">strucchange</a>,
+<a href="../packages/urca/index.html">urca</a>, and
+<a href="../packages/sandwich/index.html">sandwich</a>
+          packages. 
+	The
+<a href="../packages/Rcmdr/index.html">Rcmdr</a>
+          and
+<a href="../packages/Zelig/index.html">Zelig</a>
+          packages provide user
+	interfaces that may be of interest as well.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Time series
+        </strong>
+      </p>
+      <ul>
+        <li>
+          A detailed overview of tools for time series analysis can be found in
+          the
+<a href="TimeSeries.html">TimeSeries</a>
+          task view. Below a brief overview of the
+	  most important methods in finance is given.
+        </li>
+        <li>
+          Classical time series functionality is provided
+          by the
+<tt>arima()</tt>
+          and
+<tt>KalmanLike()</tt>
+          commands in the
+          basic R distribution.
+        </li>
+        <li>
+          The
+<a href="../packages/dse/index.html">dse</a>
+          and
+<a href="../packages/timsac/index.html">timsac</a>
+          packages provides a variety of more
+	  advanced estimation methods;
+<a href="../packages/fracdiff/index.html">fracdiff</a>
+          can
+	  estimate fractionally integrated series;
+<a href="../packages/longmemo/index.html">longmemo</a>
+          covers
+	  related material.
+        </li>
+        <li>
+          For volatility modeling, the standard GARCH(1,1) model can
+          be estimated with the
+<tt>garch()</tt>
+          function in the
+<a href="../packages/tseries/index.html">tseries</a>
+          package.  Rmetrics (see below) contains
+          the
+<a href="../packages/fGarch/index.html">fGarch</a>
+          package which has additional models.
+          The
+<a href="../packages/rugarch/index.html">rugarch</a>
+          package can be used to model a
+          variety of univariate GARCH models with extensions such as
+          ARFIMA, in-mean, external regressors and various other
+          specifications; with methods for fit, forecast, simulation,
+          inference and plotting are provided too. The
+<a href="../packages/rmgarch/index.html">rmgarch</a>
+          builds on it to provide the ability to estimate several multivariate 
+	  GARCH models. The
+<a href="../packages/betategarch/index.html">betategarch</a>
+          package can estimate and simulate the
+          Beta-t-EGARCH model by Harvey.  The
+<a href="../packages/bayesGARCH/index.html">bayesGARCH</a>
+          package can perform Bayesian estimation of a GARCH(1,1)
+          model with Student's t innovations.  For multivariate
+          models, the
+<a href="../packages/ccgarch/index.html">ccgarch</a>
+          package can estimate
+          (multivariate) Conditional Correlation GARCH models whereas
+          the
+<a href="../packages/gogarch/index.html">gogarch</a>
+          package provides functions for
+          generalized orthogonal GARCH models.  The
+<a href="../packages/AutoSEARCH/index.html">AutoSEARCH</a>
+          package provides automated
+          general-to-specific model selection of the mean and
+          log-volatility of a log-ARCH-X model.
+        </li>
+        <li>
+          Unit root and cointegration tests are provided by
+<a href="../packages/tseries/index.html">tseries</a>,
+    	  and
+<a href="../packages/urca/index.html">urca</a>.
+    	  The Rmetrics packages
+<a href="../packages/timeSeries/index.html">timeSeries</a>
+          and
+<a href="../packages/fMultivar/index.html">fMultivar</a>
+          contain a number of estimation functions for 
+          ARMA, GARCH, long memory models, unit roots and more. 
+	  The
+<a href="../packages/CADFtest/index.html">CADFtest</a>
+          package implements the Hansen unit root test.
+        </li>
+        <li>
+<a href="../packages/MSBVAR/index.html">MSBVAR</a>
+          provides
+	  Bayesian estimation of vector autoregressive models. The
+<a href="../packages/dlm/index.html">dlm</a>
+          package  provides
+	  Bayesian and likelihood analysis of dynamic linear models (ie
+	  linear Gaussian state space models).
+        </li>
+        <li>
+          The
+<a href="../packages/vars/index.html">vars</a>
+          package offer estimation, diagnostics,
+	  forecasting and error decomposition of VAR and SVAR model in a
+          classical framework.
+        </li>
+        <li>
+          The
+<a href="../packages/dyn/index.html">dyn</a>
+          and
+<a href="../packages/dynlm/index.html">dynlm</a>
+          are suitable for dynamic (linear) regression
+	  models.
+        </li>
+        <li>
+          Several packages provide wavelet analysis 
+	  functionality:
+<a href="../packages/rwt/index.html">rwt</a>,
+<a href="../packages/wavelets/index.html">wavelets</a>,
+<a href="../packages/waveslim/index.html">waveslim</a>,
+<a href="../packages/wavethresh/index.html">wavethresh</a>. Some methods from chaos 
+          theory are provided by the package
+<a href="../packages/tseriesChaos/index.html">tseriesChaos</a>.
+        </li>
+        <li>
+          The
+<a href="../packages/forecast/index.html">forecast</a>
+          package adds functions for
+          forecasting problems.
+        </li>
+        <li>
+          The
+<a href="../packages/tsfa/index.html">tsfa</a>
+          package provides functions for time series factor analysis.
+        </li>
+        <li>
+          The
+<a href="../packages/stochvol/index.html">stochvol</a>
+          package implements Bayesian
+	  estimation of stochastic volatility using Markov Chain Monte
+	  Carlo.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Finance
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The Rmetrics suite of packages comprises
+<a href="../packages/fArma/index.html">fArma</a>,
+<a href="../packages/fAsianOptions/index.html">fAsianOptions</a>,
+<a href="../packages/fAssets/index.html">fAssets</a>,
+<a href="../packages/fBasics/index.html">fBasics</a>,
+<a href="../packages/fBonds/index.html">fBonds</a>,
+<a href="../packages/timeDate/index.html">timeDate</a>
+          (formerly: fCalendar),
+<a href="../packages/fCopulae/index.html">fCopulae</a>,
+<a href="../packages/fExoticOptions/index.html">fExoticOptions</a>,
+<a href="../packages/fExtremes/index.html">fExtremes</a>,
+<a href="../packages/fGarch/index.html">fGarch</a>,
+<a href="../packages/fImport/index.html">fImport</a>,
+<a href="../packages/fMultivar/index.html">fMultivar</a>,
+<a href="../packages/fNonlinear/index.html">fNonlinear</a>,
+<a href="../packages/fOptions/index.html">fOptions</a>,
+<a href="../packages/fPortfolio/index.html">fPortfolio</a>,
+<a href="../packages/fRegression/index.html">fRegression</a>,
+<a href="../packages/timeSeries/index.html">timeSeries</a>
+          (formerly: fSeries),
+<a href="../packages/fTrading/index.html">fTrading</a>,
+<a href="../packages/fUnitRoots/index.html">fUnitRoots</a>
+          and contains a very large number of relevant functions for different aspect of empirical
+	  and computational finance.
+        </li>
+        <li>
+          The
+<a href="../packages/RQuantLib/index.html">RQuantLib</a>
+          package provides several option-pricing
+          functions as well as some fixed-income functionality from the
+          QuantLib project to R.
+        </li>
+        <li>
+          The
+<a href="../packages/quantmod/index.html">quantmod</a>
+          package offers a number of functions for
+          quantitative modelling in finance as well as data acqusition, plotting
+          and other utilities.
+        </li>
+        <li>
+          The
+<a href="../packages/portfolio/index.html">portfolio</a>
+          package contains
+          classes for equity portfolio management; the
+<a href="../packages/portfolioSim/index.html">portfolioSim</a>
+          builds a related simulation framework. 
+          The
+<a href="../packages/backtest/index.html">backtest</a>
+          offers tools to  
+	  explore portfolio-based hypotheses about financial instruments.
+	  The
+<a href="../packages/stockPortfolio/index.html">stockPortfolio</a>
+          package provides functions for
+	  single index, constant correlation and multigroup models.
+	  The
+<a href="../packages/pa/index.html">pa</a>
+          package offers performance attribution
+	  functionality for equity portfolios.
+        </li>
+        <li>
+          The
+<a href="../packages/PerformanceAnalytics/index.html">PerformanceAnalytics</a>
+          package contains a large number
+          of functions for portfolio performance calculations and risk management.
+        </li>
+        <li>
+          The
+<a href="../packages/TTR/index.html">TTR</a>
+          contains functions to construct technical
+          trading rules in R.
+        </li>
+        <li>
+          The
+<a href="../packages/sde/index.html">sde</a>
+          package provides simulation and inference functionality
+          for stochastic differential equations.
+        </li>
+        <li>
+          The
+<a href="../packages/termstrc/index.html">termstrc</a>
+          and
+<a href="../packages/YieldCurve/index.html">YieldCurve</a>
+          packages contain methods for the estimation
+          of zero-coupon yield curves and spread curves based the parametric 
+          Nelson and Siegel (1987) method with the Svensson (1994)
+          extension. The former package adds the McCulloch (1975) cubic
+          splines approach, the latter package adds the Diebold and Li approach.
+	  The
+<a href="../packages/SmithWilsonYieldCurve/index.html">SmithWilsonYieldCurve</a>
+          construct the yield curve using 
+          the Smith-Wilson approach based on LIBOR and SWAP rates.
+        </li>
+        <li>
+          The
+<a href="../packages/vrtest/index.html">vrtest</a>
+          package contains a number of variance ratio
+          tests for the weak-form of the efficient markets hypothesis.
+        </li>
+        <li>
+          The
+<a href="../packages/gmm/index.html">gmm</a>
+          package provides generalized method of moments
+	  (GMM) estimations function that are often used when estimating the
+	  parameters of the moment conditions implied by an asset pricing
+	  model.
+        </li>
+        <li>
+          The
+<a href="../packages/tawny/index.html">tawny</a>
+          package contains estimator based on random
+	  matrix theory as well as shrinkage methods to remove sampling noise
+	  when estimating sample covariance matrices.
+        </li>
+        <li>
+          The
+<a href="../packages/opefimor/index.html">opefimor</a>
+          package by contains material to
+          accompany the Iacus (2011) book entitled "Option Pricing and
+          Estimation of Financial Models in R".
+        </li>
+        <li>
+          The
+<a href="../packages/maRketSim/index.html">maRketSim</a>
+          package provides a market simulator, 
+          initially designed around the bond market.
+        </li>
+        <li>
+          The
+<a href="../packages/BurStFin/index.html">BurStFin</a>
+          and
+<a href="../packages/BurStMisc/index.html">BurStMisc</a>
+          package has a collection of
+          function for Finance including the estimation of covariance
+          matrices.
+        </li>
+        <li>
+          The
+<a href="../packages/AmericanCallOpt/index.html">AmericanCallOpt</a>
+          package contains a pricer for
+          different American call options.
+        </li>
+        <li>
+          The
+<a href="../packages/VarSwapPrice/index.html">VarSwapPrice</a>
+          package can price a variance swap 
+          via a portfolio of European options contracts.
+        </li>
+        <li>
+          The
+<a href="../packages/FinAsym/index.html">FinAsym</a>
+          package implements the Lee and Ready (1991) 
+          and Easley and O'Hara (1987) tests for, respectively, trade direction, 
+          and probability of informed trading.
+        </li>
+        <li>
+          The
+<a href="../packages/parma/index.html">parma</a>
+          package provides support for portfolio
+	allocation and risk management applications.
+        </li>
+        <li>
+          The
+<a href="../packages/GUIDE/index.html">GUIDE</a>
+          package provides a
+          <em>
+            GUI
+          </em>
+          for
+          <em>
+            DE
+          </em>
+          rivatives and contains numerous pricer examples as
+	well as interactive 2d and 3d plots to study these pricing
+	functions.
+        </li>
+        <li>
+          The
+<a href="../packages/PIN/index.html">PIN</a>
+          package estimates the probability of
+	informed trading using microstructure data.
+        </li>
+        <li>
+          The
+<a href="../packages/SharpeR/index.html">SharpeR</a>
+          package contains a collection of tools
+	for analyzing significance of trading strategies, based on the
+	Sharpe ratio and overfit of the same.
+        </li>
+        <li>
+          The
+<a href="../packages/RND/index.html">RND</a>
+          package implements various functions to extract risk-neutral densities 
+       from option prices.
+        </li>
+        <li>
+<a href="../packages/LSMonteCarlo/index.html">LSMonteCarlo</a>
+          can price American Options via the Least Squares Monte Carlo 
+        method
+        </li>
+        <li>
+          The
+<a href="../packages/BenfordTests/index.html">BenfordTests</a>
+          package provides 
+        seven statistical tests and support functions for determining if numerical data 
+        could conform to Benford's law.
+        </li>
+        <li>
+          The
+<a href="../packages/OptHedging/index.html">OptHedging</a>
+          package values call and put option portfolio and implements an 
+        optimal hedging strategy.
+        </li>
+        <li>
+          The
+<a href="../packages/markovchain/index.html">markovchain</a>
+          package provides functionality to
+	easily handle and analyse discrete Markov chains.
+        </li>
+        <li>
+          The
+<a href="../packages/ycinterextra/index.html">ycinterextra</a>
+          package models yield curve interpolation and extrapolation using 
+        via the Nelson-Siegel, Svensson, or Smith-Wilson models, as well as Hermite cubic splines.
+        </li>
+        <li>
+          The
+<a href="../packages/tvm/index.html">tvm</a>
+          package models provides functions for time
+	value of money such as cashflows and yield curves.
+        </li>
+        <li>
+          The
+<a href="../packages/MarkowitzR/index.html">MarkowitzR</a>
+          package provides functions to test
+	the statistical signicance of Markowitz portfolios.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Risk management
+        </strong>
+      </p>
+      <ul>
+        <li>
+          Several packages provide functionality for 
+          Extreme Value Theory models:
+<a href="../packages/evd/index.html">evd</a>,
+<a href="../packages/evdbayes/index.html">evdbayes</a>,
+<a href="../packages/evir/index.html">evir</a>,
+<a href="../packages/extRemes/index.html">extRemes</a>,
+<a href="../packages/ismev/index.html">ismev</a>,
+<a href="../packages/POT/index.html">POT</a>.
+        </li>
+        <li>
+          The packages
+<a href="../packages/CreditMetrics/index.html">CreditMetrics</a>
+          and
+<a href="../packages/crp.CSFP/index.html">crp.CSFP</a>
+          provide function for modelling credit risks.
+        </li>
+        <li>
+          The
+<a href="../packages/mvtnorm/index.html">mvtnorm</a>
+          package provides code for multivariate Normal and t-distributions.
+        </li>
+        <li>
+          The Rmetrics packages
+<a href="../packages/fPortfolio/index.html">fPortfolio</a>
+          and
+<a href="../packages/fExtremes/index.html">fExtremes</a>
+          also contain a number of relevant functions.
+        </li>
+        <li>
+          The
+<a href="../packages/copula/index.html">copula</a>
+          and
+<a href="../packages/fgac/index.html">fgac</a>
+          packages cover 
+          multivariate dependency structures using copula methods.
+        </li>
+        <li>
+          The
+<a href="../packages/actuar/index.html">actuar</a>
+          package provides an actuarial
+	  perspective to risk management.
+        </li>
+        <li>
+          The
+<a href="../packages/ghyp/index.html">ghyp</a>
+          package provides generalized hyberbolic distribution
+          functions as well as procedures for VaR, CVaR or target-return
+          portfolio optimizations.
+        </li>
+        <li>
+          The
+<a href="../packages/ChainLadder/index.html">ChainLadder</a>
+          package provides functions for modeling
+          insurance claim reserves; and the
+<a href="../packages/lifecontingencies/index.html">lifecontingencies</a>
+          package 
+          provides functions for financial and actuarial evaluations of life contingencies.
+        </li>
+        <li>
+          The
+<a href="../packages/frmqa/index.html">frmqa</a>
+          package aims to collect functions for Financial Risk Management and Quantitative Analysis.
+        </li>
+        <li>
+          The
+<a href="../packages/ESG/index.html">ESG</a>
+          package can be used to model for asset projection, a scenario-based simulation approach.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Books
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/FinTS/index.html">FinTS</a>
+          package provides an R companion to Tsay (2005),
+          <em>
+            Analysis of Financial Time Series
+          </em>, 2nd ed. Wiley,  
+         and includes data sets, functions and script files to work some 
+         of the examples.
+        </li>
+        <li>
+          The
+<a href="../packages/NMOF/index.html">NMOF</a>
+          package provides functions, examples and data 
+         from
+          <em>
+            Numerical Methods in Finance
+          </em>
+          by Manfred Gilli, Dietmar Maringer and 
+	 Enrico Schumann (2011), including the different optimization heuristics such as 
+	 Differential Evolution, Genetic Algorithms, Particle Swarms, and Threshold Accepting.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Data and date management
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/its/index.html">its</a>,
+<a href="../packages/zoo/index.html">zoo</a>
+          and
+<a href="../packages/timeDate/index.html">timeDate</a>
+          (part of Rmetrics) packages provide support for
+          irregularly-spaced time series. The
+<a href="../packages/xts/index.html">xts</a>
+          package extends
+<a href="../packages/zoo/index.html">zoo</a>
+          specifically for financial time series. See the
+<a href="TimeSeries.html">TimeSeries</a>
+          task view for more details.
+        </li>
+        <li>
+<a href="../packages/timeDate/index.html">timeDate</a>
+          also addresses
+          calendar issues such as recurring holidays for a large number of
+          financial centers, and provides code for high-frequency data sets.
+        </li>
+        <li>
+          The
+<a href="../packages/fame/index.html">fame</a>
+          package can access Fame time series databases (but 
+	  also requires a Fame backend). The
+<a href="../packages/tis/index.html">tis</a>
+          package provides 
+          time indices and time-indexed series compatible with Fame
+	  frequencies.
+        </li>
+        <li>
+          The
+<a href="../packages/TSdbi/index.html">TSdbi</a>
+          package provides a unifying interface for
+	  several time series data base backends, and its SQL implementations
+	  provide a database table design.
+        </li>
+        <li>
+          The
+<a href="../packages/IBrokers/index.html">IBrokers</a>
+          package provides access to the Interactive Brokers
+	  API for data access (but requires an account to access the service).
+        </li>
+        <li>
+          The
+<a href="../packages/data.table/index.html">data.table</a>
+          package provides very efficient and fast
+	  access to in-memory data sets such as asset prices.
+        </li>
+        <li>
+          The
+<a href="../packages/TFX/index.html">TFX</a>
+          package provides an interface to the TrueFX (TM)
+	  service for free streaming real-time and historical
+	  tick-by-tick market data for interbank foreign exchange
+	  rates at the millisecond resolution.
+        </li>
+        <li>
+          The package
+<a href="../packages/highfrequency/index.html">highfrequency</a>
+          contains functionality
+	  to manage, clean and match highfrequency trades and quotes
+	  data and enables users to calculate various liquidity
+	  measures, estimate and forecast volatility, and investigate
+	  microstructure noise and intraday periodicity.
+        </li>
+        <li>
+          The
+<a href="../packages/Rbitcoin/index.html">Rbitcoin</a>
+          package offers access to Bitcoin
+          exchange APIs (mtgox, bitstamp, btce, kraken) via public and
+          private API calls and integration of data structures for all
+          markets.
+        </li>
+        <li>
+          The
+<a href="../packages/TAQMNGR/index.html">TAQMNGR</a>
+          package manages tick-by-tick (equity)
+      	  transaction data performing 'cleaning', 'aggregation' and
+      	  'import' where cleaning and aggregation are performed
+      	  according to Brownlees and Gallo (2006).
+        </li>
+      </ul>
+    </div>
+
+  <h3>CRAN packages:</h3>
+  <ul>
+    <li><a href="../packages/actuar/index.html">actuar</a></li>
+    <li><a href="../packages/AmericanCallOpt/index.html">AmericanCallOpt</a></li>
+    <li><a href="../packages/AutoSEARCH/index.html">AutoSEARCH</a></li>
+    <li><a href="../packages/backtest/index.html">backtest</a></li>
+    <li><a href="../packages/bayesGARCH/index.html">bayesGARCH</a></li>
+    <li><a href="../packages/BenfordTests/index.html">BenfordTests</a></li>
+    <li><a href="../packages/betategarch/index.html">betategarch</a></li>
+    <li><a href="../packages/BurStFin/index.html">BurStFin</a></li>
+    <li><a href="../packages/BurStMisc/index.html">BurStMisc</a></li>
+    <li><a href="../packages/CADFtest/index.html">CADFtest</a></li>
+    <li><a href="../packages/car/index.html">car</a></li>
+    <li><a href="../packages/ccgarch/index.html">ccgarch</a></li>
+    <li><a href="../packages/ChainLadder/index.html">ChainLadder</a></li>
+    <li><a href="../packages/copula/index.html">copula</a></li>
+    <li><a href="../packages/CreditMetrics/index.html">CreditMetrics</a></li>
+    <li><a href="../packages/crp.CSFP/index.html">crp.CSFP</a></li>
+    <li><a href="../packages/data.table/index.html">data.table</a></li>
+    <li><a href="../packages/dlm/index.html">dlm</a></li>
+    <li><a href="../packages/dse/index.html">dse</a></li>
+    <li><a href="../packages/dyn/index.html">dyn</a></li>
+    <li><a href="../packages/dynlm/index.html">dynlm</a></li>
+    <li><a href="../packages/ESG/index.html">ESG</a></li>
+    <li><a href="../packages/evd/index.html">evd</a></li>
+    <li><a href="../packages/evdbayes/index.html">evdbayes</a></li>
+    <li><a href="../packages/evir/index.html">evir</a></li>
+    <li><a href="../packages/extRemes/index.html">extRemes</a></li>
+    <li><a href="../packages/fame/index.html">fame</a></li>
+    <li><a href="../packages/fArma/index.html">fArma</a> (core)</li>
+    <li><a href="../packages/fAsianOptions/index.html">fAsianOptions</a> (core)</li>
+    <li><a href="../packages/fAssets/index.html">fAssets</a> (core)</li>
+    <li><a href="../packages/fBasics/index.html">fBasics</a> (core)</li>
+    <li><a href="../packages/fBonds/index.html">fBonds</a> (core)</li>
+    <li><a href="../packages/fCopulae/index.html">fCopulae</a> (core)</li>
+    <li><a href="../packages/fExoticOptions/index.html">fExoticOptions</a> (core)</li>
+    <li><a href="../packages/fExtremes/index.html">fExtremes</a> (core)</li>
+    <li><a href="../packages/fgac/index.html">fgac</a></li>
+    <li><a href="../packages/fGarch/index.html">fGarch</a> (core)</li>
+    <li><a href="../packages/fImport/index.html">fImport</a> (core)</li>
+    <li><a href="../packages/FinAsym/index.html">FinAsym</a></li>
+    <li><a href="../packages/FinTS/index.html">FinTS</a></li>
+    <li><a href="../packages/fMultivar/index.html">fMultivar</a> (core)</li>
+    <li><a href="../packages/fNonlinear/index.html">fNonlinear</a> (core)</li>
+    <li><a href="../packages/fOptions/index.html">fOptions</a> (core)</li>
+    <li><a href="../packages/forecast/index.html">forecast</a></li>
+    <li><a href="../packages/fPortfolio/index.html">fPortfolio</a> (core)</li>
+    <li><a href="../packages/fracdiff/index.html">fracdiff</a></li>
+    <li><a href="../packages/fRegression/index.html">fRegression</a> (core)</li>
+    <li><a href="../packages/frmqa/index.html">frmqa</a></li>
+    <li><a href="../packages/fTrading/index.html">fTrading</a> (core)</li>
+    <li><a href="../packages/fUnitRoots/index.html">fUnitRoots</a> (core)</li>
+    <li><a href="../packages/ghyp/index.html">ghyp</a></li>
+    <li><a href="../packages/gmm/index.html">gmm</a></li>
+    <li><a href="../packages/gogarch/index.html">gogarch</a></li>
+    <li><a href="../packages/GUIDE/index.html">GUIDE</a></li>
+    <li><a href="../packages/highfrequency/index.html">highfrequency</a></li>
+    <li><a href="../packages/IBrokers/index.html">IBrokers</a></li>
+    <li><a href="../packages/ismev/index.html">ismev</a></li>
+    <li><a href="../packages/its/index.html">its</a></li>
+    <li><a href="../packages/lifecontingencies/index.html">lifecontingencies</a></li>
+    <li><a href="../packages/lmtest/index.html">lmtest</a></li>
+    <li><a href="../packages/longmemo/index.html">longmemo</a></li>
+    <li><a href="../packages/LSMonteCarlo/index.html">LSMonteCarlo</a></li>
+    <li><a href="../packages/maRketSim/index.html">maRketSim</a></li>
+    <li><a href="../packages/markovchain/index.html">markovchain</a></li>
+    <li><a href="../packages/MarkowitzR/index.html">MarkowitzR</a></li>
+    <li><a href="../packages/MSBVAR/index.html">MSBVAR</a></li>
+    <li><a href="../packages/mvtnorm/index.html">mvtnorm</a></li>
+    <li><a href="../packages/nlme/index.html">nlme</a></li>
+    <li><a href="../packages/NMOF/index.html">NMOF</a></li>
+    <li><a href="../packages/opefimor/index.html">opefimor</a></li>
+    <li><a href="../packages/OptHedging/index.html">OptHedging</a></li>
+    <li><a href="../packages/pa/index.html">pa</a></li>
+    <li><a href="../packages/parma/index.html">parma</a></li>
+    <li><a href="../packages/PerformanceAnalytics/index.html">PerformanceAnalytics</a> (core)</li>
+    <li><a href="../packages/PIN/index.html">PIN</a></li>
+    <li><a href="../packages/portfolio/index.html">portfolio</a></li>
+    <li><a href="../packages/portfolioSim/index.html">portfolioSim</a></li>
+    <li><a href="../packages/POT/index.html">POT</a></li>
+    <li><a href="../packages/quantmod/index.html">quantmod</a></li>
+    <li><a href="../packages/Rbitcoin/index.html">Rbitcoin</a></li>
+    <li><a href="../packages/Rcmdr/index.html">Rcmdr</a></li>
+    <li><a href="../packages/rmgarch/index.html">rmgarch</a></li>
+    <li><a href="../packages/RND/index.html">RND</a></li>
+    <li><a href="../packages/RQuantLib/index.html">RQuantLib</a></li>
+    <li><a href="../packages/rugarch/index.html">rugarch</a></li>
+    <li><a href="../packages/rwt/index.html">rwt</a></li>
+    <li><a href="../packages/sandwich/index.html">sandwich</a></li>
+    <li><a href="../packages/sde/index.html">sde</a></li>
+    <li><a href="../packages/SharpeR/index.html">SharpeR</a></li>
+    <li><a href="../packages/SmithWilsonYieldCurve/index.html">SmithWilsonYieldCurve</a></li>
+    <li><a href="../packages/stochvol/index.html">stochvol</a></li>
+    <li><a href="../packages/stockPortfolio/index.html">stockPortfolio</a></li>
+    <li><a href="../packages/strucchange/index.html">strucchange</a></li>
+    <li><a href="../packages/TAQMNGR/index.html">TAQMNGR</a></li>
+    <li><a href="../packages/tawny/index.html">tawny</a></li>
+    <li><a href="../packages/termstrc/index.html">termstrc</a></li>
+    <li><a href="../packages/TFX/index.html">TFX</a></li>
+    <li><a href="../packages/timeDate/index.html">timeDate</a> (core)</li>
+    <li><a href="../packages/timeSeries/index.html">timeSeries</a> (core)</li>
+    <li><a href="../packages/timsac/index.html">timsac</a></li>
+    <li><a href="../packages/tis/index.html">tis</a></li>
+    <li><a href="../packages/TSdbi/index.html">TSdbi</a></li>
+    <li><a href="../packages/tseries/index.html">tseries</a> (core)</li>
+    <li><a href="../packages/tseriesChaos/index.html">tseriesChaos</a></li>
+    <li><a href="../packages/tsfa/index.html">tsfa</a></li>
+    <li><a href="../packages/TTR/index.html">TTR</a></li>
+    <li><a href="../packages/tvm/index.html">tvm</a></li>
+    <li><a href="../packages/urca/index.html">urca</a> (core)</li>
+    <li><a href="../packages/vars/index.html">vars</a></li>
+    <li><a href="../packages/VarSwapPrice/index.html">VarSwapPrice</a></li>
+    <li><a href="../packages/vrtest/index.html">vrtest</a></li>
+    <li><a href="../packages/wavelets/index.html">wavelets</a></li>
+    <li><a href="../packages/waveslim/index.html">waveslim</a></li>
+    <li><a href="../packages/wavethresh/index.html">wavethresh</a></li>
+    <li><a href="../packages/xts/index.html">xts</a> (core)</li>
+    <li><a href="../packages/ycinterextra/index.html">ycinterextra</a></li>
+    <li><a href="../packages/YieldCurve/index.html">YieldCurve</a></li>
+    <li><a href="../packages/Zelig/index.html">Zelig</a></li>
+    <li><a href="../packages/zoo/index.html">zoo</a> (core)</li>
+  </ul>
+
+  <h3>Related links:</h3>
+  <ul>
+    <li>CRAN Task View: <a href="Econometrics.html">Econometrics</a></li>
+    <li>CRAN Task View: <a href="Multivariate.html">Multivariate</a></li>
+    <li>CRAN Task View: <a href="Optimization.html">Optimization</a></li>
+    <li>CRAN Task View: <a href="Robust.html">Robust</a></li>
+    <li>CRAN Task View: <a href="SocialSciences.html">SocialSciences</a></li>
+    <li>CRAN Task View: <a href="TimeSeries.html">TimeSeries</a></li>
+    <li><a href="http://www.rmetrics.org">
+  Rmetrics contains a wealth of R code for Finance
+</a></li>
+    <li><a href="http://www.quantlib.org">
+  Quantlib is a C++ library for quantitative finance
+</a></li>
+    <li><a href="http://findata.org/rbloomberg/">
+  Access data from a Bloomberg installation in R
+</a></li>
+    <li><a href="https://www.stat.math.ethz.ch/mailman/listinfo/R-SIG-Finance/">
+  Mailing list: R Special Interest Group Finance
+</a></li>
+    <li><a href="http://www.msci.com/us/indexperf/index.html">
+  MSCI indexes data
+</a></li>
+    <li><a href="http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html">
+  French/Fama data
+</a></li>
+    <li><a href="http://www.wilshire.com/Indexes/calculator/">
+  Wilshire indexes data
+</a></li>
+    <li><a href="http://orfe.princeton.edu/~rcarmona/maindownload.html">
+  Rene Carmona
+</a></li>
+    <li><a href="http://faculty.washington.edu/ezivot/splus.htm">
+  Eric Zivot
+</a></li>
+    <li><a href="http://www.stat.tamu.edu/~ljin/Finance/stat689-R.htm">
+  R Code for Ruppert's 'Statistics and Finance'
+</a></li>
+    <li><a href="http://www.r-programming.org/papers">
+  Guy Yollin
+</a></li>
+  </ul>
+
+</body>
+</html>
+ 

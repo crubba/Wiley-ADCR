@@ -1,0 +1,494 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CRAN Task View: Meta-Analysis</title>
+  <link rel=stylesheet type="text/css" href="../CRAN_web.css" />
+</head>
+
+<body>
+  <h2>CRAN Task View: Meta-Analysis</h2>
+  <table summary="MetaAnalysis task view information">
+    <tr><td valign="top"><b>Maintainer:</b></td><td>Michael Dewey</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x69;&#x6e;&#x66;&#x6f;&#x20;&#x61;&#x74;&#x20;&#x61;&#x67;&#x68;&#x6d;&#x65;&#x64;&#x2e;&#x66;&#x73;&#x6e;&#x65;&#x74;&#x2e;&#x63;&#x6f;&#x2e;&#x75;&#x6b;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2014-02-07</td></tr>
+  </table>
+
+    <div>
+      <p>
+        This task view covers packages which include facilities for meta-analysis
+    of summary statistics from primary studies. The task view does not consider
+    the meta-analysis of individual participant data which can be handled by
+    any of the standard linear modelling functions.
+      </p>
+      <p>
+        The standard meta-analysis model is a form of weighted least squares and so
+   any of the wide range of R packages providing weighted least squares would
+   in principle be able to fit the model. The advantage of using a specialised package is
+   that (a) it takes care of the small tweaks necessary (b) it provides a range
+   of ancillary functions for displaying and investigating the model.
+   Where the model is referred to below it is this  model which is meant.
+      </p>
+      <p>
+        Where summary statistics are not available a meta-analysis of significance
+   levels is possible. This is not completely unconnected with the problem
+   of adjustment for multiple comparisons but the packages below which offer this,
+   chiefly in the context of genetic data, also offer additional functionality.
+      </p>
+      <h4>
+        Univariate meta-analysis
+      </h4>
+      <p>
+        <i>
+          Preparing for meta-analysis
+        </i>
+      </p>
+      <ul>
+        <li>
+          The primary studies often use a range of statistics to present their
+   results. Convenience functions to convert these onto a common
+   metric are presented by:
+<a href="../packages/compute.es/index.html">compute.es</a>
+          which converts from various statistics to
+    d, g, r, z and the log odds ratio,
+<a href="../packages/MAc/index.html">MAc</a>
+          which converts to correlation coefficients,
+<a href="../packages/MAd/index.html">MAd</a>
+          which converts to mean differences,
+   and
+<a href="../packages/metafor/index.html">metafor</a>
+          which converts to effect sizes an extensive set of measures
+    for comparative studies (such as binary data, person years, mean differences and
+    ratios and so on), for studies of association (a wide range of correlation types), for non-comparative
+    studies (proportions, incidence rates, and mean change). It also provides for a measure 
+    used in psychometrics (Cronbach's alpha).
+        </li>
+        <li>
+<a href="../packages/meta/index.html">meta</a>
+          provides functions to read and work
+    with files output by RevMan 4 and 5.
+        </li>
+      </ul>
+      <p>
+        <i>
+          Fitting the model
+        </i>
+      </p>
+      <ul>
+        <li>
+          Four packages provide the inverse variance weighted, Mantel-Haenszel,
+    and Peto methods:
+<a href="../packages/epiR/index.html">epiR</a>,
+<a href="../packages/meta/index.html">meta</a>,
+<a href="../packages/metafor/index.html">metafor</a>, and
+<a href="../packages/rmeta/index.html">rmeta</a>.
+    The last three also provide cumulative meta-analysis.
+    The same three provide the usual forest and funnel plots.
+    In addition radial (Galbraith) plots are provided by
+<a href="../packages/metafor/index.html">metafor</a>
+          and L'Abbe plots by
+<a href="../packages/meta/index.html">meta</a>
+          and
+<a href="../packages/metafor/index.html">metafor</a>.
+        </li>
+        <li>
+          For binary data
+<a href="../packages/metafor/index.html">metafor</a>
+          provides the binomial-normal model.
+        </li>
+        <li>
+          For sparse binary data
+<a href="../packages/exactmeta/index.html">exactmeta</a>
+          provides an exact method which does not involve continuity
+   corrections
+        </li>
+        <li>
+          Packages which work with specific effect sizes may be more congenial
+    to workers in some areas of science
+<a href="../packages/MAc/index.html">MAc</a>
+          and
+<a href="../packages/metacor/index.html">metacor</a>
+          which provide meta-analysis of correlation coefficients and
+<a href="../packages/MAd/index.html">MAd</a>
+          which provides meta-analysis of mean differences.
+<a href="../packages/MAc/index.html">MAc</a>
+          and
+<a href="../packages/MAd/index.html">MAd</a>
+          provide a range of graphics.
+<a href="../packages/psychometric/index.html">psychometric</a>
+          provides an extensive range of functions for the meta-analysis of 
+    psychometric studies.
+        </li>
+        <li>
+          Bayesian approaches are contained in various packages.
+<a href="../packages/bspmma/index.html">bspmma</a>
+          which 
+    provides two different models: a non-parametric and a semi-parametric.
+    Graphical display of the results is provided.
+<a href="../packages/metamisc/index.html">metamisc</a>
+          provides a method with priors suggested by Higgins.
+<a href="../packages/mmeta/index.html">mmeta</a>
+          provides meta-analysis using
+   beta-binomial prior distributions.
+        </li>
+        <li>
+          Some packages concentrate on providing a specialised version of the core
+    meta-analysis function without providing the range of ancillary
+    functions. These are:
+<a href="../packages/metagen/index.html">metagen</a>
+          which provides
+     an improved method of obtaining confidence intervals,
+<a href="../packages/metaLik/index.html">metaLik</a>
+          which uses a more sophisticated approach to the likelihood,
+<a href="../packages/metamisc/index.html">metamisc</a>
+          which as well as the method of moments provides two likelihood-based
+    methods, and
+<a href="../packages/metatest/index.html">metatest</a>
+          which provides
+     another improved method of obtaining confidence intervals.
+        </li>
+      </ul>
+      <i>
+        Investigating heterogeneity
+      </i>
+      <p>
+        Confidence intervals for the heterogeneity parameter are provided in
+<a href="../packages/metafor/index.html">metafor</a>
+        and
+<a href="../packages/metagen/index.html">metagen</a>.
+      </p>
+      <i>
+        Investigating small study bias
+      </i>
+      <p>
+        The issue of whether small studies give different results
+   from large studies has been addressed by visual
+   examination of  the funnel plots mentioned above.
+   In addition
+<a href="../packages/meta/index.html">meta</a>
+        and
+<a href="../packages/metafor/index.html">metafor</a>
+        provide
+   both the non-parametric method suggested by Begg and Mazumdar
+   and a range of regression tests modelled after the approach of Egger.
+   An exploratory technique for detecting an excess of statistically
+   significant studies is provided by
+<a href="../packages/PubBias/index.html">PubBias</a>.
+      </p>
+      <i>
+        Unobserved studies
+      </i>
+      <p>
+        A recurrent issue in meta-analysis has been
+    the problem of unobserved studies.
+      </p>
+      <ul>
+        <li>
+          Rosenthal's fail safe n is provided by
+<a href="../packages/metafor/index.html">metafor</a>
+          as well as two more recent methods
+    by Orwin and Rosenberg.
+        </li>
+        <li>
+          Duval's trim and fill method is provided by
+<a href="../packages/meta/index.html">meta</a>
+          and
+<a href="../packages/metafor/index.html">metafor</a>.
+        </li>
+        <li>
+<a href="../packages/copas/index.html">copas</a>
+          provides Copas's selection model.
+        </li>
+        <li>
+<a href="../packages/selectMeta/index.html">selectMeta</a>
+          provides various selection models:
+     the parametric model of Iyengar
+     and Greenhouse, the non-parametric model of Dear and Begg, and
+      proposes a new non-parametric method imposing a monotonicity
+      constraint.
+        </li>
+        <li>
+<a href="../packages/SAMURAI/index.html">SAMURAI</a>
+          performs a sensitivity analysis assuming the number of unobserved
+     studies is known, perhaps from a trial registry, but not their outcome.
+        </li>
+        <li>
+<a href="../packages/extfunnel/index.html">extfunnel</a>
+          augments the funnel plot to assess the impact
+   of additional evidence.
+        </li>
+      </ul>
+      <h4>
+        Multivariate meta-analysis
+      </h4>
+      <p>
+        Standard methods outlined above assume that the effect sizes
+   are independent. This assumption may be violated in a number of ways:
+   within each primary study multiple treatments may
+   be compared to the same control, each primary study may report multiple
+   endpoints, or primary studies may be clustered for instance
+   because they come from
+   the same country or the same research team.
+   In these situations where the outcome is multivariate:
+      </p>
+      <ul>
+        <li>
+<a href="../packages/mvmeta/index.html">mvmeta</a>
+          assumes the within study covariances
+   are known and as well as fixed effects provides a
+   variety of options for fitting random effects.
+<a href="../packages/metafor/index.html">metafor</a>
+          provides fixed effects and likelihood
+   based random effects model fitting procedures.
+   Both these packages include meta-regression,
+<a href="../packages/metafor/index.html">metafor</a>
+          also provides for clustered and
+   hierarchical models
+        </li>
+        <li>
+<a href="../packages/mvtmeta/index.html">mvtmeta</a>
+          provides multivariate meta-analysis 
+   using the method of moments for random effects
+   although not meta-regression,
+        </li>
+        <li>
+<a href="http://R-Forge.R-project.org/projects/metasem/"><span class="Rforge">metaSEM</span></a>
+          is available from R-Forge and
+   provides multivariate (and univariate) meta-analysis and
+   meta-regression by embedding it in the structural equation framework
+   and using OpenMx for the structural equation modelling.
+   It can provide a three-level meta-analysis taking account of
+   clustering and allowing for level 2 and level 3 heterogeneity.
+   It also provides via a two-stage approach
+   meta-analysis of correlation or covariance matrices.
+        </li>
+        <li>
+<a href="../packages/dosresmeta/index.html">dosresmeta</a>
+          concentrates on the situation where individual
+   studies have information on the dose-response relationship.
+        </li>
+        <li>
+<a href="../packages/robumeta/index.html">robumeta</a>
+          provides robust variance estimation for
+   clustered and hierarchical estimates.
+        </li>
+      </ul>
+      <h4>
+        Meta-analysis of studies of diagnostic tests
+      </h4>
+      <p>
+        A special case of multivariate meta-analysis is the case of summarising
+    studies of diagnostic tests. This gives rise to a bivariate, binary
+    meta-analysis with the within-study correlation assumed zero
+    although the between-study correlation is estimated. This is an
+    active area of research and a variety of methods are available
+    including what is referred to here called Reitsma's
+    method, and the heirarchical summary receiver operating
+    characteristic (HSROC) method.
+    In many situations these are equivalent.
+      </p>
+      <ul>
+        <li>
+<a href="../packages/mada/index.html">mada</a>
+          provides various descriptive statistics
+     and univariate methods (diagnostic odds ratio and Lehman
+     model)
+     as well as the bivariate method due to Reitsma.
+     Meta-regression is also provided.
+     A range of graphical methods is also available.
+        </li>
+        <li>
+<a href="../packages/HSROC/index.html">HSROC</a>
+          provides HSROC with estimation in a Bayesian framework.
+    Graphical methods are provided.
+    The case of imperfect reference standards is catered for.
+        </li>
+        <li>
+<a href="../packages/Metatron/index.html">Metatron</a>
+          provides a method for the Reitsma model
+    incuding the case of an imperfect reference standard
+        </li>
+        <li>
+<a href="../packages/metamisc/index.html">metamisc</a>
+          provides the method of Riley which estimates a common
+    within and between correlation. Graphical output is also
+    provided.
+        </li>
+        <li>
+<a href="../packages/bamdit/index.html">bamdit</a>
+          provides Bayesian meta-analysis with a bivariate
+    random effects model (using JAGS to implement the MCMC method).
+        </li>
+      </ul>
+      <h4>
+        Meta-regression
+      </h4>
+      <p>
+        Where suitable moderator variables are available they may
+    be included using meta-regression. All these packages are mentioned above, this
+    just draws that information together.
+      </p>
+      <ul>
+        <li>
+<a href="../packages/metafor/index.html">metafor</a>
+          provides meta-regression (multiple
+    moderators are catered for). A range of model diagnostics is also
+    provided. Various packages rely on
+<a href="../packages/metafor/index.html">metafor</a>
+          to
+    provide meta-regression (<a href="../packages/meta/index.html">meta</a>,
+<a href="../packages/MAc/index.html">MAc</a>,
+    and
+<a href="../packages/MAd/index.html">MAd</a>).
+        </li>
+        <li>
+<a href="../packages/metagen/index.html">metagen</a>,
+<a href="../packages/metaLik/index.html">metaLik</a>,
+<a href="http://R-Forge.R-project.org/projects/metasem/"><span class="Rforge">metaSEM</span></a>, and
+<a href="../packages/metatest/index.html">metatest</a>
+          also provide meta-regression.
+        </li>
+        <li>
+<a href="../packages/mvmeta/index.html">mvmeta</a>
+          provides meta-regression for multivariate meta-analysis
+    as does
+<a href="http://R-Forge.R-project.org/projects/metasem/"><span class="Rforge">metaSEM</span></a>.
+        </li>
+        <li>
+<a href="../packages/mada/index.html">mada</a>
+          provides for the meta-regression of diagnostic test studies.
+        </li>
+      </ul>
+      <h4>
+        Network meta-analysis
+      </h4>
+      <p>
+        Also known as multiple treatment comparison.
+      </p>
+      <p>
+        This is provided in a Bayesian framework by
+<a href="../packages/gemtc/index.html">gemtc</a>,
+   which acts as a front-end to your
+   favourite MCMC package, and
+<a href="../packages/pcnetmeta/index.html">pcnetmeta</a>,
+   which uses JAGS.
+<a href="../packages/netmeta/index.html">netmeta</a>
+        works in a frequentist
+   framework.
+      </p>
+      <h4>
+        Genetics
+      </h4>
+      <p>
+        There are a number of packages specialising in genetic data:
+<a href="../packages/gap/index.html">gap</a>
+        combines p-values,
+<a href="../packages/MADAM/index.html">MADAM</a>
+        combines p-values using Fisher's method,
+<a href="../packages/MAMA/index.html">MAMA</a>
+        provides meta-analysis of microarray data,
+<a href="../packages/MetABEL/index.html">MetABEL</a>
+        provides meta-analysis of genome wide SNP association
+      results,
+<a href="../packages/MetaDE/index.html">MetaDE</a>
+        provides microarray meta-analysis of for differentially
+      expressed dene detection,
+<a href="../packages/metaMA/index.html">metaMA</a>
+        provides meta-analysis of p-values or moderated
+    effect sizes to find differentially expressed genes,
+<a href="../packages/MetaPCA/index.html">MetaPCA</a>
+        provides meta-analysis in the dimension reduction
+    of genomic data,
+<a href="../packages/MetaQC/index.html">MetaQC</a>
+        provides objective quality control and
+    inclusion/exclusion criteria for genomic meta-analysis,
+<a href="../packages/MetaSKAT/index.html">MetaSKAT</a>,
+<a href="../packages/seqMeta/index.html">seqMeta</a>, and
+<a href="../packages/skatMeta/index.html">skatMeta</a>
+        provide meta-analysis for the SKAT test.
+      </p>
+      <h4>
+        Others
+      </h4>
+      <p>
+<a href="../packages/SCMA/index.html">SCMA</a>
+        provides single case meta-analysis. It is part of a suite of packages
+    dedicated to single-case designs.
+      </p>
+      <p>
+<a href="../packages/CRTSize/index.html">CRTSize</a>
+        provides meta-analysis as part of a package primarily dedicated to the determination
+    of sample size in cluster randomised trials.
+      </p>
+      <p>
+<a href="../packages/CAMAN/index.html">CAMAN</a>
+        offers the possibility of using finite semiparametric mixtures as an
+    alternative to the random effects model where there is heterogeneity.
+   Covariates can be included to provide meta-regression.
+      </p>
+      <p>
+<a href="../packages/RcmdrPlugin.MA/index.html">RcmdrPlugin.MA</a>
+        provides an interface to the Rcmdr GUI.
+      </p>
+    </div>
+
+  <h3>CRAN packages:</h3>
+  <ul>
+    <li><a href="../packages/bamdit/index.html">bamdit</a></li>
+    <li><a href="../packages/bspmma/index.html">bspmma</a></li>
+    <li><a href="../packages/CAMAN/index.html">CAMAN</a></li>
+    <li><a href="../packages/compute.es/index.html">compute.es</a></li>
+    <li><a href="../packages/copas/index.html">copas</a></li>
+    <li><a href="../packages/CRTSize/index.html">CRTSize</a></li>
+    <li><a href="../packages/dosresmeta/index.html">dosresmeta</a></li>
+    <li><a href="../packages/epiR/index.html">epiR</a></li>
+    <li><a href="../packages/exactmeta/index.html">exactmeta</a></li>
+    <li><a href="../packages/extfunnel/index.html">extfunnel</a></li>
+    <li><a href="../packages/gap/index.html">gap</a></li>
+    <li><a href="../packages/gemtc/index.html">gemtc</a></li>
+    <li><a href="../packages/HSROC/index.html">HSROC</a></li>
+    <li><a href="../packages/MAc/index.html">MAc</a></li>
+    <li><a href="../packages/MAd/index.html">MAd</a></li>
+    <li><a href="../packages/mada/index.html">mada</a></li>
+    <li><a href="../packages/MADAM/index.html">MADAM</a></li>
+    <li><a href="../packages/MAMA/index.html">MAMA</a></li>
+    <li><a href="../packages/meta/index.html">meta</a> (core)</li>
+    <li><a href="../packages/MetABEL/index.html">MetABEL</a></li>
+    <li><a href="../packages/metacor/index.html">metacor</a></li>
+    <li><a href="../packages/MetaDE/index.html">MetaDE</a></li>
+    <li><a href="../packages/metafor/index.html">metafor</a> (core)</li>
+    <li><a href="../packages/metagen/index.html">metagen</a></li>
+    <li><a href="../packages/metaLik/index.html">metaLik</a></li>
+    <li><a href="../packages/metaMA/index.html">metaMA</a></li>
+    <li><a href="../packages/metamisc/index.html">metamisc</a></li>
+    <li><a href="../packages/MetaPCA/index.html">MetaPCA</a></li>
+    <li><a href="../packages/MetaQC/index.html">MetaQC</a></li>
+    <li><a href="../packages/MetaSKAT/index.html">MetaSKAT</a></li>
+    <li><a href="../packages/metatest/index.html">metatest</a></li>
+    <li><a href="../packages/Metatron/index.html">Metatron</a></li>
+    <li><a href="../packages/mmeta/index.html">mmeta</a></li>
+    <li><a href="../packages/mvmeta/index.html">mvmeta</a></li>
+    <li><a href="../packages/mvtmeta/index.html">mvtmeta</a></li>
+    <li><a href="../packages/netmeta/index.html">netmeta</a></li>
+    <li><a href="../packages/pcnetmeta/index.html">pcnetmeta</a></li>
+    <li><a href="../packages/psychometric/index.html">psychometric</a></li>
+    <li><a href="../packages/PubBias/index.html">PubBias</a></li>
+    <li><a href="../packages/RcmdrPlugin.MA/index.html">RcmdrPlugin.MA</a></li>
+    <li><a href="../packages/rmeta/index.html">rmeta</a></li>
+    <li><a href="../packages/robumeta/index.html">robumeta</a></li>
+    <li><a href="../packages/SAMURAI/index.html">SAMURAI</a></li>
+    <li><a href="../packages/SCMA/index.html">SCMA</a></li>
+    <li><a href="../packages/selectMeta/index.html">selectMeta</a></li>
+    <li><a href="../packages/seqMeta/index.html">seqMeta</a></li>
+    <li><a href="../packages/skatMeta/index.html">skatMeta</a></li>
+  </ul>
+
+  <h3>Related links:</h3>
+  <ul>
+    <li>CRAN Task View: <a href="Genetics.html">Genetics</a></li>
+    <li>CRAN Task View: <a href="ClinicalTrials.html">ClinicalTrials</a></li>
+    <li>R-Forge Project: <a href="http://R-Forge.R-project.org/projects/metasem/" target="_top"><span class="Rforge">metaSEM</span></a></li>
+  </ul>
+
+</body>
+</html>
+ 

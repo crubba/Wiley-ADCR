@@ -1,0 +1,444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CRAN Task View: Reproducible Research</title>
+  <link rel=stylesheet type="text/css" href="../CRAN_web.css" />
+</head>
+
+<body>
+  <h2>CRAN Task View: Reproducible Research</h2>
+  <table summary="ReproducibleResearch task view information">
+    <tr><td valign="top"><b>Maintainer:</b></td><td>Max Kuhn</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x6d;&#x61;&#x78;&#x2e;&#x6b;&#x75;&#x68;&#x6e;&#x20;&#x61;&#x74;&#x20;&#x70;&#x66;&#x69;&#x7a;&#x65;&#x72;&#x2e;&#x63;&#x6f;&#x6d;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2014-01-20</td></tr>
+  </table>
+
+    <div>
+      <p>
+        The goal of reproducible research is to tie specific instructions to data analysis
+      and experimental data so that scholarship can be recreated, better understood and
+      verified.
+      </p>
+      <p>
+        R largely facilitates reproducible research using literate programming; a document 
+      that is a combination of content and data analysis code. The
+<tt>Sweave</tt>
+        function (in the 
+      base R utils package) and the
+<a href="../packages/knitr/index.html">knitr</a>
+        package can be used to blend the subject matter and R code
+      so that a single document defines the content and the algorithms.
+      </p>
+      <p>
+        Basic packages can be structured into the following groups:
+      </p>
+      <ul>
+        <li>
+          <i>
+            LaTeX Markup
+          </i>: 
+       The
+<a href="../packages/Hmisc/index.html">Hmisc</a>,
+<a href="../packages/xtable/index.html">xtable</a>
+          and
+<a href="../packages/tables/index.html">tables</a>
+          packages contain functions to write R objects into LaTeX
+       representations.
+<a href="../packages/Hmisc/index.html">Hmisc</a>
+          also includes methods for
+       translating strings to proper LaTeX markup (e.g., ">=" to
+       "$\geq$"). Animations can be inserted into LaTeX documents
+       being converted to PDF via the
+<a href="../packages/animation/index.html">animation</a>
+          package. The
+<tt>pictex</tt>
+          function in the base grDevices package is a
+       PicTeX graphics driver and the
+<a href="../packages/tikzDevice/index.html">tikzDevice</a>
+          can convert R graphics to
+          <a href="http://www.texample.net/tikz/ ">
+            TikZ
+          </a>
+          markup. The
+<a href="../packages/tth/index.html">tth</a>
+          package can convert TeX to HTML.
+        </li>
+        <li>
+          <i>
+            HTML Markup
+          </i>: 
+       The
+<a href="../packages/R2HTML/index.html">R2HTML</a>
+          package
+       has drivers that allow
+<tt>Sweave</tt>
+          to process HTML documents via
+<tt>Sweave</tt>. 
+       Both
+<a href="../packages/R2HTML/index.html">R2HTML</a>
+          and
+<a href="../packages/hwriter/index.html">hwriter</a>
+          can be used to build HTML pages sequentially.
+<a href="../packages/R2HTML/index.html">R2HTML</a>,
+<a href="../packages/xtable/index.html">xtable</a>
+          and
+<a href="../packages/hwriter/index.html">hwriter</a>
+          can also convert some 
+       R objects into HTML representations.
+<a href="../packages/knitr/index.html">knitr</a>
+          also has facilities to weave
+       R code with HTML as well as convert markdown to HTML.
+        </li>
+        <li>
+          <i>
+            ODF Markup
+          </i>: 
+       The
+<a href="../packages/odfWeave/index.html">odfWeave</a>
+          package extends
+<tt>Sweave</tt>
+          to the
+          <a href="http://en.wikipedia.org/wiki/OpenDocument_technical_specification">
+            Open Document Format
+          </a>. 
+       Word processing tools, such as OpenOffice.org, can then be used to blend content and programs.
+       Many word processors can be used to translate the ODF document to other formats 
+       (e.g., Word, PDF, HTML, etc.)
+        </li>
+        <li>
+          <i>
+            Microsoft Formats
+          </i>:
+       The
+<a href="../packages/R2wd/index.html">R2wd</a>
+          and
+<a href="../packages/R2PPT/index.html">R2PPT</a>
+          packages for Windows
+       can be used to communicate between R and Word or PowerPoint via
+       the COM interface. Document elements (e.g. sections, text,
+       images, etc) that are created in R can be inserted into the
+       document from R. The
+<a href="../packages/rtf/index.html">rtf</a>
+          can also be used to create
+       RTF format documents directly from R. Commercial R products
+       that work with RTF and/or Word are
+          <a href="http://www.smartsystems.ro/rtfgen">
+            RTFGen
+          </a>,
+          <a href="http://inferenceforr.com/">
+            Inference for R
+          </a>
+          and
+          <a href="http://rcom.univie.ac.at/">
+            SWord
+          </a>.The output from other
+       packages (<a href="../packages/odfWeave/index.html">odfWeave</a>
+          and
+<a href="../packages/R2HTML/index.html">R2HTML</a>) can also
+       be opened by Word.
+          <a href="http://rcom.univie.ac.at/">
+            RExcel
+          </a>
+          can integrate code with
+       Microsoft Excel.
+       Additionally, the
+<a href="../packages/table1xls/index.html">table1xls</a>
+          can convert summary tables to 
+       Excel files.
+        </li>
+        <li>
+          <i>
+            Plain Text Formats
+          </i>: 
+       R code and output in
+<tt>Sweave</tt>
+          files can be converted into
+          <a href="http://www.methods.co.nz/asciidoc/">
+            AsciiDoc
+          </a>
+          and other structured 
+       text formats using the
+<a href="../packages/ascii/index.html">ascii</a>
+          package. The
+<a href="../packages/markdown/index.html">markdown</a>
+          and
+<a href="../packages/knitr/index.html">knitr</a>
+          packages have tools for
+          <a href="http://daringfireball.net/projects/markdown/">
+            markdown
+          </a>
+          format.
+        </li>
+        <li>
+          <i>
+            Syntax Highlighting
+          </i>: 
+       The
+<a href="../packages/SweaveListingUtils/index.html">SweaveListingUtils</a>
+          package can also provide enhanced control over how
+       R code chunks and their output are rendered in LaTeX.
+        </li>
+        <li>
+          <i>
+            Caching of R Objects
+          </i>: 
+       The
+<a href="../packages/cacheSweave/index.html">cacheSweave</a>
+          and
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/weaver.html"><span class="BioC">weaver</span></a>
+          packages allow caching of specific
+       code chunks. The
+<a href="../packages/cacher/index.html">cacher</a>
+          and
+<a href="../packages/R.cache/index.html">R.cache</a>
+          packages can also be used but are 
+       not integrated with
+<tt>Sweave</tt>. 
+       The
+<a href="../packages/SRPM/index.html">SRPM</a>
+          package (for shared reproducibility package management) creates 
+       an R package that organize the results of an
+<tt>Sweave</tt>
+          document into different 
+       directories (e.g., article, figures, etc).
+<a href="../packages/knitr/index.html">knitr</a>
+          also has the ability to
+       cache the results of code chunks.
+        </li>
+        <li>
+          <i>
+            Others
+          </i>: 
+       The
+<a href="../packages/brew/index.html">brew</a>
+          and
+<a href="../packages/R.rsp/index.html">R.rsp</a>
+          packages contain alternative approaches 
+       to embedding R code into various markups.
+<a href="../packages/knitr/index.html">knitr</a>
+          is a comprehensive package 
+       derived from
+<tt>Sweave</tt>
+          that includes code formatting, highlighting,
+       caching, fine control of graphics, conditional evaluation, multiple
+       markup formats and other features. The
+<a href="../packages/pander/index.html">pander</a>
+          package can write R 
+       objects into
+          <a href="http://johnmacfarlane.net/pandoc/README.html">
+            Pandoc's 
+       markdown
+          </a>
+          and also to convert those or complex reports to PDF/HTML/docx/ODT. The
+<a href="../packages/rapport/index.html">rapport</a>
+          package builds on
+<a href="../packages/pander/index.html">pander</a>
+          and provides a way to create 
+       reproducible statistical report templates with graphs, tables and annotations to 
+       be applied to any R data frame and export the results in different formats. The
+<a href="../packages/installr/index.html">installr</a>
+          package for Windows can download and install MikTeX, pandoc 
+       (and other software), as well as quickly update R itself.
+        </li>
+      </ul>
+      <p>
+        An incomplete list of packages which facilitate literate programming for specific 
+      types of analysis or objects:
+      </p>
+      <ul>
+        <li>
+          The base R utils package has generic functions to convert objects to
+  LaTeX (via
+<tt>toLatex</tt>) and BibTeX (via
+<tt>toBibtex</tt>).
+           The
+<a href="../packages/bibtex/index.html">bibtex</a>
+          can also be used to parse BibTeX files.
+        </li>
+        <li>
+          Functions for creating LaTeX representations of summary statistics and visualizations 
+  can be found in the
+<a href="../packages/Hmisc/index.html">Hmisc</a>,
+<a href="../packages/reporttools/index.html">reporttools</a>, and
+<a href="../packages/r2lh/index.html">r2lh</a>
+          packages.
+<a href="../packages/Hmisc/index.html">Hmisc</a>
+          also has functions for marking up data frames and the
+<a href="../packages/quantreg/index.html">quantreg</a>
+          and
+<a href="../packages/memisc/index.html">memisc</a>
+          packages can mark up matrices.
+        </li>
+        <li>
+          Cross-tabulations can be converted to LaTeX code using the
+<a href="../packages/Hmisc/index.html">Hmisc</a>
+          and
+<a href="../packages/memisc/index.html">memisc</a>
+          packages.
+        </li>
+        <li>
+          The
+<a href="../packages/xtable/index.html">xtable</a>
+          and
+<a href="../packages/rms/index.html">rms</a>
+          packages provide LaTeX 
+        representations of some common models (e.g., Cox proportional hazards model, etc.). 
+        For example, processing an
+<tt>aov</tt>
+          object with the
+<tt>xtable</tt>
+          function will generate LaTeX markup of the ANOVA table. Similarly, methods exist
+        for
+<tt>glm</tt>,
+<tt>prcomp</tt>,
+<tt>ts</tt>
+          and other types of objects.
+        </li>
+        <li>
+          The
+<a href="../packages/quantreg/index.html">quantreg</a>
+          contains LaTeX markup functions for quantile regression 
+  fit summaries.
+        </li>
+        <li>
+          Standardized exams can be created using the
+<a href="../packages/exams/index.html">exams</a>
+          package
+        </li>
+        <li>
+          The
+<a href="../packages/odfWeave.survey/index.html">odfWeave.survey</a>
+          and
+<a href="../packages/TeachingSampling/index.html">TeachingSampling</a>
+          packages provide 
+      ODF and LaTeX functions, respectively, for survey sampling objects. The
+<a href="../packages/suRtex/index.html">suRtex</a>
+          package can create LaTeX markup of descriptive statistical summaries of
+      survey data.
+        </li>
+        <li>
+          The
+<a href="../packages/texreg/index.html">texreg</a>
+          has functions to create nice LaTeX and HTML representations
+      of one or more objects (e.g.
+<tt>lm</tt>,
+<tt>lme4</tt>, etc.). The
+<a href="../packages/stargazer/index.html">stargazer</a>
+          has similar functionality for showing models and summary tables 
+      in LaTeX and ASCII.
+        </li>
+        <li>
+          The
+<a href="../packages/sparktex/index.html">sparktex</a>
+          package can create LaTeX representations of
+          <a href="http://en.wikipedia.org/wiki/Sparkline">
+            sparklines
+          </a>.
+        </li>
+        <li>
+          LaTeX markup for several object types can be created using the
+<a href="../packages/papeR/index.html">papeR</a>
+          package.
+        </li>
+      </ul>
+    </div>
+
+  <h3>CRAN packages:</h3>
+  <ul>
+    <li><a href="../packages/animation/index.html">animation</a></li>
+    <li><a href="../packages/apsrtable/index.html">apsrtable</a></li>
+    <li><a href="../packages/ascii/index.html">ascii</a></li>
+    <li><a href="../packages/bibtex/index.html">bibtex</a></li>
+    <li><a href="../packages/brew/index.html">brew</a></li>
+    <li><a href="../packages/cacher/index.html">cacher</a></li>
+    <li><a href="../packages/cacheSweave/index.html">cacheSweave</a></li>
+    <li><a href="../packages/exams/index.html">exams</a></li>
+    <li><a href="../packages/Hmisc/index.html">Hmisc</a> (core)</li>
+    <li><a href="../packages/hwriter/index.html">hwriter</a></li>
+    <li><a href="../packages/installr/index.html">installr</a></li>
+    <li><a href="../packages/knitr/index.html">knitr</a> (core)</li>
+    <li><a href="../packages/markdown/index.html">markdown</a></li>
+    <li><a href="../packages/memisc/index.html">memisc</a></li>
+    <li><a href="../packages/odfWeave/index.html">odfWeave</a></li>
+    <li><a href="../packages/odfWeave.survey/index.html">odfWeave.survey</a></li>
+    <li><a href="../packages/pander/index.html">pander</a></li>
+    <li><a href="../packages/papeR/index.html">papeR</a></li>
+    <li><a href="../packages/quantreg/index.html">quantreg</a></li>
+    <li><a href="../packages/R.cache/index.html">R.cache</a></li>
+    <li><a href="../packages/R.rsp/index.html">R.rsp</a></li>
+    <li><a href="../packages/R2HTML/index.html">R2HTML</a> (core)</li>
+    <li><a href="../packages/r2lh/index.html">r2lh</a></li>
+    <li><a href="../packages/R2PPT/index.html">R2PPT</a></li>
+    <li><a href="../packages/R2wd/index.html">R2wd</a></li>
+    <li><a href="../packages/rapport/index.html">rapport</a></li>
+    <li><a href="../packages/reporttools/index.html">reporttools</a></li>
+    <li><a href="../packages/rms/index.html">rms</a> (core)</li>
+    <li><a href="../packages/rtf/index.html">rtf</a></li>
+    <li><a href="../packages/sparktex/index.html">sparktex</a></li>
+    <li><a href="../packages/SRPM/index.html">SRPM</a></li>
+    <li><a href="../packages/stargazer/index.html">stargazer</a></li>
+    <li><a href="../packages/suRtex/index.html">suRtex</a></li>
+    <li><a href="../packages/svSweave/index.html">svSweave</a></li>
+    <li><a href="../packages/SweaveListingUtils/index.html">SweaveListingUtils</a></li>
+    <li><a href="../packages/table1xls/index.html">table1xls</a></li>
+    <li><a href="../packages/tables/index.html">tables</a></li>
+    <li><a href="../packages/TeachingSampling/index.html">TeachingSampling</a></li>
+    <li><a href="../packages/texreg/index.html">texreg</a></li>
+    <li><a href="../packages/tikzDevice/index.html">tikzDevice</a></li>
+    <li><a href="../packages/tth/index.html">tth</a></li>
+    <li><a href="../packages/xtable/index.html">xtable</a> (core)</li>
+  </ul>
+
+  <h3>Related links:</h3>
+  <ul>
+    <li><a href="http://www.statistik.uni-muenchen.de/~leisch/Sweave/">
+  The Sweave Homepage
+</a></li>
+    <li><a href="http://yihui.name/knitr/">
+  knitr: Elegant, flexible and fast dynamic report generation with R
+</a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/weaver.html" target="_top"><span class="BioC">weaver</span></a></li>
+    <li><a href="http://en.wikipedia.org/wiki/Literate_Programming">
+  Wikipedia: Literate Programming
+</a></li>
+    <li><a href="http://biostat.mc.vanderbilt.edu/wiki/Main/StatReport">
+  Harrell: Site for Reproducible Research
+</a></li>
+    <li><a href="http://www.econ.uiuc.edu/~roger/research/repro/">
+  Koenker, Zeileis: On Reproducible Econometric Research
+</a></li>
+    <li><a href="http://biostatistics.oxfordjournals.org/cgi/reprint/10/3/405">
+  Peng: Reproducible Research and Biostatistics
+</a></li>
+    <li><a href="http://www.bepress.com/uwbiostat/paper194/">
+  Rossini, Leisch: Literate Statistical Practice
+</a></li>
+    <li><a href="http://www.ndns.nl/static/files/sls/presentations/Baggerly-AnnalsAppliedStats.pdf">
+  Baggerly, Coombes: Deriving Chemosensitivity from Cell Lines: Forensic Bioinformatics and Reproducible Research in High-Throughput Biology
+</a></li>
+    <li><a href="http://www.R-project.org/doc/Rnews/Rnews_2002-3.pdf">
+  Leisch: Sweave, Part I: Mixing R and LaTeX
+</a></li>
+    <li><a href="http://www.R-project.org/doc/Rnews/Rnews_2003-2.pdf">
+  Leisch: Sweave, Part II: Package Vignettes
+</a></li>
+    <li><a href="http://www.R-project.org/doc/Rnews/Rnews_2005-1.pdf">
+  Betebenner: Using Control Structures with Sweave
+</a></li>
+    <li><a href="http://www.R-project.org/doc/Rnews/Rnews_2006-2.pdf">
+  Garbade, Burgard: Using R/Sweave in Everyday Clinical Practice
+</a></li>
+    <li><a href="http://www.R-project.org/doc/Rnews/Rnews_2006-4.pdf">
+  Kuhn: Sweave and the Open Document Format - The odfWeave Package
+</a></li>
+    <li><a href="http://www.R-project.org/doc/Rnews/Rnews_2008-1.pdf">
+  Gorjanc: Using Sweave with LyX
+</a></li>
+    <li><a href="http://www.R-project.org/doc/Rnews/Rnews_2003-3.pdf">
+  Lecoutre: The R2HTML Package
+</a></li>
+  </ul>
+
+</body>
+</html>
+ 

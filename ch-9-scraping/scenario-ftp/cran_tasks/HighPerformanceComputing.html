@@ -1,0 +1,993 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CRAN Task View: High-Performance and Parallel Computing with R</title>
+  <link rel=stylesheet type="text/css" href="../CRAN_web.css" />
+</head>
+
+<body>
+  <h2>CRAN Task View: High-Performance and Parallel Computing with R</h2>
+  <table summary="HighPerformanceComputing task view information">
+    <tr><td valign="top"><b>Maintainer:</b></td><td>Dirk Eddelbuettel</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x44;&#x69;&#x72;&#x6b;&#x2e;&#x45;&#x64;&#x64;&#x65;&#x6c;&#x62;&#x75;&#x65;&#x74;&#x74;&#x65;&#x6c;&#x20;&#x61;&#x74;&#x20;&#x52;&#x2d;&#x70;&#x72;&#x6f;&#x6a;&#x65;&#x63;&#x74;&#x2e;&#x6f;&#x72;&#x67;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2013-12-18</td></tr>
+  </table>
+
+    <div>
+      <p>
+        This CRAN task view contains a list of packages, grouped by topic, that
+      are useful for high-performance computing (HPC) with R.  In this context, we
+      are defining 'high-performance computing' rather loosely as just about anything
+      related to pushing R a little further: using compiled code,
+      parallel computing (in both explicit and implicit modes), working with
+      large objects as well as profiling.
+      </p>
+      <p>
+        Unless otherwise mentioned, all packages presented with hyperlinks 
+      are available from CRAN, the
+      Comprehensive R Archive Network.
+      </p>
+      <p>
+        Several of the areas discussed in this Task View are undergoing rapid
+      change. Please send suggestions for additions and extensions for this task
+      view to the
+        <a href="mailto:Dirk.Eddelbuettel@R-project.org">
+          task view maintainer
+        </a>.
+      </p>
+      <p>
+        Suggestions and corrections by Achim Zeileis, Markus
+      Schmidberger, Martin Morgan, Max Kuhn, Tomas Radivoyevitch,
+      Jochen Knaus, Tobias Verbeke, Hao Yu, David Rosenberg, Marco
+      Enea, Ivo Welch, Jay Emerson, Wei-Chen Chen, Bill Cleveland, 
+      Ross Boylan, and Ramon Diaz-Uriarte
+      (as well as others I may have forgotten to add here) are gratefully acknowledged.
+      </p>
+      <p>
+        <strong>
+          Direct support in R started with release 2.14.0
+        </strong>
+        which includes a new package
+        <strong>
+          parallel
+        </strong>
+        incorporating 
+      (slightly revised) copies of packages
+<a href="../packages/multicore/index.html">multicore</a>
+        and
+<a href="../packages/snow/index.html">snow</a>.  Some types of clusters are not handled directly by 
+      the base package 'parallel'. However, and as explained in the package vignette, the parts of
+      parallel which provide
+<a href="../packages/snow/index.html">snow</a>
+        -like functions will
+      accept
+<a href="../packages/snow/index.html">snow</a>
+        clusters including MPI clusters.
+<br/>
+        The
+        <strong>
+          parallel
+        </strong>
+        package also contains support for multiple 
+      RNG streams following L'Ecuyer et al (2002), with support for 
+      both mclapply and snow clusters.
+<br/>
+        The version released for R 2.14.0 contains base functionality:
+      higher-level convenience functions are planned for later R releases.
+      </p>
+      <p>
+        <strong>
+          Parallel computing: Explicit parallelism
+        </strong>
+      </p>
+      <ul>
+        <li>
+          Several packages provide the communications layer required for parallel
+	computing. The first package in this area was
+	rpvm by Li and Rossini which uses the PVM (Parallel Virtual
+	Machine) standard and libraries. rpvm is no longer actively
+	maintained, but available from its CRAN archive directory.
+        </li>
+        <li>
+          In recent years, the
+        alternative MPI (Message Passing Interface) standard has become the
+        de facto standard in parallel computing. It is supported in R via
+  	the
+<a href="../packages/Rmpi/index.html">Rmpi</a>
+          by Yu.
+<a href="../packages/Rmpi/index.html">Rmpi</a>
+          package is mature yet actively
+	maintained and offers access to numerous functions from the MPI
+	API, as well as a number of R-specific extensions.
+<a href="../packages/Rmpi/index.html">Rmpi</a>
+          can be used with the LAM/MPI, MPICH / MPICH2, Open MPI, and Deino MPI 
+        implementations. It should be noted that LAM/MPI is now in
+        maintenance mode, and new development is focussed on Open MPI.
+        </li>
+        <li>
+          The
+<a href="../packages/pbdMPI/index.html">pbdMPI</a>
+          package provides S4 classes to directly interface 
+        MPI in order to support the Single Program/Multiple Data (SPMD) parallel 
+        programming style which is particularly useful for batch parallel execution.
+	The
+<a href="../packages/pbdSLAP/index.html">pbdSLAP</a>
+          builds on this and uses scalable linear algebra 
+	packages (namely BLACS, PBLAS, and ScaLAPACK) in double precision based 
+	on ScaLAPACK version 2.0.2. 
+	The
+<a href="../packages/pbdBASE/index.html">pbdBASE</a>
+          builds on these and provides the core classes
+        and methods for distributed data types upon which the
+<a href="../packages/pbdDMAT/index.html">pbdDMAT</a>
+          builds to provide distributed dense matrices for "Programming 
+	with Big Data". The
+<a href="../packages/pbdNCDF4/index.html">pbdNCDF4</a>
+          package permits
+	multiple processes to write to the same file (without manual
+	synchronization) and supports terabyte-sized files.
+	The
+<a href="../packages/pbdDEMO/index.html">pbdDEMO</a>
+          package provides examples for these
+	packages, and a detailed vignette.
+        The
+<a href="../packages/pbdPROF/index.html">pbdPROF</a>
+          package profiles MPI communication SPMD code
+        via MPI profiling libraries, such as fpmpi, mpiP, or TAU.
+        </li>
+        <li>
+          An alternative is provided by the
+<a href="../packages/nws/index.html">nws</a>
+          (NetWorkSpaces)
+        packages from REvolution Computing.  It is the successor to the
+	earlier LindaSpaces approach to parallel computing, and is
+	implemented on top of the Twisted networking toolkit for Python.
+        </li>
+        <li>
+          The
+<a href="../packages/snow/index.html">snow</a>
+          (Simple Network of Workstations) package by
+        Tierney et al. can use PVM, MPI, NWS as well as direct networking
+        sockets. It provides an abstraction layer by hiding the
+	communications details. The
+<a href="../packages/snowFT/index.html">snowFT</a>
+          package provides 
+        fault-tolerance extensions to
+<a href="../packages/snow/index.html">snow</a>.
+        </li>
+        <li>
+          The
+<a href="../packages/snowfall/index.html">snowfall</a>
+          package by Knaus provides a more recent
+	alternative to
+<a href="../packages/snow/index.html">snow</a>. Functions can be used in sequential or
+	parallel mode.
+        </li>
+        <li>
+          The
+<a href="../packages/biopara/index.html">biopara</a>
+          package by Lazar and Schoenfeld offers socket-based parallel
+        execution with some support for load-balancing and fault-tolerance.
+        </li>
+        <li>
+          The
+<a href="../packages/foreach/index.html">foreach</a>
+          package allows general iteration over
+	elements in a collection without the use of an explicit loop
+	counter. Using foreach without side effects also facilitates
+	executing the loop in parallel which is possible via
+	the
+<a href="../packages/doMC/index.html">doMC</a>
+          (using
+<a href="../packages/multicore/index.html">multicore</a>
+          on single
+	workstations),
+<a href="../packages/doSNOW/index.html">doSNOW</a>
+          (using
+<a href="../packages/snow/index.html">snow</a>, see
+	above),
+<a href="../packages/doMPI/index.html">doMPI</a>
+          (using
+<a href="../packages/Rmpi/index.html">Rmpi</a>) packages and
+<a href="../packages/doRedis/index.html">doRedis</a>
+          (using
+<a href="../packages/rredis/index.html">rredis</a>) packages.
+        </li>
+        <li>
+          The
+<a href="../packages/bigrf/index.html">bigrf</a>
+          package provides a Random Forests
+        implementation with support for parellel execution and large
+        memory.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Parallel computing: Implicit parallelism
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The pnmath package by Tierney 
+	(
+          <a href="http://www.stat.uiowa.edu/~luke/R/experimental/">
+            link
+          </a>)
+	uses the Open MP parallel processing directives of recent compilers
+        (such gcc 4.2 or later) for implicit parallelism by replacing a
+        number of internal R functions with replacements that can make use of
+        multiple cores --- without any explicit requests from the user.  The
+        alternate pnmath0 package offers the same functionality using
+        Pthreads for environments in which the newer compilers are not
+        available.  Similar functionality is expected to become integrated
+        into R 'eventually'.
+        </li>
+        <li>
+          The romp package by Jamitzky was presented at useR! 2008
+        (
+          <a href="http://www.statistik.tu-dortmund.de/useR-2008/slides/Jamitzky.pdf">
+            slides
+          </a>)
+        and offers another interface to Open MP using Fortran. The code is still
+	pre-alpha and available from the Google Code project
+<a href="http://code.google.com/p/romp/"><span class="Gcode">romp</span></a>.
+	An R-Forge project
+<a href="http://R-Forge.R-project.org/projects/romp/"><span class="Rforge">romp</span></a>
+          was initiated but there is no package, yet.
+        </li>
+        <li>
+          The
+<a href="../packages/fork/index.html">fork</a>
+          package by Warnes provides R-equivalents to low-level Unix system functions
+        like fork, signal, wait, kill and exit in order to spawn
+        sub-processes for parallel execution.
+        </li>
+        <li>
+          The
+<a href="../packages/multicore/index.html">multicore</a>
+          package by Urbanek provides a way of
+        running parallel computations in R on machines with multiple cores or
+        CPUs by making use of operating system
+        facilities.
+        </li>
+        <li>
+          The R/parallel package by Vera, Jansen and Suppi offers a C++-based master-slave dispatch
+        mechanism for parallel execution (
+          <a href="http://www.rparallel.org/">
+            link
+          </a>)
+        </li>
+        <li>
+          The
+<a href="../packages/Rdsm/index.html">Rdsm</a>
+          package provides a threads-like parallel
+	computing environment, both on multicore machine and across the network
+	by providing facilities inspired from distributed shared memory
+	programming.
+        </li>
+        <li>
+          The
+<a href="../packages/mchof/index.html">mchof</a>
+          package provides convenient, consistent
+        parallel implementations of several commonly used higher-order
+        functions found in base R such as Filter or Reduce.
+        </li>
+        <li>
+          The
+<a href="../packages/RhpcBLASctl/index.html">RhpcBLASctl</a>
+          detects the number of available
+        BLAS cores, and permits explicit selection of the number of
+        cores.
+        </li>
+        <li>
+          The
+<a href="../packages/Rhpc/index.html">Rhpc</a>
+          permits
+<tt>*apply()</tt>
+          style dispatch via MPI.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Parallel computing: Grid computing
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The multiR package by Grose was presented at useR! 2008 
+	but has not been released. It may offer a snow-style framework on a grid computing platform.
+        </li>
+        <li>
+          The
+<a href="http://R-Forge.R-project.org/projects/biocep-distrib/"><span class="Rforge">biocep-distrib</span></a>
+          project by Chine offers a Java-based framework for local, Grid,
+        or Cloud computing. It is under active development.
+        </li>
+        <li>
+          The
+<a href="../packages/xgrid/index.html">xgrid</a>
+          package provides functions to use Apple Xgrid clusters from within R.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Parallel computing: Hadoop
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The RHIPE package, started by Saptarshi Guha and now developed by a core team via GitHub,   
+        provides an interface between R and Hadoop for analysis of large complex data wholly from 
+	within R using the Divide and Recombine approach to big data. (
+          <a href="http://www.datadr.org">
+            link
+          </a>)
+        </li>
+        <li>
+          The rmr package by Revolution Analytics also provides an interface between R and Hadoop
+	for a Map/Reduce programming framework. (
+          <a href="https://github.com/RevolutionAnalytics/RHadoop/wiki/rmr">
+            link
+          </a>)
+        </li>
+        <li>
+          A related package, segue package by Long, permits easy execution of embarassingly parallel task on Elastic Map Reduce (EMR) at Amazon.
+	(
+          <a href="http://code.google.com/p/segue/">
+            link
+          </a>)
+        </li>
+        <li>
+          The
+<a href="../packages/RProtoBuf/index.html">RProtoBuf</a>
+          package provides an interface to
+        Google's language-neutral, platform-neutral, extensible
+        mechanism for serializing structured data.  This package can
+        be used in R code to read data streams from other systems in a
+        distributed MapReduce setting where data is serialized and
+        passed back and forth between tasks.
+        </li>
+        <li>
+          The
+<a href="../packages/HistogramTools/index.html">HistogramTools</a>
+          package provides a number of
+        routines useful for the construction, aggregation,
+        manipulation, and plotting of large numbers of Histograms such
+        as those created by Mappers in a MapReduce application.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Parallel computing: Random numbers
+        </strong>
+      </p>
+      <ul>
+        <li>
+          Random-number generators for parallel computing are available via
+        the
+<a href="../packages/rsprng/index.html">rsprng</a>
+          package by Li, and the
+<a href="../packages/rlecuyer/index.html">rlecuyer</a>
+          package by Sevcikova and Rossini.
+        </li>
+        <li>
+          The
+<a href="../packages/doRNG/index.html">doRNG</a>
+          package provides functions to perform
+        reproducible parallel foreach loops, using independent random
+        streams as generated by the package rstream, suitable for the
+        different foreach backends.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Parallel computing: Resource managers and batch schedulers
+        </strong>
+      </p>
+      <ul>
+        <li>
+          Job-scheduling toolkits permit management of
+	parallel computing resources and tasks.  The slurm (Simple Linux
+        Utility for Resource Management) set of programs (written by a
+        consortium led by Lawrence Livermore Labs) works well with
+        MPI. (
+          <a href="https://slurm.schedmd.com/">
+            link
+          </a>)
+        </li>
+        <li>
+          The Condor toolkit (
+          <a href="http://www.cs.wisc.edu/condor/">
+            link
+          </a>) from 
+	the University of Wisconsin-Madison has been used with R as described
+	in this
+          <a href="http://www.r-project.org/doc/Rnews/Rnews_2005-2.pdf">
+            R
+        News article
+          </a>.
+        </li>
+        <li>
+          The sfCluster package by Knaus can be used with
+<a href="../packages/snowfall/index.html">snowfall</a>.
+	(
+          <a href="http://www.imbi.uni-freiburg.de/parallel/">
+            link
+          </a>) but is
+	currently limited to LAM/MPI.
+        </li>
+        <li>
+          The
+<a href="../packages/batch/index.html">batch</a>
+          package by Hoffmann can launch parallel computing
+        requests onto a cluster and gather results.
+        </li>
+        <li>
+          The
+<a href="../packages/BatchJobs/index.html">BatchJobs</a>
+          package provides Map, Reduce and
+	Filter variants to manage R jobs and their results on batch
+	computing systems like PBS/Torque, LSF and Sun Grid
+	Engine. Multicore and SSH systems are also supported. The
+<a href="../packages/BatchExperiments/index.html">BatchExperiments</a>
+          package extends it with an
+	abstraction layer for running statistical experiments.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Parallel computing: Applications
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/caret/index.html">caret</a>
+          package by Kuhn can use various frameworks
+	(MPI, NWS etc) to parallelized cross-validation and bootstrap characterizations of predictive models.
+        </li>
+        <li>
+          The
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/maanova.html"><span class="BioC">maanova</span></a>
+          package on Bioconductor by Wu can use
+<a href="../packages/snow/index.html">snow</a>
+          and
+<a href="../packages/Rmpi/index.html">Rmpi</a>
+          for the analysis of micro-array experiments.
+        </li>
+        <li>
+          The
+<a href="../packages/pvclust/index.html">pvclust</a>
+          package by Suzuki and Shimodaira can use
+<a href="../packages/snow/index.html">snow</a>
+          and
+<a href="../packages/Rmpi/index.html">Rmpi</a>
+          for hierarchical clustering via multiscale
+	bootstraps; and the
+<a href="../packages/scaleboot/index.html">scaleboot</a>
+          package by Shimodaira can
+	use
+<a href="../packages/pvclust/index.html">pvclust</a>,
+<a href="../packages/snow/index.html">snow</a>
+          and
+<a href="../packages/Rmpi/index.html">Rmpi</a>
+          for
+	computing approximately unbiased p-values via multiscale bootstraps.
+        </li>
+        <li>
+          The
+<a href="../packages/tm/index.html">tm</a>
+          package by Feinerer can use
+<a href="../packages/snow/index.html">snow</a>
+          and
+<a href="../packages/Rmpi/index.html">Rmpi</a>
+          for parallelized text mining.
+        </li>
+        <li>
+          The
+<a href="../packages/varSelRF/index.html">varSelRF</a>
+          package by Diaz-Uriarte can use
+<a href="../packages/snow/index.html">snow</a>
+          and
+<a href="../packages/Rmpi/index.html">Rmpi</a>
+          for parallelized use of variable selection via
+	random forests.
+        </li>
+        <li>
+          The
+<a href="../packages/bcp/index.html">bcp</a>
+          package by Erdman and Emerson for the Bayesian
+	analysis of change points can use
+<a href="../packages/foreach/index.html">foreach</a>
+          for parallelized operations.
+        </li>
+        <li>
+          The
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/multtest.html"><span class="BioC">multtest</span></a>
+          package by Pollard et al. on Bioconductor can
+	use
+<a href="../packages/snow/index.html">snow</a>,
+<a href="../packages/Rmpi/index.html">Rmpi</a>
+          or rpvm for
+	resampling-based testing of multiple hypothesis.
+        </li>
+        <li>
+          The
+<a href="../packages/GAMBoost/index.html">GAMBoost</a>
+          package by Binder for
+<tt>glm</tt>
+          and
+<tt>gam</tt>
+          model fitting via boosting using b-splines,
+	the
+<a href="../packages/Geneland/index.html">Geneland</a>
+          package by Estoup, Guillot and Santos for
+	structure detection from multilocus genetic data,
+	the
+<a href="../packages/Matching/index.html">Matching</a>
+          package by Sekhon for multivariate and propensity
+	score matching,
+	the
+<a href="../packages/STAR/index.html">STAR</a>
+          package by Pouzat for spike train analysis,
+	the
+<a href="../packages/bnlearn/index.html">bnlearn</a>
+          package by Scutari for bayesian network
+	structure learning,
+	the
+<a href="../packages/latentnet/index.html">latentnet</a>
+          package by Krivitsky and Handcock for latent
+	position and cluster models,
+	the
+<a href="../packages/lga/index.html">lga</a>
+          package by Harrington for linear grouping analysis,
+	the
+<a href="../packages/peperr/index.html">peperr</a>
+          package by Porzelius and Binder for parallised
+	estimation of prediction error,
+	the
+<a href="../packages/orloca/index.html">orloca</a>
+          package by Fernandez-Palacin and Munoz-Marquez
+	for operations research locational analysis,
+	the
+<a href="../packages/rgenoud/index.html">rgenoud</a>
+          package by Mebane and Sekhon for genetic
+	optimization using derivatives 
+	the
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/affyPara.html"><span class="BioC">affyPara</span></a>
+          package by Schmidberger, Vicedo and
+	Mansmann for parallel normalization of Affymetrix microarrays, 
+	and the
+<a href="http://www.Bioconductor.org/packages/release/bioc/html/puma.html"><span class="BioC">puma</span></a>
+          package by Pearson et al. which propagates
+	uncertainty into standard microarray analyses such as differential
+	expression
+	all can use
+<a href="../packages/snow/index.html">snow</a>
+          for parallelized operations using either
+	one of the MPI, PVM, NWS or socket protocols supported by
+<a href="../packages/snow/index.html">snow</a>.
+        </li>
+        <li>
+          The
+<a href="http://code.google.com/p/bugsparallel/"><span class="Gcode">bugsparallel</span></a>
+          package uses
+<a href="../packages/Rmpi/index.html">Rmpi</a>
+          for distributed
+          computing of multiple MCMC chains using WinBUGS.
+        </li>
+        <li>
+          The
+<a href="../packages/partDSA/index.html">partDSA</a>
+          package uses
+<a href="../packages/nws/index.html">nws</a>
+          for generating a
+          piecewise constant estimation list of increasingly complex
+          predictors based on an intensive and comprehensive search over the
+          entire covariate space.
+        </li>
+        <li>
+          The
+<a href="../packages/dclone/index.html">dclone</a>
+          package provides a global optimization
+	approach and a variant of simulated annealing which exploits Bayesian
+	MCMC tools to get MLE point estimates and standard errors using low
+	level functions for implementing maximum likelihood estimating
+	procedures for complex models using data cloning and Bayesian Markov
+	chain Monte Carlo methods with support for JAGS, WinBUGS and
+	OpenBUGS; parallel computing is supported via the
+<a href="../packages/snow/index.html">snow</a>
+          package.
+        </li>
+        <li>
+          The
+<a href="../packages/pmclust/index.html">pmclust</a>
+          package utilizes unsupervised model-based
+        clustering for high dimensional (ultra) large data. The package uses
+<a href="../packages/pbdMPI/index.html">pbdMPI</a>
+          to perform a parallel version of the EM algorithm for
+	finite mixture Gaussian models.
+        </li>
+        <li>
+          The
+<a href="../packages/harvestr/index.html">harvestr</a>
+          package provides helper functions
+        for (reproducible) simulations.
+        </li>
+        <li>
+          Nowadays, many packages can use the facilities offered by
+        the
+          <strong>
+            parallel
+          </strong>
+          (or
+<a href="../packages/multicore/index.html">multicore</a>) package. One example 
+        is
+<a href="../packages/pls/index.html">pls</a>
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Parallel computing: GPUs
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/gputools/index.html">gputools</a>
+          package by Buckner and Seligman
+        provides several common data-mining algorithms which are
+        implemented using a mixture of nVidia's CUDA langauge and
+        cublas library. Given a computer with an nVidia GPU these
+        functions may be substantially more efficient than native R
+        routines.  The
+<a href="../packages/rpud/index.html">rpud</a>
+          package provides an optimised
+        distance metric for NVidia-based GPUs.
+        </li>
+        <li>
+          The
+<a href="../packages/cudaBayesreg/index.html">cudaBayesreg</a>
+          package by da Silva implements
+        the
+<tt>rhierLinearModel</tt>
+          from the
+<a href="../packages/bayesm/index.html">bayesm</a>
+          package 
+	using nVidia's CUDA langauge and tools to provide high-performance
+        statistical analysis of fMRI voxels.
+        </li>
+        <li>
+          The rgpu package (see below for link) aims to speed up bioinformatics
+        analysis by using the GPU.
+        </li>
+        <li>
+          The
+<a href="../packages/magma/index.html">magma</a>
+          package provides an interface to the hybrid
+	GPU/CPU library Magma (see below for link).
+        </li>
+        <li>
+          The
+<a href="../packages/gcbd/index.html">gcbd</a>
+          package implements a benchmarking framework for
+	BLAS and GPUs (using
+<a href="../packages/gputools/index.html">gputools</a>).
+        </li>
+        <li>
+          The
+<a href="../packages/OpenCL/index.html">OpenCL</a>
+          package provides an interface from R to
+	OpenCL permitting hardware- and vendor neutral interfaces to
+	GPU programming.
+        </li>
+        <li>
+          The
+<a href="../packages/WideLM/index.html">WideLM</a>
+          package use CUDA (4.1 or greater) to fit
+        many 'skinny' regression models simultaneously from a single
+        data set.
+        </li>
+        <li>
+          The
+<a href="../packages/HiPLARM/index.html">HiPLARM</a>
+          package provide High-Performance Linear
+        Algebra for R using multi-core and/or GPU support using the
+        PLASMA / MAGMA libraries from UTK, CUDA, and accelerated BLAS.
+        </li>
+        <li>
+          The
+<a href="../packages/permGPU/index.html">permGPU</a>
+          package computes permutation resampling
+        inference in the context of RNA microarray studies on the GPU,
+        it uses CUDA (>= 4.5)
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Large memory and out-of-memory data
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/biglm/index.html">biglm</a>
+          package by Lumley uses incremental computations to
+        offer
+<tt>lm()</tt>
+          and
+<tt>glm()</tt>
+          functionality to 
+        data sets stored outside of R's main memory.
+        </li>
+        <li>
+          The
+<a href="../packages/ff/index.html">ff</a>
+          package by Adler et al. offers file-based access to data sets
+        that are too large to be loaded into memory, along with a number of
+        higher-level functions.
+        </li>
+        <li>
+          The
+<a href="../packages/bigmemory/index.html">bigmemory</a>
+          package by Kane and Emerson permits storing large objects such
+        as matrices in memory (as well as via files) and uses external
+        pointer objects to refer to them.  This permits transparent access
+        from R without bumping against R's internal memory limits.  Several R
+        processes on the same computer can also share big memory objects.
+        </li>
+        <li>
+          A large number of database packages, and database-alike packages
+        (such as
+<a href="../packages/sqldf/index.html">sqldf</a>
+          by Grothendieck and
+<a href="../packages/data.table/index.html">data.table</a>
+          by Dowle) are also of potential interest but not reviewed here.
+        </li>
+        <li>
+          The
+<a href="../packages/HadoopStreaming/index.html">HadoopStreaming</a>
+          package provides a framework for
+	writing map/reduce scripts for use in Hadoop Streaming; it also
+	facilitates operating on data in a streaming fashion which does not
+	require Hadoop.
+        </li>
+        <li>
+          The
+<a href="../packages/speedglm/index.html">speedglm</a>
+          package permits to fit (generalised) linear
+	models to large data.  For in-memory data sets, speedlm() or
+	speedglm() can be used along with update.speedlm() which can update
+	fitted models with new data. For out-of-memory data sets, shglm() is
+	available; it works in the presence of factors and can check for
+	singular matrices.
+        </li>
+        <li>
+          The
+<a href="../packages/biglars/index.html">biglars</a>
+          package by Seligman et al can use the
+<a href="../packages/ff/index.html">ff</a>
+          to support large-than-memory datasets for least-angle regression,
+	lasso and stepwise regression.
+        </li>
+        <li>
+          The
+<a href="../packages/bigrf/index.html">bigrf</a>
+          package provides a Random Forests
+        implementation with support for parellel execution and large
+        memory.
+        </li>
+        <li>
+          The
+<a href="../packages/MonetDB.R/index.html">MonetDB.R</a>
+          package allows R to access the MonetDB 
+         column-oriented, open source database system as a
+	 backend.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Easier interfaces for Compiled code
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/inline/index.html">inline</a>
+          package by Sklyar et al eases adding code in C,
+	C++ or Fortran to R. It takes care of the compilation, linking and
+	loading of embeded code segments that are stored as R strings.
+        </li>
+        <li>
+          The
+<a href="../packages/Rcpp/index.html">Rcpp</a>
+          package by Eddelbuettel and Francois offers a
+        number of C++ clases that makes transferring R objects to C++
+        functions (and back) easier, and the
+<a href="../packages/RInside/index.html">RInside</a>
+          package
+        by the same authors allows easy embedding of R itself into C++
+        applications for faster and more direct data transfer.
+        </li>
+        <li>
+          The
+<a href="../packages/rJava/index.html">rJava</a>
+          package by Urbanek provides a low-level
+	interface to Java similar to the
+<tt>.Call()</tt>
+          interface for C
+	and C++.
+        </li>
+      </ul>
+      <p>
+        <strong>
+          Profiling tools
+        </strong>
+      </p>
+      <ul>
+        <li>
+          The
+<a href="../packages/profr/index.html">profr</a>
+          package by Wickham can visualize output from
+	the
+<tt>Rprof</tt>
+          interface for profiling.
+        </li>
+        <li>
+          The
+<a href="../packages/proftools/index.html">proftools</a>
+          package by Tierney can also be used to analyse profiling output.
+        </li>
+      </ul>
+    </div>
+
+  <h3>CRAN packages:</h3>
+  <ul>
+    <li><a href="../packages/batch/index.html">batch</a></li>
+    <li><a href="../packages/BatchExperiments/index.html">BatchExperiments</a></li>
+    <li><a href="../packages/BatchJobs/index.html">BatchJobs</a></li>
+    <li><a href="../packages/bayesm/index.html">bayesm</a></li>
+    <li><a href="../packages/bcp/index.html">bcp</a></li>
+    <li><a href="../packages/biglars/index.html">biglars</a></li>
+    <li><a href="../packages/biglm/index.html">biglm</a></li>
+    <li><a href="../packages/bigmemory/index.html">bigmemory</a></li>
+    <li><a href="../packages/bigrf/index.html">bigrf</a></li>
+    <li><a href="../packages/biopara/index.html">biopara</a></li>
+    <li><a href="../packages/bnlearn/index.html">bnlearn</a></li>
+    <li><a href="../packages/caret/index.html">caret</a></li>
+    <li><a href="../packages/cudaBayesreg/index.html">cudaBayesreg</a></li>
+    <li><a href="../packages/data.table/index.html">data.table</a></li>
+    <li><a href="../packages/dclone/index.html">dclone</a></li>
+    <li><a href="../packages/doMC/index.html">doMC</a></li>
+    <li><a href="../packages/doMPI/index.html">doMPI</a></li>
+    <li><a href="../packages/doRedis/index.html">doRedis</a></li>
+    <li><a href="../packages/doRNG/index.html">doRNG</a></li>
+    <li><a href="../packages/doSNOW/index.html">doSNOW</a></li>
+    <li><a href="../packages/ff/index.html">ff</a></li>
+    <li><a href="../packages/foreach/index.html">foreach</a></li>
+    <li><a href="../packages/fork/index.html">fork</a></li>
+    <li><a href="../packages/GAMBoost/index.html">GAMBoost</a></li>
+    <li><a href="../packages/gcbd/index.html">gcbd</a></li>
+    <li><a href="../packages/Geneland/index.html">Geneland</a></li>
+    <li><a href="../packages/gputools/index.html">gputools</a></li>
+    <li><a href="../packages/HadoopStreaming/index.html">HadoopStreaming</a></li>
+    <li><a href="../packages/harvestr/index.html">harvestr</a></li>
+    <li><a href="../packages/HiPLARM/index.html">HiPLARM</a></li>
+    <li><a href="../packages/HistogramTools/index.html">HistogramTools</a></li>
+    <li><a href="../packages/inline/index.html">inline</a></li>
+    <li><a href="../packages/latentnet/index.html">latentnet</a></li>
+    <li><a href="../packages/lga/index.html">lga</a></li>
+    <li><a href="../packages/magma/index.html">magma</a></li>
+    <li><a href="../packages/Matching/index.html">Matching</a></li>
+    <li><a href="../packages/mchof/index.html">mchof</a></li>
+    <li><a href="../packages/MonetDB.R/index.html">MonetDB.R</a></li>
+    <li><a href="../packages/multicore/index.html">multicore</a></li>
+    <li><a href="../packages/nws/index.html">nws</a></li>
+    <li><a href="../packages/OpenCL/index.html">OpenCL</a></li>
+    <li><a href="../packages/orloca/index.html">orloca</a></li>
+    <li><a href="../packages/partDSA/index.html">partDSA</a></li>
+    <li><a href="../packages/pbdBASE/index.html">pbdBASE</a></li>
+    <li><a href="../packages/pbdDEMO/index.html">pbdDEMO</a></li>
+    <li><a href="../packages/pbdDMAT/index.html">pbdDMAT</a></li>
+    <li><a href="../packages/pbdMPI/index.html">pbdMPI</a></li>
+    <li><a href="../packages/pbdNCDF4/index.html">pbdNCDF4</a></li>
+    <li><a href="../packages/pbdPROF/index.html">pbdPROF</a></li>
+    <li><a href="../packages/pbdSLAP/index.html">pbdSLAP</a></li>
+    <li><a href="../packages/peperr/index.html">peperr</a></li>
+    <li><a href="../packages/permGPU/index.html">permGPU</a></li>
+    <li><a href="../packages/pls/index.html">pls</a></li>
+    <li><a href="../packages/pmclust/index.html">pmclust</a></li>
+    <li><a href="../packages/profr/index.html">profr</a></li>
+    <li><a href="../packages/proftools/index.html">proftools</a></li>
+    <li><a href="../packages/pvclust/index.html">pvclust</a></li>
+    <li><a href="../packages/Rcpp/index.html">Rcpp</a></li>
+    <li><a href="../packages/Rdsm/index.html">Rdsm</a></li>
+    <li><a href="../packages/rgenoud/index.html">rgenoud</a></li>
+    <li><a href="../packages/Rhpc/index.html">Rhpc</a></li>
+    <li><a href="../packages/RhpcBLASctl/index.html">RhpcBLASctl</a></li>
+    <li><a href="../packages/RInside/index.html">RInside</a></li>
+    <li><a href="../packages/rJava/index.html">rJava</a></li>
+    <li><a href="../packages/rlecuyer/index.html">rlecuyer</a></li>
+    <li><a href="../packages/Rmpi/index.html">Rmpi</a> (core)</li>
+    <li><a href="../packages/RProtoBuf/index.html">RProtoBuf</a></li>
+    <li><a href="../packages/rpud/index.html">rpud</a></li>
+    <li><a href="../packages/rredis/index.html">rredis</a></li>
+    <li><a href="../packages/rsprng/index.html">rsprng</a></li>
+    <li><a href="../packages/scaleboot/index.html">scaleboot</a></li>
+    <li><a href="../packages/snow/index.html">snow</a> (core)</li>
+    <li><a href="../packages/snowfall/index.html">snowfall</a></li>
+    <li><a href="../packages/snowFT/index.html">snowFT</a></li>
+    <li><a href="../packages/speedglm/index.html">speedglm</a></li>
+    <li><a href="../packages/sqldf/index.html">sqldf</a></li>
+    <li><a href="../packages/STAR/index.html">STAR</a></li>
+    <li><a href="../packages/tm/index.html">tm</a></li>
+    <li><a href="../packages/varSelRF/index.html">varSelRF</a></li>
+    <li><a href="../packages/WideLM/index.html">WideLM</a></li>
+    <li><a href="../packages/xgrid/index.html">xgrid</a></li>
+  </ul>
+
+  <h3>Related links:</h3>
+  <ul>
+    <li><a href="http://www.stat.uiowa.edu/~luke/classes/295-hpc/">
+  HPC computing notes by Luke Tierney for HPC class at University of Iowa
+</a></li>
+    <li><a href="https://stat.ethz.ch/mailman/listinfo/r-sig-hpc/">
+  Mailing List: R Special Interest Group High Performance Computing
+</a></li>
+    <li><a href="http://www.jstatsoft.org/v31/i01/">
+  Schmidberger, Morgan, Eddelbuettel, Yu, Tierney and Mansmann (2009) paper on 'State of the Art in Parallel Computing with R'
+</a></li>
+    <li><a href="http://www.stat.uiowa.edu/~luke/R/experimental/">
+  Luke Tierney's code directory for pnmath and pnmath0
+</a></li>
+    <li>R-Forge Project: <a href="http://R-Forge.R-project.org/projects/biocep-distrib/" target="_top"><span class="Rforge">biocep-distrib</span></a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/affyPara.html" target="_top"><span class="BioC">affyPara</span></a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/maanova.html" target="_top"><span class="BioC">maanova</span></a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/multtest.html" target="_top"><span class="BioC">multtest</span></a></li>
+    <li>Bioconductor Package: <a href="http://www.Bioconductor.org/packages/release/bioc/html/puma.html" target="_top"><span class="BioC">puma</span></a></li>
+    <li>Google Code Project: <a href="http://code.google.com/p/romp/" target="_top"><span class="Gcode">romp</span></a></li>
+    <li>Google Code Project: <a href="http://code.google.com/p/bugsparallel/" target="_top"><span class="Gcode">bugsparallel</span></a></li>
+    <li><a href="https://computing.llnl.gov/linux/slurm/">
+  Slurm project at Lawrence Livermore National Laboratory
+</a></li>
+    <li><a href="http://www.cs.wisc.edu/condor/">
+  Condor project at University of Wisconsin-Madison
+</a></li>
+    <li><a href="http://www.imbi.uni-freiburg.de/parallel/">
+  Parallel Computing in R with sfCluster/snowfall
+</a></li>
+    <li><a href="http://en.wikipedia.org/wiki/Message_Passing_Interface">
+  Wikipedia: Message Passing Interface (MPI)
+</a></li>
+    <li><a href="http://en.wikipedia.org/wiki/Parallel_Virtual_Machine">
+  Wikipedia: Parallel Virtual Machine (PVM)
+</a></li>
+    <li><a href="http://dirk.eddelbuettel.com/papers/ismNov2009introHPCwithR.pdf">
+  Slides from Introduction to High-Performance Computing with R tutorial help in Nov 2009 at the Institute for Statistical Mathematics, Tokyo, Japan
+</a></li>
+    <li><a href="https://gforge.nbic.nl/projects/rgpu/">
+  rgpu project at nbic.nl
+</a></li>
+    <li><a href="http://icl.cs.utk.edu/magma/">
+  Magma: Matrix Algebra on GPU and Multicore architectures
+</a></li>
+    <li><a href="http://shop.oreilly.com/product/0636920021421.do">
+  Parallel R: Data Analysis in the Distributed World"
+</a></li>
+    <li><a href="http://thirteen-01.stat.iastate.edu/snoweye/hpsc/">
+  High Performance Statistical Computing for Data Intensive Research
+</a></li>
+    <li><a href="http://heather.cs.ucdavis.edu/~matloff/rth.html">
+  Rth: Parallel R through Thrust
+</a></li>
+    <li><a href="http://r-pbd.org">
+  Programming with Big Data in R
+</a></li>
+    <li><a href="http://www.datadr.org">
+  RHIPE
+</a></li>
+  </ul>
+
+</body>
+</html>
+ 

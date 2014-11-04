@@ -1,0 +1,926 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CRAN Task View: Analysis of Spatial Data</title>
+  <link rel=stylesheet type="text/css" href="../CRAN_web.css" />
+</head>
+
+<body>
+  <h2>CRAN Task View: Analysis of Spatial Data</h2>
+  <table summary="Spatial task view information">
+    <tr><td valign="top"><b>Maintainer:</b></td><td>Roger Bivand</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x52;&#x6f;&#x67;&#x65;&#x72;&#x2e;&#x42;&#x69;&#x76;&#x61;&#x6e;&#x64;&#x20;&#x61;&#x74;&#x20;&#x6e;&#x68;&#x68;&#x2e;&#x6e;&#x6f;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2014-02-26</td></tr>
+  </table>
+
+    <div>
+      <p>
+        Base R includes many functions that can be used for reading,
+    visualising, and analysing spatial data. The focus in this view is on
+    "geographical" spatial data, where observations can be identified
+    with geographical locations, and where additional information about
+    these locations may be retrieved if the location is recorded with
+    care. Base R functions are complemented by contributed packages,
+    some of which are on CRAN, and others are still in development. One
+    active location is
+        <a target="_top" href="http://R-Forge.R-project.org/">
+          R-Forge
+        </a>, which lists "Spatial Data and Statistics" projects in its
+        <a target="_top" href="http://R-Forge.R-project.org/softwaremap/trove_list.php">
+          project tree
+        </a>. Information on R-spatial packages,
+    especially
+<a href="../packages/sp/index.html">sp</a>
+        will be posted
+    on the R-Forge rspatial project
+        <a target="_top" href="http://rspatial.R-Forge.R-project.org/">
+          website
+        </a>, including
+    a visualisation gallery.
+      </p>
+      <p>
+        The
+    contributed packages address two broad areas: moving spatial data
+    into and out of R, and analysing spatial data in R.
+      </p>
+      <p>
+        The
+        <a href="https://stat.ethz.ch/mailman/listinfo/R-SIG-Geo/">
+          R-SIG-Geo
+        </a>
+        mailing-list is a good place to begin for obtaining help and discussing
+    questions about both accessing data, and analysing it. The mailing list
+    is a good place to search for information about relevant courses, and a
+    list is hosted at the
+        <a href="http://geodacenter.asu.edu/projects/rsp">
+          GeoDaCenter
+        </a>.
+      </p>
+      <p>
+        The packages in this
+    view can be roughly structured into the following topics. If you think
+    that some package is missing from the list, please let me know. Please 
+    also visit and contribute to the
+        <a href="http://rwiki.sciviews.org/doku.php?id=tips:spatial-data">
+          spatial data handling
+        </a>
+        and
+        <a href="http://rwiki.sciviews.org/doku.php?id=tips:stats-spatial">
+          spatial statistics
+        </a>
+        pages on the R Wiki.
+      </p>
+      <ul>
+        <li>
+          <p>
+            <b>
+              Classes for spatial data
+            </b>: Because many of the
+      packages importing and using spatial data have had to include
+      objects of storing data and functions for visualising it,
+      an initiative is in progress to construct shared classes
+      and plotting functions for spatial data.
+      The
+<a href="../packages/sp/index.html">sp</a>
+            package is discussed in a note in
+            <a href="http://CRAN.R-project.org/doc/Rnews/Rnews_2005-2.pdf">
+              R
+      News
+            </a>.  Many other packages have become dependent on these
+      classes, including
+<a href="../packages/rgdal/index.html">rgdal</a>
+            and
+<a href="../packages/maptools/index.html">maptools</a>. 
+      Functions provided by
+<a href="../packages/vec2dtransf/index.html">vec2dtransf</a>
+            for applying affine 
+      and similarity transformations on vector spatial data (sp objects). 
+      The
+<a href="../packages/rgeos/index.html">rgeos</a>
+            package provides an interface to topology functions
+      for
+<a href="../packages/sp/index.html">sp</a>
+            objects using
+            <a href="http://trac.osgeo.org/geos/">
+              GEOS
+            </a>.
+<a href="../packages/rgeos/index.html">rgeos</a>
+            is now available for Mac OSX on CRAN.
+      The
+<a href="../packages/raster/index.html">raster</a>
+            package is a major extension of spatial data 
+      classes to virtualise access to large rasters, permitting large 
+      objects to be analysed, and extending the analytical tools available 
+      for both raster and vector data. Used with
+<a href="../packages/rasterVis/index.html">rasterVis</a>, it
+      can also provide enhanced visualisation and interaction. The
+<a href="../packages/spatial.tools/index.html">spatial.tools</a>
+            package contains spatial functions meant to 
+      enhance the core functionality of the
+<a href="../packages/raster/index.html">raster</a>
+            package, 
+      including a parallel processing engine for use with rasters.
+      The
+<a href="../packages/micromap/index.html">micromap</a>
+            package provides linked micromaps using
+      ggplot2.
+      The
+<a href="../packages/spacetime/index.html">spacetime</a>
+            package 
+      extends the shared classes defined in
+<a href="../packages/sp/index.html">sp</a>
+            for 
+      spatio-temporal data (see
+            <a href="http://www.jstatsoft.org/v51/i07">
+              Spatio-Temporal Data in R
+            </a>). The
+<a href="../packages/Grid2Polygons/index.html">Grid2Polygons</a>
+            converts a 
+      spatial object from class SpatialGridDataFrame to 
+      SpatialPolygonsDataFrame.
+          </p>
+          <p>
+            An
+      alternative approach to some of these issues is implemented in
+      the
+<a href="../packages/PBSmapping/index.html">PBSmapping</a>
+            package;
+<a href="../packages/PBSmodelling/index.html">PBSmodelling</a>
+            provides
+      modelling support. In addition,
+<a href="../packages/GEOmap/index.html">GEOmap</a>
+            provides mapping
+      facilities directed to meet the needs of geologists, and uses the
+<a href="../packages/geomapdata/index.html">geomapdata</a>
+            package.
+          </p>
+        </li>
+        <li>
+          <p>
+            <b>
+              Handling spatial data
+            </b>: A number of packages have
+      been written using sp classes. The
+<a href="../packages/raster/index.html">raster</a>
+            package 
+      introduces many GIS methods that now permit much to be done with 
+      spatial data without having to use GIS in addition to R. It may be
+      complemented by
+<a href="../packages/gdistance/index.html">gdistance</a>, which provided calculation
+      of distances and routes on geographic grids.
+<a href="../packages/geosphere/index.html">geosphere</a>
+            permits computations of distance and area 
+      to be carried out on spatial data in geographical coordinates. 
+      The
+<a href="../packages/spsurvey/index.html">spsurvey</a>
+            package provides a
+      range of sampling functions. The
+<a href="../packages/trip/index.html">trip</a>
+            package extends sp
+      classes to permit the accessing and manipulating of spatial data for
+      animal tracking. The
+<a href="../packages/hdeco/index.html">hdeco</a>
+            package provides hierarchical
+      decomposition of entropy for categorical map comparisons. The
+<a href="../packages/GeoXp/index.html">GeoXp</a>
+            package permits interactive graphical exploratory
+      spatial data analysis.
+<a href="../packages/spcosa/index.html">spcosa</a>
+            provides spatial coverage
+      sampling and random sampling from compact geographical strata.
+          </p>
+          <p>
+            The UScensus2000 suite of packages (<a href="../packages/UScensus2000blkgrp/index.html">UScensus2000blkgrp</a>,
+<a href="../packages/UScensus2000cdp/index.html">UScensus2000cdp</a>,
+<a href="../packages/UScensus2000tract/index.html">UScensus2000tract</a>) makes the
+      use of data from the 2000 US Census more convenient. An important
+      data set, Guerry's "Moral Statistics of France", has been made
+      available in the
+<a href="../packages/Guerry/index.html">Guerry</a>
+            package, which provides data
+      and maps and examples designed to contribute to the integration
+      of multivariate and spatial analysis. 
+      The
+<a href="../packages/marmap/index.html">marmap</a>
+            package is designed for downloading, plotting
+      and manipulating bathymetric and topographic data in R.
+<a href="../packages/marmap/index.html">marmap</a>
+            can query the ETOPO1 bathymetry and topography database hosted by the
+      NOAA, use simple latitude-longitude-depth data in ascii format, and take
+      advantage of the advanced plotting tools available in R to build
+      publication-quality bathymetric maps (see the
+            <a href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0073051">
+              PLOS
+            </a>
+            paper). Modern country boundaries are
+      provided at 2 resolutions by
+<a href="../packages/rworldmap/index.html">rworldmap</a>
+            along with
+      functions to join and map tabular data referenced by country
+      names or codes. Chloropleth and bubble maps are supported and general
+      functions to work on user supplied maps (see
+            <a href="http://journal.r-project.org/archive/2011-1/RJournal_2011-1_South.pdf">
+              A New R package for Mapping Global Data
+            </a>. Higher resolution country
+      borders are available from the linked package
+<a href="../packages/rworldxtra/index.html">rworldxtra</a>.
+      Historical country boundaries (1946-2012) can be obtained from the
+<a href="../packages/cshapes/index.html">cshapes</a>
+            package along with functions for calculating
+      distance matrices (see
+            <a href="http://journal.r-project.org/archive/2010-1/RJournal_2010-1_Weidmann+Skrede~Gleditsch.pdf">
+              Mapping and Measuring Country Shapes
+            </a>).
+          </p>
+          <p>
+            The
+<a href="../packages/landsat/index.html">landsat</a>
+            package with accompanying
+            <a href="http://www.jstatsoft.org/v43/i04">
+              JSS paper
+            </a>
+            provides
+      tools for exploring and developing correction tools for remote
+      sensing data.
+<a href="../packages/taRifx/index.html">taRifx</a>
+            is a collection of utility and 
+      convenience functions, and some interesting spatial functions.
+          </p>
+        </li>
+        <li>
+          <p>
+            <b>
+              Reading and writing spatial data -
+<a href="../packages/rgdal/index.html">rgdal</a>
+            </b>:
+      Maps may be
+      vector-based or raster-based. The
+<a href="../packages/rgdal/index.html">rgdal</a>
+            package provides
+      bindings to
+            <a href="http://www.gdal.org/">
+              GDAL
+            </a>
+            -supported raster
+      formats and
+            <a href="http://www.gdal.org/ogr/">
+              OGR
+            </a>
+            -supported
+      vector formats. It contains functions to write raster
+      files in supported formats. The package also provides
+            <a href="http://trac.osgeo.org/proj/">
+              PROJ.4
+            </a>
+            projection
+      support for vector objects 
+      (
+            <a href="http://spatialreference.org">
+              this site
+            </a>
+            provides 
+      searchable online PROJ.4 representations of projections). 
+      The Windows and Mac OSX CRAN binaries of
+<a href="../packages/rgdal/index.html">rgdal</a>
+            include subsets of possible data source drivers; if others
+      are needed, use other conversion utilities, or install from source
+      against a version of GDAL with the required drivers.
+          </p>
+        </li>
+        <li>
+          <p>
+            <b>
+              Reading and writing spatial data - other packages
+            </b>:
+      There are a
+      number of other packages for accessing vector data on CRAN:
+<a href="../packages/maps/index.html">maps</a>
+            (with
+<a href="../packages/mapdata/index.html">mapdata</a>
+            and
+<a href="../packages/mapproj/index.html">mapproj</a>)
+      provides access to the same kinds of geographical databases as S -
+<a href="../packages/RArcInfo/index.html">RArcInfo</a>
+            allows ArcInfo v.7 binary files and *.e00
+      files to be read, and
+<a href="../packages/maptools/index.html">maptools</a>
+            and
+<a href="../packages/shapefiles/index.html">shapefiles</a>
+            read and write ArcGIS/ArcView shapefiles; for NetCDF files,
+<a href="../packages/ncdf/index.html">ncdf</a>
+            may be used. The
+<a href="../packages/maptools/index.html">maptools</a>
+            package also provides helper functions for writing map polygon
+      files to be read by WinBUGS, Mondrian, and the tmap command
+      in Stata. It also provides interface functions between
+<a href="../packages/PBSmapping/index.html">PBSmapping</a>
+            and
+<a href="../packages/spatstat/index.html">spatstat</a>
+            and sp classes,
+      in addition to
+<a href="../packages/maps/index.html">maps</a>
+            databases and sp classes. There is
+      also an interface to GSHHS shoreline databases. 
+      For visualisation, the colour palettes provided in
+      the
+<a href="../packages/RColorBrewer/index.html">RColorBrewer</a>
+            package are very useful, and may
+      be modified or extended using the
+<tt>colorRampPalette</tt>
+            function provided with R. The
+<a href="../packages/classInt/index.html">classInt</a>
+            package provides
+      functions for choosing class intervals for thematic cartography.
+      The
+<a href="../packages/gmt/index.html">gmt</a>
+            package gives a simple interface between GMT
+      map-making software and R.
+<a href="../packages/geonames/index.html">geonames</a>
+            is an interface to 
+      the
+            <a href="www.geonames.org">
+              www.geonames.org
+            </a>
+            service. If the
+      user wishes to place a map backdrop behind other displays, the the
+<a href="../packages/RgoogleMaps/index.html">RgoogleMaps</a>
+            package for accessing 
+      Google Maps(TM) may be useful.
+<a href="../packages/ggmap/index.html">ggmap</a>
+            may be used for 
+      spatial visualisation with Google Maps and OpenStreetMap.
+      The
+<a href="../packages/plotGoogleMaps/index.html">plotGoogleMaps</a>
+            package provides methods for the 
+      visualisation of spatial and spatio-temporal objects in Google Maps in
+      a web browser.
+<a href="../packages/plotKML/index.html">plotKML</a>
+            is a package providing methods for
+      the visualisation of spatial and spatio-temporal objects in Google
+      Earth. A further option is
+<a href="../packages/leafletR/index.html">leafletR</a>, which provides basic
+      web-mapping functionality to combine vector data files and online
+      map tiles from different sources.
+<a href="../packages/OpenStreetMap/index.html">OpenStreetMap</a>
+            gives access to open street map raster images, 
+      and
+<a href="../packages/osmar/index.html">osmar</a>
+            provides infrastructure to access OpenStreetMap 
+      data from different sources, to work with the data in common R manner, 
+      and to convert data into available infrastructure provided by 
+      existing R packages.
+<a href="../packages/RSurvey/index.html">RSurvey</a>
+            may be used as a processing program for spatially
+      distributed data, and is capable of error corrections and data
+      visualisation.
+          </p>
+          <p>
+            Integration with version 6.* and 7 (devel) of the leading open source
+      GIS, GRASS, is provided in CRAN package
+<a href="../packages/spgrass6/index.html">spgrass6</a>, using
+<a href="../packages/rgdal/index.html">rgdal</a>
+            for exchanging data.
+<a href="../packages/RPyGeo/index.html">RPyGeo</a>
+            is a wrapper
+      for Python access to the ArcGIS GeoProcessor, and
+<a href="../packages/RSAGA/index.html">RSAGA</a>
+            is a similar shell-based wrapper for SAGA commands.
+          </p>
+        </li>
+        <li>
+          <p>
+            <b>
+              Point pattern analysis
+            </b>: The
+<a href="../packages/spatial/index.html">spatial</a>
+            package is a recommended package shipped with base R, and contains
+      several core functions, including an implementation of Khat
+      by its author, Prof. Ripley. In addition,
+<a href="../packages/spatstat/index.html">spatstat</a>
+            allows freedom in defining the region(s) of interest, and makes
+      extensions to marked processes and spatial covariates. Its
+      strengths are model-fitting and simulation, and it has a useful
+            <a href="http://www.spatstat.org/">
+              homepage
+            </a>. It is the only
+      package that will enable the user to fit inhomogeneous point process
+      models with interpoint interactions.
+<a href="../packages/MarkedPointProcess/index.html">MarkedPointProcess</a>
+            is another contemporary point pattern package. 
+      The
+<a href="../packages/spatgraphs/index.html">spatgraphs</a>
+            package provides graphs, graph visualisation and graph based
+      summaries to be used with spatial point pattern analysis. The
+<a href="../packages/splancs/index.html">splancs</a>
+            package also allows point data to be analysed
+      within a polygonal region of interest, and covers many methods,
+      including 2D kernel densities.
+          </p>
+          <p>
+<a href="../packages/ecespa/index.html">ecespa</a>
+            provides
+      wrappers, functions and data for spatial point pattern analysis,
+      used in the book on Spatial Ecology of the ECESPA/AEET. The
+      functions for binning points on grids in
+<a href="../packages/ash/index.html">ash</a>
+            may
+      also be of interest. The
+<a href="../packages/ads/index.html">ads</a>
+            package perform first-
+      and second-order multi-scale analyses derived from Ripley's
+      K-function. The
+<a href="../packages/aspace/index.html">aspace</a>
+            package is a collection of
+      functions for estimating centrographic statistcs and computational
+      geometries from spatial point patterns.
+<a href="../packages/spatialkernel/index.html">spatialkernel</a>
+            provides edge-corrected kernel density 
+      estimation and binary kernel
+      regression estimation for multivariate spatial point process data.
+<a href="../packages/DSpat/index.html">DSpat</a>
+            contains functions for spatial modelling
+      for distance sampling data, and
+<a href="../packages/spatialsegregation/index.html">spatialsegregation</a>
+            provides segregation measures for multitype spatial point 
+      patterns.
+<a href="../packages/GriegSmith/index.html">GriegSmith</a>
+            uses the Grieg-Smith method on 
+      2 dimensional spatial data. The
+<a href="../packages/dbmss/index.html">dbmss</a>
+            package allows 
+      simple computation of a full set of spatial statistic functions of 
+      distance, including classical ones (Ripley's K and others) and more 
+      recent ones used by spatial economists (Duranton and Overman's Kd, 
+      Marcon and Puech's M). It relies on spatstat for core 
+      calculation.
+<a href="../packages/latticeDensity/index.html">latticeDensity</a>
+            contains functions that compute
+      the lattice-based density estimator of Barry and McIntyre, which
+      accounts for point processes in two-dimensional regions with
+      irregular boundaries and holes.
+          </p>
+        </li>
+        <li>
+          <p>
+            <b>
+              Geostatistics
+            </b>: The
+<a href="../packages/gstat/index.html">gstat</a>
+            package
+      provides a wide range of functions for univariate and multivariate
+      geostatistics, also for larger datasets, while
+<a href="../packages/geoR/index.html">geoR</a>
+            and
+<a href="../packages/geoRglm/index.html">geoRglm</a>
+            contain functions for model-based
+      geostatistics. Variogram diagnostics may be carried out with
+<a href="../packages/vardiag/index.html">vardiag</a>. Automated interpolation using
+<a href="../packages/gstat/index.html">gstat</a>
+            is available in
+<a href="../packages/automap/index.html">automap</a>. This family of packages is
+      supplemented by
+<a href="../packages/intamap/index.html">intamap</a>
+            with procedures for automated
+      interpolation and
+<a href="../packages/psgp/index.html">psgp</a>, which implements projected
+      sparse Gaussian process kriging.  A similar wide range of
+      functions is to be found in the
+<a href="../packages/fields/index.html">fields</a>
+            package. The
+<a href="../packages/spatial/index.html">spatial</a>
+            package is shipped with base R, and contains
+      several core functions. The
+<a href="../packages/spBayes/index.html">spBayes</a>
+            package fits Gaussian
+      univariate and multivariate models with MCMC.
+<a href="../packages/ramps/index.html">ramps</a>
+            is a different Bayesian geostatistical modelling package.
+      The
+<a href="../packages/geospt/index.html">geospt</a>
+            package contains some geostatistical and radial
+      basis functions, including prediction and cross validation. Besides, 
+      it includes functions for the design of optimal spatial sampling 
+      networks based on geostatistical modelling.
+          </p>
+          <p>
+            The
+<a href="../packages/RandomFields/index.html">RandomFields</a>
+            package provides functions for
+      the simulation and analysis of random fields, and variogram
+      model descriptions can be passed between
+<a href="../packages/geoR/index.html">geoR</a>,
+<a href="../packages/gstat/index.html">gstat</a>
+            and this package.
+<a href="../packages/SpatialExtremes/index.html">SpatialExtremes</a>
+            proposes several approaches for spatial extremes modelling
+      using
+<a href="../packages/RandomFields/index.html">RandomFields</a>. In addition,
+<a href="../packages/CompRandFld/index.html">CompRandFld</a>,
+<a href="../packages/constrainedKriging/index.html">constrainedKriging</a>
+            and
+<a href="../packages/geospt/index.html">geospt</a>
+            provide 
+      alternative approaches to geostatistical modelling. The
+<a href="../packages/spTimer/index.html">spTimer</a>
+            package  is able to fit, spatially predict and 
+      temporally forecast large amounts of space-time data using [1] 
+      Bayesian Gaussian Process (GP) Models, [2] Bayesian Auto-Regressive 
+      (AR) Models, and [3] Bayesian Gaussian Predictive Processes (GPP) 
+      based AR Models. The
+<a href="../packages/rtop/index.html">rtop</a>
+            package provides functions for 
+      the geostatistical interpolation of data with irregular spatial 
+      support such as runoff related data or data from administrative 
+      units. The
+<a href="../packages/georob/index.html">georob</a>
+            package provides functions for fitting 
+      linear models with spatially correlated errors by robust and Gaussian 
+      Restricted Maximum Likelihood and for computing robust and customary 
+      point and block kriging predictions, along with utility functions for 
+      cross-validation and for unbiased back-transformation of kriging 
+      predictions of log-transformed data. The
+<a href="../packages/SpatialTools/index.html">SpatialTools</a>
+            package has an emphasis on kriging, and provides functions for 
+      prediction and simulation.
+          </p>
+          <p>
+            The
+<a href="../packages/sgeostat/index.html">sgeostat</a>
+            package
+      is also available. Within the same general topical area are
+      the
+<a href="../packages/deldir/index.html">deldir</a>
+            and
+<a href="../packages/tripack/index.html">tripack</a>
+            packages for
+      triangulation and the
+<a href="../packages/akima/index.html">akima</a>
+            package for spline
+      interpolation; the
+<a href="../packages/MBA/index.html">MBA</a>
+            package provides scattered
+      data interpolation with multilevel B-splines. In addition,
+      there are the
+<a href="../packages/spatialCovariance/index.html">spatialCovariance</a>
+            package, which
+      supports the computation of spatial covariance matrices
+      for data on rectangles, the
+<a href="../packages/regress/index.html">regress</a>
+            package
+      building in part on
+<a href="../packages/spatialCovariance/index.html">spatialCovariance</a>, and the
+<a href="../packages/tgp/index.html">tgp</a>
+            package. The
+<a href="../packages/Stem/index.html">Stem</a>
+            package provides
+      for the estimation of the parameters of a spatio-temporal
+      model using the EM algorithm, and the estimation of the
+      parameter standard errors using a spatio-temporal parametric
+      bootstrap.
+<a href="../packages/FieldSim/index.html">FieldSim</a>
+            is another random fields
+      simulations package. The
+<a href="../packages/SSN/index.html">SSN</a>
+            is for geostatistical 
+      modeling for data on stream networks, including models based on 
+      in-stream distance. Models are created using moving average 
+      constructions. Spatial linear models, including covariates, can be 
+      fit with ML or REML. Mapping and other graphical functions are 
+      included.
+          </p>
+        </li>
+        <li>
+          <p>
+            <b>
+              Disease mapping and areal data analysis
+            </b>:
+<a href="../packages/DCluster/index.html">DCluster</a>
+            is a package for the detection of
+      spatial clusters of diseases. It extends and  depends on the
+<a href="../packages/spdep/index.html">spdep</a>
+            package, which provides basic functions for
+      building neighbour lists and spatial weights, tests for spatial
+      autocorrelation for areal data like Moran's I, and functions for
+      fitting spatial regression models, such as SAR and CAR models. These
+      models assume that the spatial dependence can be described by known
+      weights. The
+<a href="../packages/SpatialEpi/index.html">SpatialEpi</a>
+            package provides implementations of
+      cluster detection and disease mapping functions, including Bayesian
+      cluster detection, and supports strata. Regionalisation of polygon
+      objects is provided by
+<a href="../packages/AMOEBA/index.html">AMOEBA</a>: a function to calculate
+      spatial clusters using the Getis-Ord local statistic. It searches
+      irregular clusters (ecotopes) on a map, and by
+<tt>skater</tt>
+            in
+<a href="../packages/spdep/index.html">spdep</a>. The
+<a href="../packages/seg/index.html">seg</a>
+            package provides functions
+      for measuring spatial segregation.
+      The
+<a href="../packages/spgwr/index.html">spgwr</a>
+            package contains an implementation of
+      geographically weighted regression methods for exploring possible
+      non-stationarity. The
+<a href="../packages/gwrr/index.html">gwrr</a>
+            package fits geographically
+      weighted regression (GWR) models and has tools to diagnose and 
+      remediate collinearity in the GWR models. Also fits geographically 
+      weighted ridge regression (GWRR) and geographically weighted lasso 
+      (GWL) models. The
+<a href="../packages/GWmodel/index.html">GWmodel</a>
+            package contains functions for 
+      computing geographically weighted models. The
+<a href="../packages/sparr/index.html">sparr</a>
+            package provides another
+      approach to relative risks. The
+<a href="../packages/CARBayes/index.html">CARBayes</a>
+            package 
+      implements Bayesian hierarchical spatial areal unit models. In 
+      such models the spatial correlation is modelled by a set of random 
+      effects, which are assigned a conditional autoregressive (CAR) prior 
+      distribution. Examples of the models included are the BYM model as 
+      well as a recently developed localised spatial smoothing model.
+      The
+<a href="../packages/glmmBUGS/index.html">glmmBUGS</a>
+            package is a helpful way of passing out spatial
+      models to WinBUGS.
+          </p>
+        </li>
+        <li>
+          <p>
+            <b>
+              Spatial regression
+            </b>:
+      The choice of function for spatial regression will depend on the 
+      support available. If the data are characterised by point support
+      and the spatial process is continuous, geostatistical methods may be 
+      used, or functions in the
+<a href="../packages/nlme/index.html">nlme</a>
+            package. If the support
+      is areal, and the spatial process is not being treated as continuous,
+      functions provided in the
+<a href="../packages/spdep/index.html">spdep</a>
+            package may be used.
+      This package can also be seen as providing spatial econometrics
+      functions, and, as noted above, provides basic functions for
+      building neighbour lists and spatial weights, tests for spatial
+      autocorrelation for areal data like Moran's I, and functions for
+      fitting spatial regression models. It provides the full range of
+      local indicators of spatial association, such as local Moran's I and
+      diagnostic tools for fitted linear models, including Lagrange
+      Multiplier tests. Spatial regression models that can be fitted using
+      maximum likelihood include spatial lag models, spatial error models,
+      and spatial Durbin models. For larger data sets, sparse matrix 
+      techniques can be used for maximum likelihood fits, while spatial two
+      stage least squares and generalised method of moments estimators are
+      an alternative. When using GMM,
+<a href="../packages/sphet/index.html">sphet</a>
+            can be used to 
+      accommodate both autocorrelation and heteroskedasticity. Spatial 
+      count regression is provided using custom MCMC
+      by
+<a href="../packages/spatcounts/index.html">spatcounts</a>. The
+<a href="../packages/McSpatial/index.html">McSpatial</a>
+            provides functions 
+      for locally weighted regression, semiparametric and conditionally 
+      parametric regression, fourier and cubic spline functions, GMM and 
+      linearized spatial logit and probit, k-density functions and 
+      counterfactuals, nonparametric quantile regression and conditional 
+      density functions, Machado-Mata decomposition for quantile 
+      regressions, spatial AR model, repeat sales models, and 
+      conditionally parametric logit and probit.
+      The
+<a href="../packages/splm/index.html">splm</a>
+            package provides methods for 
+      fitting spatial panel data by maximum likelihood and GM.
+<a href="../packages/spatialprobit/index.html">spatialprobit</a>
+            make possible Bayesian estimation of the 
+      spatial autoregressive probit model (SAR probit model).
+          </p>
+        </li>
+        <li>
+          <p>
+            <b>
+              Ecological analysis
+            </b>: There are many packages
+      for analysing ecological and environmental data. They include
+<a href="../packages/ade4/index.html">ade4</a>
+            for exploratory and Euclidean methods in the
+      environmental sciences,  the
+<a href="../packages/adehabitat/index.html">adehabitat</a>
+            family of packages 
+      for the analysis of habitat selection by animals
+      (<a href="../packages/adehabitatHR/index.html">adehabitatHR</a>,
+<a href="../packages/adehabitatHS/index.html">adehabitatHS</a>,
+<a href="../packages/adehabitatLT/index.html">adehabitatLT</a>, and
+<a href="../packages/adehabitatMA/index.html">adehabitatMA</a>),
+<a href="../packages/pastecs/index.html">pastecs</a>
+            for the
+      regulation, decomposition and analysis of space-time series,
+<a href="../packages/vegan/index.html">vegan</a>
+            for ordination methods and other useful
+      functions for community and vegetation ecologists, and many
+      other functions in other contributed packages. One such is
+<a href="../packages/tripEstimation/index.html">tripEstimation</a>, basing on the classes provided by
+<a href="../packages/trip/index.html">trip</a>.
+<a href="../packages/ncf/index.html">ncf</a>
+            has entered CRAN recently, and
+      provides a range of spatial nonparametric covariance functions.
+<a href="../packages/rangeMapper/index.html">rangeMapper</a>
+            is a package to manipulate species range
+      (extent-of-occurrence) maps, mainly tools for easy generation of
+      biodiversity (species richness) or life-history traits maps.
+<a href="../packages/ModelMap/index.html">ModelMap</a>
+            builds on other packages to create models
+      using underlying GIS data. The
+<a href="../packages/gstudio/index.html">gstudio</a>
+            package contains 
+      classes and functions for the spatial analysis of marker data to 
+      include structure statistics, analyses based upon allele frequencies, 
+      and Population Graphs network analysis of spatial conditional genetic 
+      covariance. This package interfaces with raster and sp objects 
+      directly. An off-CRAN package
+      -
+            <a href="http://www.leg.ufpr.br/Rcitrus/">
+              Rcitrus
+            </a>
+            - is for
+      the spatial analysis of plant disease incidence.
+      The
+<a href="../packages/Geneland/index.html">Geneland</a>
+            package uses
+<a href="../packages/fields/index.html">fields</a>
+            and
+<a href="../packages/RandomFields/index.html">RandomFields</a>
+            to make use of both geographic and genetic
+      informations to estimate the number of populations in a dataset and
+      delineate their spatial organisation. The
+<a href="../packages/ngspatial/index.html">ngspatial</a>
+            package 
+      provides tools for analyzing spatial data, especially non-Gaussian 
+      areal data. It supports the sparse spatial generalized linear mixed 
+      model of Hughes and Haran (2013) and the centered autologistic model 
+      of Caragea and Kaiser (2009).
+      The
+            <a href="Environmetrics.html">
+              Environmetrics
+            </a>
+            Task
+      View contains a much more complete survey of relevant functions
+      and packages.
+          </p>
+        </li>
+      </ul>
+    </div>
+
+  <h3>CRAN packages:</h3>
+  <ul>
+    <li><a href="../packages/ade4/index.html">ade4</a></li>
+    <li><a href="../packages/adehabitat/index.html">adehabitat</a></li>
+    <li><a href="../packages/adehabitatHR/index.html">adehabitatHR</a></li>
+    <li><a href="../packages/adehabitatHS/index.html">adehabitatHS</a></li>
+    <li><a href="../packages/adehabitatLT/index.html">adehabitatLT</a></li>
+    <li><a href="../packages/adehabitatMA/index.html">adehabitatMA</a></li>
+    <li><a href="../packages/ads/index.html">ads</a></li>
+    <li><a href="../packages/akima/index.html">akima</a></li>
+    <li><a href="../packages/AMOEBA/index.html">AMOEBA</a></li>
+    <li><a href="../packages/ash/index.html">ash</a></li>
+    <li><a href="../packages/aspace/index.html">aspace</a></li>
+    <li><a href="../packages/automap/index.html">automap</a></li>
+    <li><a href="../packages/CARBayes/index.html">CARBayes</a></li>
+    <li><a href="../packages/classInt/index.html">classInt</a> (core)</li>
+    <li><a href="../packages/CompRandFld/index.html">CompRandFld</a></li>
+    <li><a href="../packages/constrainedKriging/index.html">constrainedKriging</a></li>
+    <li><a href="../packages/cshapes/index.html">cshapes</a></li>
+    <li><a href="../packages/dbmss/index.html">dbmss</a></li>
+    <li><a href="../packages/DCluster/index.html">DCluster</a> (core)</li>
+    <li><a href="../packages/deldir/index.html">deldir</a> (core)</li>
+    <li><a href="../packages/DSpat/index.html">DSpat</a></li>
+    <li><a href="../packages/ecespa/index.html">ecespa</a></li>
+    <li><a href="../packages/fields/index.html">fields</a></li>
+    <li><a href="../packages/FieldSim/index.html">FieldSim</a></li>
+    <li><a href="../packages/gdistance/index.html">gdistance</a></li>
+    <li><a href="../packages/Geneland/index.html">Geneland</a></li>
+    <li><a href="../packages/GEOmap/index.html">GEOmap</a></li>
+    <li><a href="../packages/geomapdata/index.html">geomapdata</a></li>
+    <li><a href="../packages/geonames/index.html">geonames</a></li>
+    <li><a href="../packages/geoR/index.html">geoR</a> (core)</li>
+    <li><a href="../packages/geoRglm/index.html">geoRglm</a></li>
+    <li><a href="../packages/georob/index.html">georob</a></li>
+    <li><a href="../packages/geosphere/index.html">geosphere</a></li>
+    <li><a href="../packages/geospt/index.html">geospt</a></li>
+    <li><a href="../packages/geospt/index.html">geospt</a></li>
+    <li><a href="../packages/GeoXp/index.html">GeoXp</a></li>
+    <li><a href="../packages/ggmap/index.html">ggmap</a></li>
+    <li><a href="../packages/glmmBUGS/index.html">glmmBUGS</a></li>
+    <li><a href="../packages/gmt/index.html">gmt</a></li>
+    <li><a href="../packages/Grid2Polygons/index.html">Grid2Polygons</a></li>
+    <li><a href="../packages/GriegSmith/index.html">GriegSmith</a></li>
+    <li><a href="../packages/gstat/index.html">gstat</a> (core)</li>
+    <li><a href="../packages/gstudio/index.html">gstudio</a></li>
+    <li><a href="../packages/Guerry/index.html">Guerry</a></li>
+    <li><a href="../packages/GWmodel/index.html">GWmodel</a></li>
+    <li><a href="../packages/gwrr/index.html">gwrr</a></li>
+    <li><a href="../packages/hdeco/index.html">hdeco</a></li>
+    <li><a href="../packages/intamap/index.html">intamap</a></li>
+    <li><a href="../packages/landsat/index.html">landsat</a></li>
+    <li><a href="../packages/latticeDensity/index.html">latticeDensity</a></li>
+    <li><a href="../packages/leafletR/index.html">leafletR</a></li>
+    <li><a href="../packages/mapdata/index.html">mapdata</a></li>
+    <li><a href="../packages/mapproj/index.html">mapproj</a></li>
+    <li><a href="../packages/maps/index.html">maps</a></li>
+    <li><a href="../packages/maptools/index.html">maptools</a> (core)</li>
+    <li><a href="../packages/MarkedPointProcess/index.html">MarkedPointProcess</a></li>
+    <li><a href="../packages/marmap/index.html">marmap</a></li>
+    <li><a href="../packages/MBA/index.html">MBA</a></li>
+    <li><a href="../packages/McSpatial/index.html">McSpatial</a></li>
+    <li><a href="../packages/micromap/index.html">micromap</a></li>
+    <li><a href="../packages/ModelMap/index.html">ModelMap</a></li>
+    <li><a href="../packages/ncdf/index.html">ncdf</a></li>
+    <li><a href="../packages/ncf/index.html">ncf</a></li>
+    <li><a href="../packages/ngspatial/index.html">ngspatial</a></li>
+    <li><a href="../packages/nlme/index.html">nlme</a></li>
+    <li><a href="../packages/OpenStreetMap/index.html">OpenStreetMap</a></li>
+    <li><a href="../packages/osmar/index.html">osmar</a></li>
+    <li><a href="../packages/pastecs/index.html">pastecs</a></li>
+    <li><a href="../packages/PBSmapping/index.html">PBSmapping</a></li>
+    <li><a href="../packages/PBSmodelling/index.html">PBSmodelling</a></li>
+    <li><a href="../packages/plotGoogleMaps/index.html">plotGoogleMaps</a></li>
+    <li><a href="../packages/plotKML/index.html">plotKML</a></li>
+    <li><a href="../packages/psgp/index.html">psgp</a></li>
+    <li><a href="../packages/ramps/index.html">ramps</a></li>
+    <li><a href="../packages/RandomFields/index.html">RandomFields</a> (core)</li>
+    <li><a href="../packages/rangeMapper/index.html">rangeMapper</a></li>
+    <li><a href="../packages/RArcInfo/index.html">RArcInfo</a></li>
+    <li><a href="../packages/raster/index.html">raster</a> (core)</li>
+    <li><a href="../packages/rasterVis/index.html">rasterVis</a></li>
+    <li><a href="../packages/RColorBrewer/index.html">RColorBrewer</a> (core)</li>
+    <li><a href="../packages/regress/index.html">regress</a></li>
+    <li><a href="../packages/rgdal/index.html">rgdal</a> (core)</li>
+    <li><a href="../packages/rgeos/index.html">rgeos</a> (core)</li>
+    <li><a href="../packages/RgoogleMaps/index.html">RgoogleMaps</a></li>
+    <li><a href="../packages/RPyGeo/index.html">RPyGeo</a></li>
+    <li><a href="../packages/RSAGA/index.html">RSAGA</a></li>
+    <li><a href="../packages/RSurvey/index.html">RSurvey</a></li>
+    <li><a href="../packages/rtop/index.html">rtop</a></li>
+    <li><a href="../packages/rworldmap/index.html">rworldmap</a></li>
+    <li><a href="../packages/rworldxtra/index.html">rworldxtra</a></li>
+    <li><a href="../packages/seg/index.html">seg</a></li>
+    <li><a href="../packages/sgeostat/index.html">sgeostat</a></li>
+    <li><a href="../packages/shapefiles/index.html">shapefiles</a></li>
+    <li><a href="../packages/sp/index.html">sp</a> (core)</li>
+    <li><a href="../packages/spacetime/index.html">spacetime</a> (core)</li>
+    <li><a href="../packages/sparr/index.html">sparr</a></li>
+    <li><a href="../packages/spatcounts/index.html">spatcounts</a></li>
+    <li><a href="../packages/spatgraphs/index.html">spatgraphs</a></li>
+    <li><a href="../packages/spatial/index.html">spatial</a></li>
+    <li><a href="../packages/spatial.tools/index.html">spatial.tools</a></li>
+    <li><a href="../packages/spatialCovariance/index.html">spatialCovariance</a></li>
+    <li><a href="../packages/SpatialEpi/index.html">SpatialEpi</a></li>
+    <li><a href="../packages/SpatialExtremes/index.html">SpatialExtremes</a></li>
+    <li><a href="../packages/spatialkernel/index.html">spatialkernel</a></li>
+    <li><a href="../packages/spatialprobit/index.html">spatialprobit</a></li>
+    <li><a href="../packages/spatialsegregation/index.html">spatialsegregation</a></li>
+    <li><a href="../packages/SpatialTools/index.html">SpatialTools</a></li>
+    <li><a href="../packages/spatstat/index.html">spatstat</a> (core)</li>
+    <li><a href="../packages/spBayes/index.html">spBayes</a></li>
+    <li><a href="../packages/spcosa/index.html">spcosa</a></li>
+    <li><a href="../packages/spdep/index.html">spdep</a> (core)</li>
+    <li><a href="../packages/spgrass6/index.html">spgrass6</a></li>
+    <li><a href="../packages/spgwr/index.html">spgwr</a></li>
+    <li><a href="../packages/sphet/index.html">sphet</a></li>
+    <li><a href="../packages/splancs/index.html">splancs</a> (core)</li>
+    <li><a href="../packages/splm/index.html">splm</a></li>
+    <li><a href="../packages/spsurvey/index.html">spsurvey</a></li>
+    <li><a href="../packages/spTimer/index.html">spTimer</a></li>
+    <li><a href="../packages/SSN/index.html">SSN</a></li>
+    <li><a href="../packages/Stem/index.html">Stem</a></li>
+    <li><a href="../packages/taRifx/index.html">taRifx</a></li>
+    <li><a href="../packages/tgp/index.html">tgp</a></li>
+    <li><a href="../packages/trip/index.html">trip</a></li>
+    <li><a href="../packages/tripack/index.html">tripack</a></li>
+    <li><a href="../packages/tripEstimation/index.html">tripEstimation</a></li>
+    <li><a href="../packages/UScensus2000blkgrp/index.html">UScensus2000blkgrp</a></li>
+    <li><a href="../packages/UScensus2000cdp/index.html">UScensus2000cdp</a></li>
+    <li><a href="../packages/UScensus2000tract/index.html">UScensus2000tract</a></li>
+    <li><a href="../packages/vardiag/index.html">vardiag</a></li>
+    <li><a href="../packages/vec2dtransf/index.html">vec2dtransf</a></li>
+    <li><a href="../packages/vegan/index.html">vegan</a></li>
+  </ul>
+
+  <h3>Related links:</h3>
+  <ul>
+    <li>CRAN Task View: <a href="Environmetrics.html">Environmetrics</a></li>
+    <li><a target="_top" href="http://geodacenter.asu.edu/projects/rsp">
+  Rgeo: Spatial Statistics with R
+</a></li>
+    <li><a href="https://www.stat.math.ethz.ch/mailman/listinfo/R-SIG-Geo/">
+  R-SIG-Geo mailing list
+</a></li>
+  </ul>
+
+</body>
+</html>
+ 
