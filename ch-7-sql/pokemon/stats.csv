@@ -1,0 +1,9 @@
+id;damage_class_id;identifier;is_battle_only
+1;NA;hp;0
+2;2;attack;0
+3;2;defense;0
+4;3;special-attack;0
+5;3;special-defense;0
+6;NA;speed;0
+7;NA;accuracy;1
+8;NA;evasion;1
