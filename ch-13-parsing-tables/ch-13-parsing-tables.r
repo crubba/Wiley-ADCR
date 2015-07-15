@@ -90,7 +90,7 @@ name        <- sapply(station, '[', 2)
 
                                                 start <- proc.time()
 # extract part of the sections that contains daily temperatures
-temperatures <- str_extract(txtparts, "day.*") 
+temperatures <- str_extract(txtparts, "day[\\s\\S]*") 
 
 # prepare object to store temperature data
 tempData <- data.frame(avgtemp=NA, day=NA, month=NA, year=NA, id="", name="")
@@ -150,7 +150,7 @@ parseTemp <- function(filename){
     id          <- sapply(station, '[', 1)
     name        <- sapply(station, '[', 2)
     # extract part of the sections that contains daily temperatures
-    temperatures <- str_extract(txtparts, "day.*") 
+    temperatures <- str_extract(txtparts, "day[\\s\\S]*") 
     # prepare object to store temperature data
     tempData <- data.frame(avgtemp=NA, day=NA, month=NA, year=NA, id="", name="")
     # generate a day pattern matching the order of temperatures
