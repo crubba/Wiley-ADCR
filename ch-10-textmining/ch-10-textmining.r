@@ -82,6 +82,7 @@ for(i in 2:length(list.files("Press_Releases/"))){
     if(length(release) != 0){
         n <- n + 1
         tmp_corpus <- Corpus(VectorSource(release))
+        release_corpus <- c(release_corpus, tmp_corpus)
         meta(release_corpus[[n]], "organisation") <- organisation[1]
         meta(release_corpus[[n]], "publication") <- publication
     }
