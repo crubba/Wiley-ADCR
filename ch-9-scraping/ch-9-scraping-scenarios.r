@@ -388,7 +388,7 @@ writeBin(resImage,"sky.pdf",useBytes=T)
 
 
 install.packages("RHTMLForms", 
-                 repos ="http://www.omegahat.org/R", 
+                 repos ="http://www.omegahat.net/R", 
                  type  ="source")
 library(RHTMLForms)
 
